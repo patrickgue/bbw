@@ -9,7 +9,7 @@ package ch.bbw.cms.models;
 import ch.bbw.cms.enums.*;
 
 /**
- *
+ * 
  * @author 5ia13tibonomelli, 5ia13paguenthard
  */
 public class User {

@@ -15,7 +15,7 @@ import java.sql.SQLException;
 /**
  * This Class is used to connect to the database in the internet. it provides methods which can be called from the application.
 
- * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons
+ * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons</b>
  * @author 5ia13paguenthard
  */
 public class DatabaseControl {
@@ -38,6 +38,7 @@ public class DatabaseControl {
         }
     }
     
+    // FIXME: remove on release
     public static void main(String[] args){
         new DatabaseControl();
     }
