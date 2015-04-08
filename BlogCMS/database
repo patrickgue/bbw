@@ -1,0 +1,32 @@
+
+ +-------------------------------+
+ | cms_user                      |
+ +-------------------------------+ 1          1
+ | X user_id       int     nn ai |=======+-----------+
+ |   user_name     varchar nn    |       |           |
+ |   user_password varchar nn    |   	 |           |
+ |   user_type     enum    nn    |    	 |           |
+ |   user_bio      varchar nn    |     	 |           |
+ |   user_age      int     nn    |     	 |           |
+ |   user_gender   enum    nn    |     	 |           |
+ +-------------------------------+     	 |           |
+     					 |           |
+     					 |           |
+     +-------------------------------+   |           |
+     | cms_post                      |   |           |
+   1 +-------------------------------+   |           |
++----| X post_id      int      nn ai |   |           |
+|    |   post_content longtext nn    |   |           |
+|    |   post_likes   int      nn    |   |           |
+|    |   post_user_id int      nn    |---+ 0...1     |
+|    +-------------------------------+               |
+|                                                    |
+|                                                    |
+|    +---------------------------------+             |
+|    | cms_comment                     |             |
+|    +---------------------------------+             |
+|    | X comment_id      int     nn ai |             |
+|    |   comment_content varchar nn    | 0...*       |
+|0..*|   comment_user_id int     nn    |-------------+
++----|   comment_post_id int     nn    |
+     +---------------------------------+
