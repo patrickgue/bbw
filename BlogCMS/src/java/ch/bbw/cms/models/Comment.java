@@ -7,13 +7,13 @@
 package ch.bbw.cms.models;
 
 /**
- *
+ * This class is used to save comments belonging to a post
  * @author 5ia13nosiegrist
  */
 public class Comment {
     int commentID;
-    String CommentContent;
-    int PostID;
+    String commentContent;
+    int postID;
     
 
     public int getCommentID() {
@@ -25,19 +25,19 @@ public class Comment {
     }
 
     public String getCommentContent() {
-        return CommentContent;
+        return commentContent;
     }
 
-    public void setCommentContent(String CommentContent) {
-        this.CommentContent = CommentContent;
+    public void setCommentContent(String commentContent) {
+        this.commentContent = commentContent;
     }
 
     public int getPostID() {
-        return PostID;
+        return postID;
     }
 
-    public void setPostID(int PostID) {
-        this.PostID = PostID;
+    public void setPostID(int postID) {
+        this.postID = postID;
     }
     
     

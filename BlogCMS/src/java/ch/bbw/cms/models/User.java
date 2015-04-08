@@ -19,6 +19,8 @@ public class User {
     private UserType type;
     private String bio;
     private int age;
+
+
     private int id;
 
     public void setName(String name){
@@ -43,6 +45,26 @@ public class User {
 
     public String getEmail(){
 	return this.email;
+    }
+
+    public void setType(UserType type){
+	this.type = type;
+    }
+
+    public UserType getType(){
+	return this.type;
+    }
+
+    public void setBio(String bio){
+	this.bio = bio;
+    }
+
+    public String getBio(){
+	return this.bio;
+    }
+
+    public void setAge(int age){
+	this.age = age;
     }
 
     public void setUserId(int id){

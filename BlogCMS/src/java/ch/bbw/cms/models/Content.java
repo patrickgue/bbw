@@ -7,7 +7,8 @@
 package ch.bbw.cms.models;
 
 /**
- *
+ * This class is used to save different types of data
+ * 
  * @author 5ia13nosiegrist
  */
 public abstract class Content {

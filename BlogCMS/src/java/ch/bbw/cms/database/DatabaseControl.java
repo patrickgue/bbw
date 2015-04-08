@@ -13,7 +13,9 @@ import java.sql.SQLException;
 
 
 /**
- *
+ * This Class is used to connect to the database in the internet. it provides methods which can be called from the application.
+
+ * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons
  * @author 5ia13paguenthard
  */
 public class DatabaseControl {
@@ -25,7 +27,7 @@ public class DatabaseControl {
             
             Class.forName("com.mysql.jdbc.Driver");
             
-            conn = DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cmd001");
+            conn = DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
             
         } catch (ClassNotFoundException ex) {  
             ex.printStackTrace();
