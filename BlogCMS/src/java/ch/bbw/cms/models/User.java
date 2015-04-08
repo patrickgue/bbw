@@ -6,6 +6,8 @@
 
 package ch.bbw.cms.models;
 
+import ch.bbw.cms.enums.*;
+
 /**
  *
  * @author 5ia13tibonomelli, 5ia13paguenthard
@@ -14,7 +16,10 @@ public class User {
     private String name;
     private String password;
     private String email;
-    private int userID;
+    private UserType type;
+    private String bio;
+    private int age;
+    private int id;
 
     public void setName(String name){
 	this.name = name;
