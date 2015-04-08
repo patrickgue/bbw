@@ -18,7 +18,7 @@
 +----| X post_id      int      nn ai |   |           |
 |    |   post_content longtext nn    |   |           |
 |    |   post_likes   int      nn    |   |           |
-|    |   post_user_id int      nn    |---+ 0...1     |
+|    |   post_user_id int      nn    |---+ 0...*
 |    +-------------------------------+               |
 |                                                    |
 |                                                    |
