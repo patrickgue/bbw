@@ -8,8 +8,43 @@ package ch.bbw.cms.models;
 
 /**
  *
- * @author 5ia13tibonomelli
+ * @author 5ia13tibonomelli, 5ia13paguenthard
  */
 public class User {
-    
+    private String name;
+    private String password;
+    private String email;
+    private int userID;
+
+    public void setName(String name){
+	this.name = name;
+    }
+
+    public String getName(){
+	return this.name;
+    }
+
+    public void setPassword(String password){
+	this.password = password;
+    }
+
+    public String getPassword(){
+	return this.password;
+    }
+
+    public void setEmail(String email){
+	this.email = email;
+    }
+
+    public String getEmail(){
+	return this.email;
+    }
+
+    public void setUserId(int id){
+	this.userID = id;
+    }
+
+    public void getUserId(){
+	return userID;
+    }
 }
