@@ -25,7 +25,7 @@ public class Post extends Content{
     }
     public void like(User user){
         for(User tmp : likes){
-	    if(tmp.getUserId() == user.getUserId){
+	    if(tmp.getUserId() == user.getUserId()){
 		// User already defined 
 		// TODO error message?
 		return;

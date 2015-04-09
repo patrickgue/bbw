@@ -9,6 +9,8 @@ package ch.bbw.cms.database;
 import java.util.*;
 import java.sql.*;
 
+import ch.bbw.cms.models.*;
+
 
 /**
  * This Class is used to connect to the database in the internet. it provides methods which can be called from the application.
@@ -43,24 +45,26 @@ public class DatabaseControl {
     public ArrayList<Post> getPosts(int userId){
 	ArrayList<Post> posts = new ArrayList<Post>();
 	String query = "SELECT * FROM cms_post WHERE post_user_id = "+userId;
-	try {
+        try {
 	    Statement st = conn.createStatement();
 	    ResultSet rs = st.executeQuery(query);
 	    while (rs.next()) {
 		int id = userId;
 		String content = rs.getString("post_content");
-		String title = rs.getString("post_title");
-		posts.add(new Post(id, content, title);
+		String title = "Fake Title";//rs.getString("post_title"); // TODO implement title in database
+		posts.add(new Post(id, content, title));
 	    }
 	} catch (SQLException ex) {
-	    //TODO Error Handling
+	    ex.printStackTrace();
 	}
-	    return posts;
+	return posts;
     }
     
     // FIXME: remove on release
     public static void main(String[] args){
-        new DatabaseControl();
+        DatabaseControl ctrl = new DatabaseControl();
+        ArrayList<Post> test = ctrl.getPosts(0);
+        System.out.println(test.get(0).getContent());
     }
     
     

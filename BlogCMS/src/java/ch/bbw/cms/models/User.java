@@ -68,10 +68,10 @@ public class User {
     }
 
     public void setUserId(int id){
-	this.userID = id;
+	this.id = id;
     }
 
-    public void getUserId(){
-	return userID;
+    public int getUserId(){
+	return id;
     }
 }
