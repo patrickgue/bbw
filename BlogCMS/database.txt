@@ -21,6 +21,7 @@
      | cms_post                      |   |           |
    1 +-------------------------------+   |           |
 +----| X post_id      int      nn ai |   |           |
+|    |   post_title   varchar  nn    |   |           |
 |    |   post_content longtext nn    |   |           |
 |    |   post_likes   int      nn    |   |           |
 |    |   post_user_id int      nn    |---+ 0...*     |

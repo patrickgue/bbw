@@ -6,10 +6,8 @@
 
 package ch.bbw.cms.database;
 
-
+import java.util.*;
 import java.sql.*;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 
 /**
@@ -36,6 +34,28 @@ public class DatabaseControl {
         } catch (Exception ex){
             ex.printStackTrace();
         }
+    }
+
+    public ArrayList<Post> getPosts(User user){
+	return getPosts(user.getUserId());
+    }
+
+    public ArrayList<Post> getPosts(int userId){
+	ArrayList<Post> posts = new ArrayList<Post>();
+	String query = "SELECT * FROM cms_post WHERE post_user_id = "+userId;
+	try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    while (rs.next()) {
+		int id = userId;
+		String content = rs.getString("post_content");
+		String title = rs.getString("post_title");
+		posts.add(new Post(id, content, title);
+	    }
+	} catch (SQLException ex) {
+	    //TODO Error Handling
+	}
+	    return posts;
     }
     
     // FIXME: remove on release

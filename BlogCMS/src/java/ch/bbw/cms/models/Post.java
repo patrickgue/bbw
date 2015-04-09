@@ -24,7 +24,14 @@ public class Post extends Content{
         this.likes = new ArrayList<User>();
     }
     public void like(User user){
-        likes.add(user);
+        for(User tmp : likes){
+	    if(tmp.getUserId() == user.getUserId){
+		// User already defined 
+		// TODO error message?
+		return;
+	    }
+	}
+	likes.add(user);
     }
     
     
