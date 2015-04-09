@@ -14,8 +14,8 @@
 	        <div class="page-center">
 	            <h1 class="h-centered">CMS Blog</h1>
 	            <div class="header-body">
-	              <input type="text" id="general-search" value="Search"/>  
-		      <span id="profile-menu-buttons">
+	              <input type="text" style="float: left;" value="Search"/>  
+		      <span style="float: right;">
 	                    <button id="menu-button" style="float: left;"><span class="fa fa-bars"></span></button> 
 	                    <a href="profile.html"><button id="profile-button-header">Profil</button></a>
 	                    <button id="logout-button-header">Log out</button>

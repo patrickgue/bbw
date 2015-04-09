@@ -12,20 +12,21 @@ body{
 }
 
 header{
-    background-color: #212C32;
-    color: #C7C7C7;
+    background-color: rgb(255, 66, 14);
+    color: #f4f4f4;
+    width: 95%;
+    padding-left: 5%;
 }
 
 
 header h1, header h2, header h3{
-    font-weight: 300;
+    font-weight: 600;
     margin-top: 0px;
     padding-top: 30px;
 }
 
 .header-body{
     width: 100%;
-    border-top: 1px solid #C7C7C7;
     padding-top: 4px;
     margin-top: 4px;
     padding-bottom: 4px;
@@ -39,7 +40,7 @@ header h1, header h2, header h3{
 }
 
 .h-centered{
-    text-align: center;
+    /* text-align: center; */
 }
 
 .left{
@@ -83,9 +84,9 @@ input{
 
 
 header button, header input{
-    background-color: #434E54;
-    color: #C7C7C7;
-    border-bottom: 2px solid #323D43;
+    background-color: #f4f4f4;
+    color: rgb(255, 66, 14);
+    border-bottom: 2px solid #a0a0a0
 }
 
 .list-entry{
@@ -157,12 +158,12 @@ header button, header input{
     color: #eee;
 }
 
-#general-search{
-    float: left;
+#profile-button-menu{
+    float: right;
 }
 
-#profile-menu-buttons{
-    float: right;
+#general-search{
+    float: left;
 }
 
 @media screen and (max-width: 768px) {
