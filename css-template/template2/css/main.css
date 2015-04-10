@@ -3,6 +3,7 @@ body{
     padding: 0px;
     font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', sans-serif;
     color:  #212C32;
+    overflow-x: hidden;
 }
 
 .page-center{
@@ -14,8 +15,11 @@ body{
 header{
     background-color: rgb(255, 66, 14);
     color: #f4f4f4;
-    width: 95%;
-    padding-left: 5%;
+    width: 120%;
+    padding-left: 10%;
+    margin-left: -10%;
+    transform: rotate(-3deg);
+    margin-bottom: 40px;
 }
 
 
@@ -201,7 +205,6 @@ header button, header input{
     }
     
     .list-entry.selected{
-	border-left: 15px solid #212C32;
 	border-right: none;
     }
 }
