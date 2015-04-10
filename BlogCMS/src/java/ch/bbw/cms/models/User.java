@@ -22,7 +22,30 @@ public class User {
     private int age;
 
 
-    private int id;
+    private Integer id;
+    
+    public User(Integer id, String name, String password, String email, UserGender gender, UserType type, String bio, Integer age){
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.gender = gender;
+        this.type = type;
+        this.bio = bio;
+        this.age = age;
+    }
+    
+    public User(Integer id, String name, String password, String email, UserGender gender, UserType type){
+        this(id, name, password, email, gender, type, "", 0);
+    }
+    
+    public User(String name, String password, String email, UserGender gender, UserType type, String bio, Integer age){
+        this(null, name, password, email, gender, type, bio, age);
+    }
+    
+    public User(String name, String password, String email, UserGender gender, UserType type){
+        this(null, name, password, email, gender, type);
+    }
 
     public void setName(String name){
 	this.name = name;

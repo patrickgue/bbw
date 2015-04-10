@@ -1,5 +1,6 @@
 package ch.bbw.cms.enums;
 
+
 /**
  * Used to define the Gender of the user
  * 
@@ -9,5 +10,27 @@ package ch.bbw.cms.enums;
  * @author 5ia13paguenthard
  */
 public enum UserGender{
-    FEMALE, MALE, OTHER;
+    FEMALE("female"), MALE("male"), OTHER("other");
+    
+    public static UserGender getUserTypeFromString(String type) {
+        if(type.equals(MALE.getGenderName())){
+            return MALE;
+        } else if(type.equals(FEMALE.getGenderName())){
+            return FEMALE;
+        } else if(type.equals(OTHER.getGenderName())){
+            return OTHER;
+        } else {
+            return null;
+        }
+    }
+    
+    String genderName;
+    
+    UserGender(String genderName){
+        this.genderName = genderName;
+    }
+    
+    public String getGenderName(){
+        return this.genderName;
+    }
 }

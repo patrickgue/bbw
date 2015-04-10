@@ -6,6 +6,7 @@
 
 package ch.bbw.cms.database;
 
+import ch.bbw.cms.enums.*;
 import java.util.*;
 import java.sql.*;
 
@@ -51,7 +52,7 @@ public class DatabaseControl {
 	    while (rs.next()) {
 		int id = userId;
 		String content = rs.getString("post_content");
-		String title = "Fake Title";//rs.getString("post_title"); // TODO implement title in database
+		String title = rs.getString("post_title"); 
 		posts.add(new Post(id, content, title));
 	    }
 	} catch (SQLException ex) {
@@ -60,12 +61,36 @@ public class DatabaseControl {
 	return posts;
     }
     
+    public ArrayList<User> getUserList(){
+        ArrayList<User> users = new ArrayList<User>();
+	String query = "SELECT * FROM cms_user";
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    while (rs.next()) {
+                int id = rs.getInt("user_id");
+                String name = rs.getString("user_name");
+                String password = rs.getString("user_password");
+                String email = rs.getString("user_email");
+                UserType type = UserType.getUserTypeFromString(rs.getString("user_type"));
+                String bio = rs.getString("user_bio");
+                int age = rs.getInt("user_age");
+                UserGender gender = UserGender.getUserTypeFromString(rs.getString("user_gender"));
+		users.add(new User(id, name, password, email, gender, type, bio, age));
+	    }
+	} catch (SQLException ex) {
+	    ex.printStackTrace();
+	}
+	return users;
+    }
+    
     // FIXME: remove on release
     public static void main(String[] args){
         DatabaseControl ctrl = new DatabaseControl();
         ArrayList<Post> test = ctrl.getPosts(0);
         System.out.println(test.get(0).getContent());
     }
-    
+
+   
     
 }
