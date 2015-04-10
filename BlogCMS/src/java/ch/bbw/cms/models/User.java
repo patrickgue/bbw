@@ -17,6 +17,7 @@ public class User {
     private String password;
     private String email;
     private UserType type;
+    private UserGender gender;
     private String bio;
     private int age;
 
@@ -61,6 +62,14 @@ public class User {
 
     public String getBio(){
 	return this.bio;
+    }
+
+    public UserGender getGender(){
+	return this.gender;
+    }
+
+    public void setGender(UserGender gender){
+	this.gender = gender;
     }
 
     public void setAge(int age){
