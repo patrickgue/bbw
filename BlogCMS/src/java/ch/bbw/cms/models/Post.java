@@ -23,32 +23,84 @@ public class Post extends Content{
         this.comments = new ArrayList<Comment>();
         this.likes = new ArrayList<User>();
     }
+    
+    @Override
+    public String toString(){
+        return "Post: "+title+"\nContent:\n"+getContent();
+    }
+    
     public void like(User user){
-        for(User tmp : likes){
+        for(User tmp : getLikes()){
 	    if(tmp.getUserId() == user.getUserId()){
 		// User already defined 
 		// TODO error message?
 		return;
 	    }
 	}
-	likes.add(user);
+	getLikes().add(user);
     }
     
     
     public void dislike(User user){
-        likes.remove(user);
+        getLikes().remove(user);
     }
     
     public int countLikes(){
-        return likes.size();
+        return getLikes().size();
     }
     
     public boolean hasLiked(User user){
         try{
-            int i = likes.indexOf(user);
+            int i = getLikes().indexOf(user);
             return true;
         }catch(Exception e){
             return false;
         }
+    }
+
+    /**
+     * @return the title
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * @param title the title to set
+     */
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    /**
+     * @return the comments
+     */
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+    public String getSummary(){
+        return getContent().substring(0, (getContent().length() > 20 ? 20 : getContent().length()) )+(getContent().length() > 20 ? "..." : "" );
+    }
+    
+    /**
+     * @param comments the comments to set
+     */
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
+    }
+
+    /**
+     * @return the likes
+     */
+    public ArrayList<User> getLikes() {
+        return likes;
+    }
+
+    /**
+     * @param likes the likes to set
+     */
+    public void setLikes(ArrayList<User> likes) {
+        this.likes = likes;
     }
 }

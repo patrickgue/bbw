@@ -40,17 +40,30 @@ public class DatabaseControl {
     }
 
     public ArrayList<Post> getPosts(User user){
-	return getPosts(user.getUserId());
+	return getPostList(user.getUserId());
+    }
+    
+    public ArrayList<Post> getPosts(){
+	return getPostList(null);
+    }
+    
+    public ArrayList<Post> getPosts(int userId){
+        return getPostList(userId);
     }
 
-    public ArrayList<Post> getPosts(int userId){
+    public ArrayList<Post> getPostList(Integer userId){
 	ArrayList<Post> posts = new ArrayList<Post>();
-	String query = "SELECT * FROM cms_post WHERE post_user_id = "+userId;
+	String query;
+        if(userId == null){
+            query = "SELECT * FROM cms_post";
+        } else {
+            query = "SELECT * FROM cms_post WHERE post_user_id = "+userId;
+        }
         try {
 	    Statement st = conn.createStatement();
 	    ResultSet rs = st.executeQuery(query);
 	    while (rs.next()) {
-		int id = userId;
+		int id = rs.getInt("post_id");
 		String content = rs.getString("post_content");
 		String title = rs.getString("post_title"); 
 		posts.add(new Post(id, content, title));
