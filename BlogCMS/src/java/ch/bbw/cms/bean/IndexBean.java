@@ -21,7 +21,7 @@ public class IndexBean {
     private DatabaseControl database;
     private ArrayList<Post> postList;// = new ArrayList<Post>();
     private String cssFile = "main.css";
-    private String search;
+    private String search = "Search";
     
     public IndexBean() {
         database = new DatabaseControl();
