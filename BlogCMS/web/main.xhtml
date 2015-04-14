@@ -16,7 +16,8 @@
             <div class="page-center">
                 <h1 class="h-centered">CMS Blog</h1>
                 <div class="header-body">
-                  <input type="text" id="general-search" value="Search"/>  
+                  <!-- <input type="text" id="general-search" value="Search"/>  -->
+                  <h:form><h:inputText value="#{indexBean.search}" id="general-search"/></h:form>
                   <span id="profile-menu-buttons">
                         <button id="menu-button" style="float: left;"><span class="fa fa-bars"></span></button> 
                         <a href="profile.html"><button id="profile-button-header">Profil</button></a>
