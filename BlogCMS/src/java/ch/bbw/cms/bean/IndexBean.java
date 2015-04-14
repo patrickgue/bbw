@@ -26,6 +26,7 @@ public class IndexBean {
         database = new DatabaseControl();
         postList = database.getPosts();
         System.out.println("PostList: "+postList);
+        
     }
     
     public ArrayList<Post> getPostList(){ 
