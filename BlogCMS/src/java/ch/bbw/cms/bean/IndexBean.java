@@ -21,7 +21,8 @@ public class IndexBean {
     private DatabaseControl database;
     private ArrayList<Post> postList;// = new ArrayList<Post>();
     private String cssFile = "main.css";
-     
+    private String search;
+    
     public IndexBean() {
         database = new DatabaseControl();
         postList = database.getPosts();
@@ -71,6 +72,20 @@ public class IndexBean {
             cssFile = "main.css";
         }
         return "main.xhtml";
+    }
+
+    /**
+     * @return the search
+     */
+    public String getSearch() {
+        return search;
+    }
+
+    /**
+     * @param search the search to set
+     */
+    public void setSearch(String search) {
+        this.search = search;
     }
     
 }

@@ -17,5 +17,16 @@ $(document).ready(function(){
             $(".left").css("display", "none");
         }
     });
-
+    
+    $("#general-search").on("focus", function(){
+        if($(this).val() == "Search"){
+            $(this).val("");
+        }
+    })
+    
+    $("#general-search").on("blur", function(){
+        if($(this).val() == ""){
+            $(this).val("Search");
+        }
+    })
 });
