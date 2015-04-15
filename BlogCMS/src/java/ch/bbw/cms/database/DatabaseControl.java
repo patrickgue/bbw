@@ -97,7 +97,7 @@ public class DatabaseControl {
 	return users;
     }
     
-    public boolean createPost(){
+    public boolean createUser(){
         String query = "INSERT INTO cms_user (user_name, user_password, user_email)";
         try {
 	    Statement st = conn.createStatement();
