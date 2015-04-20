@@ -22,11 +22,18 @@ public class IndexBean {
     private ArrayList<Post> postList;// = new ArrayList<Post>();
     private String cssFile = "main.css";
     private String search = "Search";
+    private Post currentPost;
     
     public IndexBean() {
         database = new DatabaseControl();
         postList = database.getPosts();
-        System.out.println("PostList: "+postList);
+        try{
+	    currentPost = postList.get(0);
+	} catch(IndexOutOfBoundsException ex){
+	    currentPost = new Post(-1, "Ask the admin to get a creator account to publish your own blog!",  "no Posts");
+	}
+
+	System.out.println("PostList: "+postList);
         
     }
     
