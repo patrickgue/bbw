@@ -157,12 +157,16 @@ header button, header input{
     color: #eee;
 }
 
-#general-search{
+.general-search{
     float: left;
 }
 
 #profile-menu-buttons{
     float: right;
+}
+
+.share-icon{
+    height: 20px;
 }
 
 @media screen and (max-width: 768px) {

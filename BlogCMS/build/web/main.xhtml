@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,6 +10,7 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="../css/#{indexBean.cssFile}"/>
         <script src="../js/jquery-1.11.1.js" type="text/javascript"></script>
+        <script src="../js/share.js" type="text/javascript"></script>
         <script src="../js/main.js" type="text/javascript"></script>
     </h:head>
     <h:body>
@@ -17,10 +19,10 @@
                 <h1 class="h-centered">CMS Blog</h1>
                 <div class="header-body">
                   <!-- <input type="text" id="general-search" value="Search"/>  -->
-                  <h:form><h:inputText value="#{indexBean.search}" class="general-search"/></h:form>
+                  <h:form style="width: 200px;"><h:inputText value="#{indexBean.search}" class="general-search"/></h:form>
                   <span id="profile-menu-buttons">
                         <button id="menu-button" style="float: left;"><span class="fa fa-bars"></span></button> 
-                        <a href="profile.html"><button id="profile-button-header">Profil</button></a>
+                        <a href="profile.xhtml"><button id="profile-button-header">Profil</button></a>
                         <button id="logout-button-header">Log out</button>
                     </span>
 
@@ -38,10 +40,15 @@
                         
                         <h:dataTable style="width: 100%" var="post" value="#{indexBean.postList}">
                             <h:column>
-                                <div class="list-entry">
-                                    <h3><h:outputText value="#{post.title}" /></h3>
-                                    <span><h:outputText value="#{post.summary}" /></span>
-                                </div>
+                                <h:form>
+                                    <h:commandLink action="main.xhtml">
+                                        <div class="list-entry">
+                                            <h3><h:outputText value="#{post.title}" /></h3>
+                                            <span><h:outputText value="#{post.summary}" /></span>
+                                        </div>
+                                        <f:setPropertyActionListener target="#{indexBean.currentPost}" value="#{post}"/>
+                                    </h:commandLink>
+                                </h:form>
                             </h:column>
                         </h:dataTable>
                         
@@ -55,13 +62,20 @@
                 <div class="right">
                     <div class="header-image" style="background-image: url('http://4.bp.blogspot.com/-DMrcMIgc64k/TgC51PqFqEI/AAAAAAAAFG0/BmK06sVY8fU/s1600/cool%2Bforest%2Bwallpapers%2B%25284%2529.jpg');"></div>
                         <div style="padding: 10px;">
+                            <div class="share">
+                                <span>Share:</span> 
+                                <a id="share-mail" ><img class="share-icon" src="../img/mail.png"/></a>
+                                <a id="share-facebook" target="_blank"><img class="share-icon" src="../img/fb.png"/></a>
+                                <a id="share-twitter" target="_blank"><img class="share-icon" src="../img/tw.png"/></a>
+                                
+                            </div>
                             <h2><h:outputText value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
 			    <h:outputText value="#{indexBean.currentPost.content}"/>
                         </div>
                 </div>
 
                 <footer>
-                    (c) 2015 <h:form><h:commandButton action="#{indexBean.switchStyles()}" value="switch styles"/></h:form>
+                    (c) 2015 <h:form><h:commandButton action="#{indexBean.switchStyles()}" value="switch styles"/></h:form> 
                 </footer>
             </div>
         </div>

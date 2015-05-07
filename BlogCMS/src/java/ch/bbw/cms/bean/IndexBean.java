@@ -9,6 +9,8 @@ import javax.faces.bean.*;
 import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.Post;
 import java.util.ArrayList;
+import java.util.Map;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -24,7 +26,10 @@ public class IndexBean {
     private String search = "Search";
     private Post currentPost;
     
+
+    
     public IndexBean() {
+        
         database = new DatabaseControlMock();
         postList = database.getPosts();
         try{
@@ -108,5 +113,6 @@ public class IndexBean {
     public void setCurrentPost(Post currentPost) {
         this.currentPost = currentPost;
     }
-    
+
+  
 }
