@@ -6,11 +6,10 @@
 package ch.bbw.cms.bean;
 
 import javax.faces.bean.*;
-import ch.bbw.cms.mock.DatabaseControlMock;
+import ch.bbw.cms.database.DatabaseControl;
 import ch.bbw.cms.models.Post;
 import java.util.ArrayList;
-import java.util.Map;
-import javax.faces.context.FacesContext;
+
 
 /**
  *
@@ -20,7 +19,7 @@ import javax.faces.context.FacesContext;
 @SessionScoped
 public class IndexBean {
 
-    private DatabaseControlMock database;
+    private DatabaseControl database;
     private ArrayList<Post> postList;// = new ArrayList<Post>();
     private String cssFile = "main.css";
     private String search = "Search";
@@ -30,7 +29,7 @@ public class IndexBean {
     
     public IndexBean() {
         
-        database = new DatabaseControlMock();
+        database = new DatabaseControl();
         postList = database.getPosts();
         try{
 	    currentPost = postList.get(0);
