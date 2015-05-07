@@ -97,6 +97,21 @@ public class DatabaseControl {
 	return users;
     }
     
+    public boolean createUser(){
+        String query = "INSERT INTO cms_user (user_name, user_password, user_email)";
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    if(rs == null){
+                return false;
+            }
+	} catch (SQLException ex) {
+	    ex.printStackTrace();
+	}
+        return true;
+    }
+    
+    
     // FIXME: remove on release
     public static void main(String[] args){
         DatabaseControl ctrl = new DatabaseControl();
