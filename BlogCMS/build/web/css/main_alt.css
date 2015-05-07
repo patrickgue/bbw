@@ -171,6 +171,10 @@ header button, header input{
     color: #eee;
 }
 
+.share-icon{
+    height: 20px;
+}
+
 @media screen and (max-width: 768px) {
     #menu-button{
         display: inline-block;
