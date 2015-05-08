@@ -68,15 +68,15 @@
                     <div class="form-line-block">
                         <label>Gender</label>
                         <h:selectOneListbox value="#{loginSignupBean.gender}">
-                            <f:selectItem itemLabel="Female" itemValue="female"/>
-                            <f:selectItem itemLabel="Male" itemValue="male"/>
-                            <f:selectItem itemLabel="Other" itemValue="other"/>
+                            <f:selectItem itemLabel="Female" itemValue="FEMALE"/>
+                            <f:selectItem itemLabel="Male" itemValue="MALE"/>
+                            <f:selectItem itemLabel="Other" itemValue="OTHER"/>
                         </h:selectOneListbox> 
                     </div>
                     
                     <div class="form-line-block">
                         <label></label>
-                        <h:commandButton value="Sign Up" action="#{loginSignupBean.login()}"/>
+                        <h:commandButton value="Sign Up" action="#{loginSignupBean.signup()}"/>
                     </div>
                     
                     

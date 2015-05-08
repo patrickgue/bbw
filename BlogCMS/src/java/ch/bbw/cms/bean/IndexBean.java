@@ -34,7 +34,7 @@ public class IndexBean {
     
     public IndexBean() {
         
-        database = new DatabaseControlMock();
+        database = new DatabaseControl();
         if(postList == null){
             postList = database.getPosts();
         }

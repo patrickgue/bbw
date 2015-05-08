@@ -47,8 +47,8 @@
                                 <h:form>
                                     <h:commandLink action="main.xhtml">
                                         <div class="list-entry">
-                                            <h3><h:outputText value="#{post.title}" /></h3>
-                                            <span><h:outputText value="#{post.summary}" /></span>
+                                            <h3><h:outputText escape="false" value="#{post.title}" /></h3>
+                                            <span><h:outputText escape="false" value="#{post.summary}" /></span>
                                         </div>
                                         <f:setPropertyActionListener target="#{indexBean.currentPost}" value="#{post}"/>
                                     </h:commandLink>
@@ -74,8 +74,8 @@
                                 <a style="cursor: pointer;" id="share-twitter" target="_blank"><img class="share-icon" src="../img/tw.png"/></a>
                                 
                             </div>
-                            <h2><h:outputText value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
-                            <h:outputText escape="true" value="#{indexBean.currentPost.content}"/>
+                            <h2><h:outputText escape="false" value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
+                            <h:outputText escape="false" value="#{indexBean.currentPost.content}"/>
                         </div>
                 </div>
 

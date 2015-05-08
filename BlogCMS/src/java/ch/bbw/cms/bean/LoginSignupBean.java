@@ -9,6 +9,7 @@ import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.mock.DatabaseControlMock;
+import ch.bbw.cms.database.DatabaseControl;
 import ch.bbw.cms.models.User;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -28,7 +29,7 @@ public class LoginSignupBean {
     private DatabaseControlInf database;
     
     public LoginSignupBean(){
-        database = new DatabaseControlMock();
+        database = new DatabaseControl();
     }
             
     

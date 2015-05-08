@@ -71,7 +71,7 @@ public class DatabaseControl implements DatabaseControlInf{
 		int id = rs.getInt("post_id");
 		String content = rs.getString("post_content");
 		String title = rs.getString("post_title"); 
-		posts.add(new Post(id, content, title));
+		posts.add(new Post(id, title, content));
 	    }
 	} catch (SQLException ex) {
 	    ex.printStackTrace();
@@ -162,10 +162,11 @@ public class DatabaseControl implements DatabaseControlInf{
     
     @Override
     public boolean createPost(int userid, String title, String content){
-        String query = "INSERT INTO cms_post (post_user_id, post_title, post_content)  values("
+        String query = "INSERT INTO cms_post (post_user_id, post_title, post_content, post_likes)  values("
                 + ""+userid
                 + ",'"+title+"'"
-                + ",'"+content+"')";
+                + ",'"+content+"'"
+                + ", 0)";
         
         return execute(query);
     }
@@ -173,10 +174,7 @@ public class DatabaseControl implements DatabaseControlInf{
     private boolean execute(String query){
         try {
 	    Statement st = conn.createStatement();
-	    ResultSet rs = st.executeQuery(query);
-	    if(rs == null){
-                return false;
-            }
+	    st.executeUpdate(query);
 	} catch (SQLException ex) {
 	    ex.printStackTrace();
             return false;

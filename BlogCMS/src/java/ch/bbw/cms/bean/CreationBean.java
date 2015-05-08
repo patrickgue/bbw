@@ -25,7 +25,7 @@ public class CreationBean {
     private String title;
     private String postcontent;
 
-    private DatabaseControlInf database = new DatabaseControlMock();
+    private DatabaseControlInf database = new DatabaseControl();
     
     public String createPost(){
         if(database.createPost(new Post(0, title, postcontent))){
