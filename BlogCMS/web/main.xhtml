@@ -70,12 +70,12 @@
                             <div class="share">
                                 <span>Share:</span> 
                                 <a id="share-mail" ><img class="share-icon" src="../img/mail.png"/></a>
-                                <a id="share-facebook" target="_blank"><img class="share-icon" src="../img/fb.png"/></a>
-                                <a id="share-twitter" target="_blank"><img class="share-icon" src="../img/tw.png"/></a>
+                                <a style="cursor: pointer;" id="share-facebook" target="_blank"><img class="share-icon" src="../img/fb.png"/></a>
+                                <a style="cursor: pointer;" id="share-twitter" target="_blank"><img class="share-icon" src="../img/tw.png"/></a>
                                 
                             </div>
                             <h2><h:outputText value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
-			    <h:outputText value="#{indexBean.currentPost.content}"/>
+                            <h:outputText escape="true" value="#{indexBean.currentPost.content}"/>
                         </div>
                 </div>
 

@@ -29,16 +29,16 @@
                 <h:form>
                     <div class="form-line-block">
                         <label>Username</label>
-                        <h:inputText value="#{loginSignup.username}"/>
+                        <h:inputText value="#{loginSignupBean.username}"/>
                     </div>
                     <div class="form-line-block">
                         <label>Password</label>
-                        <h:inputSecret value="#{loginSignup.password}"/>
+                        <h:inputSecret value="#{loginSignupBean.password}"/>
                     </div>
 
                     <div class="form-line-block">
                         <label></label>
-                        <h:commandButton value="Log In" action="#{loginSignup.login()}"/>
+                        <h:commandButton value="Log In" action="#{loginSignupBean.login()}"/>
                     </div>
                 </h:form>
             </div>
@@ -48,26 +48,26 @@
                 <h:form>
                     <div class="form-line-block">
                         <label>Username</label>
-                        <h:inputText value="#{loginSignup.username}"/>
+                        <h:inputText value="#{loginSignupBean.username}"/>
                     </div>
                     <div class="form-line-block">
                         <label>Password</label>
-                        <h:inputSecret value="#{loginSignup.password}"/>
+                        <h:inputSecret value="#{loginSignupBean.password}"/>
                     </div>
                     
                     <div class="form-line-block">
                         <label>repeat Password</label>
-                        <h:inputSecret value="#{loginSignup.repassword}"/>
+                        <h:inputSecret value="#{loginSignupBean.repassword}"/>
                     </div>
 
                     <div class="form-line-block">
                         <label>E-Mail</label>
-                        <h:inputText value="#{loginSignup.email}"/>
+                        <h:inputText value="#{loginSignupBean.email}"/>
                     </div>
                     
                     <div class="form-line-block">
                         <label>Gender</label>
-                        <h:selectOneListbox value="#{loginSignup.gender}">
+                        <h:selectOneListbox value="#{loginSignupBean.gender}">
                             <f:selectItem itemLabel="Female" itemValue="female"/>
                             <f:selectItem itemLabel="Male" itemValue="male"/>
                             <f:selectItem itemLabel="Other" itemValue="other"/>
@@ -76,14 +76,14 @@
                     
                     <div class="form-line-block">
                         <label></label>
-                        <h:commandButton value="Sign Up" action="#{loginSignup.login()}"/>
+                        <h:commandButton value="Sign Up" action="#{loginSignupBean.login()}"/>
                     </div>
                     
                     
                 </h:form>
             </div>
             <footer>
-                (c) 2015 <h:form><h:commandButton action="#{indexBean.switchStyles()}" value="switch styles"/></h:form> 
+                (c) 2015 <h:form><h:commandButton action="#{indexBeanBean.switchStyles()}" value="switch styles"/></h:form> 
             </footer>
         </div>
         

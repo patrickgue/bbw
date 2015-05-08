@@ -10,6 +10,8 @@ import ch.bbw.cms.database.DatabaseControl;
 import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import ch.bbw.cms.inf.Log;
+import ch.bbw.cms.mock.DefaultLog;
 import java.util.ArrayList;
 
 
@@ -26,6 +28,7 @@ public class IndexBean {
     private String cssFile = "main.css";
     private String search = "Search";
     private Post currentPost;
+    private Log log = new DefaultLog();
     
 
     
@@ -41,7 +44,7 @@ public class IndexBean {
 	    currentPost = new Post(-1, "Ask the admin to get a creator account to publish your own blog!",  "no Posts");
 	}
 
-	System.out.println("PostList: "+postList);
+	log.debug("PostList: "+postList);
         
     }
     
@@ -57,7 +60,7 @@ public class IndexBean {
     }
     
     public void refreshPostList(){
-        System.out.println("Refresh");
+        log.debug("Refresh");
         postList = database.getPosts();
     }
     
@@ -108,7 +111,7 @@ public class IndexBean {
 
     public String performSearch(){
         setPostList(database.getPosts(search));
-        System.out.println(search+", "+postList.toString());
+        log.debug(search+", "+postList.toString());
         return "main.xhtml";
     }
     
