@@ -11,6 +11,7 @@ import java.util.*;
 import java.sql.*;
 
 import ch.bbw.cms.models.*;
+import ch.bbw.cms.inf.DatabaseControlInf;
 
 
 /**
@@ -19,7 +20,7 @@ import ch.bbw.cms.models.*;
  * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons</b>
  * @author 5ia13paguenthard
  */
-public class DatabaseControl {
+public class DatabaseControl implements DatabaseControlInf{
     private Connection conn;
     
     
@@ -39,18 +40,22 @@ public class DatabaseControl {
         }
     }
 
+    @Override
     public ArrayList<Post> getPosts(User user){
 	return getPostList(user.getUserId());
     }
     
+    @Override
     public ArrayList<Post> getPosts(){
 	return getPostList(null);
     }
     
+    @Override
     public ArrayList<Post> getPosts(int userId){
         return getPostList(userId);
     }
 
+    @Override
     public ArrayList<Post> getPostList(Integer userId){
 	ArrayList<Post> posts = new ArrayList<Post>();
 	String query;
@@ -74,6 +79,7 @@ public class DatabaseControl {
 	return posts;
     }
     
+    @Override
     public ArrayList<User> getUserList(){
         ArrayList<User> users = new ArrayList<User>();
 	String query = "SELECT * FROM cms_user";
@@ -97,20 +103,25 @@ public class DatabaseControl {
 	return users;
     }
     
-    public boolean createUser(){
-        String query = "INSERT INTO cms_user (user_name, user_password, user_email)";
-        try {
-	    Statement st = conn.createStatement();
-	    ResultSet rs = st.executeQuery(query);
-	    if(rs == null){
-                return false;
-            }
-	} catch (SQLException ex) {
-	    ex.printStackTrace();
-	}
-        return true;
+    @Override
+    public boolean createUser(String username, String password, String email, UserGender gender, UserType type){
+        String query = "INSERT INTO cms_user (user_name, user_password, user_email, user_gender, user_type)  values("
+                + " '"+username+"'"
+                + ",'"+password+"'"
+                + ",'"+email+"'"
+                + ",'"+gender.getGenderName()+"'"
+                + ",'"+type.getType()+"')";
+        return execute(query);
     }
     
+    
+    public boolean createUser(User user){
+        return createUser(user.getName(),
+                user.getPassword(),
+                user.getEmail(),
+                user.getGender(),
+                user.getType());
+    }
     
     // FIXME: remove on release
     public static void main(String[] args){
@@ -119,6 +130,62 @@ public class DatabaseControl {
         System.out.println(test.get(0).getContent());
     }
 
+    @Override
+    public ArrayList<Post> getPosts(String searchterm) {
+        ArrayList<Post> tmpPosts = getPosts();
+        ArrayList<Post> returnPosts = new ArrayList<Post>();
+        
+        for(Post p : tmpPosts){
+            if(p.getContent().contains(searchterm) ||
+                    p.getTitle().contains(searchterm)){
+                returnPosts.add(p);
+            }
+        }
+        
+        return returnPosts;
+    }
+
    
+    @Override
+    public boolean checkUser(String username, String password){
+        ArrayList<User> users = getUserList();
+        
+        for(User tmp : users){
+            if(tmp.getEmail().equals(username) || tmp.getName().equals(username)){
+                if(tmp.getPassword().equals(password)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     
+    @Override
+    public boolean createPost(int userid, String title, String content){
+        String query = "INSERT INTO cms_post (post_user_id, post_title, post_content)  values("
+                + ""+userid
+                + ",'"+title+"'"
+                + ",'"+content+"')";
+        
+        return execute(query);
+    }
+    
+    private boolean execute(String query){
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    if(rs == null){
+                return false;
+            }
+	} catch (SQLException ex) {
+	    ex.printStackTrace();
+            return false;
+	}
+        return true;
+    }
+
+    @Override
+    public boolean createPost(Post post) {
+        return createPost(post.getUserId(), post.getTitle(), post.getContent());
+    }
 }

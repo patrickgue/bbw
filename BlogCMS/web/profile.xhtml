@@ -16,7 +16,11 @@
         <div class="page-center">
             <h1 class="h-centered">CMS Blog</h1>
             <div class="header-body">
-                <input type="text" style="float: left;" value="Search"/>  
+                <h:form style="width: 240px;">
+                    <h:inputText value="#{indexBean.search}" class="general-search"/>
+                    <h:commandButton style="float: left;" value="go" action="#{indexBean.performSearch()}" />
+
+                </h:form>
                 <span style="float: right;">
                     <a href="main.xhtml"><button id="profile-button-header">Home</button></a>
                     <button id="logout-button-header">Log out</button>
@@ -28,7 +32,7 @@
         </header>
         <div class="content">
             <div class="page-center">
-            <button id="profile-button-menu">Home</button>
+                <a href="main.xhtml"><button id="profile-button-menu">Home</button></a>
                 <button id="logout-button-menu">Log out</button>
                 <h2>Profil von User 1</h2>
                 <div id="pinwall">

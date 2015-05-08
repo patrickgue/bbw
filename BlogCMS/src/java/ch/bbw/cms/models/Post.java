@@ -17,7 +17,7 @@ public class Post extends Content{
     private ArrayList<Comment> comments;
     private ArrayList<User> likes;
 
-    public Post(int userId, String content, String title) {
+    public Post(int userId, String title, String content) {
         super(userId, content);
         this.title = title;
         this.comments = new ArrayList<Comment>();

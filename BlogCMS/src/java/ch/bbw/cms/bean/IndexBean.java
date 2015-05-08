@@ -7,7 +7,11 @@ package ch.bbw.cms.bean;
 
 import javax.faces.bean.*;
 import ch.bbw.cms.database.DatabaseControl;
+import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.Post;
+import ch.bbw.cms.inf.DatabaseControlInf;
+import ch.bbw.cms.inf.Log;
+import ch.bbw.cms.mock.DefaultLog;
 import java.util.ArrayList;
 
 
@@ -19,30 +23,35 @@ import java.util.ArrayList;
 @SessionScoped
 public class IndexBean {
 
-    private DatabaseControl database;
+    private DatabaseControlInf database;
     private ArrayList<Post> postList;// = new ArrayList<Post>();
     private String cssFile = "main.css";
     private String search = "Search";
     private Post currentPost;
+    private Log log = new DefaultLog();
     
 
     
     public IndexBean() {
         
-        database = new DatabaseControl();
-        postList = database.getPosts();
+        database = new DatabaseControlMock();
+        if(postList == null){
+            postList = database.getPosts();
+        }
         try{
 	    currentPost = postList.get(0);
 	} catch(IndexOutOfBoundsException ex){
 	    currentPost = new Post(-1, "Ask the admin to get a creator account to publish your own blog!",  "no Posts");
 	}
 
-	System.out.println("PostList: "+postList);
+	log.debug("PostList: "+postList);
         
     }
     
     public ArrayList<Post> getPostList(){ 
-        refreshPostList();
+        if(search.equals("") || search.equals("Search")){
+            refreshPostList();
+        }
         return postList;
     }
     
@@ -51,6 +60,7 @@ public class IndexBean {
     }
     
     public void refreshPostList(){
+        log.debug("Refresh");
         postList = database.getPosts();
     }
     
@@ -99,6 +109,12 @@ public class IndexBean {
         this.search = search;
     }
 
+    public String performSearch(){
+        setPostList(database.getPosts(search));
+        log.debug(search+", "+postList.toString());
+        return "main.xhtml";
+    }
+    
     /**
      * @return the currentPost
      */
