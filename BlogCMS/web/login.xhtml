@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,7 +24,7 @@
             </div>
         </header>
         <div class="page-center">
-            <div style="display: inline-block;">
+            <div style="display: inline-block; vertical-align: top;">
                 <h3>Log In</h3>
                 <h:form>
                     <div class="form-line-block">
@@ -55,17 +56,37 @@
                     </div>
                     
                     <div class="form-line-block">
-                        <label>Password</label>
-                        <h:inputSecret value="#{loginSignup.password}"/>
+                        <label>repeat Password</label>
+                        <h:inputSecret value="#{loginSignup.repassword}"/>
                     </div>
 
+                    <div class="form-line-block">
+                        <label>E-Mail</label>
+                        <h:inputText value="#{loginSignup.email}"/>
+                    </div>
+                    
+                    <div class="form-line-block">
+                        <label>Gender</label>
+                        <h:selectOneListbox value="#{loginSignup.gender}">
+                            <f:selectItem itemLabel="Female" itemValue="female"/>
+                            <f:selectItem itemLabel="Male" itemValue="male"/>
+                            <f:selectItem itemLabel="Other" itemValue="other"/>
+                        </h:selectOneListbox> 
+                    </div>
+                    
                     <div class="form-line-block">
                         <label></label>
                         <h:commandButton value="Sign Up" action="#{loginSignup.login()}"/>
                     </div>
+                    
+                    
                 </h:form>
             </div>
+            <footer>
+                (c) 2015 <h:form><h:commandButton action="#{indexBean.switchStyles()}" value="switch styles"/></h:form> 
+            </footer>
         </div>
+        
     </h:body>
 </html>
 

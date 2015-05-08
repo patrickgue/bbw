@@ -7,14 +7,15 @@
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/main.css</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/general.css</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Content.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/profile.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Post.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/js/share.js</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/login.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/main.xhtml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/main_alt.css</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignup.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
         </group>

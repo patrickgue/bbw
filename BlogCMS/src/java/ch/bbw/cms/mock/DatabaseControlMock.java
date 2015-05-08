@@ -59,11 +59,7 @@ public class DatabaseControlMock implements DatabaseControlInf{
 	return users;
     }
     
-    @Override
-    public boolean createUser(){
-        users.add(null);
-        return true;
-    }
+
 
     @Override
     public ArrayList<Post> getPosts(String searchterm) {
@@ -78,6 +74,16 @@ public class DatabaseControlMock implements DatabaseControlInf{
     @Override
     public boolean checkUser(String username, String password){
         
+        return true;
+    }
+
+    @Override
+    public boolean createUser(String username, String password, String email, UserGender gender, UserType type) {
+        return true;
+    }
+    
+    @Override
+    public boolean createUser(User user){
         return true;
     }
     

@@ -104,8 +104,13 @@ public class DatabaseControl implements DatabaseControlInf{
     }
     
     @Override
-    public boolean createUser(){
-        String query = "INSERT INTO cms_user (user_name, user_password, user_email)";
+    public boolean createUser(String username, String password, String email, UserGender gender, UserType type){
+        String query = "INSERT INTO cms_user (user_name, user_password, user_email, user_gender, user_type)  values("
+                + "'"+username+"'"
+                + "'"+password+"'"
+                + "'"+email+"'"
+                + "'"+gender.getGenderName()+"'"
+                + "'"+type.getType()+"')";
         try {
 	    Statement st = conn.createStatement();
 	    ResultSet rs = st.executeQuery(query);
@@ -114,10 +119,19 @@ public class DatabaseControl implements DatabaseControlInf{
             }
 	} catch (SQLException ex) {
 	    ex.printStackTrace();
+            return false;
 	}
         return true;
     }
     
+    
+    public boolean createUser(User user){
+        return createUser(user.getName(),
+                user.getPassword(),
+                user.getEmail(),
+                user.getGender(),
+                user.getType());
+    }
     
     // FIXME: remove on release
     public static void main(String[] args){

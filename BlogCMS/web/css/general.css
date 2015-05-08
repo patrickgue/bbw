@@ -10,5 +10,5 @@ and open the template in the editor.
 
 .form-line-block label{
     display: inline-block;
-    min-width: 100px;
+    min-width: 150px;
 }

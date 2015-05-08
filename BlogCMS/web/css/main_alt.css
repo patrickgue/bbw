@@ -72,7 +72,7 @@ p{
 }
 
 
-button, input{
+button, input, select{
     min-width: 40px;
     min-height: 30px;
     border: none;
@@ -82,8 +82,8 @@ button, input{
     margin: 2px;
 }
 
-input{
-    min-width: 80;
+input[type="text"], input[type="password"], select{
+    min-width: 180px;
     min-height: 24px;
     border-radius: 0px;
     background-color: #f0f0f0;

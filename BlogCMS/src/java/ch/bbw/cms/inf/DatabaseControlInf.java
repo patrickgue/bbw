@@ -5,6 +5,9 @@
  */
 package ch.bbw.cms.inf;
 
+import ch.bbw.cms.enums.UserGender;
+import ch.bbw.cms.enums.UserType;
+
 import ch.bbw.cms.models.*;
 
 import java.util.ArrayList;
@@ -21,5 +24,6 @@ public interface DatabaseControlInf {
     public ArrayList<Post> getPostList(Integer userId);
     public ArrayList<User> getUserList();
     public boolean checkUser(String username, String password);
-    public boolean createUser();
+    public boolean createUser(String username, String password, String email, UserGender gender, UserType type);
+    public boolean createUser(User user);
 }
