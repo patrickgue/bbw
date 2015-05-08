@@ -26,4 +26,6 @@ public interface DatabaseControlInf {
     public boolean checkUser(String username, String password);
     public boolean createUser(String username, String password, String email, UserGender gender, UserType type);
     public boolean createUser(User user);
+    public boolean createPost(Post post);
+    public boolean createPost(int userid, String title, String content);
 }

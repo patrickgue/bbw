@@ -106,22 +106,12 @@ public class DatabaseControl implements DatabaseControlInf{
     @Override
     public boolean createUser(String username, String password, String email, UserGender gender, UserType type){
         String query = "INSERT INTO cms_user (user_name, user_password, user_email, user_gender, user_type)  values("
-                + "'"+username+"'"
-                + "'"+password+"'"
-                + "'"+email+"'"
-                + "'"+gender.getGenderName()+"'"
-                + "'"+type.getType()+"')";
-        try {
-	    Statement st = conn.createStatement();
-	    ResultSet rs = st.executeQuery(query);
-	    if(rs == null){
-                return false;
-            }
-	} catch (SQLException ex) {
-	    ex.printStackTrace();
-            return false;
-	}
-        return true;
+                + " '"+username+"'"
+                + ",'"+password+"'"
+                + ",'"+email+"'"
+                + ",'"+gender.getGenderName()+"'"
+                + ",'"+type.getType()+"')";
+        return execute(query);
     }
     
     
@@ -168,5 +158,34 @@ public class DatabaseControl implements DatabaseControlInf{
             }
         }
         return false;
+    }
+    
+    @Override
+    public boolean createPost(int userid, String title, String content){
+        String query = "INSERT INTO cms_post (post_user_id, post_title, post_content)  values("
+                + ""+userid
+                + ",'"+title+"'"
+                + ",'"+content+"')";
+        
+        return execute(query);
+    }
+    
+    private boolean execute(String query){
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    if(rs == null){
+                return false;
+            }
+	} catch (SQLException ex) {
+	    ex.printStackTrace();
+            return false;
+	}
+        return true;
+    }
+
+    @Override
+    public boolean createPost(Post post) {
+        return createPost(post.getUserId(), post.getTitle(), post.getContent());
     }
 }

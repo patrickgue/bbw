@@ -25,6 +25,16 @@ public class CreationBean {
     private String title;
     private String postcontent;
 
+    private DatabaseControlInf database = new DatabaseControlMock();
+    
+    public String createPost(){
+        if(database.createPost(new Post(0, title, postcontent))){
+            return "main.xhtml";
+        } else {
+            return "create.xhtml";
+        }
+    }
+    
     /**
      * @return the title
      */

@@ -91,5 +91,15 @@ public class DatabaseControlMock implements DatabaseControlInf{
         return true;
     }
     
+    @Override
+    public boolean createPost(Post post){
+        return true;
+    }
+    
+    @Override
+    public boolean createPost(int userid, String title, String content){
+        return true;
+    }
+    
     
 }
