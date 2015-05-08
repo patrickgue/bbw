@@ -9,6 +9,8 @@ import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
+import ch.bbw.cms.inf.DatabaseControlInf;
+
 
 import java.util.ArrayList;
 
@@ -16,7 +18,7 @@ import java.util.ArrayList;
  *
  * @author guenthard
  */
-public class DatabaseControlMock {
+public class DatabaseControlMock implements DatabaseControlInf{
     ArrayList<User> users = new ArrayList<User>();
 	
     public DatabaseControlMock(){
@@ -26,18 +28,22 @@ public class DatabaseControlMock {
         users.add(new User(4, "dummy1", "asdf", "dummy@dummy4", UserGender.FEMALE, UserType.NORMAL));
     }
     
+    @Override
     public ArrayList<Post> getPosts(User user){
 	return getPostList(user.getUserId());
     }
     
+    @Override
     public ArrayList<Post> getPosts(){
 	return getPostList(null);
     }
     
+    @Override
     public ArrayList<Post> getPosts(int userId){
         return getPostList(userId);
     }
 
+    @Override
     public ArrayList<Post> getPostList(Integer userId){
 	ArrayList<Post> posts = new ArrayList<Post>();
 	
@@ -47,11 +53,13 @@ public class DatabaseControlMock {
 	return posts;
     }
     
+    @Override
     public ArrayList<User> getUserList(){
         
 	return users;
     }
     
+    @Override
     public boolean createUser(){
         users.add(null);
         return true;

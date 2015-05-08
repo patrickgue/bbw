@@ -11,6 +11,7 @@ import java.util.*;
 import java.sql.*;
 
 import ch.bbw.cms.models.*;
+import ch.bbw.cms.inf.DatabaseControlInf;
 
 
 /**
@@ -19,7 +20,7 @@ import ch.bbw.cms.models.*;
  * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons</b>
  * @author 5ia13paguenthard
  */
-public class DatabaseControl {
+public class DatabaseControl implements DatabaseControlInf{
     private Connection conn;
     
     
@@ -39,18 +40,22 @@ public class DatabaseControl {
         }
     }
 
+    @Override
     public ArrayList<Post> getPosts(User user){
 	return getPostList(user.getUserId());
     }
     
+    @Override
     public ArrayList<Post> getPosts(){
 	return getPostList(null);
     }
     
+    @Override
     public ArrayList<Post> getPosts(int userId){
         return getPostList(userId);
     }
 
+    @Override
     public ArrayList<Post> getPostList(Integer userId){
 	ArrayList<Post> posts = new ArrayList<Post>();
 	String query;
@@ -74,6 +79,7 @@ public class DatabaseControl {
 	return posts;
     }
     
+    @Override
     public ArrayList<User> getUserList(){
         ArrayList<User> users = new ArrayList<User>();
 	String query = "SELECT * FROM cms_user";
@@ -97,6 +103,7 @@ public class DatabaseControl {
 	return users;
     }
     
+    @Override
     public boolean createUser(){
         String query = "INSERT INTO cms_user (user_name, user_password, user_email)";
         try {
