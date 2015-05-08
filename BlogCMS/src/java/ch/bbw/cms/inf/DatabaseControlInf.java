@@ -17,7 +17,9 @@ public interface DatabaseControlInf {
     public ArrayList<Post> getPosts(User user);
     public ArrayList<Post> getPosts();
     public ArrayList<Post> getPosts(int userId);
+    public ArrayList<Post> getPosts(String searchterm);
     public ArrayList<Post> getPostList(Integer userId);
     public ArrayList<User> getUserList();
+    public boolean checkUser(String username, String password);
     public boolean createUser();
 }

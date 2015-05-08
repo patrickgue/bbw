@@ -47,7 +47,7 @@ public class DatabaseControlMock implements DatabaseControlInf{
     public ArrayList<Post> getPostList(Integer userId){
 	ArrayList<Post> posts = new ArrayList<Post>();
 	
-        posts.add(new Post(0, "blabla", "title of blabla 1"));
+        posts.add(new Post(0, "title of blabla 1", "blabla"));
         posts.add(new Post(1, "hihi", "asdf"));
         
 	return posts;
@@ -62,6 +62,22 @@ public class DatabaseControlMock implements DatabaseControlInf{
     @Override
     public boolean createUser(){
         users.add(null);
+        return true;
+    }
+
+    @Override
+    public ArrayList<Post> getPosts(String searchterm) {
+        ArrayList<Post> posts = new ArrayList<Post>();
+	
+        posts.add(new Post(0, "title of omg 1", "omg"));
+        posts.add(new Post(1, "abc", "some text Lorem Ipsum hello world Telephone Banana Java Abstract etc."));
+        
+	return posts;
+    }
+    
+    @Override
+    public boolean checkUser(String username, String password){
+        
         return true;
     }
     

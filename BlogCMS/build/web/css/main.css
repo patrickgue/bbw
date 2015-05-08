@@ -6,7 +6,8 @@ body{
 }
 
 .page-center{
-    width: 100%;
+    width: 98%;
+    padding: 0% 1%;
     max-width: 1280px;
     margin: auto;
 }

@@ -126,6 +126,33 @@ public class DatabaseControl implements DatabaseControlInf{
         System.out.println(test.get(0).getContent());
     }
 
+    @Override
+    public ArrayList<Post> getPosts(String searchterm) {
+        ArrayList<Post> tmpPosts = getPosts();
+        ArrayList<Post> returnPosts = new ArrayList<Post>();
+        
+        for(Post p : tmpPosts){
+            if(p.getContent().contains(searchterm) ||
+                    p.getTitle().contains(searchterm)){
+                returnPosts.add(p);
+            }
+        }
+        
+        return returnPosts;
+    }
+
    
-    
+    @Override
+    public boolean checkUser(String username, String password){
+        ArrayList<User> users = getUserList();
+        
+        for(User tmp : users){
+            if(tmp.getEmail().equals(username) || tmp.getName().equals(username)){
+                if(tmp.getPassword().equals(password)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

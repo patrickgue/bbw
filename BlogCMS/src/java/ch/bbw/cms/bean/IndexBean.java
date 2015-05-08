@@ -32,7 +32,9 @@ public class IndexBean {
     public IndexBean() {
         
         database = new DatabaseControlMock();
-        postList = database.getPosts();
+        if(postList == null){
+            postList = database.getPosts();
+        }
         try{
 	    currentPost = postList.get(0);
 	} catch(IndexOutOfBoundsException ex){
@@ -44,7 +46,9 @@ public class IndexBean {
     }
     
     public ArrayList<Post> getPostList(){ 
-        refreshPostList();
+        if(search.equals("") || search.equals("Search")){
+            refreshPostList();
+        }
         return postList;
     }
     
@@ -53,6 +57,7 @@ public class IndexBean {
     }
     
     public void refreshPostList(){
+        System.out.println("Refresh");
         postList = database.getPosts();
     }
     
@@ -101,6 +106,12 @@ public class IndexBean {
         this.search = search;
     }
 
+    public String performSearch(){
+        setPostList(database.getPosts(search));
+        System.out.println(search+", "+postList.toString());
+        return "main.xhtml";
+    }
+    
     /**
      * @return the currentPost
      */
