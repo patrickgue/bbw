@@ -1,3 +1,5 @@
+
+
 html{
     overflow-x: hidden;
 }
@@ -5,7 +7,7 @@ html{
 body{
     margin: 0px;
     padding: 0px;
-    font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', sans-serif;
+    font-family: '_AkzidenzGrotesk','Helvetica Neue', 'Helvetica', 'Nimbus Sans L', sans-serif;
     color:  #212C32;
     overflow-x: hidden;
 }

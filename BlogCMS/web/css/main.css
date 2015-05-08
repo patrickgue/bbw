@@ -1,7 +1,8 @@
+
 body{
     margin: 0px;
     padding: 0px;
-    font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', sans-serif;
+    font-family: '_AkzidenzGrotesk', 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', sans-serif;
     color:  #212C32;
 }
 
@@ -19,7 +20,7 @@ header{
 
 
 header h1, header h2, header h3{
-    font-weight: 300;
+    /* font-weight: 300;*/
     margin-top: 0px;
     padding-top: 30px;
 }
