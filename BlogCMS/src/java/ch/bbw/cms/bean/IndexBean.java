@@ -12,6 +12,7 @@ import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Post;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 
@@ -27,6 +28,7 @@ public class IndexBean {
     private DatabaseControlInf database;
     private ArrayList<Post> postList;// = new ArrayList<Post>();
     private String cssFile = "main.css";
+    private LinkedList<String> cssFiles = new LinkedList<String>();
     private String search = "Search";
     private Post currentPost;
     private Log log = new DefaultLog();
@@ -36,6 +38,9 @@ public class IndexBean {
 
     
     public IndexBean() {
+        for(String tmp : new String[]{"main_alt_timo.css", "main_alt_pat.css"}){
+            cssFiles.add(tmp);
+        }
         context = FacesContext.getCurrentInstance();
         try{
             userIdTest = context.getExternalContext().getSessionMap().toString();
@@ -95,10 +100,13 @@ public class IndexBean {
     }
     
     public String switchStyles(){
-        if("main.css".equals(cssFile)){
-            cssFile = "main_alt.css";
-        } else {
+        if(cssFiles.isEmpty()){
+            for(String tmp : new String[]{"main_alt_timo.css", "main_alt_pat.css"}){
+                cssFiles.add(tmp);
+            }
             cssFile = "main.css";
+        } else {
+            cssFile = cssFiles.pop();
         }
         return "main.xhtml";
     }
