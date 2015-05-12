@@ -30,5 +30,6 @@ public interface DatabaseControlInf {
     public boolean createPost(int userid, String title, String content);
     public boolean changeUserPassword(int userId, String newPw);
     public boolean changeUserBio(int userId, String bio);
+    public int getUserId(String nameOrEmail);
     
 }

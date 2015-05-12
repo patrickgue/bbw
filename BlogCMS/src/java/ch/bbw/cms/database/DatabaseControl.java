@@ -196,6 +196,25 @@ public class DatabaseControl implements DatabaseControlInf{
     public boolean changeUserPassword(int userId, String newPw) {
         return true;
     }
+
+    @Override
+    public int getUserId(String nameOrEmail) {
+	String query = "SELECT * FROM cms_user WHERE user_name = \""+nameOrEmail+"\" OR user_email = \""+nameOrEmail+"\"";
+        
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    
+            int id = rs.getInt("user_id");
+	    if(id != 0 || id != -1){
+                return id;
+            }
+	} catch (SQLException ex) {
+	    ex.printStackTrace();
+	}
+	return -1;
+    }
+    
     
     
 }

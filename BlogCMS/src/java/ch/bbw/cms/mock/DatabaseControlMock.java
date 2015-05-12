@@ -110,6 +110,13 @@ public class DatabaseControlMock implements DatabaseControlInf{
     public boolean changeUserPassword(int userId, String newPw) {
         return true;
     }
+
+    @Override
+    public int getUserId(String nameOrEmail) {
+        return 1;
+    }
+    
+    
     
     
 }
