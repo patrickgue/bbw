@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/web/main.xhtml</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/enums/UserGender.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/web/profile.xhtml</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/web/css/general.css</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/web/css/main.css</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/web/css/main_alt.css</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/web/login.xhtml</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/CreationBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
         </group>
     </open-files>
 </project-private>

@@ -6,3 +6,4 @@ BlogCMS/nbproject/private/private.properties
 *.properties
 BlogCMS/build/web/WEB-INF/classes/ch/bbw/cms/database/DatabaseControl.class
 *.class
+*.class
