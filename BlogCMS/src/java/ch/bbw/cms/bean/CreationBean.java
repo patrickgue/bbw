@@ -25,16 +25,22 @@ import javax.faces.context.FacesContext;
 public class CreationBean {
     private String title;
     private String postcontent;
+    private String userIdTest;
     FacesContext context;
         
     public CreationBean(){
         context = FacesContext.getCurrentInstance();
+        try{
+            userIdTest = context.getExternalContext().getSessionMap().toString();
+        } catch(Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     private DatabaseControlInf database = new DatabaseControl();
     
     public String createPost(){
-        int userid = 0;
+        int userid = -1;
         try{
             userid = (int)(context.getExternalContext().getSessionMap().get("userid"));
         } catch(IllegalStateException ex){
@@ -46,6 +52,8 @@ public class CreationBean {
             return "create.xhtml";
         }
     }
+    
+    
     
     /**
      * @return the title
@@ -77,5 +85,19 @@ public class CreationBean {
     
     public boolean isEnabled(){
         return true;//(int)(context.getExternalContext().getSessionMap().get("userid")) != -1;
+    }
+
+    /**
+     * @return the userIdTest
+     */
+    public String getUserIdTest() {
+        return userIdTest;
+    }
+
+    /**
+     * @param userIdTest the userIdTest to set
+     */
+    public void setUserIdTest(String userIdTest) {
+        this.userIdTest = userIdTest;
     }
 }

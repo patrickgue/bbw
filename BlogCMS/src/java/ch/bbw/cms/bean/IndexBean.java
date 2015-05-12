@@ -31,12 +31,17 @@ public class IndexBean {
     private Post currentPost;
     private Log log = new DefaultLog();
     private FacesContext context;
+    private String userIdTest; 
     
 
     
     public IndexBean() {
         context = FacesContext.getCurrentInstance();
-        
+        try{
+            userIdTest = context.getExternalContext().getSessionMap().toString();
+        } catch(Exception ex){
+            ex.printStackTrace();
+        }
         database = new DatabaseControl();
         if(postList == null){
             postList = database.getPosts();
@@ -130,6 +135,20 @@ public class IndexBean {
      */
     public void setCurrentPost(Post currentPost) {
         this.currentPost = currentPost;
+    }
+
+    /**
+     * @return the userIdTest
+     */
+    public String getUserIdTest() {
+        return userIdTest;
+    }
+
+    /**
+     * @param userIdTest the userIdTest to set
+     */
+    public void setUserIdTest(String userIdTest) {
+        this.userIdTest = userIdTest;
     }
 
   
