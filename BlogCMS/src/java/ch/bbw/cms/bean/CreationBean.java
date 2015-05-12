@@ -34,7 +34,12 @@ public class CreationBean {
     private DatabaseControlInf database = new DatabaseControl();
     
     public String createPost(){
-        int userid = (int)(context.getExternalContext().getSessionMap().get("userid"));
+        int userid = 0;
+        try{
+            userid = (int)(context.getExternalContext().getSessionMap().get("userid"));
+        } catch(IllegalStateException ex){
+            ex.printStackTrace();
+        }
         if(database.createPost(new Post(userid, title, postcontent))){
             return "main.xhtml";
         } else {
@@ -71,6 +76,6 @@ public class CreationBean {
     }
     
     public boolean isEnabled(){
-        return (int)(context.getExternalContext().getSessionMap().get("userid")) != -1 ? true : false;
+        return true;//(int)(context.getExternalContext().getSessionMap().get("userid")) != -1;
     }
 }
