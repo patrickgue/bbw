@@ -5,14 +5,15 @@
  */
 package ch.bbw.cms.bean;
 
+import ch.bbw.cms.database.DatabaseControl;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.mock.DatabaseControlMock;
-import ch.bbw.cms.database.DatabaseControl;
 import ch.bbw.cms.models.User;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -27,6 +28,7 @@ public class LoginSignupBean {
     private String email;
     private String gender;
     private DatabaseControlInf database;
+    private FacesContext context;
     
     public LoginSignupBean(){
         database = new DatabaseControl();
@@ -34,7 +36,10 @@ public class LoginSignupBean {
             
     
     public String login(){
-        if(database.checkUser(username, password)){
+        context = FacesContext.getCurrentInstance();
+        int userid = database.checkUser(username, password);
+        if(userid != -1){
+            context.getExternalContext().getSessionMap().put("userid", 1);
             return "main.xhtml";
         } else {
             return "login.xhtml";

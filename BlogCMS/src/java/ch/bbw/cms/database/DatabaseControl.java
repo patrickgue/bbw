@@ -147,17 +147,17 @@ public class DatabaseControl implements DatabaseControlInf{
 
    
     @Override
-    public boolean checkUser(String username, String password){
+    public int checkUser(String username, String password){
         ArrayList<User> users = getUserList();
         
         for(User tmp : users){
             if(tmp.getEmail().equals(username) || tmp.getName().equals(username)){
                 if(tmp.getPassword().equals(password)){
-                    return true;
+                    return tmp.getUserId();
                 }
             }
         }
-        return false;
+        return -1;
     }
     
     @Override
