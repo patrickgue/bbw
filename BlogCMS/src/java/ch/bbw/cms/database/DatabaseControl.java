@@ -136,8 +136,8 @@ public class DatabaseControl implements DatabaseControlInf{
         ArrayList<Post> returnPosts = new ArrayList<Post>();
         
         for(Post p : tmpPosts){
-            if(p.getContent().contains(searchterm) ||
-                    p.getTitle().contains(searchterm)){
+            if(p.getContent().toLowerCase().contains(searchterm.toLowerCase()) ||
+                    p.getTitle().toLowerCase().contains(searchterm.toLowerCase())){
                 returnPosts.add(p);
             }
         }
@@ -186,4 +186,35 @@ public class DatabaseControl implements DatabaseControlInf{
     public boolean createPost(Post post) {
         return createPost(post.getUserId(), post.getTitle(), post.getContent());
     }
+
+    @Override
+    public boolean changeUserBio(int userId, String bio) {
+        return true;
+    }
+
+    @Override
+    public boolean changeUserPassword(int userId, String newPw) {
+        return true;
+    }
+
+    @Override
+    public int getUserId(String nameOrEmail) {
+	String query = "SELECT * FROM cms_user WHERE user_name = \""+nameOrEmail+"\" OR user_email = \""+nameOrEmail+"\"";
+        
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    
+            int id = rs.getInt("user_id");
+	    if(id != 0 || id != -1){
+                return id;
+            }
+	} catch (SQLException ex) {
+	    ex.printStackTrace();
+	}
+	return -1;
+    }
+    
+    
+    
 }

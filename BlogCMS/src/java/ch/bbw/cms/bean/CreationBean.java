@@ -13,6 +13,7 @@ import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.mock.DefaultLog;
 import java.util.ArrayList;
+import javax.faces.context.FacesContext;
 
 
 /**
@@ -24,16 +25,35 @@ import java.util.ArrayList;
 public class CreationBean {
     private String title;
     private String postcontent;
+    private String userIdTest;
+    FacesContext context;
+        
+    public CreationBean(){
+        context = FacesContext.getCurrentInstance();
+        try{
+            userIdTest = context.getExternalContext().getSessionMap().toString();
+        } catch(Exception ex){
+            ex.printStackTrace();
+        }
+    }
 
     private DatabaseControlInf database = new DatabaseControl();
     
     public String createPost(){
-        if(database.createPost(new Post(0, title, postcontent))){
+        int userid = -1;
+        try{
+            userid = (int)(context.getExternalContext().getSessionMap().get("userid"));
+        } catch(IllegalStateException ex){
+            ex.printStackTrace();
+        }
+        if(database.createPost(new Post(userid, title, postcontent))){
             return "main.xhtml";
         } else {
             return "create.xhtml";
         }
     }
+    
+    
     
     /**
      * @return the title
@@ -61,5 +81,23 @@ public class CreationBean {
      */
     public void setPostcontent(String postcontent) {
         this.postcontent = postcontent;
+    }
+    
+    public boolean isEnabled(){
+        return true;//(int)(context.getExternalContext().getSessionMap().get("userid")) != -1;
+    }
+
+    /**
+     * @return the userIdTest
+     */
+    public String getUserIdTest() {
+        return userIdTest;
+    }
+
+    /**
+     * @param userIdTest the userIdTest to set
+     */
+    public void setUserIdTest(String userIdTest) {
+        this.userIdTest = userIdTest;
     }
 }

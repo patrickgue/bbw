@@ -39,7 +39,7 @@ public class LoginSignupBean {
         context = FacesContext.getCurrentInstance();
         int userid = database.checkUser(username, password);
         if(userid != -1){
-            context.getExternalContext().getSessionMap().put("userid", 1);
+            context.getExternalContext().getSessionMap().put("userid", userid);
             return "main.xhtml";
         } else {
             return "login.xhtml";
@@ -49,6 +49,8 @@ public class LoginSignupBean {
     public String signup(){
         if(password.equals(repassword)){
             if(database.createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.NORMAL))){
+                int userid = database.getUserId(username);
+                context.getExternalContext().getSessionMap().put("userid", userid);
                 return "main.xhtml";
             } else {
                 return "login.xhtml";
