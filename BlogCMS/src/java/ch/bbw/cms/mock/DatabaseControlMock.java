@@ -76,9 +76,9 @@ public class DatabaseControlMock implements DatabaseControlInf{
     }
     
     @Override
-    public boolean checkUser(String username, String password){
+    public int checkUser(String username, String password){
         
-        return true;
+        return 1;
     }
 
     @Override
