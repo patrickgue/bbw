@@ -136,8 +136,8 @@ public class DatabaseControl implements DatabaseControlInf{
         ArrayList<Post> returnPosts = new ArrayList<Post>();
         
         for(Post p : tmpPosts){
-            if(p.getContent().contains(searchterm) ||
-                    p.getTitle().contains(searchterm)){
+            if(p.getContent().toLowerCase().contains(searchterm.toLowerCase()) ||
+                    p.getTitle().toLowerCase().contains(searchterm.toLowerCase())){
                 returnPosts.add(p);
             }
         }
