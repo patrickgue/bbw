@@ -100,6 +100,16 @@ public class DatabaseControlMock implements DatabaseControlInf{
     public boolean createPost(int userid, String title, String content){
         return true;
     }
+
+    @Override
+    public boolean changeUserBio(int userId, String bio) {
+        return true;
+    }
+
+    @Override
+    public boolean changeUserPassword(int userId, String newPw) {
+        return true;
+    }
     
     
 }

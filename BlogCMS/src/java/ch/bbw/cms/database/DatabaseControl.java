@@ -186,4 +186,16 @@ public class DatabaseControl implements DatabaseControlInf{
     public boolean createPost(Post post) {
         return createPost(post.getUserId(), post.getTitle(), post.getContent());
     }
+
+    @Override
+    public boolean changeUserBio(int userId, String bio) {
+        return true;
+    }
+
+    @Override
+    public boolean changeUserPassword(int userId, String newPw) {
+        return true;
+    }
+    
+    
 }
