@@ -5,14 +5,15 @@
  */
 package ch.bbw.cms.bean;
 
-import javax.faces.bean.*;
 import ch.bbw.cms.database.DatabaseControl;
-import ch.bbw.cms.mock.DatabaseControlMock;
-import ch.bbw.cms.models.Post;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
+import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.mock.DefaultLog;
+import ch.bbw.cms.models.Post;
 import java.util.ArrayList;
+import javax.faces.bean.*;
+import javax.faces.context.FacesContext;
 
 
 /**
@@ -29,10 +30,12 @@ public class IndexBean {
     private String search = "Search";
     private Post currentPost;
     private Log log = new DefaultLog();
+    private FacesContext context;
     
 
     
     public IndexBean() {
+        context = FacesContext.getCurrentInstance();
         
         database = new DatabaseControl();
         if(postList == null){
