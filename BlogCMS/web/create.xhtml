@@ -47,7 +47,11 @@
                     
                     <div class="form-line-block">
                         <label style="vertical-align: top;"></label>
-                        <h:commandButton rendered="#{creationBean.isEnabled()}" action="#{creationBean.createPost()}" value="Post"/>
+                        <h:commandButton rendered="#{creationBean.showPostButton}" action="#{creationBean.createPost()}" value="Post"/>
+                    </div>
+                    <div class="form-line-block">
+                        <label style="vertical-align: top;"></label>
+                        <h:commandButton rendered="#{creationBean.showUpdateButton}" action="#{creationBean.updatePost()}" value="Update"/>
                     </div>
                 </h:form>
             <footer>

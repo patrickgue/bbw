@@ -13,9 +13,12 @@ package ch.bbw.cms.models;
  */
 public abstract class Content {
     private int userId;
+    private int contentId;
     private String content;
     
-    public Content(int userId, String content){
+    
+    public Content(int contentId, int userId, String content){
+        this.contentId = contentId;
         this.userId = userId;
         this.content = content;
     }
@@ -46,6 +49,20 @@ public abstract class Content {
      */
     public void setContent(String content) {
         this.content = content;
+    }
+
+    /**
+     * @return the contentId
+     */
+    public int getContentId() {
+        return contentId;
+    }
+
+    /**
+     * @param contentId the contentId to set
+     */
+    public void setContentId(int contentId) {
+        this.contentId = contentId;
     }
     
 }

@@ -17,8 +17,8 @@ public class Post extends Content{
     private ArrayList<Comment> comments;
     private ArrayList<User> likes;
 
-    public Post(int userId, String title, String content) {
-        super(userId, content);
+    public Post(Integer postId, String title, String content, int userId) {
+        super(postId, userId, content);
         this.title = title;
         this.comments = new ArrayList<Comment>();
         this.likes = new ArrayList<User>();
@@ -103,5 +103,13 @@ public class Post extends Content{
      */
     public void setLikes(ArrayList<User> likes) {
         this.likes = likes;
+    }
+    
+    public void setPostId(int id){
+        this.setContentId(id);
+    }
+    
+    public int getPostId(){
+        return this.getContentId();
     }
 }

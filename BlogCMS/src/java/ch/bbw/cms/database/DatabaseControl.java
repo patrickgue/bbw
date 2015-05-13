@@ -69,9 +69,10 @@ public class DatabaseControl implements DatabaseControlInf{
 	    ResultSet rs = st.executeQuery(query);
 	    while (rs.next()) {
 		int id = rs.getInt("post_id");
+                int userIdGet = rs.getInt("post_user_id");
 		String content = rs.getString("post_content");
 		String title = rs.getString("post_title"); 
-		posts.add(new Post(id, title, content));
+		posts.add(new Post(id, title, content, userIdGet));
 	    }
 	} catch (SQLException ex) {
 	    ex.printStackTrace();
@@ -145,6 +146,27 @@ public class DatabaseControl implements DatabaseControlInf{
         return returnPosts;
     }
 
+    @Override
+    public Post getPost(int postId){
+        String query = "SELECT * FROM cms_post WHERE post_id ="+postId;
+        
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    
+            
+            int    post = rs.getInt("post_id");
+            String titl = rs.getString("post_title");
+            String cont = rs.getString("post_content");
+            int    user = rs.getInt("post_user_id");
+
+            return new Post(post, titl, cont, user);
+
+	} catch (SQLException | NullPointerException ex) {
+	    ex.printStackTrace();
+	}
+	return null;
+    }
    
     @Override
     public int checkUser(String username, String password){
@@ -161,13 +183,46 @@ public class DatabaseControl implements DatabaseControlInf{
     }
     
     @Override
-    public boolean createPost(int userid, String title, String content){
-        String query = "INSERT INTO cms_post (post_user_id, post_title, post_content, post_likes)  values("
-                + ""+userid
+    public User getUser(int userId){
+        String query = "SELECT * FROM cms_user WHERE user_id ="+userId;
+        
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    
+            
+            int id = rs.getInt("user_id");
+            String name = rs.getString("user_name");
+            String passw = rs.getString("user_password");
+            String email = rs.getString("post_email");
+            String gender = rs.getString("post_email");
+            String type = rs.getString("post_email");
+
+            return new User(id, name, passw, email, UserGender.valueOf(gender), UserType.valueOf(type));
+
+	} catch (SQLException | NullPointerException ex) {
+	    ex.printStackTrace();
+	}
+	return null;
+    }
+    
+    @Override
+    public boolean createPost(int postId, String title, String content, int userId){
+        String query = "INSERT INTO cms_post (post_user_id, post_title, post_content, post_user_id)  values("
+                + ""+postId
                 + ",'"+title+"'"
                 + ",'"+content+"'"
-                + ", 0)";
+                + ", "+userId+")";
         
+        return execute(query);
+    }
+    
+    @Override
+    public boolean updatePost(int postId, String title, String content){
+        String query = "UPDATE cms_post SET "
+                + "post_title='"+title+"'"
+                + "post_content='"+content+"'"
+                + "WHERE post_id = "+postId;
         return execute(query);
     }
     
@@ -184,17 +239,19 @@ public class DatabaseControl implements DatabaseControlInf{
 
     @Override
     public boolean createPost(Post post) {
-        return createPost(post.getUserId(), post.getTitle(), post.getContent());
+        return createPost(post.getPostId(), post.getTitle(), post.getContent(), post.getUserId());
     }
 
     @Override
     public boolean changeUserBio(int userId, String bio) {
-        return true;
+        String query = "UPDATE cms_user SET user_bio =\""+bio+"\" WHERE user_id = " + userId;
+        return execute(query);
     }
 
     @Override
     public boolean changeUserPassword(int userId, String newPw) {
-        return true;
+        String query = "UPDATE cms_user SET user_password =\""+newPw+"\" WHERE user_id = " + userId;
+        return execute(query);
     }
 
     @Override
