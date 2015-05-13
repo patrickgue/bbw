@@ -13,6 +13,7 @@ import ch.bbw.cms.inf.DatabaseControlInf;
 
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -49,6 +50,7 @@ public class DatabaseControlMock implements DatabaseControlInf{
 	
         posts.add(new Post(0, "title of blabla 1", "blabla"));
         posts.add(new Post(1, "hihi", "asdf"));
+        posts.add(new Post(2, "show edit button!", "asdf"));
         
 	return posts;
     }
@@ -113,7 +115,8 @@ public class DatabaseControlMock implements DatabaseControlInf{
 
     @Override
     public int getUserId(String nameOrEmail) {
-        return 1;
+        Random rand = new Random();
+        return rand.nextInt(10);
     }
     
     

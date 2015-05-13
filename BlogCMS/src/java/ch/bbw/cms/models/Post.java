@@ -24,6 +24,7 @@ public class Post extends Content{
         this.likes = new ArrayList<User>();
     }
     
+    
     @Override
     public String toString(){
         return "Post: "+title+"\nContent:\n"+getContent();

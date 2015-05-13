@@ -73,7 +73,7 @@
                                 <a id="share-mail" ><img class="share-icon" src="../img/mail.png"/></a>
                                 <a style="cursor: pointer;" id="share-facebook" target="_blank"><img class="share-icon" src="../img/fb.png"/></a>
                                 <a style="cursor: pointer;" id="share-twitter" target="_blank"><img class="share-icon" src="../img/tw.png"/></a>
-                                
+                                <h:form><h:commandButton value="edit this post" action="#{indexBean.editPost()}" rendered="#{indexBean.editPostEnabled()}" /></h:form>
                             </div>
                             <h2><h:outputText escape="false" value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
                             <h:outputText escape="false" value="#{indexBean.currentPost.content}"/>
@@ -86,7 +86,7 @@
             </div>
         </div>
         <script>
-            alert(#{indexBean.userIdTest});
+            //alert("#{indexBean.userIdTest}");
         </script>
     </h:body>
 </html>

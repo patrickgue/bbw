@@ -11,6 +11,8 @@ import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Post;
+import ch.bbw.cms.helper.ClosedList;
+import ch.bbw.cms.helper.SessionData;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import javax.faces.bean.*;
@@ -18,7 +20,9 @@ import javax.faces.context.FacesContext;
 
 
 /**
- *
+ * <b>IndexBean</b>
+ * <p>IndexBean is the main Bean in this project. It handles all the functionality of the main
+ * page and also provides methods and attributes for other pages.
  * @author patrick
  */
 @ManagedBean
@@ -26,31 +30,32 @@ import javax.faces.context.FacesContext;
 public class IndexBean {
 
     private DatabaseControlInf database;
-    private ArrayList<Post> postList;// = new ArrayList<Post>();
-    private String cssFile = "main.css";
-    private LinkedList<String> cssFiles = new LinkedList<String>();
+    private ArrayList<Post> postList;
+    private String cssFile;
     private String search = "Search";
     private Post currentPost;
     private Log log = new DefaultLog();
-    private FacesContext context;
-    private String userIdTest; 
+    private SessionData session;
+    private String userIdTest;
+    private ClosedList<String> cssFls;
+    
+    
     
 
     
     public IndexBean() {
-        for(String tmp : new String[]{"main_alt_timo.css", "main_alt_pat.css"}){
-            cssFiles.add(tmp);
-        }
-        context = FacesContext.getCurrentInstance();
-        try{
-            userIdTest = context.getExternalContext().getSessionMap().toString();
-        } catch(Exception ex){
-            ex.printStackTrace();
-        }
+	cssFls = new ClosedList<String>(new String[]{"main.css", "main_alt_timo.css", "main_alt_pat.css"});
+	cssFile = cssFls.next();
+       
+        
+        
         database = new DatabaseControlMock();
+        session = new SessionData();
+        
         if(postList == null){
             postList = database.getPosts();
         }
+        
         try{
 	    currentPost = postList.get(0);
 	} catch(IndexOutOfBoundsException ex){
@@ -76,14 +81,7 @@ public class IndexBean {
         log.debug("Refresh");
         postList = database.getPosts();
     }
-    
-    public static void main(String[] args){
-        IndexBean testBean = new IndexBean();
-        
-        for(Post p : testBean.getPostList()){
-            System.out.println(p.getTitle()+"\n"+p.getContent());
-        }
-    }
+
 
     /**
      * @return the cssFile
@@ -100,14 +98,7 @@ public class IndexBean {
     }
     
     public String switchStyles(){
-        if(cssFiles.isEmpty()){
-            for(String tmp : new String[]{"main_alt_timo.css", "main_alt_pat.css"}){
-                cssFiles.add(tmp);
-            }
-            cssFile = "main.css";
-        } else {
-            cssFile = cssFiles.pop();
-        }
+	cssFile = cssFls.next();
         return "main.xhtml";
     }
 
@@ -149,6 +140,8 @@ public class IndexBean {
      * @return the userIdTest
      */
     public String getUserIdTest() {
+        userIdTest = "User Id: "+session.getUserId();
+      
         return userIdTest;
     }
 
@@ -158,6 +151,13 @@ public class IndexBean {
     public void setUserIdTest(String userIdTest) {
         this.userIdTest = userIdTest;
     }
+    
+    public String editPost(){
+        return "create.xhtml";
+    }
 
+    public boolean editPostEnabled(){
+        return currentPost.getUserId() == session.getUserId();
+    }
   
 }
