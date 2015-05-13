@@ -31,7 +31,7 @@ public class LoginSignupBean {
     private FacesContext context;
     
     public LoginSignupBean(){
-        database = new DatabaseControl();
+        database = new DatabaseControlMock();
     }
             
     

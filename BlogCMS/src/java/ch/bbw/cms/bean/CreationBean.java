@@ -37,7 +37,7 @@ public class CreationBean {
         }
     }
 
-    private DatabaseControlInf database = new DatabaseControl();
+    private DatabaseControlInf database = new DatabaseControlMock();
     
     public String createPost(){
         int userid = -1;

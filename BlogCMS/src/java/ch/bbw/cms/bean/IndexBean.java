@@ -47,7 +47,7 @@ public class IndexBean {
         } catch(Exception ex){
             ex.printStackTrace();
         }
-        database = new DatabaseControl();
+        database = new DatabaseControlMock();
         if(postList == null){
             postList = database.getPosts();
         }
