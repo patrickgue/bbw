@@ -59,7 +59,7 @@ public class IndexBean {
         try{
 	    currentPost = postList.get(0);
 	} catch(IndexOutOfBoundsException ex){
-	    currentPost = new Post(-1, "Ask the admin to get a creator account to publish your own blog!",  "no Posts");
+	    currentPost = new Post(0, "Ask the admin to get a creator account to publish your own blog!",  "no Posts", -1);
 	}
 
 	log.debug("PostList: "+postList);
@@ -152,7 +152,13 @@ public class IndexBean {
         this.userIdTest = userIdTest;
     }
     
+    public String gotoNewPost(){
+        session.setCurrentPostId(-1);
+        return "create.xhtml";
+    }
+    
     public String editPost(){
+        session.setCurrentPostId(currentPost.getPostId());
         return "create.xhtml";
     }
 
