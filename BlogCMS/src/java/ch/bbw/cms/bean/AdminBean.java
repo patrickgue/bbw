@@ -33,6 +33,7 @@ public class AdminBean {
     private ArrayList<User> users;
     private SessionData session;
     private boolean render = true;
+    private User toChangeUser;
     
 
     public AdminBean() {
@@ -52,6 +53,10 @@ public class AdminBean {
         } else {
             render = false;
         }
+        
+        //debug
+        render = true;
+        users = db.getUserList();
         
         
     }
@@ -114,5 +119,34 @@ public class AdminBean {
     
     public void setShowError(boolean r){
         render =  !r;
+    }
+    
+    public String editMode(){
+        return "admin.xhtml";
+    }
+
+    /**
+     * @return the toChangeUser
+     */
+    public User getToChangeUser() {
+        return toChangeUser;
+    }
+
+    /**
+     * @param toChangeUser the toChangeUser to set
+     */
+    public void setToChangeUser(User toChangeUser) {
+        UserType tmp;
+        if(toChangeUser.getType().equals(UserType.CONTENT)){
+            tmp = UserType.TECHNICAL;
+        } else if(toChangeUser.getType().equals(UserType.TECHNICAL)){
+            tmp = UserType.NORMAL;
+        } else {
+            tmp = UserType.CONTENT;
+        }
+        
+        db.changeUserType(toChangeUser.getUserId(), tmp);
+        toChangeUser.setType(tmp);
+        this.toChangeUser = toChangeUser;
     }
 }

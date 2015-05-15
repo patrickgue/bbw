@@ -134,4 +134,8 @@ public class Database implements DatabaseControlInf{
 	return db.getUser(id);
     }
 
+    @Override
+    public boolean changeUserType(int userId, UserType type){
+        return db.changeUserType(userId, type);
+    }
 }

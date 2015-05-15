@@ -134,6 +134,10 @@ public class DatabaseControlMock implements DatabaseControlInf{
         return new User("User 1", "abc123", "abc@def", UserGender.FEMALE, (id == 1 ? UserType.NORMAL : id == 2 ? UserType.CONTENT : UserType.TECHNICAL));
     }
 
+    @Override
+    public boolean changeUserType(int userId, UserType type){
+        return true;
+    }
     
     
     

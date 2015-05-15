@@ -41,11 +41,19 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">Gender</f:facet>
-                            <h:outputText value="#{users.gender.genderName}"/>
+                            <h:outputText value="#{users.gender}"/>
                         </h:column>
                         <h:column>
-                            <f:facet name="header">Edit</f:facet>
-                            <h:form><h:commandButton value="edit"/></h:form>
+                            <f:facet name="header">Type</f:facet>
+                            <h:outputText value="#{users.userTypeString}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Edit Mode</f:facet>
+                            <h:form>
+                                <h:commandButton action="#{adminBean.editMode()}" value="edit">
+                                    <f:setPropertyActionListener target="#{adminBean.toChangeUser}" value="#{users}"/>
+                                </h:commandButton>
+                            </h:form>
                         </h:column>
                     </h:dataTable>
                 </div>

@@ -6,6 +6,7 @@
 package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
+import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.mock.DefaultLog;
@@ -162,6 +163,10 @@ public class IndexBean {
 
     public boolean editPostEnabled(){
         return currentPost.getUserId() == session.getUserId();
+    }
+    
+    public boolean isEditor(){
+        return database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
     }
   
 }

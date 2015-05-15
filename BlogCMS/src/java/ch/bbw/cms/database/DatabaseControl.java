@@ -93,10 +93,10 @@ public class DatabaseControl implements DatabaseControlInf{
                 String name = rs.getString("user_name");
                 String password = rs.getString("user_password");
                 String email = rs.getString("user_email");
-                UserType type = UserType.getUserTypeFromString(rs.getString("user_type"));
+                UserType type = UserType.valueOf(rs.getString("user_type"));
                 String bio = rs.getString("user_bio");
                 int age = rs.getInt("user_age");
-                UserGender gender = UserGender.getUserTypeFromString(rs.getString("user_gender"));
+                UserGender gender = UserGender.valueOf(rs.getString("user_gender"));
 		users.add(new User(id, name, password, email, gender, type, bio, age));
 	    }
 	} catch (SQLException ex) {
@@ -264,6 +264,12 @@ public class DatabaseControl implements DatabaseControlInf{
     @Override
     public boolean changeUserPassword(int userId, String newPw) {
         String query = "UPDATE cms_user SET user_password =\""+newPw+"\" WHERE user_id = " + userId;
+        return execute(query);
+    }
+    
+    @Override
+    public boolean changeUserType(int userId, UserType type){
+        String query = "UPDATE cms_user SET user_type =\""+type.getType()+"\" WHERE user_id = " + userId;
         return execute(query);
     }
 
