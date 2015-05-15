@@ -37,11 +37,20 @@ public class DatabaseControl implements DatabaseControlInf{
             
             Class.forName("com.mysql.jdbc.Driver");
             
-            //conn = DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/cms","root","");
+            conn = connect();
+            //conn = DriverManager.getConnection("jdbc:mysql://localhost/cms","root","");
             
-        } catch (ClassNotFoundException | SQLException ex) {
+        } catch (ClassNotFoundException ex) {
         } 
+    }
+    
+    private Connection connect(){
+        try{
+            return DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
+        } catch(SQLException ex){
+            ex.printStackTrace();
+            return null;
+        }
     }
 
     @Override
@@ -98,10 +107,10 @@ public class DatabaseControl implements DatabaseControlInf{
                 String name = rs.getString("user_name");
                 String password = rs.getString("user_password");
                 String email = rs.getString("user_email");
-                UserType type = UserType.valueOf(rs.getString("user_type"));
+                UserType type = UserType.valueOf(rs.getString("user_type").toUpperCase());
                 String bio = rs.getString("user_bio");
                 int age = rs.getInt("user_age");
-                UserGender gender = UserGender.valueOf(rs.getString("user_gender"));
+                UserGender gender = UserGender.valueOf(rs.getString("user_gender").toUpperCase());
 		users.add(new User(id, name, password, email, gender, type, bio, age));
 	    }
 	} catch (SQLException ex) {
@@ -198,7 +207,7 @@ public class DatabaseControl implements DatabaseControlInf{
                 String gender = rs.getString("user_gender");
                 String type = rs.getString("user_type");
                 
-                return new User(userId, name, passw, email, UserGender.valueOf(gender), UserType.valueOf(type));
+                return new User(userId, name, passw, email, UserGender.valueOf(gender.toUpperCase()), UserType.valueOf(type.toUpperCase()));
             }
             
 
@@ -215,9 +224,9 @@ public class DatabaseControl implements DatabaseControlInf{
                 + "'"+title+"'"
                 + ",'"+content+"'"
                 + ", "+userId+""
-                + ", '"+date.toString()+"'"
-                + ", 0)";
-        
+                + ", 0"
+                + ", '"+new java.sql.Date(date.getTime()).toString()+"' )";
+        System.out.println(query);
         return execute(query);
     }
     
@@ -232,11 +241,18 @@ public class DatabaseControl implements DatabaseControlInf{
     
     private boolean execute(String query){
         try {
-	    Statement st = conn.createStatement();
+	    Statement st;
+            if(conn == null){
+                conn = connect();
+            }
+            st = conn.createStatement();
 	    st.executeUpdate(query);
+            st.close();
 	} catch (SQLException ex) {
             return false;
-	}
+	} catch(NullPointerException ex1){
+            return false;
+        }
         return true;
     }
 

@@ -7,6 +7,7 @@ package ch.bbw.cms.bean;
 
 import javax.faces.bean.*;
 import ch.bbw.cms.database.Database;
+import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.inf.DatabaseControlInf;
@@ -55,7 +56,7 @@ public class CreationBean {
     public String createPost(){
         int userid = session.getUserId();
         
-        if(database.createPost(new Post(-1, title, postcontent,userid, new Date()))){
+        if(database.createPost(title, postcontent,userid, new Date())){
             return "main.xhtml";
         } else {
             return "create.xhtml";
@@ -102,13 +103,12 @@ public class CreationBean {
     }
     
     public boolean isEnabled(){
-        System.out.println("get User "+database.getUser(session.getUserId()).getName());
-        /*try{
+        try{
+            System.out.println("get User "+database.getUser(session.getUserId()).getName());
             return session.getUserId() != -1 && database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
         } catch(Exception ex){
             return true;
-        }*/
-        return true;
+        }
     }
 
     /**
