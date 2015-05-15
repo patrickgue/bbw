@@ -7,10 +7,10 @@ package ch.bbw.cms.bean;
 
 import javax.faces.bean.*;
 import ch.bbw.cms.database.Database;
-import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import java.util.Date;
 
 
 /**
@@ -33,7 +33,6 @@ public class CreationBean {
         database = new Database();
         session = new SessionData();
         
-        int userid = session.getUserId();
         int postid = session.getCurrentPostId();
         System.out.println("Postid: "+postid);
                 
@@ -56,7 +55,7 @@ public class CreationBean {
     public String createPost(){
         int userid = session.getUserId();
         
-        if(database.createPost(new Post(-1, title, postcontent,userid))){
+        if(database.createPost(new Post(-1, title, postcontent,userid, new Date()))){
             return "main.xhtml";
         } else {
             return "create.xhtml";

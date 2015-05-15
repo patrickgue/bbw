@@ -6,12 +6,20 @@
 
 package ch.bbw.cms.database;
 
-import ch.bbw.cms.enums.*;
+
 import java.util.*;
+import java.util.Date;
 import java.sql.*;
 
+import ch.bbw.cms.enums.*;
+import ch.bbw.cms.helper.Pattern;
 import ch.bbw.cms.models.*;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -32,13 +40,8 @@ public class DatabaseControl implements DatabaseControlInf{
             //conn = DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
             conn = DriverManager.getConnection("jdbc:mysql://localhost/cms","root","");
             
-        } catch (ClassNotFoundException ex) {  
-            ex.printStackTrace();
-        } catch (SQLException ex){
-            ex.printStackTrace();
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
+        } catch (ClassNotFoundException | SQLException ex) {
+        } 
     }
 
     @Override
@@ -58,7 +61,7 @@ public class DatabaseControl implements DatabaseControlInf{
 
     @Override
     public ArrayList<Post> getPostList(Integer userId){
-	ArrayList<Post> posts = new ArrayList<Post>();
+	ArrayList<Post> posts = new ArrayList<>();
 	String query;
         if(userId == null){
             query = "SELECT * FROM cms_post";
@@ -73,17 +76,19 @@ public class DatabaseControl implements DatabaseControlInf{
                 int userIdGet = rs.getInt("post_user_id");
 		String content = rs.getString("post_content");
 		String title = rs.getString("post_title"); 
-		posts.add(new Post(id, title, content, userIdGet));
+                java.sql.Date result =  rs.getDate("post_date");  
+		posts.add(new Post(id, title, content, userIdGet, result));
 	    }
 	} catch (SQLException ex) {
-	    ex.printStackTrace();
+            System.out.println("##############");
+            ex.printStackTrace();
 	}
 	return posts;
     }
     
     @Override
     public ArrayList<User> getUserList(){
-        ArrayList<User> users = new ArrayList<User>();
+        ArrayList<User> users = new ArrayList<>();
 	String query = "SELECT * FROM cms_user";
         try {
 	    Statement st = conn.createStatement();
@@ -100,7 +105,6 @@ public class DatabaseControl implements DatabaseControlInf{
 		users.add(new User(id, name, password, email, gender, type, bio, age));
 	    }
 	} catch (SQLException ex) {
-	    ex.printStackTrace();
 	}
 	return users;
     }
@@ -117,6 +121,7 @@ public class DatabaseControl implements DatabaseControlInf{
     }
     
     
+    @Override
     public boolean createUser(User user){
         return createUser(user.getName(),
                 user.getPassword(),
@@ -125,17 +130,10 @@ public class DatabaseControl implements DatabaseControlInf{
                 user.getType());
     }
     
-    // FIXME: remove on release
-    public static void main(String[] args){
-        DatabaseControl ctrl = new DatabaseControl();
-        ArrayList<Post> test = ctrl.getPosts(0);
-        System.out.println(test.get(0).getContent());
-    }
-
     @Override
     public ArrayList<Post> getPosts(String searchterm) {
         ArrayList<Post> tmpPosts = getPosts();
-        ArrayList<Post> returnPosts = new ArrayList<Post>();
+        ArrayList<Post> returnPosts = new ArrayList<>();
         
         for(Post p : tmpPosts){
             if(p.getContent().toLowerCase().contains(searchterm.toLowerCase()) ||
@@ -150,7 +148,6 @@ public class DatabaseControl implements DatabaseControlInf{
     @Override
     public Post getPost(int postId){
         String query = "SELECT * FROM cms_post WHERE post_id = "+postId;
-        System.out.println(query);
         try {
 	    Statement st = conn.createStatement();
 	    ResultSet rs = st.executeQuery(query);
@@ -161,12 +158,11 @@ public class DatabaseControl implements DatabaseControlInf{
                 String titl = rs.getString("post_title");
                 String cont = rs.getString("post_content");
                 int    user = rs.getInt("post_user_id");
-
-                return new Post(post, titl, cont, user);
+                Date result =  rs.getDate("post_date");  
+                return new Post(post, titl, cont, user, result);
             }
 
 	} catch (SQLException | NullPointerException ex) {
-	    //ex.printStackTrace();
 	}
 	return null;
     }
@@ -177,7 +173,6 @@ public class DatabaseControl implements DatabaseControlInf{
         
         for(User tmp : users){
             if(tmp.getEmail().equals(username) || tmp.getName().equals(username)){
-                System.out.printf("%-16s", username);
                 if(tmp.getPassword().equals(password)){
                     System.out.println("password matches! (userid: "+tmp.getUserId()+")");
                     return tmp.getUserId();
@@ -192,13 +187,11 @@ public class DatabaseControl implements DatabaseControlInf{
     @Override
     public User getUser(int userId){
         String query = "SELECT * FROM cms_user WHERE user_id = "+userId;
-        System.out.println("Query: "+query);
         try {
 	    Statement st = conn.createStatement();
 	    ResultSet rs = st.executeQuery(query);
 	    
             if(rs.next()){
-            //int id = rs.getInt("user_id");
                 String name = rs.getString("user_name");
                 String passw = rs.getString("user_password");
                 String email = rs.getString("user_email");
@@ -210,20 +203,19 @@ public class DatabaseControl implements DatabaseControlInf{
             
 
 	} catch (NullPointerException ex) {
-	    ex.printStackTrace();
 	} catch (SQLException ex1){
             System.err.println("Sql Error");
-            ex1.printStackTrace();
         }
 	return null;
     }
     
     @Override
-    public boolean createPost(String title, String content, int userId){
-        String query = "INSERT INTO cms_post (post_title, post_content, post_user_id, post_likes)  values("
+    public boolean createPost(String title, String content, int userId, Date date){
+        String query = "INSERT INTO cms_post (post_title, post_content, post_user_id, post_likes, post_date)  values("
                 + "'"+title+"'"
                 + ",'"+content+"'"
                 + ", "+userId+""
+                + ", '"+date.toString()+"'"
                 + ", 0)";
         
         return execute(query);
@@ -235,7 +227,6 @@ public class DatabaseControl implements DatabaseControlInf{
                 + "post_title='"+title+"'"
                 + ", post_content='"+content+"'"
                 + " WHERE post_id = "+postId;
-        System.out.println("Update post query: "+query);
         return execute(query);
     }
     
@@ -244,7 +235,6 @@ public class DatabaseControl implements DatabaseControlInf{
 	    Statement st = conn.createStatement();
 	    st.executeUpdate(query);
 	} catch (SQLException ex) {
-	    ex.printStackTrace();
             return false;
 	}
         return true;
@@ -252,7 +242,7 @@ public class DatabaseControl implements DatabaseControlInf{
 
     @Override
     public boolean createPost(Post post) {
-        return createPost(post.getTitle(), post.getContent(), post.getUserId());
+        return createPost(post.getTitle(), post.getContent(), post.getUserId(), post.getDate());
     }
 
     @Override
@@ -286,7 +276,6 @@ public class DatabaseControl implements DatabaseControlInf{
                 return id;
             }
 	} catch (SQLException ex) {
-	    ex.printStackTrace();
 	}
 	return -1;
     }

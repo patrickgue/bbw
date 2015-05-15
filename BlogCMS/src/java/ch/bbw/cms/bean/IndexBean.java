@@ -14,6 +14,7 @@ import ch.bbw.cms.models.Post;
 import ch.bbw.cms.helper.ClosedList;
 import ch.bbw.cms.helper.SessionData;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.faces.bean.*;
 
 
@@ -42,11 +43,9 @@ public class IndexBean {
 
     
     public IndexBean() {
-	cssFls = new ClosedList<String>(new String[]{"main.css", "main_alt_timo.css", "main_alt_pat.css"});
+	cssFls = new ClosedList<>(new String[]{"main.css", "main_alt_timo.css", "main_alt_pat.css"});
 	cssFile = cssFls.next();
        
-        
-        
         database = new Database();
         session = new SessionData();
         System.out.println("user id:" +session.getUserId());
@@ -58,7 +57,7 @@ public class IndexBean {
         try{
 	    currentPost = postList.get(0);
 	} catch(IndexOutOfBoundsException ex){
-	    currentPost = new Post(0, "Ask the admin to get a creator account to publish your own blog!",  "no Posts", -1);
+	    currentPost = new Post(0, "Ask the admin to get a creator account to publish your own blog!",  "no Posts", -1, new Date());
 	}
 
 	log.debug("PostList: "+postList);
@@ -162,11 +161,23 @@ public class IndexBean {
     }
 
     public boolean editPostEnabled(){
-        return currentPost.getUserId() == session.getUserId();
+        try{
+            return currentPost.getUserId() == session.getUserId();
+        } catch(NullPointerException ex){
+            return false;
+        }
     }
     
     public boolean isEditor(){
-        return database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+        try{
+            return database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+        } catch(Exception ex){
+            return false;
+        }
+    }
+    
+    public String getUserNameFormPost(){
+        return "";
     }
   
 }

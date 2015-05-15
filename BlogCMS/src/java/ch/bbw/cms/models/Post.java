@@ -7,6 +7,7 @@
 package ch.bbw.cms.models;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -17,11 +18,11 @@ public class Post extends Content{
     private ArrayList<Comment> comments;
     private ArrayList<User> likes;
 
-    public Post(Integer postId, String title, String content, int userId) {
-        super(postId, userId, content);
+    public Post(Integer postId, String title, String content, int userId, Date date) {
+        super(postId, userId, content, date);
         this.title = title;
-        this.comments = new ArrayList<Comment>();
-        this.likes = new ArrayList<User>();
+        this.comments = new ArrayList<>();
+        this.likes = new ArrayList<>();
     }
     
     

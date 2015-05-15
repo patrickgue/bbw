@@ -62,8 +62,9 @@ public class AdminBean {
     }
     
     public String setDbconf(){
-        try{
-            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./dbsettings.ini")));
+        BufferedWriter writer;
+        try{    
+            writer = new BufferedWriter(new FileWriter(new File("./dbsettings.ini")));
             writer.write(databaseconfig);
             writer.close();
         } catch (FileNotFoundException ex){} catch (IOException ex1){}

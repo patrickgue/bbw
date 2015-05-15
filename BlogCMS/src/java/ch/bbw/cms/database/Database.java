@@ -2,7 +2,7 @@ package ch.bbw.cms.database;
 
 import ch.bbw.cms.enums.*;
 import java.util.*;
-import java.sql.*;
+import java.util.Date;
 
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.mock.DatabaseControlMock;
@@ -105,8 +105,8 @@ public class Database implements DatabaseControlInf{
     }
     
     @Override
-    public boolean createPost(String title, String content, int userId){
-        return db.createPost(title, content, userId);
+    public boolean createPost(String title, String content, int userId, Date date){
+        return db.createPost(title, content, userId, date);
     }
 
     @Override

@@ -49,7 +49,9 @@
                                     <h:commandLink action="main.xhtml">
                                         <div class="list-entry">
                                             <h3><h:outputText escape="false" value="#{post.title}" /></h3>
-                                            <span><h:outputText escape="false" value="#{post.summary}" /></span>
+                                            <span>
+                                                <h:outputText escape="false" value="by: #{post.user.name}, #{post.date}"/>
+                                            </span>
                                         </div>
                                         <f:setPropertyActionListener target="#{indexBean.currentPost}" value="#{post}"/>
                                     </h:commandLink>

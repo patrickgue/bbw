@@ -6,35 +6,41 @@
 
 package ch.bbw.cms.models;
 
+import ch.bbw.cms.database.Database;
+import java.util.Date;
+
 /**
  * This class is used to save different types of data
  * 
  * @author 5ia13nosiegrist
  */
 public abstract class Content {
-    private int userId;
+    private User user;
     private int contentId;
     private String content;
+    private Database database;
+    private Date date;
     
-    
-    public Content(Integer contentId, int userId, String content){
+    public Content(Integer contentId, int userId, String content, Date date){
+        database = new Database();
         this.contentId = contentId;
-        this.userId = userId;
+        this.user = database.getUser(userId);
         this.content = content;
+        this.date = date;
     }
 
     /**
      * @return the userId
      */
     public int getUserId() {
-        return userId;
+        return getUser().getUserId();
     }
 
     /**
      * @param userId the userId to set
      */
     public void setUserId(int userId) {
-        this.userId = userId;
+        getUser().setUserId(userId);
     }
 
     /**
@@ -64,5 +70,34 @@ public abstract class Content {
     public void setContentId(int contentId) {
         this.contentId = contentId;
     }
-    
+
+    /**
+     * @return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * @param user the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    /**
+     * @return the date
+     */
+    public Date getDate() {
+        return date;
+    }
+
+    /**
+     * @param date the date to set
+     */
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+
 }

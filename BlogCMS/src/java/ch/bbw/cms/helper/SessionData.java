@@ -25,11 +25,15 @@ public class SessionData {
         context = FacesContext.getCurrentInstance();
     }
     
+    
     public int getUserId(){
         init();
+        System.out.println(context.getExternalContext().getSessionMap());
         try{
+            System.out.println(context.getExternalContext().getSessionMap().get(USER_ID).toString());  
             return Integer.parseInt(context.getExternalContext().getSessionMap().get(USER_ID).toString());
         } catch(NullPointerException | IllegalStateException ex){
+            System.out.println("-1");
             return -1; // not logged in...
         }
     }
