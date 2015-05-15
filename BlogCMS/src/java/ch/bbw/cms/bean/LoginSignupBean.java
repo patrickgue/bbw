@@ -5,11 +5,10 @@
  */
 package ch.bbw.cms.bean;
 
-import ch.bbw.cms.database.DatabaseControl;
+import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.inf.DatabaseControlInf;
-import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.User;
 import ch.bbw.cms.helper.SessionData;
 import javax.faces.bean.ManagedBean;
@@ -31,7 +30,7 @@ public class LoginSignupBean {
     private SessionData session;
     
     public LoginSignupBean(){
-        database = new DatabaseControlMock();
+        database = new Database();
         session = new SessionData();
     }
             

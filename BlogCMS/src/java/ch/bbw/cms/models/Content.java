@@ -17,7 +17,7 @@ public abstract class Content {
     private String content;
     
     
-    public Content(int contentId, int userId, String content){
+    public Content(Integer contentId, int userId, String content){
         this.contentId = contentId;
         this.userId = userId;
         this.content = content;

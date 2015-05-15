@@ -5,18 +5,15 @@
  */
 package ch.bbw.cms.bean;
 
-import ch.bbw.cms.database.DatabaseControl;
+import ch.bbw.cms.database.Database;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
-import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.helper.ClosedList;
 import ch.bbw.cms.helper.SessionData;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import javax.faces.bean.*;
-import javax.faces.context.FacesContext;
 
 
 /**
@@ -49,8 +46,9 @@ public class IndexBean {
        
         
         
-        database = new DatabaseControlMock();
+        database = new Database();
         session = new SessionData();
+        System.out.println("user id:" +session.getUserId());
         
         if(postList == null){
             postList = database.getPosts();

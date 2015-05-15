@@ -1,0 +1,33 @@
+/* 
+    Created on : May 15, 2015, 9:17:09 AM
+    Author     : guenthard
+*/
+
+body{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+.settingsBlock{
+    width: auto;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #999;
+}
+
+.settingsBlock .label{
+    display: inline-block;
+    width: 240px;
+    vertical-align: top;
+}
+
+.settingsBlock .settings{
+    display: inline-block;
+    width: auto;
+}
+
+table, td, th, tr{
+    border-collapse: collapse;
+    border: 1px solid #999;
+}

@@ -6,16 +6,11 @@
 package ch.bbw.cms.bean;
 
 import javax.faces.bean.*;
-import ch.bbw.cms.database.DatabaseControl;
+import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.helper.SessionData;
-import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.inf.DatabaseControlInf;
-import ch.bbw.cms.inf.Log;
-import ch.bbw.cms.mock.DefaultLog;
-import java.util.ArrayList;
-import javax.faces.context.FacesContext;
 
 
 /**
@@ -29,34 +24,39 @@ public class CreationBean {
     private String postcontent;
     private String userIdTest;
     private SessionData session;
-    
+    private DatabaseControlInf database;
     private boolean showPostButton = true;
     private boolean showUpdateButton = false;
     
     
     public CreationBean(){
+        database = new Database();
         session = new SessionData();
         
         int userid = session.getUserId();
         int postid = session.getCurrentPostId();
+        System.out.println("Postid: "+postid);
                 
         if(postid != -1){
             Post tmp = database.getPost(postid);
-            title = tmp.getTitle();
-            postcontent = tmp.getContent();
-            showPostButton = false;
-            showUpdateButton = true;
+            try{
+                title = tmp.getTitle();
+                postcontent = tmp.getContent();
+                showPostButton = false;
+                showUpdateButton = true;
+            } catch (NullPointerException ex){
+                showPostButton = true;
+                showUpdateButton = false;
+            }
         }
         
         
     }
 
-    private DatabaseControlInf database = new DatabaseControlMock();
-    
     public String createPost(){
         int userid = session.getUserId();
         
-        if(database.createPost(new Post(null, title, postcontent,userid))){
+        if(database.createPost(new Post(-1, title, postcontent,userid))){
             return "main.xhtml";
         } else {
             return "create.xhtml";
@@ -103,7 +103,13 @@ public class CreationBean {
     }
     
     public boolean isEnabled(){
-        return session.getUserId() != -1 && database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+        System.out.println("get User "+database.getUser(session.getUserId()).getName());
+        /*try{
+            return session.getUserId() != -1 && database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+        } catch(Exception ex){
+            return true;
+        }*/
+        return true;
     }
 
     /**
