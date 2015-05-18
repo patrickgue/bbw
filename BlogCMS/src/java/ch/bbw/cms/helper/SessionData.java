@@ -5,6 +5,7 @@
  */
 package ch.bbw.cms.helper;
 
+import ch.bbw.cms.models.User;
 import javax.faces.context.FacesContext;
 
 /**
@@ -15,6 +16,10 @@ public class SessionData {
     private FacesContext context;
     final private String USER_ID = "userid";
     final private String CURRENT_POST_ID = "currentdocumentid";
+    
+
+    final private String USER_OBJ = "userobj";
+    private User user = null;
     
     
     public SessionData(){
@@ -43,6 +48,28 @@ public class SessionData {
         init();
         try{
             context.getExternalContext().getSessionMap().put(USER_ID, id);
+        } catch(NullPointerException ex){
+            System.err.println("Writing to session didn't work!");
+        }
+    }
+    
+    public User getUser(){
+        init();
+        System.out.println(context.getExternalContext().getSessionMap());
+        try{
+            System.out.println(context.getExternalContext().getSessionMap().get(USER_ID).toString());  
+            return (User) context.getExternalContext().getSessionMap().get(USER_OBJ);
+        } catch(NullPointerException | IllegalStateException ex){
+            System.out.println("-1");
+            return null; // not logged in...
+        }
+    }
+    
+    
+    public void setUser(User usr){
+        init();
+        try{
+            context.getExternalContext().getSessionMap().put(USER_ID, usr);
         } catch(NullPointerException ex){
             System.err.println("Writing to session didn't work!");
         }

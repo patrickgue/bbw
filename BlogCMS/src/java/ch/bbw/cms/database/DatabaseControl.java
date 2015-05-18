@@ -12,14 +12,10 @@ import java.util.Date;
 import java.sql.*;
 
 import ch.bbw.cms.enums.*;
-import ch.bbw.cms.helper.Pattern;
+import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.*;
 import ch.bbw.cms.inf.DatabaseControlInf;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 
 /**
@@ -30,9 +26,12 @@ import java.util.logging.Logger;
  */
 public class DatabaseControl implements DatabaseControlInf{
     private Connection conn;
+    private SessionData session;
     
     
     public DatabaseControl(){
+        session = new SessionData();
+        
         try {
             
             Class.forName("com.mysql.jdbc.Driver");
@@ -88,6 +87,8 @@ public class DatabaseControl implements DatabaseControlInf{
                 java.sql.Date result =  rs.getDate("post_date");  
 		posts.add(new Post(id, title, content, userIdGet, result));
 	    }
+            
+            st.close();
 	} catch (SQLException ex) {
             System.out.println("##############");
             ex.printStackTrace();
@@ -113,6 +114,8 @@ public class DatabaseControl implements DatabaseControlInf{
                 UserGender gender = UserGender.valueOf(rs.getString("user_gender").toUpperCase());
 		users.add(new User(id, name, password, email, gender, type, bio, age));
 	    }
+           
+            st.close();
 	} catch (SQLException ex) {
 	}
 	return users;
@@ -170,6 +173,8 @@ public class DatabaseControl implements DatabaseControlInf{
                 Date result =  rs.getDate("post_date");  
                 return new Post(post, titl, cont, user, result);
             }
+            
+            st.close();
 
 	} catch (SQLException | NullPointerException ex) {
 	}
@@ -193,11 +198,24 @@ public class DatabaseControl implements DatabaseControlInf{
         return -1;
     }
     
+    
     @Override
     public User getUser(int userId){
+        User fromSession = session.getUser();
+        
+        if(fromSession != null){
+            if(fromSession.getUserId() == userId){
+                return fromSession;
+            }
+        }
+        
+        if(conn == null){
+            conn = connect();
+        }
         String query = "SELECT * FROM cms_user WHERE user_id = "+userId;
         try {
 	    Statement st = conn.createStatement();
+            
 	    ResultSet rs = st.executeQuery(query);
 	    
             if(rs.next()){
@@ -206,10 +224,11 @@ public class DatabaseControl implements DatabaseControlInf{
                 String email = rs.getString("user_email");
                 String gender = rs.getString("user_gender");
                 String type = rs.getString("user_type");
+
                 
                 return new User(userId, name, passw, email, UserGender.valueOf(gender.toUpperCase()), UserType.valueOf(type.toUpperCase()));
             }
-            
+            st.close();
 
 	} catch (NullPointerException ex) {
 	} catch (SQLException ex1){
@@ -220,6 +239,8 @@ public class DatabaseControl implements DatabaseControlInf{
     
     @Override
     public boolean createPost(String title, String content, int userId, Date date){
+        
+        
         String query = "INSERT INTO cms_post (post_title, post_content, post_user_id, post_likes, post_date)  values("
                 + "'"+title+"'"
                 + ",'"+content+"'"
@@ -240,11 +261,13 @@ public class DatabaseControl implements DatabaseControlInf{
     }
     
     private boolean execute(String query){
+        if(conn == null){
+            conn = connect();
+        }
+        
         try {
 	    Statement st;
-            if(conn == null){
-                conn = connect();
-            }
+            
             st = conn.createStatement();
 	    st.executeUpdate(query);
             st.close();
@@ -291,6 +314,7 @@ public class DatabaseControl implements DatabaseControlInf{
 	    if(id != 0 || id != -1){
                 return id;
             }
+            st.cancel();
 	} catch (SQLException ex) {
 	}
 	return -1;

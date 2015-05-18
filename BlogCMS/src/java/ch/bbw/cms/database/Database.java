@@ -26,24 +26,7 @@ public class Database implements DatabaseControlInf{
     private DatabaseControlInf db;
 
     public Database(){
-        try{
-            File f = new File("./dbsettings.ini");
-            System.out.println(f.getAbsolutePath());
-            BufferedReader reader = new BufferedReader(new FileReader(f));
-        } catch(FileNotFoundException ex){
-            File f=new File("./dbsettings.ini");
-            
-            try{
-                if(!f.exists()){
-                    f.createNewFile();
-                    BufferedWriter writer = new BufferedWriter(new FileWriter(f));
-                    writer.write("mock");
-                    writer.close();
-                    System.out.println(f.getAbsolutePath());
-                }
-            } catch (IOException ex1){}
-            db = new DatabaseControlMock();
-        }
+        
         
 	db = new DatabaseControl();
     }
