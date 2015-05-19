@@ -37,7 +37,7 @@ public interface DatabaseControlInf {
     public int getUserId(String nameOrEmail);
     public User getUser(int id);
     public ArrayList<Post> getPinwall(User user);
-    public void addPostToPinwall(User user, Post post);
-    public void deletePostFromPinwall(User user, Post post);
+    public boolean addPostToPinwall(User user, Post post);
+    public boolean deletePostFromPinwall(User user, Post post);
     
 }

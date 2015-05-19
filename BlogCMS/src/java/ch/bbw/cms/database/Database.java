@@ -117,4 +117,19 @@ public class Database implements DatabaseControlInf{
     public boolean changeUserType(int userId, UserType type){
         return db.changeUserType(userId, type);
     }
+
+    @Override
+    public ArrayList<Post> getPinwall(User user) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean addPostToPinwall(User user, Post post) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean deletePostFromPinwall(User user, Post post) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

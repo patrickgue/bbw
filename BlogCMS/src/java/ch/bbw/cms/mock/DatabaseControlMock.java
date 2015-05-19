@@ -139,6 +139,23 @@ public class DatabaseControlMock implements DatabaseControlInf{
     public boolean changeUserType(int userId, UserType type){
         return true;
     }
+
+    @Override
+    public ArrayList<Post> getPinwall(User user) {
+        ArrayList<Post> p = new ArrayList<>();
+        p.add(new Post(0, "abc", "def", 1, new Date()));
+        return p;
+    }
+
+    @Override
+    public boolean addPostToPinwall(User user, Post post) {
+        return true;
+    }
+
+    @Override
+    public boolean deletePostFromPinwall(User user, Post post) {
+        return true;
+    }
     
     
     

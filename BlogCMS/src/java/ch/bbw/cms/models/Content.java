@@ -25,7 +25,7 @@ public abstract class Content {
     private Date date;
     
     public Content(Integer contentId, int userId, String content, Date date){
-        database = new Database();
+        //database = new Database();
         this.contentId = contentId;
         this.user = database.getUser(userId);
         this.content = content;
