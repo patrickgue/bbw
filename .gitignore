@@ -8,3 +8,5 @@ BlogCMS/build/web/WEB-INF/classes/ch/bbw/cms/database/DatabaseControl.class
 *.class
 *.class
 BlogCMS/nbproject/private/private.xml
+BlogCMS/nbproject/private/private.properties
+BlogCMS/nbproject/private/private.properties
