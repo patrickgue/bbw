@@ -1,9 +1,9 @@
+
 body{
     margin: 0px;
     padding: 0px;
     font-family: '_AkzidenzGrotesk', 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', sans-serif;
-    color:  #000000;
-    background-color: #FFFFFF;
+    color:  #212C32;
 }
 
 .page-center{
@@ -14,8 +14,8 @@ body{
 }
 
 header{
-    background-color: #C92F2F;
-    color: #FFFFFF;
+    background-color: #26596A;
+    color: #C7C7C7;
 }
 
 
@@ -27,7 +27,7 @@ header h1, header h2, header h3{
 
 .header-body{
     width: 100%;
-    border-top: 1px solid #FFFFFF;
+    border-top: 1px solid #C7C7C7;
     padding-top: 4px;
     margin-top: 4px;
     padding-bottom: 4px;
@@ -55,9 +55,8 @@ header h1, header h2, header h3{
 }
 
 footer{
-    border-top: 1px solid #132C61;
+    border-top: 1px solid #3F5460;
     clear: both;
-    background-color: #C92F2F;
 }
 
 p{
@@ -70,9 +69,9 @@ button, input, select, textarea{
     min-width: 40px;
     min-height: 30px;
     border: none;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #BBBCBC;
     border-radius: 4px;
+    border-bottom: 2px solid #647E8C; 
     margin: 2px;
 }
 
@@ -80,30 +79,30 @@ input[type="text"], input[type="password"], select, textarea{
     min-width: 180px;
     min-height: 24px;
     border-radius: 0px;
-    background-color: #132C61;
+    background-color: #f0f0f0;
    
 }
 
-
+/*
 header button, header input{
-    background-color: #FFFFFF !important;
-    color: #000000;
+    background-color: #434E54 !important;
+    color: #C7C7C7;
+    border-bottom: 2px solid #323D43;
 }
-
+*/
 .list-entry{
     border-bottom: 1px solid #323D43;    
     padding: 2px;
-    color: #000000;
 }
 
 .list-entry:hover{
-    background-color: #C92F2F;
+    background-color: #eee;
 }
 
 .list-entry.selected{
     /* background-color: #212C32;
     color: #C7C7C7;*/
-    background-color: #C92F2F;  
+    background-color: #eee;  
     border-right: 5px solid #212C32;
 }
 
@@ -156,7 +155,7 @@ header button, header input{
 }
 
 .pin-action:hover{
-    background-color: #C92F2F;
+    background-color: #212C32;
     color: #eee;
 }
 
@@ -171,7 +170,6 @@ header button, header input{
 .share-icon{
     height: 20px;
 }
-
 
 @media screen and (max-width: 768px) {
     #menu-button{

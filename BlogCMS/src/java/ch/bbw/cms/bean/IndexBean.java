@@ -5,19 +5,23 @@
  */
 package ch.bbw.cms.bean;
 
-import ch.bbw.cms.database.DatabaseControl;
+import ch.bbw.cms.database.Database;
+import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
-import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Post;
+import ch.bbw.cms.helper.ClosedList;
+import ch.bbw.cms.helper.SessionData;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.faces.bean.*;
-import javax.faces.context.FacesContext;
 
 
 /**
- *
+ * <b>IndexBean</b>
+ * <p>IndexBean is the main Bean in this project. It handles all the functionality of the main
+ * page and also provides methods and attributes for other pages.
  * @author patrick
  */
 @ManagedBean
@@ -25,31 +29,35 @@ import javax.faces.context.FacesContext;
 public class IndexBean {
 
     private DatabaseControlInf database;
-    private ArrayList<Post> postList;// = new ArrayList<Post>();
-    private String cssFile = "main.css";
+    private ArrayList<Post> postList;
+    private String cssFile;
     private String search = "Search";
     private Post currentPost;
     private Log log = new DefaultLog();
-    private FacesContext context;
-    private String userIdTest; 
+    private SessionData session;
+    private String userIdTest;
+    private ClosedList<String> cssFls;
+    
+    
     
 
     
     public IndexBean() {
-        context = FacesContext.getCurrentInstance();
-        try{
-            userIdTest = context.getExternalContext().getSessionMap().toString();
-        } catch(Exception ex){
-            ex.printStackTrace();
-        }
-        database = new DatabaseControl();
+	cssFls = new ClosedList<>(new String[]{"main.css", "main_alt_timo.css", "main_alt_pat.css"});
+	cssFile = cssFls.next();
+       
+        database = new Database();
+        session = new SessionData();
+        System.out.println("user id:" +session.getUserId());
+        
         if(postList == null){
             postList = database.getPosts();
         }
+        
         try{
 	    currentPost = postList.get(0);
 	} catch(IndexOutOfBoundsException ex){
-	    currentPost = new Post(-1, "Ask the admin to get a creator account to publish your own blog!",  "no Posts");
+	    currentPost = new Post(0, "Ask the admin to get a creator account to publish your own blog!",  "no Posts", -1, new Date());
 	}
 
 	log.debug("PostList: "+postList);
@@ -71,14 +79,7 @@ public class IndexBean {
         log.debug("Refresh");
         postList = database.getPosts();
     }
-    
-    public static void main(String[] args){
-        IndexBean testBean = new IndexBean();
-        
-        for(Post p : testBean.getPostList()){
-            System.out.println(p.getTitle()+"\n"+p.getContent());
-        }
-    }
+
 
     /**
      * @return the cssFile
@@ -95,11 +96,7 @@ public class IndexBean {
     }
     
     public String switchStyles(){
-        if("main.css".equals(cssFile)){
-            cssFile = "main_alt.css";
-        } else {
-            cssFile = "main.css";
-        }
+	cssFile = cssFls.next();
         return "main.xhtml";
     }
 
@@ -141,6 +138,8 @@ public class IndexBean {
      * @return the userIdTest
      */
     public String getUserIdTest() {
+        userIdTest = "User Id: "+session.getUserId();
+      
         return userIdTest;
     }
 
@@ -150,6 +149,35 @@ public class IndexBean {
     public void setUserIdTest(String userIdTest) {
         this.userIdTest = userIdTest;
     }
+    
+    public String gotoNewPost(){
+        session.setCurrentPostId(-1);
+        return "create.xhtml";
+    }
+    
+    public String editPost(){
+        session.setCurrentPostId(currentPost.getPostId());
+        return "create.xhtml";
+    }
 
+    public boolean editPostEnabled(){
+        try{
+            return currentPost.getUserId() == session.getUserId();
+        } catch(NullPointerException ex){
+            return false;
+        }
+    }
+    
+    public boolean isEditor(){
+        try{
+            return database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+        } catch(Exception ex){
+            return false;
+        }
+    }
+    
+    public String getUserNameFormPost(){
+        return "";
+    }
   
 }
