@@ -35,3 +35,10 @@ CREATE TABLE cms_comment(
 
        PRIMARY KEY(comment_id)
 );
+CREATE TABLE cms_pinwall(
+       pin_id INTEGER NOT NULL AUTO_INCREMENT,
+       pin_post VARCHAR(64) NOT NULL,
+       pin_user_id INTEGER NOT NULL,
+
+       PRIMARY KEY(post_id)
+);

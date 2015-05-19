@@ -36,5 +36,8 @@ public interface DatabaseControlInf {
     public boolean changeUserType(int userId, UserType type);
     public int getUserId(String nameOrEmail);
     public User getUser(int id);
+    public ArrayList<Post> getPinwall(User user);
+    public void addPostToPinwall(User user, Post post);
+    public void deletePostFromPinwall(User user, Post post);
     
 }
