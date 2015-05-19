@@ -106,4 +106,8 @@ public class User {
     public int getUserId(){
 	return id;
     }
+    
+    public String getUserTypeString(){
+        return type.getType();
+    }
 }

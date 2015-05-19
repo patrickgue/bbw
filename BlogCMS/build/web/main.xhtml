@@ -49,7 +49,9 @@
                                     <h:commandLink action="main.xhtml">
                                         <div class="list-entry">
                                             <h3><h:outputText escape="false" value="#{post.title}" /></h3>
-                                            <span><h:outputText escape="false" value="#{post.summary}" /></span>
+                                            <span>
+                                                <h:outputText escape="false" value="by: #{post.user.name}, #{post.date}"/>
+                                            </span>
                                         </div>
                                         <f:setPropertyActionListener target="#{indexBean.currentPost}" value="#{post}"/>
                                     </h:commandLink>
@@ -73,7 +75,10 @@
                                 <a id="share-mail" ><img class="share-icon" src="../img/mail.png"/></a>
                                 <a style="cursor: pointer;" id="share-facebook" target="_blank"><img class="share-icon" src="../img/fb.png"/></a>
                                 <a style="cursor: pointer;" id="share-twitter" target="_blank"><img class="share-icon" src="../img/tw.png"/></a>
-                                
+                                <h:form>
+                                    <h:commandButton value="edit this post" action="#{indexBean.editPost()}" rendered="#{indexBean.editPostEnabled()}" />
+                                    <h:commandButton value="new Post" action="#{indexBean.gotoNewPost()}" rendered="#{indexBean.isEditor()}"/>
+                                </h:form>
                             </div>
                             <h2><h:outputText escape="false" value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
                             <h:outputText escape="false" value="#{indexBean.currentPost.content}"/>
@@ -86,7 +91,7 @@
             </div>
         </div>
         <script>
-            alert(#{indexBean.userIdTest});
+            //alert("#{indexBean.userIdTest}");
         </script>
     </h:body>
 </html>

@@ -5,15 +5,14 @@
  */
 package ch.bbw.cms.bean;
 
-import ch.bbw.cms.database.DatabaseControl;
+import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.inf.DatabaseControlInf;
-import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.User;
+import ch.bbw.cms.helper.SessionData;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.context.FacesContext;
 
 /**
  *
@@ -28,18 +27,19 @@ public class LoginSignupBean {
     private String email;
     private String gender;
     private DatabaseControlInf database;
-    private FacesContext context;
+    private SessionData session;
     
     public LoginSignupBean(){
-        database = new DatabaseControl();
+        database = new Database();
+        session = new SessionData();
     }
             
     
     public String login(){
-        context = FacesContext.getCurrentInstance();
+        
         int userid = database.checkUser(username, password);
         if(userid != -1){
-            context.getExternalContext().getSessionMap().put("userid", userid);
+            session.setUserId(userid);
             return "main.xhtml";
         } else {
             return "login.xhtml";
@@ -50,7 +50,7 @@ public class LoginSignupBean {
         if(password.equals(repassword)){
             if(database.createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.NORMAL))){
                 int userid = database.getUserId(username);
-                context.getExternalContext().getSessionMap().put("userid", userid);
+                session.setUserId(userid);
                 return "main.xhtml";
             } else {
                 return "login.xhtml";
@@ -60,6 +60,8 @@ public class LoginSignupBean {
         }
         
     }
+    
+
     
     /**
      * @return the username

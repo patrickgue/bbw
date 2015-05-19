@@ -1,0 +1,21 @@
+* Notes Blog/CMS Project
+
+** Rules: 
+ - Do not delete anything, just add a new note on the bottom of the file!!!
+ - Use more or less the formating used in the first post
+ - Just post information directly related to the coding. More general information should be placed on scrumwise
+
+** Notes
+
+*** April 8th 2015
+- fixed bugs
+- Database access runs (tested without proxy!)
+
+*** May 13th 2015
+ - security has to be tested in following classes:
+   - ch.bbw.cms.helper.SessionData
+   - ch.bbw.cms.databse.DatabaseControl
+
+*** May 15th
+ - The whole System got buggy ¯\_(ツ)_/¯
+   - will fix it as soon as possible - patrick
