@@ -5,16 +5,12 @@ import java.util.*;
 import java.util.Date;
 
 import ch.bbw.cms.inf.DatabaseControlInf;
-import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 
 
 /**
@@ -22,13 +18,13 @@ import java.io.IOException;
  * switch between the mock and the real database.
  * @author 5ia13paguenthard
  */
+@ManagedBean(name="database")
+@SessionScoped 
 public class Database implements DatabaseControlInf{
     private DatabaseControlInf db;
 
     public Database(){
-        
-        
-	db = new DatabaseControl();
+        db = new DatabaseControl();
     }
     
     @Override

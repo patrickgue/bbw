@@ -6,12 +6,14 @@
         <group/>
 =======
         <group>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/CreationBean.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/helper/SessionData.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Content.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/CreationBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/web/main.xhtml</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
         </group>
 >>>>>>> origin/master
     </open-files>

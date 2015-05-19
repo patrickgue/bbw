@@ -8,10 +8,11 @@ package ch.bbw.cms.bean;
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
+import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.models.User;
-import ch.bbw.cms.helper.SessionData;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
 /**
@@ -26,18 +27,20 @@ public class LoginSignupBean {
     private String repassword;
     private String email;
     private String gender;
+    
+    @ManagedProperty(value="#{database}")
     private DatabaseControlInf database;
     private SessionData session;
     
     public LoginSignupBean(){
-        database = new Database();
+        //database = new Database();
         session = new SessionData();
     }
             
     
     public String login(){
         
-        int userid = database.checkUser(username, password);
+        int userid = getDatabase().checkUser(username, password);
         if(userid != -1){
             session.setUserId(userid);
             return "main.xhtml";
@@ -48,8 +51,8 @@ public class LoginSignupBean {
     
     public String signup(){
         if(password.equals(repassword)){
-            if(database.createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.NORMAL))){
-                int userid = database.getUserId(username);
+            if(getDatabase().createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.NORMAL))){
+                int userid = getDatabase().getUserId(username);
                 session.setUserId(userid);
                 return "main.xhtml";
             } else {
@@ -131,6 +134,20 @@ public class LoginSignupBean {
      */
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    /**
+     * @return the database
+     */
+    public DatabaseControlInf getDatabase() {
+        return database;
+    }
+
+    /**
+     * @param database the database to set
+     */
+    public void setDatabase(DatabaseControlInf database) {
+        this.database = database;
     }
     
     

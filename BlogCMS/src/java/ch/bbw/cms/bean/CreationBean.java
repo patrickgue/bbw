@@ -25,30 +25,18 @@ public class CreationBean {
     private String postcontent;
     private String userIdTest;
     private SessionData session;
-    private DatabaseControlInf database;
+   
+    @ManagedProperty(value = "#{database}")
+    private Database database;
     private boolean showPostButton = true;
     private boolean showUpdateButton = false;
     
     
     public CreationBean(){
-        database = new Database();
+        //database = new Database();
         session = new SessionData();
         
-        int postid = session.getCurrentPostId();
-        System.out.println("Postid: "+postid);
-                
-        if(postid != -1){
-            Post tmp = database.getPost(postid);
-            try{
-                title = tmp.getTitle();
-                postcontent = tmp.getContent();
-                showPostButton = false;
-                showUpdateButton = true;
-            } catch (NullPointerException ex){
-                showPostButton = true;
-                showUpdateButton = false;
-            }
-        }
+        
         
         
     }
@@ -56,7 +44,7 @@ public class CreationBean {
     public String createPost(){
         int userid = session.getUserId();
         
-        if(database.createPost(title, postcontent,userid, new Date())){
+        if(getDatabase().createPost(title, postcontent,userid, new Date())){
             return "main.xhtml";
         } else {
             return "create.xhtml";
@@ -65,7 +53,7 @@ public class CreationBean {
     
     public String updatePost(){
        
-        if(database.updatePost(session.getCurrentPostId(), title, postcontent)){
+        if(getDatabase().updatePost(session.getCurrentPostId(), title, postcontent)){
             return "main.xhtml";
         } else {
             return "create.xhtml";
@@ -104,8 +92,8 @@ public class CreationBean {
     
     public boolean isEnabled(){
         try{
-            System.out.println("get User "+database.getUser(session.getUserId()).getName());
-            return session.getUserId() != -1 && database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+            System.out.println("get User "+getDatabase().getUser(session.getUserId()).getName());
+            return session.getUserId() != -1 && getDatabase().getUser(session.getUserId()).getType().equals(UserType.CONTENT);
         } catch(Exception ex){
             return true;
         }
@@ -152,5 +140,34 @@ public class CreationBean {
      */
     public void setShowUpdateButton(boolean showUpdateButton) {
         this.showUpdateButton = showUpdateButton;
+    }
+
+    /**
+     * @return the database
+     */
+    public Database getDatabase() {
+        return database;
+    }
+
+    /**
+     * @param database the database to set
+     */
+    public void setDatabase(Database database) {
+        this.database = database;
+        int postid = session.getCurrentPostId();
+        System.out.println("Postid: "+postid);
+                
+        if(postid != -1){
+            Post tmp = database.getPost(postid);
+            try{
+                title = tmp.getTitle();
+                postcontent = tmp.getContent();
+                showPostButton = false;
+                showUpdateButton = true;
+            } catch (NullPointerException ex){
+                showPostButton = true;
+                showUpdateButton = false;
+            }
+        }
     }
 }

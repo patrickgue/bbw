@@ -28,7 +28,9 @@ import javax.faces.bean.*;
 @SessionScoped
 public class IndexBean {
 
-    private DatabaseControlInf database;
+    @ManagedProperty(value="#{database}")
+    private Database database;
+    
     private ArrayList<Post> postList;
     private String cssFile;
     private String search = "Search";
@@ -46,19 +48,11 @@ public class IndexBean {
 	cssFls = new ClosedList<>(new String[]{"main.css", "main_alt_timo.css", "main_alt_pat.css"});
 	cssFile = cssFls.next();
        
-        database = new Database();
+        //database = new Database();
         session = new SessionData();
         System.out.println("user id:" +session.getUserId());
         
-        if(postList == null){
-            postList = database.getPosts();
-        }
         
-        try{
-	    currentPost = postList.get(0);
-	} catch(IndexOutOfBoundsException ex){
-	    currentPost = new Post(0, "Ask the admin to get a creator account to publish your own blog!",  "no Posts", -1, new Date());
-	}
 
 	log.debug("PostList: "+postList);
         
@@ -77,7 +71,7 @@ public class IndexBean {
     
     public void refreshPostList(){
         log.debug("Refresh");
-        postList = database.getPosts();
+        postList = getDatabase().getPosts();
     }
 
 
@@ -115,7 +109,7 @@ public class IndexBean {
     }
 
     public String performSearch(){
-        setPostList(database.getPosts(search));
+        setPostList(getDatabase().getPosts(search));
         log.debug(search+", "+postList.toString());
         return "main.xhtml";
     }
@@ -170,7 +164,7 @@ public class IndexBean {
     
     public boolean isEditor(){
         try{
-            return database.getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+            return getDatabase().getUser(session.getUserId()).getType().equals(UserType.CONTENT);
         } catch(Exception ex){
             return false;
         }
@@ -178,6 +172,29 @@ public class IndexBean {
     
     public String getUserNameFormPost(){
         return "";
+    }
+
+    /**
+     * @return the database
+     */
+    public Database getDatabase() {
+        return database;
+    }
+
+    /**
+     * @param database the database to set
+     */
+    public void setDatabase(Database database) {
+        this.database = database;
+        if(postList == null){
+            postList = database.getPosts();
+        }
+        
+        try{
+	    currentPost = postList.get(0);
+	} catch(IndexOutOfBoundsException ex){
+	    currentPost = new Post(0, "Ask the admin to get a creator account to publish your own blog!",  "no Posts", -1, new Date());
+	}
     }
   
 }
