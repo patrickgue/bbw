@@ -19,6 +19,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 
 /**
@@ -29,7 +30,9 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class AdminBean {
     private String databaseconfig;
-    private DatabaseControlInf db;
+    
+    @ManagedProperty(value = "#{database}")
+    private Database db;
     private ArrayList<User> users;
     private SessionData session;
     private boolean render = true;
@@ -38,25 +41,10 @@ public class AdminBean {
 
     public AdminBean() {
         
-        db = new Database();
+        //db = new Database();
         session = new SessionData();
         
-        if(db.getUser(session.getUserId()).getType().equals(UserType.TECHNICAL)){
-            try{
-                BufferedReader reader = new BufferedReader(new FileReader(new File("./dbsettings.ini")));
-                String buffer;
-                while((buffer = reader.readLine()) != null){
-                    databaseconfig = buffer;
-                }
-            } catch (FileNotFoundException ex){} catch (IOException ex1){}
-            users = db.getUserList();
-        } else {
-            render = false;
-        }
         
-        //debug
-        render = true;
-        users = db.getUserList();
         
         
     }
@@ -146,8 +134,38 @@ public class AdminBean {
             tmp = UserType.CONTENT;
         }
         
-        db.changeUserType(toChangeUser.getUserId(), tmp);
+        getDb().changeUserType(toChangeUser.getUserId(), tmp);
         toChangeUser.setType(tmp);
         this.toChangeUser = toChangeUser;
+    }
+
+    /**
+     * @return the db
+     */
+    public Database getDb() {
+        return db;
+    }
+
+    /**
+     * @param db the db to set
+     */
+    public void setDb(Database db) {
+        this.db = db;
+        if(db.getUser(session.getUserId()).getType().equals(UserType.TECHNICAL)){
+            try{
+                BufferedReader reader = new BufferedReader(new FileReader(new File("./dbsettings.ini")));
+                String buffer;
+                while((buffer = reader.readLine()) != null){
+                    databaseconfig = buffer;
+                }
+            } catch (FileNotFoundException ex){} catch (IOException ex1){}
+            users = db.getUserList();
+        } else {
+            render = false;
+        }
+        
+        //debug
+        render = true;
+        users = db.getUserList();
     }
 }

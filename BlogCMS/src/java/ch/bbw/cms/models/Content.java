@@ -8,6 +8,7 @@ package ch.bbw.cms.models;
 
 import ch.bbw.cms.database.Database;
 import java.util.Date;
+import javax.faces.bean.ManagedProperty;
 
 /**
  * This class is used to save different types of data
@@ -18,6 +19,8 @@ public abstract class Content {
     private User user;
     private int contentId;
     private String content;
+    
+    @ManagedProperty(value="#{database}")
     private Database database;
     private Date date;
     
@@ -97,6 +100,20 @@ public abstract class Content {
      */
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    /**
+     * @return the database
+     */
+    public Database getDatabase() {
+        return database;
+    }
+
+    /**
+     * @param database the database to set
+     */
+    public void setDatabase(Database database) {
+        this.database = database;
     }
 
 

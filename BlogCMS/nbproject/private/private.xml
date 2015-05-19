@@ -3,23 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Content.java</file>
             <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/CreationBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
             <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/web/create.xhtml</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
             <file>file:/C:/Work/bbw.blog-cms/BlogCMS/web/main.xhtml</file>
-=======
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/CreationBean.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/helper/SessionData.java</file>
-            <file>file:/home/patrick/Documents/school/schoolproject/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
->>>>>>> origin/master
+            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
         </group>
     </open-files>
 </project-private>

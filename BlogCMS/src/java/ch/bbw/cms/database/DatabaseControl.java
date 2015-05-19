@@ -7,14 +7,16 @@
 package ch.bbw.cms.database;
 
 
-import java.util.*;
-import java.util.Date;
-import java.sql.*;
 
 import ch.bbw.cms.enums.*;
 import ch.bbw.cms.helper.SessionData;
-import ch.bbw.cms.models.*;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import ch.bbw.cms.models.*;
+import java.sql.*;
+import java.util.*;
+import java.util.Date;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 
 
@@ -24,6 +26,7 @@ import ch.bbw.cms.inf.DatabaseControlInf;
  * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons</b>
  * @author 5ia13paguenthard
  */
+
 public class DatabaseControl implements DatabaseControlInf{
     private Connection conn;
     private SessionData session;
@@ -44,6 +47,9 @@ public class DatabaseControl implements DatabaseControlInf{
     }
     
     private Connection connect(){
+        if(conn !=  null){
+            return conn;
+        }
         try{
             return DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
         } catch(SQLException ex){
