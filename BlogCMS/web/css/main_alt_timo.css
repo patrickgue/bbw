@@ -76,14 +76,17 @@ button, input, select, textarea{
     margin: 2px;
 }
 
+link {
+    text-decoration: none;
+}
+
 input[type="text"], input[type="password"], select, textarea{
     min-width: 180px;
     min-height: 24px;
     border-radius: 0px;
-    background-color: #132C61;
+    background-color: #C92F2F;
    
 }
-
 
 header button, header input{
     background-color: #FFFFFF !important;
@@ -98,13 +101,6 @@ header button, header input{
 
 .list-entry:hover{
     background-color: #C92F2F;
-}
-
-.list-entry.selected{
-    /* background-color: #212C32;
-    color: #C7C7C7;*/
-    background-color: #C92F2F;  
-    border-right: 5px solid #212C32;
 }
 
 .list-entry h2, .list-entry h3{
@@ -171,6 +167,7 @@ header button, header input{
 .share-icon{
     height: 20px;
 }
+
 
 
 @media screen and (max-width: 768px) {
