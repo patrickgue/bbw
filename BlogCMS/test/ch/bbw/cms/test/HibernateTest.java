@@ -18,7 +18,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session; 
 import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration; 
 
 import ch.bbw.cms.database.hibernate.*;
 import ch.bbw.cms.models.User;
@@ -32,11 +31,8 @@ import java.util.List;
 public class HibernateTest {
     
     private SessionFactory factory;
-    
-    
-    public HibernateTest() {
-        factory = HibernateUtil.getSessionFactory();
-    }
+    private HibernateUtil util;
+   
     
     @BeforeClass
     public static void setUpClass() {
@@ -49,6 +45,8 @@ public class HibernateTest {
     
     @Before
     public void setUp() {
+        util = new HibernateUtil();
+        factory = util.getSessionFactory();
     }
     
     @After
@@ -61,7 +59,7 @@ public class HibernateTest {
         Transaction tx = null;
         try{
             tx = session.beginTransaction();
-            List users = session.createQuery("FROM cms_user").list(); 
+            List users = session.createQuery("from cms_user").list(); 
             for (Iterator iterator = 
                               users.iterator(); iterator.hasNext();){
                 User user = (User) iterator.next(); 
@@ -73,6 +71,7 @@ public class HibernateTest {
         }catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             e.printStackTrace(); 
+            fail();
         }finally {
             session.close(); 
         }

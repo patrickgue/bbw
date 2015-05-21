@@ -114,8 +114,8 @@ public abstract class Content {
      * @param database the database to set
      */
     public void setDatabase(Database database) {
-        this.user = database.getUser(userid);
         this.database = database;
+        this.user = this.database.getUser(userid);
     }
 
 
