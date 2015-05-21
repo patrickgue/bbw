@@ -51,7 +51,8 @@ public class DatabaseControl implements DatabaseControlInf{
             return conn;
         }
         try{
-            return DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
+            return DriverManager.getConnection("jdbc:mysql://localhost/cms","root","");
+            //return DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
         } catch(SQLException ex){
             ex.printStackTrace();
             return null;

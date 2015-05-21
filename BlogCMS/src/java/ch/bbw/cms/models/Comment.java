@@ -6,40 +6,28 @@
 
 package ch.bbw.cms.models;
 
+import java.util.Date;
+
 /**
  * This class is used to save comments belonging to a post
+ * @author 5ia13paguenthard
  * @author 5ia13nosiegrist
  */
-public class Comment {
-    int commentID;
-    String commentContent;
-    int postID;
+public class Comment extends Content{
+
+    int postId;
     
-
-    public int getCommentID() {
-        return commentID;
+    public Comment(Integer id, String content, int postId, int userId, Date date){
+        super(id, userId , content, date);
+        this.postId = postId;
     }
 
-    public void setCommentID(int commentID) {
-        this.commentID = commentID;
+    public int getPostId() {
+        return postId;
     }
 
-    public String getCommentContent() {
-        return commentContent;
+    public void setPostId(int postID) {
+        this.postId = postID;
     }
-
-    public void setCommentContent(String commentContent) {
-        this.commentContent = commentContent;
-    }
-
-    public int getPostID() {
-        return postID;
-    }
-
-    public void setPostID(int postID) {
-        this.postID = postID;
-    }
-    
-    
     
 }

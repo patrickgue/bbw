@@ -9,7 +9,6 @@ import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 
 

@@ -17,6 +17,7 @@ import javax.faces.bean.ManagedProperty;
  */
 public abstract class Content {
     private User user;
+    private int userid;
     private int contentId;
     private String content;
     
@@ -27,7 +28,7 @@ public abstract class Content {
     public Content(Integer contentId, int userId, String content, Date date){
         //database = new Database();
         this.contentId = contentId;
-        this.user = database.getUser(userId);
+        this.userid = userId;
         this.content = content;
         this.date = date;
     }
@@ -113,6 +114,7 @@ public abstract class Content {
      * @param database the database to set
      */
     public void setDatabase(Database database) {
+        this.user = database.getUser(userid);
         this.database = database;
     }
 

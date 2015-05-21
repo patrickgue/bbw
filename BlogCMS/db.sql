@@ -23,6 +23,7 @@ CREATE TABLE cms_post(
        post_content VARCHAR(4096) NOT NULL,
        post_likes INTEGER NOT NULL,
        post_user_id INTEGER NOT NULL,
+       post_date DATE NOT NULL,
 
        PRIMARY KEY(post_id)
 );
@@ -32,9 +33,11 @@ CREATE TABLE cms_comment(
        comment_user_id INTEGER NOT NULL,
        comment_content VARCHAR(2048) NOT NULL,
        comment_post_id INTEGER NOT NULL,
+       comment_date DATE NOT NULL,
 
        PRIMARY KEY(comment_id)
 );
+
 CREATE TABLE cms_pinwall(
        pin_id INTEGER NOT NULL AUTO_INCREMENT,
        pin_post_id INTEGER NOT NULL,
