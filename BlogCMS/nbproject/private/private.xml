@@ -6,20 +6,19 @@
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_user.hbm.xml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/helper/SessionData.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_user.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/DBPinwall.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/DBComment.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/HibernateDatabase.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/helper/Pattern.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/hibernate.cfg.xml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/profile.xhtml</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/DBPost.hbm.xml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Post.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/create.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/login.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/admin.xhtml</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/DBPinwall.hbm.xml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_pinwall.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/test/ch/bbw/cms/test/HibernateTest.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_comment.hbm.xml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_post.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/js/main.js</file>
@@ -32,14 +31,15 @@
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_comment.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_pinwall.hbm.xml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/db.sql</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/DBComment.hbm.xml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_post.hbm.xml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/HibernateUtil.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/main.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/User.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/admin.css</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/DBPost.java</file>
         </group>
     </open-files>
 </project-private>

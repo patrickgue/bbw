@@ -54,7 +54,7 @@ public class HibernateTest {
     }
 
     @Test
-    public void testRead(){
+    public void testReadUser(){
         Session session = factory.openSession();
         Transaction tx = null;
         try{
@@ -62,10 +62,34 @@ public class HibernateTest {
             List users = session.createQuery("from cms_user").list(); 
             for (Iterator iterator = 
                               users.iterator(); iterator.hasNext();){
-                User user = (User) iterator.next(); 
+                cms_user user = (cms_user) iterator.next(); 
                 System.out.print("Name: " + user.getName()); 
                 System.out.print("  Email: " + user.getEmail()); 
-                System.out.println("  Type: " + user.getUserTypeString()); 
+                System.out.println("  Type: " + user.getType().toString()); 
+            }
+            tx.commit();
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace(); 
+            fail();
+        }finally {
+            session.close(); 
+        }
+    }
+    
+    @Test
+    public void testReadPost(){
+        Session session = factory.openSession();
+        Transaction tx = null;
+        try{
+            tx = session.beginTransaction();
+            List posts = session.createQuery("from cms_post").list(); 
+            for (Iterator iterator = 
+                              posts.iterator(); iterator.hasNext();){
+                cms_post post = (cms_post) iterator.next(); 
+                System.out.print("Title: " + post.getTitle());
+                System.out.print("  Content: " + post.getContent()); 
+                System.out.println("  UserId: " + post.getUserId()); 
             }
             tx.commit();
         }catch (HibernateException e) {

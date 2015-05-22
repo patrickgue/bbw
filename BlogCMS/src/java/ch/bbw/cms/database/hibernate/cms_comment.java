@@ -18,7 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table
-public class DBComment {
+public class cms_comment {
     @Id
     @GeneratedValue
     private Integer comment_id;
@@ -28,9 +28,9 @@ public class DBComment {
     private Integer comment_post_id;
     private Date comment_date;
     
-    public DBComment(){}
+    public cms_comment(){}
     
-    public DBComment(Integer id, String content, Integer userId, Date date){
+    public cms_comment(Integer id, String content, Integer userId, Date date){
         this.comment_id = id;
         this.comment_content = content;
         this.comment_user_id = userId;

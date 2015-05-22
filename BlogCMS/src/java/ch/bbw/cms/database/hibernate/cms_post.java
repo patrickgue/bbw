@@ -18,7 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table
-public class DBPost {
+public class cms_post {
     @Id
     @GeneratedValue
     private Integer id;
@@ -29,9 +29,9 @@ public class DBPost {
     private Integer userId;
     private Date date;
     
-    public DBPost(){}
+    public cms_post(){}
     
-    public DBPost(Integer id, String title, String content, Integer likes, Integer userId, Date date){
+    public cms_post(Integer id, String title, String content, Integer likes, Integer userId, Date date){
         this.id = id;
         this.title = title;
         this.content = content;

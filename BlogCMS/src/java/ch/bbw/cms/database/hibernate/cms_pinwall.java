@@ -17,16 +17,16 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class DBPinwall {
+public class cms_pinwall {
     @Id
     @GeneratedValue
     private Integer id;
     private Integer postId;
     private Integer userId;
     
-    public DBPinwall(){}
+    public cms_pinwall(){}
     
-    public DBPinwall(Integer id, Integer postId, Integer userId){
+    public cms_pinwall(Integer id, Integer postId, Integer userId){
         this.id = id;
         this.postId = postId;
         this.userId = userId;
