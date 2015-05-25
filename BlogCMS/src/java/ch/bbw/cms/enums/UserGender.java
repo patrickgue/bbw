@@ -4,8 +4,8 @@ package ch.bbw.cms.enums;
 /**
  * Used to define the Gender of the user
  * 
- * OTHER should be used for people who fall outside of the binary gender. FEMALE and MALE should not be 
- * limited to cis-gender people but to people who define them as the specified gender (i.e. social, not biological gender).
+ * OTHER should be used for people who fall outside of the binary gender or people who don't want other people to 
+ * know their gender. FEMALE and MALE should not be limited to cis-gender people but to people who define them as 
  * 
  * @author 5ia13paguenthard
  */
