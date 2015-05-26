@@ -93,7 +93,7 @@ public class CreationBean {
     public boolean isEnabled(){
         try{
             System.out.println("get User "+getDatabase().getUser(session.getUserId()).getName());
-            return session.getUserId() != -1 && getDatabase().getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+            return session.getUserId() != -1 && getDatabase().getUser(session.getUserId()).getType().equals(UserType.content);
         } catch(Exception ex){
             return true;
         }

@@ -115,10 +115,10 @@ public class DatabaseControl implements DatabaseControlInf{
                 String name = rs.getString("user_name");
                 String password = rs.getString("user_password");
                 String email = rs.getString("user_email");
-                UserType type = UserType.valueOf(rs.getString("user_type").toUpperCase());
+                UserType type = UserType.valueOf(rs.getString("user_type"));
                 String bio = rs.getString("user_bio");
                 int age = rs.getInt("user_age");
-                UserGender gender = UserGender.valueOf(rs.getString("user_gender").toUpperCase());
+                UserGender gender = UserGender.valueOf(rs.getString("user_gender"));
 		users.add(new User(id, name, password, email, gender, type, bio, age));
 	    }
            
@@ -367,10 +367,12 @@ public class DatabaseControl implements DatabaseControlInf{
     }
 
     @Override
-    public boolean addComment(Comment comment) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean addComment(Comment com) {
+        String query = "INSERT INTO cms_post (comment_user_id, comment_content, comment_post_id, comment_date)  values("
+                + ""+com.getUserId()+""
+                + ", '"+com.getContent()+"'"
+                + ", "+com.getPostId()+""
+                + ", '"+com.getDate().toString()+"' )";
+        return execute(query);
     }
-    
-    
-    
 }

@@ -10,15 +10,16 @@ package ch.bbw.cms.enums;
  * @author 5ia13paguenthard
  */
 public enum UserGender{
-    FEMALE("female"), MALE("male"), OTHER("other");
+    female("female"), male("male"), other("other");
     
     public static UserGender getUserTypeFromString(String type) {
-        if(type.equals(MALE.getGenderName())){
-            return MALE;
-        } else if(type.equals(FEMALE.getGenderName())){
-            return FEMALE;
-        } else if(type.equals(OTHER.getGenderName())){
-            return OTHER;
+        type = type.toLowerCase();
+        if(type.equals(male.getGenderName())){
+            return male;
+        } else if(type.equals(female.getGenderName())){
+            return female;
+        } else if(type.equals(other.getGenderName())){
+            return other;
         } else {
             return null;
         }
@@ -27,6 +28,7 @@ public enum UserGender{
     String genderName;
     
     UserGender(String genderName){
+        genderName = genderName.toLowerCase();
         this.genderName = genderName;
     }
     

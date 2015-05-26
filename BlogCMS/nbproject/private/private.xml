@@ -3,26 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/C:/Work/Test/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
             <file>file:/C:/Work/Test/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Comment.java</file>
             <file>file:/C:/Work/Test/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/HibernateDatabase.java</file>
             <file>file:/C:/Work/Test/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Content.java</file>
+            <file>file:/C:/Work/Test/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
             <file>file:/C:/Work/Test/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
             <file>file:/C:/Work/Test/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
-=======
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Content.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/web/css/main_alt_timo.css</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/HibernateDatabase.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_post.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/test/ch/bbw/cms/test/HibernateTest.java</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/web/index.xhtml</file>
-            <file>file:/C:/Work/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
->>>>>>> 9e6b2ae8ad89d51f2b77d05b46303f35916dd8a8
         </group>
     </open-files>
 </project-private>

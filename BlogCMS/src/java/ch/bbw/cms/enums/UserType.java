@@ -8,15 +8,15 @@ package ch.bbw.cms.enums;
  * TECHNICAL: This user can do admin stuff like deleting users or changeing the style
  */
 public enum UserType{
-    NORMAL("normal"), CONTENT("content"), TECHNICAL("technical");
+    normal("normal"), content("content"), technical("technical");
 
     public static UserType getUserTypeFromString(String type) {
-        if(type.equals(NORMAL.getType())){
-            return NORMAL;
-        } else if(type.equals(CONTENT.getType())){
-            return CONTENT;
-        } else if(type.equals(TECHNICAL.getType())){
-            return TECHNICAL;
+        if(type.equals(normal.getType())){
+            return normal;
+        } else if(type.equals(content.getType())){
+            return content;
+        } else if(type.equals(technical.getType())){
+            return technical;
         } else {
             return null;
         }

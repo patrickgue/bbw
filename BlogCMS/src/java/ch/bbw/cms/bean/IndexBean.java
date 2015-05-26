@@ -164,7 +164,7 @@ public class IndexBean {
     
     public boolean isEditor(){
         try{
-            return getDatabase().getUser(session.getUserId()).getType().equals(UserType.CONTENT);
+            return getDatabase().getUser(session.getUserId()).getType().equals(UserType.content);
         } catch(Exception ex){
             return false;
         }
