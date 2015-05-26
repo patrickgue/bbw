@@ -39,5 +39,6 @@ public interface DatabaseControlInf {
     public ArrayList<Post> getPinwall(User user);
     public boolean addPostToPinwall(User user, Post post);
     public boolean deletePostFromPinwall(User user, Post post);
-    
+    public boolean getComments(int postid);
+    public boolean addComment(Comment comment);
 }
