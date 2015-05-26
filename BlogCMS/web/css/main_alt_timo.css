@@ -6,6 +6,10 @@ body{
     background-color: #FFFFFF;
 }
 
+a, a*{
+    text-decoration: none;
+}
+
 .page-center{
     width: 98%;
     padding: 0% 1%;
