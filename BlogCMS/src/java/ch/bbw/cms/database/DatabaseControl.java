@@ -344,7 +344,30 @@ public class DatabaseControl implements DatabaseControlInf{
 
     @Override
     public ArrayList<Comment> getComments(int postid) {
+<<<<<<< HEAD
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+=======
+        ArrayList<Comment> comments = new ArrayList();
+        String query = "SELECT * FROM cms_comment WHERE comment_post_id = " + postid;
+        
+        try {
+	    Statement st = conn.createStatement();
+	    ResultSet rs = st.executeQuery(query);
+	    
+            while (rs.next()) {
+		int id = rs.getInt("comment_id");
+                int userIdGet = rs.getInt("comment_user_id");
+		String content = rs.getString("comment_content");
+		int postIdGet = rs.getInt("comment_post_id"); 
+                Date date =  rs.getDate("comment_date");  
+		comments.add(new Comment(id, content, postIdGet, userIdGet, date));
+	    }
+            st.close();
+            return comments;
+	} catch (SQLException ex) {
+	}
+	return null;
+>>>>>>> origin/master
     }
 
     @Override
