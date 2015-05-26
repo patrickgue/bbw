@@ -344,9 +344,6 @@ public class DatabaseControl implements DatabaseControlInf{
 
     @Override
     public ArrayList<Comment> getComments(int postid) {
-<<<<<<< HEAD
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-=======
         ArrayList<Comment> comments = new ArrayList();
         String query = "SELECT * FROM cms_comment WHERE comment_post_id = " + postid;
         
@@ -367,7 +364,6 @@ public class DatabaseControl implements DatabaseControlInf{
 	} catch (SQLException ex) {
 	}
 	return null;
->>>>>>> origin/master
     }
 
     @Override
