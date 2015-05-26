@@ -8,6 +8,7 @@ package ch.bbw.cms.database;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import ch.bbw.cms.models.Comment;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
 import java.util.ArrayList;
@@ -121,6 +122,16 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public boolean deletePostFromPinwall(User user, Post post) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean getComments(int postid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean addComment(Comment comment) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
