@@ -10,6 +10,7 @@ import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import ch.bbw.cms.models.Comment;
 
 
 import java.util.ArrayList;
@@ -155,6 +156,16 @@ public class DatabaseControlMock implements DatabaseControlInf{
     @Override
     public boolean deletePostFromPinwall(User user, Post post) {
         return true;
+    }
+
+    @Override
+    public ArrayList<Comment> getComments(int postid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean addComment(Comment comment) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

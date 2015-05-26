@@ -21,96 +21,96 @@ import javax.persistence.Table;
 public class cms_post {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Integer post_id;
     
-    private String title;
-    private String content;
-    private Integer likes;
-    private Integer userId;
-    private Date date;
+    private String post_title;
+    private String post_content;
+    private Integer post_likes;
+    private Integer post_user_id;
+    private Date post_date;
     
     public cms_post(){}
     
     public cms_post(Integer id, String title, String content, Integer likes, Integer userId, Date date){
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.likes = likes;
-        this.userId = userId;
-        this.date = date;
+        this.post_id = id;
+        this.post_title = title;
+        this.post_content = content;
+        this.post_likes = likes;
+        this.post_user_id = userId;
+        this.post_date = date;
     }
     
     public Post toPost(){
-        return new Post(userId, title, content, userId, date);
+        return new Post(post_user_id, post_title, post_content, post_user_id, post_date);
     }
 
     /**
      * @return the id
      */
     public Integer getId() {
-        return id;
+        return post_id;
     }
 
     /**
      * @param id the id to set
      */
     public void setId(Integer id) {
-        this.id = id;
+        this.post_id = id;
     }
 
     /**
      * @return the title
      */
     public String getTitle() {
-        return title;
+        return post_title;
     }
 
     /**
      * @param title the title to set
      */
     public void setTitle(String title) {
-        this.title = title;
+        this.post_title = title;
     }
 
     /**
      * @return the content
      */
     public String getContent() {
-        return content;
+        return post_content;
     }
 
     /**
      * @param content the content to set
      */
     public void setContent(String content) {
-        this.content = content;
+        this.post_content = content;
     }
 
     /**
      * @return the likes
      */
     public Integer getLikes() {
-        return likes;
+        return post_likes;
     }
 
     /**
      * @param likes the likes to set
      */
     public void setLikes(Integer likes) {
-        this.likes = likes;
+        this.post_likes = likes;
     }
 
     /**
      * @return the userId
      */
     public Integer getUserId() {
-        return userId;
+        return post_user_id;
     }
 
     /**
      * @param userId the userId to set
      */
     public void setUserId(Integer userId) {
-        this.userId = userId;
+        this.post_user_id = userId;
     }
 }

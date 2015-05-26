@@ -126,7 +126,11 @@ public class HibernateDatabase implements DatabaseControlInf{
     }
 
     @Override
+<<<<<<< HEAD
+    public ArrayList<Comment> getComments(int postid) {
+=======
     public boolean getComments(int postid) {
+>>>>>>> origin/master
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
