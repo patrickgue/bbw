@@ -134,7 +134,7 @@ public class Database implements DatabaseControlInf{
     }
 
     @Override
-    public boolean getComments(int postid) {
+    public ArrayList<Comment> getComments(int postid) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
