@@ -115,10 +115,10 @@ public class DatabaseControl implements DatabaseControlInf{
                 String name = rs.getString("user_name");
                 String password = rs.getString("user_password");
                 String email = rs.getString("user_email");
-                UserType type = UserType.valueOf(rs.getString("user_type").toUpperCase());
+                UserType type = UserType.valueOf(rs.getString("user_type"));
                 String bio = rs.getString("user_bio");
                 int age = rs.getInt("user_age");
-                UserGender gender = UserGender.valueOf(rs.getString("user_gender").toUpperCase());
+                UserGender gender = UserGender.valueOf(rs.getString("user_gender"));
 		users.add(new User(id, name, password, email, gender, type, bio, age));
 	    }
            

@@ -126,12 +126,12 @@ public class AdminBean {
      */
     public void setToChangeUser(User toChangeUser) {
         UserType tmp;
-        if(toChangeUser.getType().equals(UserType.CONTENT)){
-            tmp = UserType.TECHNICAL;
-        } else if(toChangeUser.getType().equals(UserType.TECHNICAL)){
-            tmp = UserType.NORMAL;
+        if(toChangeUser.getType().equals(UserType.content)){
+            tmp = UserType.technical;
+        } else if(toChangeUser.getType().equals(UserType.technical)){
+            tmp = UserType.normal;
         } else {
-            tmp = UserType.CONTENT;
+            tmp = UserType.content;
         }
         
         getDb().changeUserType(toChangeUser.getUserId(), tmp);
@@ -151,7 +151,7 @@ public class AdminBean {
      */
     public void setDb(Database db) {
         this.db = db;
-        if(db.getUser(session.getUserId()).getType().equals(UserType.TECHNICAL)){
+        if(db.getUser(session.getUserId()).getType().equals(UserType.technical)){
             try{
                 BufferedReader reader = new BufferedReader(new FileReader(new File("./dbsettings.ini")));
                 String buffer;

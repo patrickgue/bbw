@@ -51,7 +51,7 @@ public class LoginSignupBean {
     
     public String signup(){
         if(password.equals(repassword)){
-            if(getDatabase().createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.NORMAL))){
+            if(getDatabase().createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.normal))){
                 int userid = getDatabase().getUserId(username);
                 session.setUserId(userid);
                 return "main.xhtml";

@@ -25,10 +25,10 @@ public class DatabaseControlMock implements DatabaseControlInf{
     ArrayList<User> users = new ArrayList<User>();
 	
     public DatabaseControlMock(){
-        users.add(new User(1, "dummy1", "asdf", "dummy@dummy1", UserGender.FEMALE, UserType.NORMAL));
-        users.add(new User(2, "dummy1", "asdf", "dummy@dummy2", UserGender.FEMALE, UserType.NORMAL));
-        users.add(new User(3, "dummy1", "asdf", "dummy@dummy3", UserGender.FEMALE, UserType.NORMAL));
-        users.add(new User(4, "dummy1", "asdf", "dummy@dummy4", UserGender.FEMALE, UserType.NORMAL));
+        users.add(new User(1, "dummy1", "asdf", "dummy@dummy1", UserGender.female, UserType.normal));
+        users.add(new User(2, "dummy1", "asdf", "dummy@dummy2", UserGender.female, UserType.normal));
+        users.add(new User(3, "dummy1", "asdf", "dummy@dummy3", UserGender.female, UserType.normal));
+        users.add(new User(4, "dummy1", "asdf", "dummy@dummy4", UserGender.female, UserType.normal));
     }
     
     @Override
@@ -133,7 +133,7 @@ public class DatabaseControlMock implements DatabaseControlInf{
     
     @Override
     public User getUser(int id){
-        return new User("User 1", "abc123", "abc@def", UserGender.FEMALE, (id == 1 ? UserType.NORMAL : id == 2 ? UserType.CONTENT : UserType.TECHNICAL));
+        return new User("User 1", "abc123", "abc@def", UserGender.female, (id == 1 ? UserType.normal : id == 2 ? UserType.content : UserType.technical));
     }
 
     @Override
