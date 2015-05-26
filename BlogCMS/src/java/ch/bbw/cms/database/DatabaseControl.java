@@ -367,10 +367,12 @@ public class DatabaseControl implements DatabaseControlInf{
     }
 
     @Override
-    public boolean addComment(Comment comment) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean addComment(Comment com) {
+        String query = "INSERT INTO cms_post (comment_user_id, comment_content, comment_post_id, comment_date)  values("
+                + ""+com.getUserId()+""
+                + ", '"+com.getContent()+"'"
+                + ", "+com.getPostId()+""
+                + ", '"+com.getDate().toString()+"' )";
+        return execute(query);
     }
-    
-    
-    
 }
