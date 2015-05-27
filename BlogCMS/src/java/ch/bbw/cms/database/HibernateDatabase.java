@@ -36,8 +36,18 @@ public class HibernateDatabase implements DatabaseControlInf{
         factory = util.getSessionFactory();
     }
     
-    
+    private Session initSession(){
+        Session session;
+        try{
+            session = factory.getCurrentSession();
+        } catch(HibernateException ex){
+            session = factory.openSession();
+        }
+        return session;
+    }
 
+    
+    
     @Override
     public ArrayList<Post> getPosts(User user) {
         return getPosts(user.getUserId());
@@ -88,7 +98,7 @@ public class HibernateDatabase implements DatabaseControlInf{
             
         }
         
-        Session session = factory.openSession();
+        Session session = initSession();
         Transaction tx = null;
         
         try{
@@ -122,7 +132,7 @@ public class HibernateDatabase implements DatabaseControlInf{
     public ArrayList<User> getUserList() {
         ArrayList<User> users = new ArrayList<>();
 	String query = "from cms_user";
-        Session session = factory.openSession();
+        Session session = initSession();
         Transaction tx = null;
         
         try{
