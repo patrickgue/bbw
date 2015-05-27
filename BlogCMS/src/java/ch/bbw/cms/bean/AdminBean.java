@@ -151,6 +151,7 @@ public class AdminBean {
      */
     public void setDb(Database db) {
         this.db = db;
+        System.out.println("## User Id: "+session.getUserId());
         if(db.getUser(session.getUserId()).getType().equals(UserType.technical)){
             try{
                 BufferedReader reader = new BufferedReader(new FileReader(new File("./dbsettings.ini")));

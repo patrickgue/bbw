@@ -41,7 +41,7 @@ public class cms_post {
     }
     
     public Post toPost(){
-        return new Post(post_user_id, post_title, post_content, post_user_id, post_date);
+        return new Post(post_user_id, post_title, post_content, post_user_id, getPost_date());
     }
 
     /**
@@ -112,5 +112,31 @@ public class cms_post {
      */
     public void setUserId(Integer userId) {
         this.post_user_id = userId;
+    }
+
+    /**
+     * @return the post_date
+     */
+    public Date getPost_date() {
+        return post_date;
+    }
+
+    /**
+     * @param post_date the post_date to set
+     */
+    public void setPost_date(Date post_date) {
+        this.post_date = post_date;
+    }
+    
+    
+    public String toString(){
+        return "| cms_post    \n" +
+"-------------+---\n" +
+"post_id      | "+getId()+"\n" +
+"post_title   | "+getTitle()+"\n" +
+"post_content | "+getContent()+"\n" +
+"post_likes   | "+getLikes()+"\n" +
+"post_user_id | "+getUserId()+"\n" +
+"post_date    | "+getPost_date() ;
     }
 }
