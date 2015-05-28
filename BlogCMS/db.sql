@@ -9,10 +9,10 @@ CREATE TABLE cms_user(
        user_name VARCHAR(64) NOT NULL,
        user_email VARCHAR(64) NOT NULL,
        user_password VARCHAR(64) NOT NULL,
-       user_type ENUM('NORMAL', 'CONTENT', 'TECHNICAL') NOT NULL,
+       user_type ENUM('normal', 'content', 'technical') NOT NULL,
        user_bio VARCHAR(1024),
        user_age INTEGER ,
-       user_gender ENUM('FEMALE', 'MALE', 'OTHER') NOT NULL,
+       user_gender ENUM('female', 'male', 'other') NOT NULL,
 
        PRIMARY KEY(user_id)
 );

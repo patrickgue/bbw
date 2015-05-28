@@ -2,23 +2,23 @@
 | Database ERD of "blog/cms"                                              |
 +-------------------------------------------------------------------------+
 
-
-
- +-------------------------------+
- | cms_user                      |
- +-------------------------------+ 1          1
- | X user_id       int     nn ai |=======+-----------+
- |   user_name     varchar nn    |       |           |
- |   user_password varchar nn    |   	 |           |
- |   user_type     enum    nn    |    	 |           |
- |   user_bio      varchar nn    |     	 |           |
- |   user_age      int     nn    |     	 |           |
- |   user_gender   enum    nn    |     	 |           |
- +-------------------------------+     	 |           |
-     					 |           |
-     					 |           |
-     +-------------------------------+   |           |
-     | cms_post                      |   |           |
+		 +---------------------------------------------------+
+		 | n						     |
+ +---------------+---------------+				     |
+ | cms_user                      |				     |
+ +-------------------------------+ 1          1			     |
+ | X user_id       int     nn ai |=======+-----------+		     |1
+ |   user_name     varchar nn    |       |           |	 +-----------+-------------+
+ |   user_password varchar nn    |   	 |           |   | cms_pinwall             |
+ |   user_type     enum    nn    |    	 |           |   +-------------------------+
+ |   user_bio      varchar nn    |     	 |           |   | X pin_id      int nn ai |
+ |   user_age      int     nn    |     	 |           |   |   pin_post_id int nn    |
+ |   user_gender   enum    nn    |     	 |           |   |   pin_user_id int nn    |
+ +-------------------------------+     	 |           |	 +-----------+-------------+
+     					 |           |		     | 1
+     					 |           |		     |	
+     +-------------------------------+ n |           |		     |
+     | cms_post                      +---+-----------+---------------+
    1 +-------------------------------+   |           |
 +----| X post_id      int      nn ai |   |           |
 |    |   post_title   varchar  nn    |   |           |
@@ -36,3 +36,8 @@
 |0..*|   comment_user_id int     nn    |-------------+
 +----|   comment_post_id int     nn    |
      +---------------------------------+
+
+
+													       
+       	       	       	       	       	       	       	       	       	       	       	       	       	     
+
