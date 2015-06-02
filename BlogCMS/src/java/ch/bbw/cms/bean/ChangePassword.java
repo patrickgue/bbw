@@ -44,7 +44,6 @@ public class ChangePassword {
    
     public void change()
     {
- 
         int userId = sessiondata.getUserId();
         db.changeUserPassword(userId, newPassword);
     }
