@@ -51,8 +51,8 @@ public class DatabaseControl implements DatabaseControlInf{
             return conn;
         }
         try{
-            //return DriverManager.getConnection("jdbc:mysql://localhost/cms","root","");
-            return DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
+            return DriverManager.getConnection("jdbc:mysql://localhost/cms","root","");
+            //return DriverManager.getConnection("jdbc:mysql://db51.netzone.ch/rogerguenthar","rogerguenthar","cms001");
         } catch(SQLException ex){
             ex.printStackTrace();
             return null;
@@ -233,7 +233,7 @@ public class DatabaseControl implements DatabaseControlInf{
                 String type = rs.getString("user_type");
 
                 
-                return new User(userId, name, passw, email, UserGender.valueOf(gender.toUpperCase()), UserType.valueOf(type.toUpperCase()));
+                return new User(userId, name, passw, email, UserGender.valueOf(gender), UserType.valueOf(type));
             }
             st.close();
 

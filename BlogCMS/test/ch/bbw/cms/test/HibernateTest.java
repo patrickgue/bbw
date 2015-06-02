@@ -20,7 +20,6 @@ import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
 
 import ch.bbw.cms.database.hibernate.*;
-import ch.bbw.cms.models.User;
 import java.util.Iterator;
 import java.util.List;
 
@@ -100,4 +99,6 @@ public class HibernateTest {
             session.close(); 
         }
     }
+    
+   
 }

@@ -31,6 +31,7 @@ public abstract class Content {
         this.userid = userId;
         this.content = content;
         this.date = date;
+        this.user = new Database().getUser(userid);
     }
 
     /**

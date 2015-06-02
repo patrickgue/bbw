@@ -3,7 +3,8 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: '_AkzidenzGrotesk', 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', sans-serif;
-    color:  #212C32;
+    background-color: #333;
+    color: #eee;
 }
 
 .page-center{
@@ -14,8 +15,8 @@ body{
 }
 
 header{
-    background-color: #26596A;
-    color: #C7C7C7;
+    background-color: #333;
+    color: #eee;
 }
 
 
@@ -41,7 +42,8 @@ header h1, header h2, header h3{
 }
 
 .h-centered{
-    text-align: center;
+    /* text-align: center; */
+    font-size: 32pt;
 }
 
 .left{
@@ -69,17 +71,24 @@ button, input, select, textarea{
     min-width: 40px;
     min-height: 30px;
     border: none;
-    background-color: #BBBCBC;
-    border-radius: 4px;
-    border-bottom: 2px solid #647E8C; 
+    background-color: transparent;
+    color: #f0f0f0;
+    border: 2px solid #f0f0f0;
     margin: 2px;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover{
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 input[type="text"], input[type="password"], select, textarea{
     min-width: 180px;
-    min-height: 24px;
     border-radius: 0px;
     background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    min-height: 28px;
    
 }
 
