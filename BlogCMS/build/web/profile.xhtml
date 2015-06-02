@@ -36,6 +36,13 @@
                 <a href="main.xhtml"><button id="profile-button-menu">Home</button></a>
                 <button id="logout-button-menu">Log out</button>
                 <h2>Profil von User 1</h2>
+                <h:form>
+                <h:outputText value="New Password" id="newPassword"></h:outputText>
+                <h:inputText value="" id="NewPassword"></h:inputText><br></br>
+                <h:outputText value="Repeat Password" id="repeatPassword"></h:outputText>
+                <h:inputText value="" id="RepeatPassword"></h:inputText><br></br>
+                <h:commandButton value="Save Changes" action="#{ChangePassword.change}"></h:commandButton>
+                </h:form>
                 <div id="pinwall">
                     <div class="pin">
                         <div class="pin-header">
