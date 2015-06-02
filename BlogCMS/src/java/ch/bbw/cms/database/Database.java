@@ -1,13 +1,13 @@
 package ch.bbw.cms.database;
 
 import ch.bbw.cms.enums.*;
-import java.util.*;
-import java.util.Date;
-
 import ch.bbw.cms.inf.DatabaseControlInf;
+import ch.bbw.cms.mock.DatabaseControlMock;
 import ch.bbw.cms.models.Comment;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
+import java.util.*;
+import java.util.Date;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -24,7 +24,7 @@ public class Database implements DatabaseControlInf{
     private DatabaseControlInf db;
 
     public Database(){
-        db = new DatabaseControl();//HibernateDatabase();
+        db = new DatabaseControlMock();//HibernateDatabase();
     }
     
     @Override
@@ -135,11 +135,11 @@ public class Database implements DatabaseControlInf{
 
     @Override
     public ArrayList<Comment> getComments(int postid) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return db.getComments(postid);
     }
 
     @Override
     public boolean addComment(Comment comment) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return db.addComment(comment);
     }
 }

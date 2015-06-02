@@ -82,6 +82,27 @@
                             </div>
                             <h2><h:outputText escape="false" value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
                             <h:outputText escape="false" value="#{indexBean.currentPost.content}"/>
+                            <h3><h:outputText escape="false" value="Kommentare"/></h3>
+                            <h:form>
+                            <h:inputTextarea value="#{indexBean.comment}"></h:inputTextarea>
+                            <h:commandButton value="Post" action="#{indexBean.postComment()}"></h:commandButton>
+                            </h:form>
+                            <h:dataTable style="width: 100%" id="comment-list" var="comment" value="#{indexBean.commentList}">
+                            <h:column>
+                               
+                                    
+                                        <div class="list-entry">
+                                            <h3><h:outputText escape="false" value="#{comment.user.name}, #{comment.date}" /></h3>
+                                            <span>
+                                                <h:outputText escape="false" value="#{comment.content}"/>
+                                            </span>
+                                        </div>
+                                        
+                                    
+                               
+                            </h:column>
+                            
+                        </h:dataTable>
                         </div>
                 </div>
 
