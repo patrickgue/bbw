@@ -38,13 +38,12 @@ public class HibernateDatabase implements DatabaseControlInf{
     }
     
     private Session initSession(){
-        Session session;
+        
         try{
-            session = factory.getCurrentSession();
+            return factory.getCurrentSession();
         } catch(HibernateException ex){
-            session = factory.openSession();
+            return factory.openSession();
         }
-        return session;
     }
 
     

@@ -51,7 +51,7 @@ public class HibernateDatabaseTest {
     
     @Test
     public void testPostListLength(){
-        assertEquals(1, database.getPostList(null).size());
+        assertEquals(15, database.getPostList(null).size());
     }
     
     
