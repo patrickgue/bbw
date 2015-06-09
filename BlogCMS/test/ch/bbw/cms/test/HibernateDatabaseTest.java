@@ -7,6 +7,7 @@ package ch.bbw.cms.test;
 
 import ch.bbw.cms.database.HibernateDatabase;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import javax.faces.bean.ManagedProperty;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -20,6 +21,7 @@ import static org.junit.Assert.*;
  */
 public class HibernateDatabaseTest {
     
+    @ManagedProperty(value = "#{hibernateUtil}")
     private DatabaseControlInf database;
     
     public HibernateDatabaseTest() {

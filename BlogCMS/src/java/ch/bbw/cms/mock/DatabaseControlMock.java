@@ -23,6 +23,7 @@ import java.util.Random;
  */
 public class DatabaseControlMock implements DatabaseControlInf{
     ArrayList<User> users = new ArrayList<User>();
+     ArrayList<Comment> c;
 	
     public DatabaseControlMock(){
         users.add(new User(1, "dummy1", "asdf", "dummy@dummy1", UserGender.female, UserType.normal));
@@ -160,14 +161,19 @@ public class DatabaseControlMock implements DatabaseControlInf{
 
     @Override
     public ArrayList<Comment> getComments(int postid) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        c = new ArrayList<Comment>();
+        Date d = new Date(485656);
+        c.add(new Comment(1, "Erster:D", 1, 1, d));
+        System.err.println(c.size());
+        return c;
     }
 
     @Override
     public boolean addComment(Comment comment) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        c.add(comment);
+        System.err.println("Drin " + c.size());
+        return true;
     }
-    
     
     
     

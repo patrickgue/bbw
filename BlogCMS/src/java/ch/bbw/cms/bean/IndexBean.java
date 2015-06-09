@@ -7,12 +7,12 @@ package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserType;
-import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.helper.ClosedList;
 import ch.bbw.cms.helper.SessionData;
+import ch.bbw.cms.models.Comment;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.faces.bean.*;
@@ -39,6 +39,8 @@ public class IndexBean {
     private SessionData session;
     private String userIdTest;
     private ClosedList<String> cssFls;
+    private String comment = "Kommentar eingeben";
+    private ArrayList<Comment> commentList;
     
     
     
@@ -56,6 +58,12 @@ public class IndexBean {
 
 	log.debug("PostList: "+postList);
         
+    }
+    
+    public String postComment(){
+        Date d = new Date();
+        database.addComment(new Comment(1, comment, currentPost.getPostId(), session.getUserId(), d));
+        return "main.xhtml";
     }
     
     public ArrayList<Post> getPostList(){ 
@@ -195,6 +203,35 @@ public class IndexBean {
 	} catch(IndexOutOfBoundsException ex){
 	    currentPost = new Post(0, "Ask the admin to get a creator account to publish your own blog!",  "no Posts", -1, new Date());
 	}
+    }
+
+    /**
+     * @return the comment
+     */
+    public String getComment() {
+        return comment;
+    }
+
+    /**
+     * @param comment the comment to set
+     */
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    /**
+     * @return the commentList
+     */
+    public ArrayList<Comment> getCommentList() {
+        this.commentList = database.getComments(currentPost.getPostId());
+        return commentList;
+    }
+
+    /**
+     * @param commentList the commentList to set
+     */
+    public void setCommentList(ArrayList<Comment> commentList) {
+        this.commentList = commentList;
     }
   
 }

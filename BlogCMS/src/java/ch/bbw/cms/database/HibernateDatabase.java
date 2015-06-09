@@ -280,7 +280,7 @@ public class HibernateDatabase implements DatabaseControlInf{
             tx = session.beginTransaction();
             List lcomments = session.createQuery(query).list(); 
             for (Iterator iterator = 
-                              lcomments.iterator(); iterator.hasNext();){
+                lcomments.iterator(); iterator.hasNext();){
                 cms_comment comment = (cms_comment) iterator.next(); 
                 
                 comments.add(new Comment(comment.getId(), comment.getContent(), comment.getPostId(), comment.getUserId(), comment.getDate()));
@@ -289,6 +289,7 @@ public class HibernateDatabase implements DatabaseControlInf{
 
             }
             tx.commit();
+            
         }catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             e.printStackTrace(); 
