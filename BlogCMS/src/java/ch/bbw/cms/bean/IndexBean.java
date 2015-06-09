@@ -39,7 +39,7 @@ public class IndexBean {
     private SessionData session;
     private String userIdTest;
     private ClosedList<String> cssFls;
-    private String comment;
+    private String comment = "Kommentar eingeben";
     private ArrayList<Comment> commentList;
     
     

@@ -16,12 +16,25 @@ a, a*{
     max-width: 1280px;
     margin: auto;
 }
+.comments{
+    margin-top: 30px;
+    padding: 10px;
+    padding-right: 20px;
+    border-radius: 5px; 
+        
+    background-color: #C92F2F;
+    
+}
 
 header{
     background-color: #C92F2F;
     color: #FFFFFF;
 }
 
+.general-comment{
+    background-color: #FFFFFF;
+    
+}
 
 header h1, header h2, header h3{
     /* font-weight: 300;*/
