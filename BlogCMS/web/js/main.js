@@ -29,4 +29,15 @@ $(document).ready(function(){
             $(this).val("Search");
         }
     })
+    $(".general-comment").on("focus", function(){
+        if($(this).val() == "Kommentar eingeben"){
+            $(this).val("");
+        }
+    })
+    
+    $(".general-comment").on("blur", function(){
+        if($(this).val() == ""){
+            $(this).val("Kommentar eingeben");
+        }
+    })
 });

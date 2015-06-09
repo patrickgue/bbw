@@ -171,7 +171,7 @@ public class DatabaseControlMock implements DatabaseControlInf{
     @Override
     public boolean addComment(Comment comment) {
         c.add(comment);
-        System.err.println("Drin");
+        System.err.println("Drin " + c.size());
         return true;
     }
     
