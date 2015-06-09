@@ -43,6 +43,13 @@
                 <h:inputText id="RepeatPassword"></h:inputText><br></br>
                 <h:commandButton value="Save Changes" action="#{ChangePassword.change}"></h:commandButton>
                 </h:form>
+                <h:form>
+                <h1>User Daten</h1>
+                <h:outputText value="Username" id="username"></h:outputText><br></br>
+                <h:outputText value="#{profileBean.username}" id="username"></h:outputText>
+                <h:outputText value="Email" id="email"></h:outputText><br></br>
+                <h:outputText value="Gender" id="gender"></h:outputText><br></br>
+                </h:form>
                 <div id="pinwall">
                     <div class="pin">
                         <div class="pin-header">

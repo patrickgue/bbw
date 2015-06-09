@@ -8,6 +8,7 @@ package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.helper.SessionData;
+import ch.bbw.cms.models.User;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -19,13 +20,18 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 
-public class ChangePassword {
+public class ProfileBean {
+    public ProfileBean()
+    {
+        showUserInfo();
+    }
+    
     private Database db = new Database();
     private SessionData sessiondata = new SessionData();
     
     private String newPassword;
     private String repeatPassword;
-
+   
     public String getNewPassword() {
         return newPassword;
     }
@@ -42,10 +48,20 @@ public class ChangePassword {
         this.repeatPassword = repeatPassword;
     }
    
-    public void change()
+    public String change()
     {
         int userId = sessiondata.getUserId();
         db.changeUserPassword(userId, newPassword);
+         User user = sessiondata.getUser();
+         
+         return "profile.xhtml";
+
+    }
+    
+    public String showUserInfo()
+    {
+        User username = sessiondata.getUser();
+        return "profile.xhtml";
     }
     
 }
