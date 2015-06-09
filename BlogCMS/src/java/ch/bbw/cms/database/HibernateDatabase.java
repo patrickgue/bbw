@@ -32,6 +32,11 @@ public class HibernateDatabase implements DatabaseControlInf{
     private SessionFactory factory;
     private HibernateUtil util;
 
+    private ArrayList<Post> postCache;
+    private Date lastCachedPosts = new Date();
+    private ArrayList<User> userCache;
+    private Date lastCachedUsers = new Date();
+    
     public HibernateDatabase() {
         util = new HibernateUtil();
         factory = util.getSessionFactory();
@@ -55,12 +60,30 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<Post> getPosts(){
-	return getPostList(null);
+        if(postCache == null || (new Date().getTime() - lastCachedPosts.getTime()) > 10000){
+            postCache = getPostList(null);
+            lastCachedPosts = new Date();
+        }
+        /*System.out.println("Time:  "+new Date().compareTo(lastCachedPosts));
+        System.out.println("Time: "+(new Date().getTime() - lastCachedPosts.getTime()));*/
+	return postCache;
     }
 
     @Override
     public ArrayList<Post> getPosts(int userId) {
-        return getPostList(userId);
+        ArrayList<Post> retPosts = new ArrayList<>();
+        for(Post tmp : postCache){
+            if(tmp.getUserId() == userId){
+                retPosts.add(tmp);
+            }
+        }
+        System.out.print(new Date().compareTo(lastCachedPosts));
+        if(retPosts.size() > 0){
+            return retPosts;
+        } else {
+            return getPostList(userId);
+        }        
+        
     }
 
     @Override
@@ -130,6 +153,10 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<User> getUserList() {
+        if(userCache != null && new Date().getTime() - lastCachedUsers.getTime() < 10000){
+            return userCache;
+        }
+        
         ArrayList<User> users = new ArrayList<>();
 	String query = "from cms_user";
         Session session = initSession();
@@ -160,7 +187,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         }finally {
             session.close(); 
         }
-        
+        userCache = users;
         return users;
     }
 

@@ -24,7 +24,7 @@ public class Database implements DatabaseControlInf{
     private DatabaseControlInf db;
 
     public Database(){
-        db = new DatabaseControlMock();//HibernateDatabase();
+        db = new HibernateDatabase();
     }
     
     @Override
