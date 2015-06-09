@@ -21,10 +21,7 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 
 public class ProfileBean {
-    public ProfileBean()
-    {
-        showUserInfo();
-    }
+   
     
     private Database db = new Database();
     private SessionData sessiondata = new SessionData();
