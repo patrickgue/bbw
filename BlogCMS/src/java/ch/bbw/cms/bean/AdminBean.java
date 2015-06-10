@@ -7,6 +7,7 @@ package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserType;
+import ch.bbw.cms.helper.Const;
 import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.models.User;
@@ -28,11 +29,9 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean
 @SessionScoped
-public class AdminBean {
+public class AdminBean extends AllPageBean{
     private String databaseconfig;
     
-    @ManagedProperty(value = "#{database}")
-    private Database db;
     private ArrayList<User> users;
     private SessionData session;
     private boolean render = true;
@@ -143,15 +142,17 @@ public class AdminBean {
      * @return the db
      */
     public Database getDb() {
-        return db;
+        return getDatabase();
     }
 
     /**
      * @param db the db to set
      */
     public void setDb(Database db) {
-        this.db = db;
-        System.out.println("## User Id: "+session.getUserId());
+        this.setDatabase(db);
+        if(Const.LOG_DEBUG){
+            logger.debug("## User Id: "+session.getUserId());
+        }
         if(db.getUser(session.getUserId()).getType().equals(UserType.technical)){
             try{
                 BufferedReader reader = new BufferedReader(new FileReader(new File("./dbsettings.ini")));

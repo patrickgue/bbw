@@ -30,14 +30,14 @@ $(document).ready(function(){
         }
     })
     $(".general-comment").on("focus", function(){
-        if($(this).val() == "Kommentar eingeben"){
+        if($(this).val() == "Enter comment"){
             $(this).val("");
         }
     })
     
     $(".general-comment").on("blur", function(){
         if($(this).val() == ""){
-            $(this).val("Kommentar eingeben");
+            $(this).val("Enter comment");
         }
     })
 });

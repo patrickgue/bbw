@@ -20,14 +20,12 @@ import java.util.Date;
  */
 @ManagedBean
 @RequestScoped
-public class CreationBean {
+public class CreationBean extends AllPageBean{
     private String title;
     private String postcontent;
     private String userIdTest;
     private SessionData session;
    
-    @ManagedProperty(value = "#{database}")
-    private Database database;
     private boolean showPostButton = true;
     private boolean showUpdateButton = false;
     
@@ -146,14 +144,14 @@ public class CreationBean {
      * @return the database
      */
     public Database getDatabase() {
-        return database;
+        return getDatabase();
     }
 
     /**
      * @param database the database to set
      */
     public void setDatabase(Database database) {
-        this.database = database;
+        this.setDatabase(database);
         int postid = session.getCurrentPostId();
         System.out.println("Postid: "+postid);
                 

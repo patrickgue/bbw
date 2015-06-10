@@ -21,20 +21,17 @@ import javax.faces.bean.RequestScoped;
  */
 @ManagedBean
 @RequestScoped
-public class LoginSignupBean {
+public class LoginSignupBean extends AllPageBean{
     private String username;
     private String password;
     private String repassword;
     private String email;
     private String gender;
     
-    @ManagedProperty(value="#{database}")
-    private DatabaseControlInf database;
-    private SessionData session;
     
     public LoginSignupBean(){
         //database = new Database();
-        session = new SessionData();
+        sessiondata = new SessionData();
     }
             
     
@@ -42,7 +39,7 @@ public class LoginSignupBean {
         
         int userid = getDatabase().checkUser(username, password);
         if(userid != -1){
-            session.setUserId(userid);
+            sessiondata.setUserId(userid);
             return "main.xhtml";
         } else {
             return "login.xhtml";
@@ -53,7 +50,7 @@ public class LoginSignupBean {
         if(password.equals(repassword)){
             if(getDatabase().createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.normal))){
                 int userid = getDatabase().getUserId(username);
-                session.setUserId(userid);
+                sessiondata.setUserId(userid);
                 return "main.xhtml";
             } else {
                 return "login.xhtml";
@@ -139,15 +136,15 @@ public class LoginSignupBean {
     /**
      * @return the database
      */
-    public DatabaseControlInf getDatabase() {
-        return database;
+    public Database getDatabase() {
+        return super.getDatabase();
     }
 
     /**
      * @param database the database to set
      */
-    public void setDatabase(DatabaseControlInf database) {
-        this.database = database;
+    public void setDatabase(Database database) {
+        super.setDatabase(database);
     }
     
     

@@ -11,7 +11,10 @@ import ch.bbw.cms.database.hibernate.cms_post;
 import ch.bbw.cms.database.hibernate.cms_user;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
+import ch.bbw.cms.helper.Const;
 import ch.bbw.cms.inf.DatabaseControlInf;
+import ch.bbw.cms.inf.Log;
+import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Comment;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
@@ -31,7 +34,11 @@ import org.hibernate.Transaction;
 public class HibernateDatabase implements DatabaseControlInf{
     private SessionFactory factory;
     private HibernateUtil util;
-
+    private Log logger = new DefaultLog();
+    
+    /**
+     * Cache Posts and User lists. The lists get refreshed after {@link:#Const.REFRESH_TIME Const.REFRESH_TIME}
+     */
     private ArrayList<Post> postCache;
     private Date lastCachedPosts = new Date();
     private ArrayList<User> userCache;
@@ -60,24 +67,22 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<Post> getPosts(){
-        if(postCache == null || (new Date().getTime() - lastCachedPosts.getTime()) > 10000){
+        if(postCache == null || (new Date().getTime() - lastCachedPosts.getTime()) > Const.REFRESH_TIME){
             postCache = getPostList(null);
             lastCachedPosts = new Date();
         }
-        /*System.out.println("Time:  "+new Date().compareTo(lastCachedPosts));
-        System.out.println("Time: "+(new Date().getTime() - lastCachedPosts.getTime()));*/
 	return postCache;
     }
 
     @Override
     public ArrayList<Post> getPosts(int userId) {
         ArrayList<Post> retPosts = new ArrayList<>();
-        for(Post tmp : postCache){
-            if(tmp.getUserId() == userId){
-                retPosts.add(tmp);
+        for(Post tmpPostFromList : postCache){
+            if(tmpPostFromList.getUserId() == userId){
+                retPosts.add(tmpPostFromList);
             }
         }
-        System.out.print(new Date().compareTo(lastCachedPosts));
+        
         if(retPosts.size() > 0){
             return retPosts;
         } else {
@@ -153,7 +158,8 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<User> getUserList() {
-        if(userCache != null && new Date().getTime() - lastCachedUsers.getTime() < 10000){
+        if(userCache != null && new Date().getTime() - lastCachedUsers.getTime() < Const.REFRESH_TIME){
+            lastCachedUsers = new Date();
             return userCache;
         }
         
@@ -243,7 +249,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         return execute("UPDATE cms_post SET "
                 + "post_title='"+title+"'"
                 + ", post_content='"+content+"'"
-                + " WHERE post_id = "+postid);
+                + " WHERE post_id="+postid+";");
     }
 
     @Override
@@ -330,21 +336,25 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public boolean addComment(Comment comment) {
-        return execute("INSERT INTO cms_post (comment_user_id, comment_content, comment_post_id, comment_date)  values("
+        return execute("INSERT INTO cms_comment (comment_user_id, comment_content, comment_post_id, comment_date)  values("
                 + ""+comment.getUserId()+""
                 + ", '"+comment.getContent()+"'"
                 + ", "+comment.getPostId()+""
-                + ", '"+comment.getDate().toString()+"' )");
+                + ", '"+comment.getDate().toString()+"' );");
     }
     
     private boolean execute(String mysqlQuery){
+        if(Const.LOG_DEBUG){
+            logger.debug("MySQL Query: "+mysqlQuery);
+        }
         boolean worked = true;
         Session session = initSession();
         Transaction tx = null;
         
         try{
             tx = session.beginTransaction();
-            session.createSQLQuery(mysqlQuery);
+            session.createSQLQuery(mysqlQuery).executeUpdate();
+
             
             tx.commit();
         }catch (HibernateException e) {

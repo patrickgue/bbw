@@ -26,11 +26,8 @@ import javax.faces.bean.*;
  */
 @ManagedBean
 @SessionScoped
-public class IndexBean {
+public class IndexBean extends AllPageBean{
 
-    @ManagedProperty(value="#{database}")
-    private Database database;
-    
     private ArrayList<Post> postList;
     private String cssFile;
     private String search = "Search";
@@ -39,7 +36,7 @@ public class IndexBean {
     private SessionData session;
     private String userIdTest;
     private ClosedList<String> cssFls;
-    private String comment = "Kommentar eingeben";
+    private String comment;
     private ArrayList<Comment> commentList;
     
     
@@ -49,8 +46,9 @@ public class IndexBean {
     public IndexBean() {
 	cssFls = new ClosedList<>(new String[]{"main.css", "main_alt_timo.css", "main_alt_pat.css"});
 	cssFile = cssFls.next();
-       
-        //database = new Database();
+        
+        comment = "Enter comment";
+        
         session = new SessionData();
         System.out.println("user id:" +session.getUserId());
         
@@ -62,7 +60,7 @@ public class IndexBean {
     
     public String postComment(){
         Date d = new Date();
-        database.addComment(new Comment(1, comment, currentPost.getPostId(), session.getUserId(), d));
+        getDatabase().addComment(new Comment(1, comment, currentPost.getPostId(), session.getUserId(), d));
         return "main.xhtml";
     }
     
@@ -185,15 +183,17 @@ public class IndexBean {
     /**
      * @return the database
      */
+    @Override
     public Database getDatabase() {
-        return database;
+        return getDatabase();
     }
 
     /**
      * @param database the database to set
      */
+    @Override
     public void setDatabase(Database database) {
-        this.database = database;
+        super.setDatabase(database);
         if(postList == null){
             postList = database.getPosts();
         }
@@ -223,7 +223,7 @@ public class IndexBean {
      * @return the commentList
      */
     public ArrayList<Comment> getCommentList() {
-        this.commentList = database.getComments(currentPost.getPostId());
+        this.commentList = getDatabase().getComments(currentPost.getPostId());
         return commentList;
     }
 

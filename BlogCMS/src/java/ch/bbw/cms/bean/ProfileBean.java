@@ -20,11 +20,9 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 
-public class ProfileBean {
+public class ProfileBean extends AllPageBean{
    
     
-    private Database db = new Database();
-    private SessionData sessiondata = new SessionData();
     
     private String newPassword;
     private String repeatPassword;
@@ -48,7 +46,7 @@ public class ProfileBean {
     public String change()
     {
         int userId = sessiondata.getUserId();
-        db.changeUserPassword(userId, newPassword);
+        getDatabase().changeUserPassword(userId, newPassword);
          User user = sessiondata.getUser();
          
          return "profile.xhtml";

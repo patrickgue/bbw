@@ -5,9 +5,9 @@
 <hibernate-configuration>  
     <session-factory>  
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>  
-        <property name="hibernate.connection.username">rogerguenthar</property>  
-        <property name="hibernate.connection.password">cms001</property>  
-        <property name="hibernate.connection.url">jdbc:mysql://db51.netzone.ch/rogerguenthar</property>  
+        <property name="hibernate.connection.username">root</property>  
+        <property name="hibernate.connection.password"></property>  
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/cms</property>  
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>  
         <property name="show_sql">true</property>   
         <property name="connection.pool_size">1</property>  
