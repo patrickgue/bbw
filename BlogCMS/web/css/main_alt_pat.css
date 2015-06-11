@@ -7,6 +7,10 @@ body{
     color: #eee;
 }
 
+a, a *{
+    color: #eee;
+}
+
 .page-center{
     width: 98%;
     padding: 0% 1%;
@@ -106,7 +110,12 @@ header button, header input{
 
 .list-entry:hover{
     background-color: #eee;
+    color: #333;
 }
+
+.list-entry:hover + a, .list-entry:hover + a *{
+    color: #333;
+} 
 
 .list-entry.selected{
     /* background-color: #212C32;
@@ -143,7 +152,7 @@ header button, header input{
 .pin{
     width: 240px;
     height: 200px;
-    border: 1px solid #212C32;
+    border: 1px solid #eee;
     float: left;
     margin: 10px;
 }
@@ -164,8 +173,8 @@ header button, header input{
 }
 
 .pin-action:hover{
-    background-color: #212C32;
-    color: #eee;
+    background-color: #eee;
+    color: #212C32;
 }
 
 .general-search{
@@ -220,5 +229,9 @@ header button, header input{
     .list-entry.selected{
 	border-left: 15px solid #212C32;
 	border-right: none;
+    }
+    
+    #post-list a, #post-list a *{
+        color: #333;
     }
 }

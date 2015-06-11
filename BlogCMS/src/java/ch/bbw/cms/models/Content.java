@@ -7,6 +7,8 @@
 package ch.bbw.cms.models;
 
 import ch.bbw.cms.database.Database;
+import ch.bbw.cms.helper.Pattern;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.faces.bean.ManagedProperty;
 
@@ -97,6 +99,11 @@ public abstract class Content {
         return date;
     }
 
+    public String getDateString(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Pattern.TIME_PATTERN);
+        return dateFormat.format(date);
+    }
+    
     /**
      * @param date the date to set
      */

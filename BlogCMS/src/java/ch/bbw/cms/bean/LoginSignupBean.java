@@ -30,8 +30,6 @@ public class LoginSignupBean extends AllPageBean{
     
     
     public LoginSignupBean(){
-        //database = new Database();
-        sessiondata = new SessionData();
     }
             
     
@@ -39,7 +37,7 @@ public class LoginSignupBean extends AllPageBean{
         
         int userid = getDatabase().checkUser(username, password);
         if(userid != -1){
-            sessiondata.setUserId(userid);
+            getSessiondata().setUserId(userid);
             return "main.xhtml";
         } else {
             return "login.xhtml";
@@ -50,7 +48,7 @@ public class LoginSignupBean extends AllPageBean{
         if(password.equals(repassword)){
             if(getDatabase().createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.normal))){
                 int userid = getDatabase().getUserId(username);
-                sessiondata.setUserId(userid);
+                getSessiondata().setUserId(userid);
                 return "main.xhtml";
             } else {
                 return "login.xhtml";

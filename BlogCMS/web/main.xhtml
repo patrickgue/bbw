@@ -28,7 +28,7 @@
                   <span id="profile-menu-buttons">
                         <button id="menu-button" style="float: left;"><span class="fa fa-bars"></span></button> 
                         <a href="profile.xhtml"><button id="profile-button-header">Profil</button></a>
-                        <button id="logout-button-header">Log out</button>
+                        <h:form style="display: inline-block;"><h:commandButton id="logout-button-header" value="Log out" action="#{indexBean.logout()}"/></h:form>
                     </span>
 
                     <div style="clear: both;"></div>
@@ -50,7 +50,7 @@
                                         <div class="list-entry">
                                             <h3><h:outputText escape="false" value="#{post.title}" /></h3>
                                             <span>
-                                                <h:outputText escape="false" value="by: #{post.user.name}, #{post.date}"/>
+                                                <h:outputText escape="false" value="by: #{post.user.name}, #{post.getDateString()}"/>
                                             </span>
                                         </div>
                                         <f:setPropertyActionListener target="#{indexBean.currentPost}" value="#{post}"/>
@@ -80,10 +80,16 @@
                                     <h:commandButton value="new Post" action="#{indexBean.gotoNewPost()}" rendered="#{indexBean.isEditor()}"/>
                                 </h:form>
                             </div>
-                            <h2><h:outputText escape="false" value="#{indexBean.currentPost.title}" /><!--Blog Entry 1--></h2>
+                            <h2>
+                                <h:form style="display: inline-block">
+                                    <h:commandButton value="pin" title="pin this post to your pinwall" action="#{indexBean.pinPost()}" rendered="#{indexBean.renderPin()}" style="display: inline-block" />
+                                    <h:commandButton value="unpin" title="unpinn this pist from your pinwall" action="#{indexBean.unpinPost()}" rendered="#{indexBean.renderUnpin()}" style="display: inline-block" />
+                                </h:form>
+                                <h:outputText escape="false" value="#{indexBean.currentPost.title}" />
+                            </h2>
                             <h:outputText escape="false" value="#{indexBean.currentPost.content}"/>
                             <div class="comments">
-                                <h3><h:outputText escape="false" value="Kommentare"/></h3>
+                                <h3><h:outputText escape="false" value="Comments"/></h3>
                                 <h:form>
                                 <h:inputTextarea style="width: 100%; height: 100px;" value="#{indexBean.comment}" class="general-comment"></h:inputTextarea>
                                 <h:commandButton value="Post" action="#{indexBean.postComment()}"></h:commandButton>

@@ -19,25 +19,38 @@ $(document).ready(function(){
     });
     
     $(".general-search").on("focus", function(){
-        if($(this).val() == "Search"){
+        if($(this).val() == "Search Posts"){
             $(this).val("");
         }
-    })
+    });
     
     $(".general-search").on("blur", function(){
         if($(this).val() == ""){
-            $(this).val("Search");
+            $(this).val("Search Posts");
         }
-    })
+    });
+    
+    $(".user-search").on("focus", function(){
+        if($(this).val() == "Search Users"){
+            $(this).val("");
+        }
+    });
+    
+    $(".user-search").on("blur", function(){
+        if($(this).val() == ""){
+            $(this).val("Search Users");
+        }
+    });
+    
     $(".general-comment").on("focus", function(){
         if($(this).val() == "Enter comment"){
             $(this).val("");
         }
-    })
+    });
     
     $(".general-comment").on("blur", function(){
         if($(this).val() == ""){
             $(this).val("Enter comment");
         }
-    })
+    });
 });

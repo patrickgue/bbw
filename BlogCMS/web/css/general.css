@@ -33,3 +33,7 @@ and open the template in the editor.
     width: auto !important;;
     display: inline-block !important;
 }
+
+.general-search, .user-search{
+    float: left;
+}

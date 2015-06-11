@@ -153,9 +153,14 @@ public class DatabaseControlMock implements DatabaseControlInf{
     public boolean addPostToPinwall(User user, Post post) {
         return true;
     }
+    
+    @Override
+    public boolean addPostToPinwall(int user, int post) {
+        return true;
+    }
 
     @Override
-    public boolean deletePostFromPinwall(User user, Post post) {
+    public boolean deletePostFromPinwall(int pinid) {
         return true;
     }
 
@@ -173,6 +178,11 @@ public class DatabaseControlMock implements DatabaseControlInf{
         c.add(comment);
         System.err.println("Drin " + c.size());
         return true;
+    }
+
+    @Override
+    public int getPinId(int userid, int post) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

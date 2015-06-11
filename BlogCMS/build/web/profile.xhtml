@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,8 +20,8 @@
             <h1 class="h-centered">CMS Blog</h1>
             <div class="header-body">
                 <h:form style="width: 240px;">
-                    <h:inputText value="#{indexBean.search}" class="general-search"/>
-                    <h:commandButton style="float: left;" value="go" action="#{indexBean.performSearch()}" />
+                    <h:inputText value="#{profileBean.search}" class="user-search"/>
+                    <h:commandButton style="float: left;" value="go" action="#{profileBean.performSearch()}" />
 
                 </h:form>
                 <span style="float: right;">
@@ -44,34 +46,25 @@
                 <h:commandButton value="Save Changes" action="#{ChangePassword.change}"></h:commandButton>
                 </h:form>
                 <h:form>
-                <h1>User Daten</h1>
-                <h:outputText value="Username" id="username"></h:outputText><br></br>
+                <h2>User Daten</h2>
+                <h:outputText value="Username: #{profileBean.sessiondata.user.name}" id="username"/><br></br>
                
-                <h:outputText value="Email" id="email"></h:outputText><br></br>
-                <h:outputText value="Gender" id="gender"></h:outputText><br></br>
+                <h:outputText value="Email: #{profileBean.sessiondata.user.email}" id="email"/><br></br>
+                <h:outputText value="Gender #{profileBean.sessiondata.user.gender.genderName}" id="gender"/><br></br>
                 </h:form>
                 <div id="pinwall">
-                    <div class="pin">
-                        <div class="pin-header">
-                            <span class="pin-action fa fa-times"></span>
-                            <span class="pin-action fa fa-thumb-tack"></span>
+                    <ui:repeat value="#{profileBean.pinedPosts}" var="post">
+                        <div class="pin">
+                            <div class="pin-header">
+                                <span class="pin-action fa fa-times"></span>
+                            </div>
+                            <div class="pin-inner">
+                                <h3><h:outputText value="#{post.title}"/></h3>
+                                <p><h:outputText value="By: #{post.user.name}"/></p>
+                                <p><h:outputText escape="false" value="Summary: #{post.summary}"/></p>
+                            </div>
                         </div>
-                        <div class="pin-inner">
-                            <h3>Post 3</h3>
-                            <p>Von User 3</p>
-                        </div>
-                    </div>
-
-                    <div class="pin">
-                        <div class="pin-header">
-                            <span class="pin-action fa fa-times"></span>
-                            <span class="pin-action fa fa-thumb-tack"></span>
-                        </div>
-                        <div class="pin-inner">
-                            <h3>Post 8</h3>
-                            <p>Von User 8</p>.
-                        </div>
-                    </div>
+                    </ui:repeat>
                 </div>
                 <footer>
                     (c) 2015 

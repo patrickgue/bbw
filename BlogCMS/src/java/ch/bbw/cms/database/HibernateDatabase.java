@@ -7,6 +7,7 @@ package ch.bbw.cms.database;
 
 import ch.bbw.cms.database.hibernate.HibernateUtil;
 import ch.bbw.cms.database.hibernate.cms_comment;
+import ch.bbw.cms.database.hibernate.cms_pinwall;
 import ch.bbw.cms.database.hibernate.cms_post;
 import ch.bbw.cms.database.hibernate.cms_user;
 import ch.bbw.cms.enums.UserGender;
@@ -20,9 +21,12 @@ import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -37,12 +41,16 @@ public class HibernateDatabase implements DatabaseControlInf{
     private Log logger = new DefaultLog();
     
     /**
-     * Cache Posts and User lists. The lists get refreshed after {@link:#Const.REFRESH_TIME Const.REFRESH_TIME}
+     * Cache Posts, Pinwall and User lists. The lists get refreshed after {@link:#Const.REFRESH_TIME Const.REFRESH_TIME}
      */
     private ArrayList<Post> postCache;
     private Date lastCachedPosts = new Date();
     private ArrayList<User> userCache;
     private Date lastCachedUsers = new Date();
+    private HashMap<Integer, ArrayList<Post>> pinwallCache;
+    private Date lastCachedPinwall = new Date();
+    private HashMap<String, Integer> pinwallIdCache;
+    private Date lastPinwallIdCache = new Date();
     
     public HibernateDatabase() {
         util = new HibernateUtil();
@@ -152,14 +160,14 @@ public class HibernateDatabase implements DatabaseControlInf{
         }finally {
             session.close(); 
         }
-        
+        lastCachedPosts = new Date();
         return posts;
     }
 
     @Override
     public ArrayList<User> getUserList() {
         if(userCache != null && new Date().getTime() - lastCachedUsers.getTime() < Const.REFRESH_TIME){
-            lastCachedUsers = new Date();
+            
             return userCache;
         }
         
@@ -194,6 +202,7 @@ public class HibernateDatabase implements DatabaseControlInf{
             session.close(); 
         }
         userCache = users;
+        lastCachedUsers = new Date();
         return users;
     }
 
@@ -289,17 +298,126 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<Post> getPinwall(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(pinwallCache != null && new Date().getTime() - lastCachedPinwall.getTime() < Const.REFRESH_TIME){
+            if(pinwallCache.containsKey(user.getUserId())){
+                if(Const.LOG_DEBUG){
+                    logger.debug("Pinwall Chache access"+user.getUserId());
+                }
+                return pinwallCache.get(user.getUserId());
+            }
+        } else if(pinwallCache == null) { 
+            pinwallCache = new HashMap<>(); 
+        }
+        
+        if(Const.LOG_DEBUG){
+            logger.debug("Pinwall Database access"+user.getUserId());
+        }
+        
+        ArrayList<Post> posts = new ArrayList<>();
+	String query = "from cms_pinwall where pin_user_id = "+user.getUserId();
+        Session session = initSession();
+        Transaction tx = null;
+        
+        try{
+            tx = session.beginTransaction();
+            Query q = session.createQuery(query);
+            List lposts = q.list(); 
+            for (Iterator iterator = lposts.iterator(); iterator.hasNext();){
+                cms_pinwall pin = (cms_pinwall) iterator.next();
+                
+                posts.add(getPost(pin.getPostId()));
+                        
+                  
+
+            }
+            tx.commit();
+            
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace(); 
+            
+        }finally {
+            session.close(); 
+        }
+        
+        pinwallCache.put(user.getUserId(), posts);
+        return posts;
     }
 
     @Override
     public boolean addPostToPinwall(User user, Post post) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(Const.LOG_DEBUG){
+            new DefaultLog().debug(user.getName());
+        }
+        return execute("INSERT INTO cms_pinwall (pin_user_id, pin_post_id) VALUES('"+user.getUserId()+"', '"+post.getPostId()+"')");
+    }
+    
+    @Override
+    public boolean addPostToPinwall(int userid, int postid) {
+        return execute("INSERT INTO cms_pinwall (pin_user_id, pin_post_id) VALUES('"+userid+"', '"+postid+"')");
     }
 
     @Override
-    public boolean deletePostFromPinwall(User user, Post post) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean deletePostFromPinwall(int pinid) {
+        if(Const.LOG_DEBUG){
+            logger.debug("delete pin "+pinid);
+        }
+        return execute("DELETE FROM cms_pinwall WHERE pin_id="+pinid);
+    }
+    
+    @Override
+    public int getPinId(int userid, int postid) {
+        if(pinwallIdCache != null && new Date().getTime() - lastPinwallIdCache.getTime() < Const.REFRESH_TIME/4){
+            Set<String> keys = pinwallIdCache.keySet();
+            for(Iterator<String> it = keys.iterator(); it.hasNext();){
+                String currentKey = it.next();
+                String[] strKeys = currentKey.split(":");
+                if(Integer.parseInt(strKeys[0]) == userid && Integer.parseInt(strKeys[1]) == postid){
+                    if(Const.LOG_DEBUG){
+                        logger.debug("pin id from cache: "+pinwallIdCache.get(currentKey));
+                    }
+                    return pinwallIdCache.get(currentKey);
+                }
+                
+            }
+            
+        } else if(pinwallIdCache == null) { 
+            pinwallIdCache = new HashMap<>();
+        }
+        
+        
+        //ArrayList<Post> posts = new ArrayList<>();
+        int pinId = -1;
+	String query = "from cms_pinwall where pin_user_id="+userid+" AND pin_post_id="+postid;
+        Session session = initSession();
+        Transaction tx = null;
+        
+        try{
+            tx = session.beginTransaction();
+            Query q = session.createQuery(query);
+            List lposts = q.list(); 
+            for (Iterator iterator = lposts.iterator(); iterator.hasNext();){
+                cms_pinwall pin = (cms_pinwall) iterator.next();
+                
+                pinId = pin.getId();
+                if(Const.LOG_DEBUG){
+                    logger.debug("pin id from db "+pinId);
+                }
+                pinwallIdCache.put(userid+":"+postid, pinId);
+                lastPinwallIdCache = new Date();
+
+            }
+            tx.commit();
+            
+        }catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            e.printStackTrace(); 
+            
+        }finally {
+            session.close(); 
+        }
+        
+        return pinId;
     }
 
     @Override
@@ -367,4 +485,6 @@ public class HibernateDatabase implements DatabaseControlInf{
         }
         return worked;
     }
+
+    
 }

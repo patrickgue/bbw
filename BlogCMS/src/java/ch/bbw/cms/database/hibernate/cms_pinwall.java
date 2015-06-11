@@ -20,57 +20,57 @@ import javax.persistence.Table;
 public class cms_pinwall {
     @Id
     @GeneratedValue
-    private Integer id;
-    private Integer postId;
-    private Integer userId;
+    private Integer pin_id;
+    private Integer pin_post_id;
+    private Integer pin_user_id;
     
     public cms_pinwall(){}
     
     public cms_pinwall(Integer id, Integer postId, Integer userId){
-        this.id = id;
-        this.postId = postId;
-        this.userId = userId;
+        this.pin_id = id;
+        this.pin_post_id = postId;
+        this.pin_user_id = userId;
     }
 
     /**
      * @return the id
      */
     public Integer getId() {
-        return id;
+        return pin_id;
     }
 
     /**
      * @param id the id to set
      */
     public void setId(Integer id) {
-        this.id = id;
+        this.pin_id = id;
     }
 
     /**
      * @return the postId
      */
     public Integer getPostId() {
-        return postId;
+        return pin_post_id;
     }
 
     /**
      * @param postId the postId to set
      */
     public void setPostId(Integer postId) {
-        this.postId = postId;
+        this.pin_post_id = postId;
     }
 
     /**
      * @return the userId
      */
     public Integer getUserId() {
-        return userId;
+        return pin_user_id;
     }
 
     /**
      * @param userId the userId to set
      */
     public void setUserId(Integer userId) {
-        this.userId = userId;
+        this.pin_user_id = userId;
     }
 }

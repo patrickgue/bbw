@@ -11,8 +11,10 @@ import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.helper.ClosedList;
+import ch.bbw.cms.helper.Const;
 import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.Comment;
+import ch.bbw.cms.models.User;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.faces.bean.*;
@@ -29,15 +31,16 @@ import javax.faces.bean.*;
 public class IndexBean extends AllPageBean{
 
     private ArrayList<Post> postList;
+    private ArrayList<User> userList;
     private String cssFile;
-    private String search = "Search";
+    private String search = "Search Posts";
     private Post currentPost;
-    private Log log = new DefaultLog();
-    private SessionData session;
+    private int currentPin;
     private String userIdTest;
     private ClosedList<String> cssFls;
     private String comment;
     private ArrayList<Comment> commentList;
+    
     
     
     
@@ -49,18 +52,17 @@ public class IndexBean extends AllPageBean{
         
         comment = "Enter comment";
         
-        session = new SessionData();
-        System.out.println("user id:" +session.getUserId());
+        System.out.println("user id:" +getSessiondata().getUserId());
         
         
-
-	log.debug("PostList: "+postList);
-        
+        if(Const.LOG_DEBUG){
+            logger.debug("PostList: "+postList);
+        }
     }
     
     public String postComment(){
         Date d = new Date();
-        getDatabase().addComment(new Comment(1, comment, currentPost.getPostId(), session.getUserId(), d));
+        getDatabase().addComment(new Comment(1, comment, currentPost.getPostId(), getSessiondata().getUserId(), d));
         return "main.xhtml";
     }
     
@@ -76,7 +78,9 @@ public class IndexBean extends AllPageBean{
     }
     
     public void refreshPostList(){
-        log.debug("Refresh");
+        if(Const.LOG_DEBUG){
+            logger.debug("Refresh");
+        }
         postList = getDatabase().getPosts();
     }
 
@@ -116,7 +120,9 @@ public class IndexBean extends AllPageBean{
 
     public String performSearch(){
         setPostList(getDatabase().getPosts(search));
-        log.debug(search+", "+postList.toString());
+        if(Const.LOG_DEBUG){
+            logger.debug(search+", "+postList.toString());
+        }
         return "main.xhtml";
     }
     
@@ -138,7 +144,7 @@ public class IndexBean extends AllPageBean{
      * @return the userIdTest
      */
     public String getUserIdTest() {
-        userIdTest = "User Id: "+session.getUserId();
+        userIdTest = "User Id: "+getSessiondata().getUserId();
       
         return userIdTest;
     }
@@ -151,26 +157,49 @@ public class IndexBean extends AllPageBean{
     }
     
     public String gotoNewPost(){
-        session.setCurrentPostId(-1);
+        getSessiondata().setCurrentPostId(-1);
         return "create.xhtml";
     }
     
     public String editPost(){
-        session.setCurrentPostId(currentPost.getPostId());
+        getSessiondata().setCurrentPostId(currentPost.getPostId());
         return "create.xhtml";
     }
 
     public boolean editPostEnabled(){
         try{
-            return currentPost.getUserId() == session.getUserId();
+            return currentPost.getUserId() == getSessiondata().getUserId();
         } catch(NullPointerException ex){
             return false;
         }
     }
     
+    public boolean renderPin(){
+        if(Const.LOG_DEBUG){
+            logger.debug(""+getDatabase().getUser(getSessiondata().getUserId()));
+        }
+        currentPin = getDatabase().getPinId(getSessiondata().getUserId(), currentPost.getPostId());
+        
+        return currentPin == -1;
+    }
+    
+    public boolean renderUnpin(){
+        return !renderPin();
+    }
+    
+    public String pinPost(){
+        getDatabase().addPostToPinwall(getSessiondata().getUserId(), currentPost.getPostId());
+        return "main.xhtml";
+    }
+    
+    public String unpinPost(){
+        getDatabase().deletePostFromPinwall(currentPin);
+        return "main.xhtml";
+    }
+    
     public boolean isEditor(){
         try{
-            return getDatabase().getUser(session.getUserId()).getType().equals(UserType.content);
+            return getDatabase().getUser(getSessiondata().getUserId()).getType().equals(UserType.content);
         } catch(Exception ex){
             return false;
         }
@@ -185,7 +214,7 @@ public class IndexBean extends AllPageBean{
      */
     @Override
     public Database getDatabase() {
-        return getDatabase();
+        return super.getDatabase();
     }
 
     /**

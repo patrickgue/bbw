@@ -37,8 +37,10 @@ public interface DatabaseControlInf {
     public int getUserId(String nameOrEmail);
     public User getUser(int id);
     public ArrayList<Post> getPinwall(User user);
+    public int getPinId(int userid, int post);
     public boolean addPostToPinwall(User user, Post post);
-    public boolean deletePostFromPinwall(User user, Post post);
+    public boolean addPostToPinwall(int user, int post);
+    public boolean deletePostFromPinwall(int pinid);
     public ArrayList<Comment> getComments(int postid);
     public boolean addComment(Comment comment);
 }

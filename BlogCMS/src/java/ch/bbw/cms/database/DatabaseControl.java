@@ -336,9 +336,14 @@ public class DatabaseControl implements DatabaseControlInf{
     public boolean addPostToPinwall(User user, Post post) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    @Override
+    public boolean addPostToPinwall(int user, int post) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     @Override
-    public boolean deletePostFromPinwall(User user, Post post) {
+    public boolean deletePostFromPinwall(int pinid) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -374,5 +379,10 @@ public class DatabaseControl implements DatabaseControlInf{
                 + ", "+com.getPostId()+""
                 + ", '"+com.getDate().toString()+"' )";
         return execute(query);
+    }
+
+    @Override
+    public int getPinId(int userid, int post) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

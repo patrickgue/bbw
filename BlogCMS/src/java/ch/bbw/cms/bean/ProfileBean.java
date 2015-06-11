@@ -8,7 +8,9 @@ package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.helper.SessionData;
+import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
+import java.util.ArrayList;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -26,6 +28,8 @@ public class ProfileBean extends AllPageBean{
     
     private String newPassword;
     private String repeatPassword;
+    private ArrayList<Post> pinedPosts;
+    private String search = "Search Users";
    
     public String getNewPassword() {
         return newPassword;
@@ -45,17 +49,51 @@ public class ProfileBean extends AllPageBean{
    
     public String change()
     {
-        int userId = sessiondata.getUserId();
+        int userId = getSessiondata().getUserId();
         getDatabase().changeUserPassword(userId, newPassword);
-         User user = sessiondata.getUser();
+        User user = getSessiondata().getUser();
          
-         return "profile.xhtml";
+        return "profile.xhtml";
 
     }
     
     public String showUserInfo()
     {
-        User username = sessiondata.getUser();
+        User username = getSessiondata().getUser();
+        return "profile.xhtml";
+    }
+
+    /**
+     * @return the pinedPosts
+     */
+    public ArrayList<Post> getPinedPosts() {
+        pinedPosts = getDatabase().getPinwall(getDatabase().getUser(getSessiondata().getUserId()));
+        return pinedPosts;
+    }
+
+    /**
+     * @param pinedPosts the pinedPosts to set
+     */
+    public void setPinedPosts(ArrayList<Post> pinedPosts) {
+        this.pinedPosts = pinedPosts;
+    }
+
+    /**
+     * @return the search
+     */
+    public String getSearch() {
+        return search;
+    }
+
+    /**
+     * @param search the search to set
+     */
+    public void setSearch(String search) {
+        this.search = search;
+    }
+    
+    public String performSearch(){
+        
         return "profile.xhtml";
     }
     

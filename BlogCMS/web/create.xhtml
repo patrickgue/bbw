@@ -20,12 +20,12 @@
             <div class="page-center">
                 <h1 class="h-centered">CMS Blog</h1>
                 <div class="header-body">
-                  <!-- <input type="text" id="general-search" value="Search"/>  -->
-                  <h2 style="float: left; padding-top: 0px;">Create Post</h2>
-                  <span id="profile-menu-buttons">
+                    <!-- <input type="text" id="general-search" value="Search"/>  -->
+                    <h2 style="float: left; padding-top: 0px;">Create Post</h2>
+                    <!--<span id="profile-menu-buttons">
                         <a href="main.xhtml"><button id="profile-button-header">Home</button></a>
                         <a href="profile.xhtml"><button id="profile-button-header">Profil</button></a>
-                    </span>
+                    </span>-->
 
                     <div style="clear: both;"></div>
                 </div>
@@ -48,10 +48,12 @@
                     <div class="form-line-block">
                         <label style="vertical-align: top;"></label>
                         <h:commandButton rendered="#{creationBean.showPostButton}" action="#{creationBean.createPost()}" value="Post"/>
+                        <h:commandButton rendered="#{creationBean.showPostButton}" action="main.xhtml" value="Cancel"/>
                     </div>
                     <div class="form-line-block">
                         <label style="vertical-align: top;"></label>
                         <h:commandButton rendered="#{creationBean.showUpdateButton}" action="#{creationBean.updatePost()}" value="Update"/>
+                        <h:commandButton rendered="#{creationBean.showUpdateButton}" action="main.xhtml" value="Cancel"/>
                     </div>
                 </h:form>
             <footer>
@@ -61,7 +63,6 @@
         </div>
         <script>
             CKEDITOR.replace( $(".test").attr("id") );
-            alert("#{creationBean.userIdTest}");
         </script>
     </h:body>
 </html>

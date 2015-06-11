@@ -43,5 +43,5 @@ CREATE TABLE cms_pinwall(
        pin_post_id INTEGER NOT NULL,
        pin_user_id INTEGER NOT NULL,
 
-       PRIMARY KEY(post_id)
+       PRIMARY KEY(pin_id)
 );

@@ -120,17 +120,27 @@ public class Database implements DatabaseControlInf{
 
     @Override
     public ArrayList<Post> getPinwall(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return db.getPinwall(user);
     }
 
     @Override
     public boolean addPostToPinwall(User user, Post post) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return db.addPostToPinwall(user, post);
+    }
+    
+    @Override
+    public boolean addPostToPinwall(int user, int post){
+        return db.addPostToPinwall(user, post);
     }
 
     @Override
-    public boolean deletePostFromPinwall(User user, Post post) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean deletePostFromPinwall(int pinid) {
+        return db.deletePostFromPinwall(pinid);
+    }
+    
+    @Override
+    public int getPinId(int userid, int post) {
+        return db.getPinId(userid, post);
     }
 
     @Override
@@ -142,4 +152,6 @@ public class Database implements DatabaseControlInf{
     public boolean addComment(Comment comment) {
         return db.addComment(comment);
     }
+
+    
 }

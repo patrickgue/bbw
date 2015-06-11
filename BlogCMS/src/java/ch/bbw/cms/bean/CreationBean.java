@@ -10,7 +10,6 @@ import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.Post;
-import ch.bbw.cms.inf.DatabaseControlInf;
 import java.util.Date;
 
 
@@ -143,15 +142,15 @@ public class CreationBean extends AllPageBean{
     /**
      * @return the database
      */
-    public Database getDatabase() {
-        return getDatabase();
-    }
+    /*public Database getDatabase() {
+        return super.getDatabase();
+    }*/
 
     /**
      * @param database the database to set
      */
     public void setDatabase(Database database) {
-        this.setDatabase(database);
+        super.setDatabase(database);
         int postid = session.getCurrentPostId();
         System.out.println("Postid: "+postid);
                 
