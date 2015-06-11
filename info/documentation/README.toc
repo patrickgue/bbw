@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Blog-CMS}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Screenshots of the main page and the update page 2015-05-15}{1}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}main page}{1}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}update page}{2}{subsubsection.1.1.2}
+\contentsline {subsection}{\numberline {1.2}Screenshot of the main page 2015-05-08}{2}{subsection.1.2}
