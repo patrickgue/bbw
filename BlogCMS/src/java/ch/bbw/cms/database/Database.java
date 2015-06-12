@@ -64,6 +64,16 @@ public class Database implements DatabaseControlInf{
     }
     
     @Override
+    public boolean deletePost(int id){
+        return db.deletePost(id);
+    }
+    
+    @Override
+    public boolean deletePost(Post post){
+        return db.deletePost(post);
+    }
+    
+    @Override
     public int checkUser(String username, String password){
         return db.checkUser(username, password);
     }
@@ -119,6 +129,16 @@ public class Database implements DatabaseControlInf{
     }
 
     @Override
+    public boolean deleteUser(int id){
+        return db.deleteUser(id);
+    }
+    
+    @Override
+    public boolean deleteUser(User user){
+        return db.deleteUser(user);
+    }
+    
+    @Override
     public ArrayList<Post> getPinwall(User user) {
         return db.getPinwall(user);
     }
@@ -151,6 +171,16 @@ public class Database implements DatabaseControlInf{
     @Override
     public boolean addComment(Comment comment) {
         return db.addComment(comment);
+    }
+    
+    @Override
+    public boolean deleteComment(Comment comment) {
+        return db.deleteComment(comment);
+    }
+    
+    @Override
+    public boolean deleteComment(int commentid) {
+        return db.deleteComment(commentid);
     }
 
     

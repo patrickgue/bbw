@@ -6,6 +6,9 @@
 
 package ch.bbw.cms.models;
 
+import ch.bbw.cms.helper.Const;
+import ch.bbw.cms.inf.Log;
+import ch.bbw.cms.mock.DefaultLog;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -17,6 +20,7 @@ public class Post extends Content{
     private String title;
     private ArrayList<Comment> comments;
     private ArrayList<User> likes;
+    private Log logger = new DefaultLog();
 
     public Post(Integer postId, String title, String content, int userId, Date date) {
         super(postId, userId, content, date);
@@ -82,7 +86,7 @@ public class Post extends Content{
     }
 
     public String getSummary(){
-        return getContent().substring(0, (getContent().length() > 20 ? 20 : getContent().length()) )+(getContent().length() > 20 ? "..." : "" );
+        return getContent().replaceAll("<[^>]+>", "").substring(0, (getContent().length() > 20 ? 20 : getContent().length()) )+(getContent().length() > 20 ? "..." : "" );
     }
     
     /**

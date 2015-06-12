@@ -5,8 +5,8 @@
  */
 package ch.bbw.cms.bean;
 
-import javax.faces.bean.*;
 import ch.bbw.cms.database.Database;
+import javax.faces.bean.*;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.Post;
@@ -23,15 +23,12 @@ public class CreationBean extends AllPageBean{
     private String title;
     private String postcontent;
     private String userIdTest;
-    private SessionData session;
    
     private boolean showPostButton = true;
     private boolean showUpdateButton = false;
     
     
     public CreationBean(){
-        //database = new Database();
-        session = new SessionData();
         
         
         
@@ -39,7 +36,7 @@ public class CreationBean extends AllPageBean{
     }
 
     public String createPost(){
-        int userid = session.getUserId();
+        int userid = getSessiondata().getUserId();
         
         if(getDatabase().createPost(title, postcontent,userid, new Date())){
             return "main.xhtml";
@@ -50,7 +47,15 @@ public class CreationBean extends AllPageBean{
     
     public String updatePost(){
        
-        if(getDatabase().updatePost(session.getCurrentPostId(), title, postcontent)){
+        if(getDatabase().updatePost(getSessiondata().getCurrentPostId(), title, postcontent)){
+            return "main.xhtml";
+        } else {
+            return "create.xhtml";
+        }
+    }
+    
+    public String deletePost(){
+        if(getDatabase().deletePost(getSessiondata().getCurrentPostId())){
             return "main.xhtml";
         } else {
             return "create.xhtml";
@@ -89,8 +94,8 @@ public class CreationBean extends AllPageBean{
     
     public boolean isEnabled(){
         try{
-            System.out.println("get User "+getDatabase().getUser(session.getUserId()).getName());
-            return session.getUserId() != -1 && getDatabase().getUser(session.getUserId()).getType().equals(UserType.content);
+            System.out.println("get User "+getDatabase().getUser(getSessiondata().getUserId()).getName());
+            return getSessiondata().getUserId() != -1 && getDatabase().getUser(getSessiondata().getUserId()).getType().equals(UserType.content);
         } catch(Exception ex){
             return true;
         }
@@ -100,7 +105,7 @@ public class CreationBean extends AllPageBean{
      * @return the userIdTest
      */
     public String getUserIdTest() {
-        userIdTest = "user id: "+session.getUserId()+", post id:"+ session.getCurrentPostId();
+        userIdTest = "user id: "+getSessiondata().getUserId()+", post id:"+ getSessiondata().getCurrentPostId();
         return userIdTest;
     }
 
@@ -149,9 +154,10 @@ public class CreationBean extends AllPageBean{
     /**
      * @param database the database to set
      */
+    @Override
     public void setDatabase(Database database) {
         super.setDatabase(database);
-        int postid = session.getCurrentPostId();
+        int postid = getSessiondata().getCurrentPostId();
         System.out.println("Postid: "+postid);
                 
         if(postid != -1){

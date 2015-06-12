@@ -5,22 +5,11 @@
  */
 package ch.bbw.cms.bean;
 
-import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserType;
-import ch.bbw.cms.helper.Const;
 import ch.bbw.cms.helper.SessionData;
-import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.models.User;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 
 /**
@@ -40,23 +29,11 @@ public class AdminBean extends AllPageBean{
 
     public AdminBean() {
         
-        //db = new Database();
-        session = new SessionData();
         
-        
-        
+        users = getDatabase().getUserList();
         
     }
-    
-    public String setDbconf(){
-        BufferedWriter writer;
-        try{    
-            writer = new BufferedWriter(new FileWriter(new File("./dbsettings.ini")));
-            writer.write(databaseconfig);
-            writer.close();
-        } catch (FileNotFoundException ex){} catch (IOException ex1){}
-        return "./admin.xhtml";
-    }
+  
     
 
     /**
@@ -120,6 +97,12 @@ public class AdminBean extends AllPageBean{
         return toChangeUser;
     }
 
+    public String deleteUser(){
+        getDatabase().deleteUser(toChangeUser.getUserId());
+        users = getDatabase().getUserList();
+        return "admin.xhtml";
+    }
+    
     /**
      * @param toChangeUser the toChangeUser to set
      */
@@ -133,41 +116,10 @@ public class AdminBean extends AllPageBean{
             tmp = UserType.content;
         }
         
-        getDb().changeUserType(toChangeUser.getUserId(), tmp);
+        getDatabase().changeUserType(toChangeUser.getUserId(), tmp);
         toChangeUser.setType(tmp);
         this.toChangeUser = toChangeUser;
     }
 
-    /**
-     * @return the db
-     */
-    public Database getDb() {
-        return getDatabase();
-    }
-
-    /**
-     * @param db the db to set
-     */
-    public void setDb(Database db) {
-        this.setDatabase(db);
-        if(Const.LOG_DEBUG){
-            logger.debug("## User Id: "+session.getUserId());
-        }
-        if(db.getUser(session.getUserId()).getType().equals(UserType.technical)){
-            try{
-                BufferedReader reader = new BufferedReader(new FileReader(new File("./dbsettings.ini")));
-                String buffer;
-                while((buffer = reader.readLine()) != null){
-                    databaseconfig = buffer;
-                }
-            } catch (FileNotFoundException ex){} catch (IOException ex1){}
-            users = db.getUserList();
-        } else {
-            render = false;
-        }
-        
-        //debug
-        render = true;
-        users = db.getUserList();
-    }
+    
 }

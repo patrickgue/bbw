@@ -6,8 +6,8 @@
 
 package ch.bbw.cms.bean;
 
-import ch.bbw.cms.database.Database;
-import ch.bbw.cms.helper.SessionData;
+import ch.bbw.cms.enums.UserGender;
+import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.models.User;
 import java.util.ArrayList;
@@ -29,7 +29,16 @@ public class ProfileBean extends AllPageBean{
     private String newPassword;
     private String repeatPassword;
     private ArrayList<Post> pinedPosts;
+    private ArrayList<User> searchedUsers = new ArrayList();
+    private boolean showSearchList = true;
     private String search = "Search Users";
+    private Post currentSelectedPost;
+    private User currentUser;
+    
+    public ProfileBean(){
+        currentUser = getDatabase().getUser(getSessiondata().getUserId());
+        searchedUsers.add(new User("testuser", "password", "email", UserGender.other, UserType.normal));
+    }
    
     public String getNewPassword() {
         return newPassword;
@@ -77,6 +86,11 @@ public class ProfileBean extends AllPageBean{
     public void setPinedPosts(ArrayList<Post> pinedPosts) {
         this.pinedPosts = pinedPosts;
     }
+    
+    public String deletePinedPost(){
+        getDatabase().deletePostFromPinwall(getDatabase().getPinId(currentUser.getUserId(), getCurrentSelectedPost().getPostId()));
+        return "profile.xhtml";
+    }
 
     /**
      * @return the search
@@ -93,8 +107,57 @@ public class ProfileBean extends AllPageBean{
     }
     
     public String performSearch(){
-        
+        ArrayList<User> allUsers = getDatabase().getUserList();
+        searchedUsers.clear();
+        for(User usr : allUsers){
+            if(usr.getName().toLowerCase().contains(search.toLowerCase()) ||
+                    usr.getEmail().toLowerCase().contains(search.toLowerCase()) ){
+                searchedUsers.add(usr);
+            }
+        }
         return "profile.xhtml";
+    }
+
+    /**
+     * @return the currentSelectedPost
+     */
+    public Post getCurrentSelectedPost() {
+        return currentSelectedPost;
+    }
+
+    /**
+     * @param currentSelectedPost the currentSelectedPost to set
+     */
+    public void setCurrentSelectedPost(Post currentSelectedPost) {
+        this.currentSelectedPost = currentSelectedPost;
+    }
+
+    /**
+     * @return the searchedUsers
+     */
+    public ArrayList<User> getSearchedUsers() {
+        return searchedUsers;
+    }
+
+    /**
+     * @param searchedUsers the searchedUsers to set
+     */
+    public void setSearchedUsers(ArrayList<User> searchedUsers) {
+        this.searchedUsers = searchedUsers;
+    }
+
+    /**
+     * @return the showSearchList
+     */
+    public boolean isShowSearchList() {
+        return showSearchList;
+    }
+
+    /**
+     * @param showSearchList the showSearchList to set
+     */
+    public void setShowSearchList(boolean showSearchList) {
+        this.showSearchList = showSearchList;
     }
     
 }

@@ -52,16 +52,34 @@
                 <h:outputText value="Email: #{profileBean.sessiondata.user.email}" id="email"/><br></br>
                 <h:outputText value="Gender #{profileBean.sessiondata.user.gender.genderName}" id="gender"/><br></br>
                 </h:form>
+                
+                
+                <h2><h:outputText rendered="#{profileBean.showSearchList}" value="Users"/></h2>
+                <ul>
+                
+                <ui:repeat value="#{profileBean.searchedUsers}" rendered="#{profileBean.showSearchList}" var="users">
+                    <li><h:outputText value="#{users.name}:#{users.email}"/></li>
+                </ui:repeat>
+                </ul>
+                
                 <div id="pinwall">
                     <ui:repeat value="#{profileBean.pinedPosts}" var="post">
                         <div class="pin">
                             <div class="pin-header">
-                                <span class="pin-action fa fa-times"></span>
+                                <h:form>
+                                    <h:commandLink action="#{profileBean.deletePinedPost()}">
+                                        <span class="pin-action fa fa-times"></span>
+                                        <f:setPropertyActionListener target="#{profileBean.currentSelectedPost}" value="#{post}"/>
+                                    </h:commandLink>
+                                </h:form>
+                                <span class="pin-action fa fa-expand pin-expand">expand</span>
+                                
                             </div>
                             <div class="pin-inner">
                                 <h3><h:outputText value="#{post.title}"/></h3>
                                 <p><h:outputText value="By: #{post.user.name}"/></p>
-                                <p><h:outputText escape="false" value="Summary: #{post.summary}"/></p>
+                                <span><h:outputText escape="false" value="#{post.summary}" class="pin-summary" /></span>
+                                <span><h:outputText escape="false" value="#{post.content}" class="pin-content" /></span>
                             </div>
                         </div>
                     </ui:repeat>
@@ -71,5 +89,29 @@
                 </footer>
             </div>
         </div>
+        <script type="text/javascript">
+            $(document).ready(function (){
+                $(".pin-content").css("display", "none");
+            });
+            
+            $(".pin-expand").on("click", function(){
+                if($(this).hasClass("fa-expand")){
+                    $(this).removeClass("fa-expand");
+                    $(this).addClass("fa-compress").html("close");
+                    $(this).parent().parent().css({"width": "100%", "height" : "auto"});
+
+                    $(this).parent().parent().find(".pin-summary").css("display", "none");
+                    $(this).parent().parent().find(".pin-content").css("display", "block");
+                } else {
+                    $(this).addClass("fa-expand");
+                    $(this).removeClass("fa-compress").html("expand");
+                    $(this).parent().parent().css({"width": "", "height" : ""});
+
+                    $(this).parent().parent().find(".pin-summary").css("display", "block");
+                    $(this).parent().parent().find(".pin-content").css("display", "none");
+                }
+                
+            });
+        </script>
     </h:body>
 </html>

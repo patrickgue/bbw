@@ -5,7 +5,6 @@
  */
 package ch.bbw.cms.bean;
 
-import ch.bbw.cms.helper.SessionData;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -15,14 +14,12 @@ import javax.faces.bean.RequestScoped;
  */
 @ManagedBean
 @RequestScoped
-public class DebugBean {
-    private SessionData session = new SessionData();
-    
+public class DebugBean extends AllPageBean{
     private String userIdString = "";
     
     public DebugBean(){
         try{
-            userIdString = "User Id: "+session.getUserId();
+            userIdString = "User Id: "+getSessiondata().getUserId();
         } catch (NullPointerException ex){
             userIdString = "User Id: <i>error - can't load</i>";
         }

@@ -182,6 +182,36 @@ public class DatabaseControlMock implements DatabaseControlInf{
 
     @Override
     public int getPinId(int userid, int post) {
+        return 1;
+    }
+
+    @Override
+    public boolean deletePost(int postId) {
+        return true;
+    }
+
+    @Override
+    public boolean deletePost(Post post) {
+        return true;
+    }
+
+    @Override
+    public boolean deleteComment(Comment comment) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean deleteComment(int commentid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean deleteUser(int userid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean deleteUser(User user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

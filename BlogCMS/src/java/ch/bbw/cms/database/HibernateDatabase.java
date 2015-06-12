@@ -12,6 +12,7 @@ import ch.bbw.cms.database.hibernate.cms_post;
 import ch.bbw.cms.database.hibernate.cms_user;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
+import ch.bbw.cms.helper.Analyzer;
 import ch.bbw.cms.helper.Const;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
@@ -39,6 +40,7 @@ public class HibernateDatabase implements DatabaseControlInf{
     private SessionFactory factory;
     private HibernateUtil util;
     private Log logger = new DefaultLog();
+    private Analyzer analyze;
     
     /**
      * Cache Posts, Pinwall and User lists. The lists get refreshed after {@link:#Const.REFRESH_TIME Const.REFRESH_TIME}
@@ -51,10 +53,14 @@ public class HibernateDatabase implements DatabaseControlInf{
     private Date lastCachedPinwall = new Date();
     private HashMap<String, Integer> pinwallIdCache;
     private Date lastPinwallIdCache = new Date();
+    private boolean loadPinsFromDb = false;
+    private HashMap<Integer, ArrayList<Comment>> commentCache = new HashMap<>();
+    private Date lastCacheComment = new Date();
     
     public HibernateDatabase() {
         util = new HibernateUtil();
         factory = util.getSessionFactory();
+        analyze = new Analyzer("hibernateDb");
     }
     
     private Session initSession(){
@@ -70,11 +76,13 @@ public class HibernateDatabase implements DatabaseControlInf{
     
     @Override
     public ArrayList<Post> getPosts(User user) {
+        analyze.count("getPostsFromUserClass");
         return getPosts(user.getUserId());
     }
 
     @Override
     public ArrayList<Post> getPosts(){
+        analyze.count("getPostsAll");
         if(postCache == null || (new Date().getTime() - lastCachedPosts.getTime()) > Const.REFRESH_TIME){
             postCache = getPostList(null);
             lastCachedPosts = new Date();
@@ -101,11 +109,13 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<Post> getPosts(String searchterm) {
+        analyze.count("getPostFromSearchTerm");
         return getPostListBase(searchterm);
     }
 
     @Override
     public Post getPost(int id) {
+        analyze.count("getPostClassFromId");
         for(Post pst: getPostListBase(null)){
             if(pst.getPostId() == id){
                 return pst;
@@ -116,10 +126,12 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<Post> getPostList(Integer userId) {
+        analyze.count("getPostFromUserId");
         return getPostListBase((Integer)userId);
     }
     
     public ArrayList<Post> getPostListBase(Object userIdOrSearchTerm) {
+        analyze.count("getPosts");
         ArrayList<Post> posts = new ArrayList<Post>();
 	String query;
         if(userIdOrSearchTerm == null){
@@ -133,6 +145,7 @@ public class HibernateDatabase implements DatabaseControlInf{
             }
             
         }
+        analyze.count("getPostsDb");
         
         Session session = initSession();
         Transaction tx = null;
@@ -166,10 +179,13 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<User> getUserList() {
+        analyze.count("getUser");
         if(userCache != null && new Date().getTime() - lastCachedUsers.getTime() < Const.REFRESH_TIME){
             
             return userCache;
         }
+        
+        analyze.count("getUserDb");
         
         ArrayList<User> users = new ArrayList<>();
 	String query = "from cms_user";
@@ -208,6 +224,7 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public int checkUser(String username, String password) {
+        analyze.count("checkUser");
         for(User tmp : getUserList()){
             if(tmp.getName().equals(username) || tmp.getEmail().equals(username)){
                 if(tmp.getPassword().equals(password)){
@@ -252,6 +269,19 @@ public class HibernateDatabase implements DatabaseControlInf{
                 + ", 0"
                 + ", '"+new java.sql.Date(date.getTime()).toString()+"' )");
     }
+    
+    @Override
+    public boolean deletePost(int id){
+        if(Const.LOG_DEBUG){
+            logger.debug("Delete post "+id);
+        }
+        return execute("DELETE FROM cms_post WHERE post_id="+id);
+    }
+    
+    @Override
+    public boolean deletePost(Post post){
+        return deletePost(post.getPostId());
+    }
 
     @Override
     public boolean updatePost(int postid, String title, String content) {
@@ -278,6 +308,7 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public int getUserId(String nameOrEmail) {
+        analyze.count("getUserId");
         for(User usr : getUserList()){
             if(usr.getName().equals(nameOrEmail) || usr.getEmail().equals(nameOrEmail)){
                 return usr.getUserId();
@@ -288,6 +319,7 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public User getUser(int id) {
+        analyze.count("getUserClassById");
         for(User usr : getUserList()){
             if(usr.getUserId() == id){
                 return usr;
@@ -297,12 +329,24 @@ public class HibernateDatabase implements DatabaseControlInf{
     }
 
     @Override
+    public boolean deleteUser(int userId){
+        return execute("DELETE FROM cms_user WHERE user_id="+userId);
+    }
+    
+    @Override 
+    public boolean  deleteUser(User usr){
+        return deleteUser(usr.getUserId());
+    }
+    
+    @Override
     public ArrayList<Post> getPinwall(User user) {
-        if(pinwallCache != null && new Date().getTime() - lastCachedPinwall.getTime() < Const.REFRESH_TIME){
+        analyze.count("getPinwall");
+        if(loadPinsFromDb == false && pinwallCache != null && new Date().getTime() - lastCachedPinwall.getTime() < Const.REFRESH_TIME){
             if(pinwallCache.containsKey(user.getUserId())){
                 if(Const.LOG_DEBUG){
                     logger.debug("Pinwall Chache access"+user.getUserId());
                 }
+                
                 return pinwallCache.get(user.getUserId());
             }
         } else if(pinwallCache == null) { 
@@ -312,6 +356,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         if(Const.LOG_DEBUG){
             logger.debug("Pinwall Database access"+user.getUserId());
         }
+        analyze.count("getPinwallDb");
         
         ArrayList<Post> posts = new ArrayList<>();
 	String query = "from cms_pinwall where pin_user_id = "+user.getUserId();
@@ -341,6 +386,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         }
         
         pinwallCache.put(user.getUserId(), posts);
+        loadPinsFromDb = false;
         return posts;
     }
 
@@ -362,12 +408,14 @@ public class HibernateDatabase implements DatabaseControlInf{
         if(Const.LOG_DEBUG){
             logger.debug("delete pin "+pinid);
         }
+        loadPinsFromDb = true;
         return execute("DELETE FROM cms_pinwall WHERE pin_id="+pinid);
     }
     
     @Override
     public int getPinId(int userid, int postid) {
-        if(pinwallIdCache != null && new Date().getTime() - lastPinwallIdCache.getTime() < Const.REFRESH_TIME/4){
+        analyze.count("getPinId");
+        if(pinwallIdCache != null && new Date().getTime() - lastPinwallIdCache.getTime() > Const.REFRESH_TIME/4){
             Set<String> keys = pinwallIdCache.keySet();
             for(Iterator<String> it = keys.iterator(); it.hasNext();){
                 String currentKey = it.next();
@@ -384,7 +432,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         } else if(pinwallIdCache == null) { 
             pinwallIdCache = new HashMap<>();
         }
-        
+        analyze.count("getPinIdDb");
         
         //ArrayList<Post> posts = new ArrayList<>();
         int pinId = -1;
@@ -422,8 +470,20 @@ public class HibernateDatabase implements DatabaseControlInf{
 
     @Override
     public ArrayList<Comment> getComments(int postid) {
+        analyze.count("getComments");
+        if( commentCache != null &&!commentCache.isEmpty() && commentCache.get(postid) != null && !commentCache.get(postid).isEmpty() && new Date().getTime() - lastCacheComment.getTime() > Const.REFRESH_TIME ){
+            if(Const.LOG_DEBUG){
+                logger.debug("load comments from cache: "+postid);
+            }
+            return commentCache.get(postid);
+        } else {
+            if(Const.LOG_DEBUG){
+                logger.debug("load comments from db: "+postid);
+            }
+        }
+        analyze.count("getCommentsDb");
         ArrayList<Comment> comments = new ArrayList<>();
-	String query = "from cms_comment where comment_post_id="+postid;
+	String query = "from cms_comment where comment_post_id="+postid + "order by comment_date desc";
         Session session = initSession();
         Transaction tx = null;
         
@@ -448,6 +508,8 @@ public class HibernateDatabase implements DatabaseControlInf{
         }finally {
             session.close(); 
         }
+        commentCache.put(postid, comments);
+        lastCacheComment = new Date();
         
         return comments;
     }
@@ -458,10 +520,22 @@ public class HibernateDatabase implements DatabaseControlInf{
                 + ""+comment.getUserId()+""
                 + ", '"+comment.getContent()+"'"
                 + ", "+comment.getPostId()+""
-                + ", '"+comment.getDate().toString()+"' );");
+                + ", '"+new java.sql.Date(comment.getDate().getTime()).toString()+"' );");
+    }
+    
+    
+    @Override
+    public boolean deleteComment(int commentid){
+        return execute("DELETE FROM cms_comment WHERE comment_id="+commentid);
+    }
+    
+    @Override
+    public boolean deleteComment(Comment comment){
+        return deleteComment(comment.getContentId());
     }
     
     private boolean execute(String mysqlQuery){
+        analyze.count("execute");
         if(Const.LOG_DEBUG){
             logger.debug("MySQL Query: "+mysqlQuery);
         }

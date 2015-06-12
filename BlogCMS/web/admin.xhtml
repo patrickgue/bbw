@@ -7,23 +7,16 @@
         <meta charset="utf-8"/>
         <title>Admin Page</title>
         <link rel="stylesheet" href="../css/admin.css"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     </h:head>
     <h:body>
         <h1>Admin Page</h1>
+        <a href="../">
+            <button><span class="fa fa-bars"></span> Home</button>
+        </a>
         <h:outputText rendered="#{adminBean.showError}" value="No permission!"/>
         
         <h:panelGroup rendered="#{adminBean.render}" layout="block">
-            <div class="settingsBlock">
-                <div class="label">
-                    <b>Database</b>
-                </div>
-                <div class="settings">
-                    <h:form>
-                        <h:inputTextarea value="#{adminBean.databaseconfig}" /><br/>
-                        <h:commandButton value="change"/>
-                    </h:form>
-                </div>
-            </div>
 
             <div class="settingsBlock">
                 <div class="label">
@@ -54,6 +47,15 @@
                                     <f:setPropertyActionListener target="#{adminBean.toChangeUser}" value="#{users}"/>
                                 </h:commandButton>
                             </h:form>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Delete</f:facet>
+                            <h:form>
+                                <h:commandLink action='#{adminBean.deleteUser()}' value="x">
+                                    <f:setPropertyActionListener target="#{adminBean.toChangeUser}" value="#{users}"/>
+                                </h:commandLink>
+                            </h:form>
+                            
                         </h:column>
                     </h:dataTable>
                 </div>

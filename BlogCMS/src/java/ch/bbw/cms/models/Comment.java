@@ -30,4 +30,11 @@ public class Comment extends Content{
         this.postId = postID;
     }
     
+    public int getCommentId(){
+        return super.getContentId();
+    }
+    
+    public void setCommentId(int commentid){
+        super.setContentId(commentid);
+    }
 }

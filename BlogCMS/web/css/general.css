@@ -37,3 +37,15 @@ and open the template in the editor.
 .general-search, .user-search{
     float: left;
 }
+
+.pin{
+    transition: all 0.6s;
+}
+
+.pin-inner{
+    width: auto;
+}
+
+.clear{
+    clear: both;
+}

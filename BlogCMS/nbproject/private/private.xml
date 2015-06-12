@@ -4,27 +4,33 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/helper/SessionData.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/HibernateDatabase.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/login.xhtml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AllPageBean.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/admin.xhtml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/SharedBean.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/DebugBean.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/nbproject/build-impl.xml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/test/ch/bbw/cms/test/TestAnalyze.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/helper/Analyzer.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/main_alt_pat.css</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/index.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/CreationBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/main.css</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/HibernateDatabase.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Content.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/general.css</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/Database.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/profile.xhtml</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/create.xhtml</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Post.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AllPageBean.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/login.xhtml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/js/share.js</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/shared.xhtml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/HibernateUtil.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/main.xhtml</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/cms_pinwall.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/ProfileBean.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/nbproject/build-impl.xml</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/mock/DatabaseControlMock.java</file>
-            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/IndexBean.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Comment.java</file>
         </group>
     </open-files>
 </project-private>

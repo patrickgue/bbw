@@ -7,12 +7,9 @@ package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserType;
-import ch.bbw.cms.inf.Log;
-import ch.bbw.cms.mock.DefaultLog;
 import ch.bbw.cms.models.Post;
 import ch.bbw.cms.helper.ClosedList;
 import ch.bbw.cms.helper.Const;
-import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.Comment;
 import ch.bbw.cms.models.User;
 import java.util.ArrayList;
@@ -31,7 +28,6 @@ import javax.faces.bean.*;
 public class IndexBean extends AllPageBean{
 
     private ArrayList<Post> postList;
-    private ArrayList<User> userList;
     private String cssFile;
     private String search = "Search Posts";
     private Post currentPost;

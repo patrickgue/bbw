@@ -8,11 +8,8 @@ package ch.bbw.cms.bean;
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
-import ch.bbw.cms.helper.SessionData;
-import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.models.User;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
 /**

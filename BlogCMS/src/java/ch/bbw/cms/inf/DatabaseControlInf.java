@@ -24,6 +24,8 @@ public interface DatabaseControlInf {
     public ArrayList<Post> getPosts(String searchterm);
     public Post getPost(int id);
     public ArrayList<Post> getPostList(Integer userId);
+    public boolean deletePost(int postId);
+    public boolean deletePost(Post post);
     public ArrayList<User> getUserList();
     public int checkUser(String username, String password);
     public boolean createUser(String username, String password, String email, UserGender gender, UserType type);
@@ -36,6 +38,8 @@ public interface DatabaseControlInf {
     public boolean changeUserType(int userId, UserType type);
     public int getUserId(String nameOrEmail);
     public User getUser(int id);
+    public boolean deleteUser(int userid);
+    public boolean deleteUser(User user);
     public ArrayList<Post> getPinwall(User user);
     public int getPinId(int userid, int post);
     public boolean addPostToPinwall(User user, Post post);
@@ -43,4 +47,6 @@ public interface DatabaseControlInf {
     public boolean deletePostFromPinwall(int pinid);
     public ArrayList<Comment> getComments(int postid);
     public boolean addComment(Comment comment);
+    public boolean deleteComment(Comment comment);
+    public boolean deleteComment(int commentid);
 }

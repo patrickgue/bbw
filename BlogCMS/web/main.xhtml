@@ -98,10 +98,11 @@
                                     <h:column>
 
                                         <div class="list-entry">
-                                            <h3><h:outputText escape="false" value="#{comment.user.name}, #{comment.date}" /></h3>
+                                            <h3><h:outputText escape="false" value="#{comment.user.name}, #{comment.dateString}" /></h3>
                                             <span>
                                                 <h:outputText escape="false" value="#{comment.content}"/>
                                             </span>
+                                            
                                         </div>
 
                                     </h:column>
@@ -115,9 +116,15 @@
                     (c) 2015 <h:form><h:commandButton action="#{indexBean.switchStyles()}" value="switch styles"/></h:form> 
                 </footer>
             </div>
+            <h:panelGroup rendered="#{indexBean.renderUnpin()}">
+                <img style="position: fixed; top: 0px; right: 10px;" src="../img/bookmark.png"/>
+            </h:panelGroup>
         </div>
         <script>
             //alert("#{indexBean.userIdTest}");
+            $(document).ready(function(){
+                shareSetId( #{indexBean.currentPost.postId} );
+            });
         </script>
     </h:body>
 </html>

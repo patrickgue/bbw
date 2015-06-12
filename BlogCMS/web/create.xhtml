@@ -54,6 +54,8 @@
                         <label style="vertical-align: top;"></label>
                         <h:commandButton rendered="#{creationBean.showUpdateButton}" action="#{creationBean.updatePost()}" value="Update"/>
                         <h:commandButton rendered="#{creationBean.showUpdateButton}" action="main.xhtml" value="Cancel"/>
+                        |
+                        <h:commandButton rendered="#{creationBean.showUpdateButton}" action="#{creationBean.deletePost()}" value="Delete Post"/>
                     </div>
                 </h:form>
             <footer>
