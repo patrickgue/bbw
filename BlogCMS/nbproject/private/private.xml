@@ -6,6 +6,8 @@
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/helper/SessionData.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/HibernateDatabase.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/inf/DatabaseControlInf.java</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/profile.xhtml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Post.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/login.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AllPageBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/admin.xhtml</file>
@@ -20,6 +22,7 @@
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/index.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/CreationBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/main.css</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Content.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/LoginSignupBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/css/general.css</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/AdminBean.java</file>
@@ -28,6 +31,7 @@
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/shared.xhtml</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/hibernate/HibernateUtil.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/web/main.xhtml</file>
+            <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/User.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/database/DatabaseControl.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/bean/ProfileBean.java</file>
             <file>file:/home/guenthard/stuff/school/bbw.blog-cms/BlogCMS/src/java/ch/bbw/cms/models/Comment.java</file>

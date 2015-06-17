@@ -39,18 +39,27 @@
                 <button id="logout-button-menu">Log out</button>
                 <h2>Profil von User 1</h2>
                 <h:form>
-                <h:outputText value="New Password" id="newPassword"></h:outputText>
-                <h:inputText id="NewPassword"></h:inputText><br></br>
-                <h:outputText value="Repeat Password" id="repeatPassword"></h:outputText>
-                <h:inputText id="RepeatPassword"></h:inputText><br></br>
-                <h:commandButton value="Save Changes" action="#{ChangePassword.change}"></h:commandButton>
+                    <div class="form-line-block">
+                        <label>New Password</label>
+                        <h:inputText id="NewPassword"></h:inputText>
+                    </div>
+                    <div class="form-line-block">
+                        <label>Repeat Password</label>
+                        <h:inputText id="RepeatPassword"></h:inputText><br></br>
+                        
+                    </div>
+                    <div class="form-line-block">
+                        <label></label>    
+                        <h:commandButton value="Save Changes" action="#{ChangePassword.change}"></h:commandButton>    
+                    </div>
                 </h:form>
+                
                 <h:form>
                 <h2>User Daten</h2>
-                <h:outputText value="Username: #{profileBean.sessiondata.user.name}" id="username"/><br></br>
+                <h:outputText value="Username: #{profileBean.logedInUser.name}" id="username"/><br></br>
                
-                <h:outputText value="Email: #{profileBean.sessiondata.user.email}" id="email"/><br></br>
-                <h:outputText value="Gender #{profileBean.sessiondata.user.gender.genderName}" id="gender"/><br></br>
+                <h:outputText value="Email: #{profileBean.logedInUser.email}" id="email"/><br></br>
+                <h:outputText value="Gender #{profileBean.logedInUser.gender.genderName}" id="gender"/><br></br>
                 </h:form>
                 
                 

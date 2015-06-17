@@ -35,6 +35,15 @@ public abstract class Content {
         this.date = date;
         this.user = new Database().getUser(userid);
     }
+    
+    public Content(Integer contentId, User user, String content, Date date){
+        //database = new Database();
+        this.contentId = contentId;
+        this.userid = user.getUserId();
+        this.content = content;
+        this.date = date;
+        this.user = user;
+    }
 
     /**
      * @return the userId

@@ -116,8 +116,15 @@
                     (c) 2015 <h:form><h:commandButton action="#{indexBean.switchStyles()}" value="switch styles"/></h:form> 
                 </footer>
             </div>
+            
+            
             <h:panelGroup rendered="#{indexBean.renderUnpin()}">
-                <img style="position: fixed; top: 0px; right: 10px;" src="../img/bookmark.png"/>
+                <h:form>
+                    <h:commandLink title="unpinn this pist from your pinwall" action="#{indexBean.unpinPost()}" style="display: inline-block" >
+                        <img style="position: fixed; top: 0px; right: 10px;" src="../img/bookmark.png"/>
+                    </h:commandLink>
+                </h:form>
+                
             </h:panelGroup>
         </div>
         <script>

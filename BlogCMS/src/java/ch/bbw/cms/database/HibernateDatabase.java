@@ -14,6 +14,7 @@ import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
 import ch.bbw.cms.helper.Analyzer;
 import ch.bbw.cms.helper.Const;
+import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.inf.DatabaseControlInf;
 import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.mock.DefaultLog;
@@ -41,6 +42,7 @@ public class HibernateDatabase implements DatabaseControlInf{
     private HibernateUtil util;
     private Log logger = new DefaultLog();
     private Analyzer analyze;
+    private SessionData sessiondata;
     
     /**
      * Cache Posts, Pinwall and User lists. The lists get refreshed after {@link:#Const.REFRESH_TIME Const.REFRESH_TIME}
@@ -58,7 +60,11 @@ public class HibernateDatabase implements DatabaseControlInf{
     private Date lastCacheComment = new Date();
     
     public HibernateDatabase() {
-        util = new HibernateUtil();
+        sessiondata = new SessionData();
+        if((util = sessiondata.getDBUtil()) == null){
+            util = new HibernateUtil();
+            sessiondata.setDBUtil(util);
+        }
         factory = util.getSessionFactory();
         analyze = new Analyzer("hibernateDb");
     }
@@ -132,16 +138,21 @@ public class HibernateDatabase implements DatabaseControlInf{
     
     public ArrayList<Post> getPostListBase(Object userIdOrSearchTerm) {
         analyze.count("getPosts");
+        if(postCache == null){
+            postCache = new ArrayList<>();
+        } else if(postCache.size() > 0 && new Date().getTime() - lastCachedPosts.getTime() > Const.REFRESH_TIME){
+            return postCache;
+        }
         ArrayList<Post> posts = new ArrayList<Post>();
 	String query;
         if(userIdOrSearchTerm == null){
             query = "from cms_post";
         } else {
             if(userIdOrSearchTerm instanceof String){
-                query = "from cms_post where post_content LIKE '%"+(String)userIdOrSearchTerm +"%'"+
-                        "or post_title LIKE '%"+(String)userIdOrSearchTerm+"%'";
+                query = "from cms_post, cms_user where post_content LIKE '%"+(String)userIdOrSearchTerm +"%'"+
+                        "or post_title LIKE '%"+(String)userIdOrSearchTerm+"%' AND post_user_id = user_id";
             } else {
-                query = "from cms_post where post_user_id = "+(Integer)userIdOrSearchTerm;
+                query = "from cms_post, cms_user where post_user_id = user_id AND post_user_id = "+(Integer)userIdOrSearchTerm;
             }
             
         }
@@ -157,13 +168,17 @@ public class HibernateDatabase implements DatabaseControlInf{
                               lposts.iterator(); iterator.hasNext();){
                 cms_post post = (cms_post) iterator.next(); 
                 
-                posts.add(new Post(
+                Post p = new Post(
                         post.getId(), 
                         post.getTitle(), 
                         post.getContent(), 
                         post.getUserId(), 
-                        post.getPost_date()));
-
+                        post.getPost_date());
+                
+                posts.add(p);
+                
+                postCache.add(p);
+                lastCachedPosts = new Date();
             }
             tx.commit();
         }catch (HibernateException e) {
@@ -173,7 +188,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         }finally {
             session.close(); 
         }
-        lastCachedPosts = new Date();
+        
         return posts;
     }
 
@@ -386,6 +401,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         }
         
         pinwallCache.put(user.getUserId(), posts);
+        lastCachedPinwall = new Date();
         loadPinsFromDb = false;
         return posts;
     }

@@ -5,6 +5,7 @@
  */
 package ch.bbw.cms.helper;
 
+import ch.bbw.cms.database.hibernate.HibernateUtil;
 import ch.bbw.cms.models.User;
 import javax.faces.context.FacesContext;
 
@@ -16,6 +17,7 @@ public class SessionData {
     private FacesContext context;
     final private String USER_ID = "userid";
     final private String CURRENT_POST_ID = "currentdocumentid";
+    final private String DBUTIL_ID = "dbutil";
     
 
     final private String USER_OBJ = "userobj";
@@ -70,6 +72,26 @@ public class SessionData {
         init();
         try{
             context.getExternalContext().getSessionMap().put(USER_ID, usr);
+        } catch(NullPointerException ex){
+            System.err.println("Writing to session didn't work!");
+        }
+    }
+    
+    public HibernateUtil getDBUtil(){
+        init();
+        System.out.println(context.getExternalContext().getSessionMap());
+        try{
+            return (HibernateUtil) context.getExternalContext().getSessionMap().get(USER_OBJ);
+        } catch(NullPointerException | IllegalStateException ex){
+            return null; // not logged in...
+        }
+    }
+    
+    
+    public void setDBUtil(HibernateUtil usr){
+        init();
+        try{
+            context.getExternalContext().getSessionMap().put(DBUTIL_ID, usr);
         } catch(NullPointerException ex){
             System.err.println("Writing to session didn't work!");
         }

@@ -21,7 +21,6 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-
 public class ProfileBean extends AllPageBean{
    
     
@@ -34,9 +33,11 @@ public class ProfileBean extends AllPageBean{
     private String search = "Search Users";
     private Post currentSelectedPost;
     private User currentUser;
+    private User logedInUser;
     
     public ProfileBean(){
         currentUser = getDatabase().getUser(getSessiondata().getUserId());
+        logedInUser = currentUser;
         searchedUsers.add(new User("testuser", "password", "email", UserGender.other, UserType.normal));
     }
    
@@ -158,6 +159,20 @@ public class ProfileBean extends AllPageBean{
      */
     public void setShowSearchList(boolean showSearchList) {
         this.showSearchList = showSearchList;
+    }
+
+    /**
+     * @return the logedInUser
+     */
+    public User getLogedInUser() {
+        return logedInUser;
+    }
+
+    /**
+     * @param logedInUser the logedInUser to set
+     */
+    public void setLogedInUser(User logedInUser) {
+        this.logedInUser = logedInUser;
     }
     
 }
