@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
-
 package ch.bbw.cms.database;
 
 
@@ -21,12 +21,13 @@ import javax.faces.bean.SessionScoped;
 
 
 /**
+ * <b><i>THIS CLASS IS DEPRECATED! USE HibternateDatabase INSTEAD</i></b>
+ * 
  * This Class is used to connect to the database in the internet. it provides methods which can be called from the application.
 
  * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons</b>
- * @author 5ia13paguenthard
  */
-
+@Deprecated
 public class DatabaseControl implements DatabaseControlInf{
     private Connection conn;
     private SessionData session;

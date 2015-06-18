@@ -1,21 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * @author: 5ia13nosiegrist
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
-
 package ch.bbw.cms.models;
 
 import ch.bbw.cms.database.Database;
-import ch.bbw.cms.helper.Pattern;
+import ch.bbw.cms.helper.Const;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.faces.bean.ManagedProperty;
 
 /**
  * This class is used to save different types of data
- * 
- * @author 5ia13nosiegrist
  */
 public abstract class Content {
     private User user;
@@ -109,7 +108,7 @@ public abstract class Content {
     }
 
     public String getDateString(){
-        SimpleDateFormat dateFormat = new SimpleDateFormat(Pattern.TIME_PATTERN);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Const.TIME_PATTERN);
         return dateFormat.format(date);
     }
     

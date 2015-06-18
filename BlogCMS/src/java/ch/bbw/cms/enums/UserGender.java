@@ -1,5 +1,10 @@
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
+ */
 package ch.bbw.cms.enums;
-
 
 /**
  * Used to define the Gender of the user
@@ -7,7 +12,7 @@ package ch.bbw.cms.enums;
  * OTHER should be used for people who fall outside of the binary gender or people who don't want other people to 
  * know their gender. FEMALE and MALE should not be limited to cis-gender people but to people who define them as 
  * 
- * @author 5ia13paguenthard
+ * 
  */
 public enum UserGender{
     female("female"), male("male"), other("other");

@@ -1,7 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * @author: 5ia13nosiegrist
+ * @author: 5ia13jethayalan
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.inf;
 
@@ -15,7 +18,8 @@ import java.util.Date;
 
 /**
  *
- * @author guenthard
+ * Interface describes all possible database access methods
+ * 
  */
 public interface DatabaseControlInf {
     public ArrayList<Post> getPosts(User user);

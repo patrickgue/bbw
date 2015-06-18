@@ -1,13 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.inf;
 
 /**
  *
- * @author guenthard
+ * Interface which describes logging classes
  */
 public interface Log {
     public void debug(String msg);

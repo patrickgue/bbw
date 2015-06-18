@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.helper;
 
@@ -18,7 +19,8 @@ import java.util.Iterator;
 
 /**
  *
- * @author guenthard
+ * This class is used to collect data and save it to a file
+ * <i>(you may have to change the path of the csv file if you are working on a Microsoft Windows NT Machine)</i>
  */
 public class Analyzer {
     private HashMap<String, Integer> map = new HashMap<>();

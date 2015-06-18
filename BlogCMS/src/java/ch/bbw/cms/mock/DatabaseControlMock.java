@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * @author: 5ia13nosiegrist
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.mock;
 
@@ -19,8 +21,9 @@ import java.util.Random;
 
 /**
  *
- * @author guenthard
+ * Mock for Database. Not used anymore, database connection is implemented
  */
+@Deprecated
 public class DatabaseControlMock implements DatabaseControlInf{
     ArrayList<User> users = new ArrayList<User>();
      ArrayList<Comment> c;

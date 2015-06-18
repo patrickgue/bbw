@@ -1,3 +1,9 @@
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
+ */
 package ch.bbw.cms.database;
 
 import ch.bbw.cms.enums.*;
@@ -16,7 +22,6 @@ import javax.faces.bean.SessionScoped;
 /**
  * This Class is used as a wrapper for the database class. The main purpose is that it has to be easy to 
  * switch between the mock and the real database.
- * @author 5ia13paguenthard
  */
 @ManagedBean(name="database")
 @SessionScoped 

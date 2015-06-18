@@ -1,13 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.helper;
 
 /**
  *
- * @author guenthard
+ * Variables constants used in various classes
  */
 public class Const {
     /**
@@ -18,4 +19,9 @@ public class Const {
      * Turn on debug logging on or off
      */
     public static final boolean LOG_DEBUG = true;
+    
+    
+    public static String TIME_PATTERN = "dd. MM. yyyy"; // 0000-00-00 00:00:00 d MMM yyyy HH:mm:ss / yyyy-MM-dd HH:mm:ss
+    
+    
 }

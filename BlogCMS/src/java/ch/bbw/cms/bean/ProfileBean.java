@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author: 5ia13jethayalan
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 
 package ch.bbw.cms.bean;
@@ -16,9 +18,8 @@ import javax.faces.bean.SessionScoped;
 
 /**
  *
- * @author 5ia13jethayalan
+ * Bean to display profil information: user data and pined posts 
  */
-
 @ManagedBean
 @SessionScoped
 public class ProfileBean extends AllPageBean{
@@ -34,11 +35,23 @@ public class ProfileBean extends AllPageBean{
     private Post currentSelectedPost;
     private User currentUser;
     private User logedInUser;
+    private String showError = "false";
+    private String errorTitle = "Error";
+    private String errorMessage = "Lorem Ipsum";
+    private String errorCloseLocation = "profile.xhtml";
+    
     
     public ProfileBean(){
-        currentUser = getDatabase().getUser(getSessiondata().getUserId());
-        logedInUser = currentUser;
-        searchedUsers.add(new User("testuser", "password", "email", UserGender.other, UserType.normal));
+        try{
+            currentUser = getSessiondata().getUser();
+            logedInUser = currentUser;
+        } catch (NullPointerException ex){
+            errorCloseLocation = "login.xhtml";
+            showError = "true";
+            errorTitle = "Error!";
+            errorMessage = "session expired! Login again";
+        }
+        
     }
    
     public String getNewPassword() {
@@ -57,14 +70,26 @@ public class ProfileBean extends AllPageBean{
         this.repeatPassword = repeatPassword;
     }
    
-    public String change()
-    {
-        int userId = getSessiondata().getUserId();
-        getDatabase().changeUserPassword(userId, newPassword);
-        User user = getSessiondata().getUser();
+    public String change(){
+        if(newPassword.equals(repeatPassword)){
+            getDatabase().changeUserPassword(getSessiondata().getUserId(), newPassword);
+            User user = getSessiondata().getUser();
+            user.setPassword(newPassword);
+        } else {
+            errorTitle = "Error!";
+            errorMessage = "passwords don't match";
+            showError = "true";
+            errorCloseLocation = "profile.xhtml";
+        }
+        
          
         return "profile.xhtml";
 
+    }
+    
+    public String closeError(){
+        showError = "false";
+        return errorCloseLocation;
     }
     
     public String showUserInfo()
@@ -77,8 +102,12 @@ public class ProfileBean extends AllPageBean{
      * @return the pinedPosts
      */
     public ArrayList<Post> getPinedPosts() {
-        pinedPosts = getDatabase().getPinwall(getDatabase().getUser(getSessiondata().getUserId()));
-        return pinedPosts;
+        try{
+            return getDatabase().getPinwall(currentUser);
+        } catch(NullPointerException ex){
+            return new ArrayList<Post>();
+        }
+        
     }
 
     /**
@@ -89,7 +118,7 @@ public class ProfileBean extends AllPageBean{
     }
     
     public String deletePinedPost(){
-        getDatabase().deletePostFromPinwall(getDatabase().getPinId(currentUser.getUserId(), getCurrentSelectedPost().getPostId()));
+        getDatabase().deletePostFromPinwall(getDatabase().getPinId(getCurrentUser().getUserId(), getCurrentSelectedPost().getPostId()));
         return "profile.xhtml";
     }
 
@@ -173,6 +202,62 @@ public class ProfileBean extends AllPageBean{
      */
     public void setLogedInUser(User logedInUser) {
         this.logedInUser = logedInUser;
+    }
+
+    /**
+     * @return the showError
+     */
+    public String getShowError() {
+        return showError;
+    }
+
+    /**
+     * @param showError the showError to set
+     */
+    public void setShowError(String showError) {
+        this.showError = showError;
+    }
+
+    /**
+     * @return the errorTitle
+     */
+    public String getErrorTitle() {
+        return errorTitle;
+    }
+
+    /**
+     * @param errorTitle the errorTitle to set
+     */
+    public void setErrorTitle(String errorTitle) {
+        this.errorTitle = errorTitle;
+    }
+
+    /**
+     * @return the errorMessage
+     */
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    /**
+     * @param errorMessage the errorMessage to set
+     */
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    /**
+     * @return the currentUser
+     */
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
+    /**
+     * @param currentUser the currentUser to set
+     */
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
     }
     
 }

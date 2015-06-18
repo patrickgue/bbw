@@ -1,3 +1,9 @@
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
+ */
 package ch.bbw.cms.enums;
 
 /**

@@ -1,12 +1,9 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
-    Created on : May 8, 2015, 9:57:54 AM
-    Author     : guenthard
-*/
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ */
+
 
 @font-face{
     font-family: '_AkzidenzGrotesk';
@@ -48,4 +45,24 @@ and open the template in the editor.
 
 .clear{
     clear: both;
+}
+
+.error-msg{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(64,64,64,0.7);
+    display: none;
+}
+
+.error-msg-center{
+    margin: auto;
+    margin-top: 10%;
+    padding: 10px;
+    width: 90%;
+    max-width: 500px;
+    background-color: #eee;
+    border-top: 4px solid #e33;
 }

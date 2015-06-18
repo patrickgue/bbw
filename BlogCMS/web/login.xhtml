@@ -1,4 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
+<!--
+@author: 5ia13paguenthard
+ 
+Licensed under the GNU GPL v3
+NO WARRANTY
+-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
@@ -8,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Blog</title>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="../css/#{indexBean.cssFile}"/>
+        <link rel="stylesheet" href="../css/#{settingsBean.cssFile}"/>
         <link rel="stylesheet" href="../css/general.css"/>
         <script src="../js/jquery-1.11.1.js" type="text/javascript"></script>
         <script src="../js/share.js" type="text/javascript"></script>
@@ -90,8 +96,27 @@
             <footer>
                 (c) 2015 <h:form><h:commandButton action="#{indexBean.switchStyles()}" value="switch styles"/></h:form> 
             </footer>
+            <div class="error-msg">
+                <div class="error-msg-center">
+                    <h3 class="error-msg-title">Some message</h3>
+                    <p class="error-msg-message">Lorem Ipsum</p>
+                    <h:form><h:commandButton action="#{loginSignupBean.closeError()}" value="Ok"/></h:form>
+                </div>
+            </div>
         </div>
-        
+        <script>
+            $(document).ready(function (){
+                if(#{loginSignupBean.showError}){
+                    error("#{loginSignupBean.errorTitle}", "#{loginSignupBean.errorMessage}");
+                }
+            });
+            
+            function error(title, message){
+                $(".error-msg").css("display","block");
+                $(".error-msg-message").html(title);
+                $(".error-msg-message").html(message);
+            }
+        </script>
     </h:body>
 </html>
 

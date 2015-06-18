@@ -1,20 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
 import ch.bbw.cms.enums.UserGender;
 import ch.bbw.cms.enums.UserType;
+import ch.bbw.cms.helper.Const;
 import ch.bbw.cms.models.User;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 /**
  *
- * @author guenthard
+ * Bean used to handle the login and signup
  */
 @ManagedBean
 @RequestScoped
@@ -24,6 +26,9 @@ public class LoginSignupBean extends AllPageBean{
     private String repassword;
     private String email;
     private String gender;
+    private String showError = "false";
+    private String errorTitle = "Title";
+    private String errorMessage = "Message";
     
     
     public LoginSignupBean(){
@@ -34,23 +39,38 @@ public class LoginSignupBean extends AllPageBean{
         
         int userid = getDatabase().checkUser(username, password);
         if(userid != -1){
-            getSessiondata().setUserId(userid);
+            getSessiondata().setUser(getDatabase().getUser(userid));
+            if(Const.LOG_DEBUG){
+                try{
+                    logger.debug("User is loggedin with ID: "+userid + "(id in sessionstorage: "+getSessiondata().getUser().getUserId());
+                } catch(NullPointerException ex){
+                    logger.error("application wasn't able to set User", ex);
+                }
+            }
             return "main.xhtml";
         } else {
             return "login.xhtml";
         }
     }
     
+    public String closeError(){
+        showError = "false";
+        return "login.xhtml";
+    } 
+    
     public String signup(){
         if(password.equals(repassword)){
             if(getDatabase().createUser(new User(username, password, email, UserGender.valueOf(gender), UserType.normal))){
                 int userid = getDatabase().getUserId(username);
-                getSessiondata().setUserId(userid);
+                getSessiondata().setUser(getDatabase().getUser(userid));
                 return "main.xhtml";
             } else {
                 return "login.xhtml";
             }
         } else {
+            errorMessage = "password don't match";
+            errorTitle = "Error!";
+            showError = "true";
             return "login.xhtml";
         }
         
@@ -140,6 +160,48 @@ public class LoginSignupBean extends AllPageBean{
      */
     public void setDatabase(Database database) {
         super.setDatabase(database);
+    }
+
+    /**
+     * @return the showError
+     */
+    public String getShowError() {
+        return showError;
+    }
+
+    /**
+     * @param showError the showError to set
+     */
+    public void setShowError(String showError) {
+        this.showError = showError;
+    }
+
+    /**
+     * @return the errorTitle
+     */
+    public String getErrorTitle() {
+        return errorTitle;
+    }
+
+    /**
+     * @param errorTitle the errorTitle to set
+     */
+    public void setErrorTitle(String errorTitle) {
+        this.errorTitle = errorTitle;
+    }
+
+    /**
+     * @return the errorMessage
+     */
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    /**
+     * @param errorMessage the errorMessage to set
+     */
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
     
     

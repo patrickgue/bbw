@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.bean;
 
 import ch.bbw.cms.database.Database;
 import javax.faces.bean.*;
 import ch.bbw.cms.enums.UserType;
-import ch.bbw.cms.helper.SessionData;
 import ch.bbw.cms.models.Post;
 import java.util.Date;
 
@@ -95,7 +95,7 @@ public class CreationBean extends AllPageBean{
     public boolean isEnabled(){
         try{
             System.out.println("get User "+getDatabase().getUser(getSessiondata().getUserId()).getName());
-            return getSessiondata().getUserId() != -1 && getDatabase().getUser(getSessiondata().getUserId()).getType().equals(UserType.content);
+            return getSessiondata().getUserId() != -1 && getSessiondata().getUser().getType().equals(UserType.content);
         } catch(Exception ex){
             return true;
         }

@@ -1,48 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.database;
 
-import ch.bbw.cms.database.hibernate.HibernateUtil;
-import ch.bbw.cms.database.hibernate.cms_comment;
-import ch.bbw.cms.database.hibernate.cms_pinwall;
-import ch.bbw.cms.database.hibernate.cms_post;
-import ch.bbw.cms.database.hibernate.cms_user;
-import ch.bbw.cms.enums.UserGender;
-import ch.bbw.cms.enums.UserType;
-import ch.bbw.cms.helper.Analyzer;
-import ch.bbw.cms.helper.Const;
-import ch.bbw.cms.helper.SessionData;
-import ch.bbw.cms.inf.DatabaseControlInf;
-import ch.bbw.cms.inf.Log;
+import ch.bbw.cms.bean.SettingsBean;
+import ch.bbw.cms.database.hibernate.*;
+import ch.bbw.cms.enums.*;
+import ch.bbw.cms.helper.*;
+import ch.bbw.cms.inf.*;
 import ch.bbw.cms.mock.DefaultLog;
-import ch.bbw.cms.models.Comment;
-import ch.bbw.cms.models.Post;
-import ch.bbw.cms.models.User;
+import ch.bbw.cms.models.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 
 /**
  *
- * @author guenthard
+ * This Class is used to connect to the database in the Internet. it provides methods which can be called from the application.
+ *
+ * <b>This class mustn't be directly included into the viewer files (i.e. xhtml files) because of security reasons</b>
  */
 public class HibernateDatabase implements DatabaseControlInf{
     private SessionFactory factory;
     private HibernateUtil util;
-    private Log logger = new DefaultLog();
-    private Analyzer analyze;
-    private SessionData sessiondata;
+    private Log logger = SettingsBean.logger();
+    private final SessionData sessiondata;
+    private final Analyzer analyze;
     
     /**
      * Cache Posts, Pinwall and User lists. The lists get refreshed after {@link:#Const.REFRESH_TIME Const.REFRESH_TIME}
@@ -67,6 +57,7 @@ public class HibernateDatabase implements DatabaseControlInf{
         }
         factory = util.getSessionFactory();
         analyze = new Analyzer("hibernateDb");
+        analyze.count("init db");
     }
     
     private Session initSession(){
@@ -172,7 +163,7 @@ public class HibernateDatabase implements DatabaseControlInf{
                         post.getId(), 
                         post.getTitle(), 
                         post.getContent(), 
-                        post.getUserId(), 
+                        getUser(post.getUserId()), 
                         post.getPost_date());
                 
                 posts.add(p);
@@ -510,7 +501,7 @@ public class HibernateDatabase implements DatabaseControlInf{
                 lcomments.iterator(); iterator.hasNext();){
                 cms_comment comment = (cms_comment) iterator.next(); 
                 
-                comments.add(new Comment(comment.getId(), comment.getContent(), comment.getPostId(), comment.getUserId(), comment.getDate()));
+                comments.add(new Comment(comment.getId(), comment.getContent(), comment.getPostId(), getUser(comment.getUserId()), comment.getDate()));
                         
                   
 

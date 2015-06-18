@@ -1,28 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.helper;
 
+import ch.bbw.cms.bean.SettingsBean;
 import ch.bbw.cms.database.hibernate.HibernateUtil;
+import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.models.User;
 import javax.faces.context.FacesContext;
 
 /**
  *
- * @author guenthard
+ * This class is used to save data to the session so different beans can access the same data
  */
 public class SessionData {
     private FacesContext context;
     final private String USER_ID = "userid";
     final private String CURRENT_POST_ID = "currentdocumentid";
     final private String DBUTIL_ID = "dbutil";
-    
-
     final private String USER_OBJ = "userobj";
     private User user = null;
-    
+    private final Log logger = SettingsBean.logger();
     
     public SessionData(){
         init();
@@ -35,17 +36,11 @@ public class SessionData {
     
     public int getUserId(){
         init();
-        System.out.println(context.getExternalContext().getSessionMap());
-        try{
-            System.out.println(context.getExternalContext().getSessionMap().get(USER_ID).toString());  
-            return Integer.parseInt(context.getExternalContext().getSessionMap().get(USER_ID).toString());
-        } catch(NullPointerException | IllegalStateException ex){
-            System.out.println("-1");
-            return -1; // not logged in...
-        }
+        
+        return getUser().getUserId();
     }
     
-    
+    @Deprecated
     public void setUserId(int id){
         init();
         try{
@@ -55,14 +50,11 @@ public class SessionData {
         }
     }
     
-    public User getUser(){
+    public User getUser() throws NullPointerException{
         init();
-        System.out.println(context.getExternalContext().getSessionMap());
         try{
-            System.out.println(context.getExternalContext().getSessionMap().get(USER_ID).toString());  
             return (User) context.getExternalContext().getSessionMap().get(USER_OBJ);
         } catch(NullPointerException | IllegalStateException ex){
-            System.out.println("-1");
             return null; // not logged in...
         }
     }
@@ -71,9 +63,9 @@ public class SessionData {
     public void setUser(User usr){
         init();
         try{
-            context.getExternalContext().getSessionMap().put(USER_ID, usr);
+            context.getExternalContext().getSessionMap().put(USER_OBJ, usr);
         } catch(NullPointerException ex){
-            System.err.println("Writing to session didn't work!");
+            logger.error("Cannot write User to session", ex);
         }
     }
     
@@ -81,7 +73,7 @@ public class SessionData {
         init();
         System.out.println(context.getExternalContext().getSessionMap());
         try{
-            return (HibernateUtil) context.getExternalContext().getSessionMap().get(USER_OBJ);
+            return (HibernateUtil) context.getExternalContext().getSessionMap().get(DBUTIL_ID);
         } catch(NullPointerException | IllegalStateException ex){
             return null; // not logged in...
         }

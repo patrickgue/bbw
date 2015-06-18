@@ -1,3 +1,11 @@
+/* 
+ * @author: 5ia13paguenthard
+ * @author: 5ia13nosiegrist
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
+ */
+
 $(document).ready(function(){
     $("#menu-button").on("click", function(){
         $(".left").toggle();

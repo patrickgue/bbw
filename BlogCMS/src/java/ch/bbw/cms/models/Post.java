@@ -1,20 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * @author: 5ia13paguenthard
+ * @author: 5ia13nosiegrist
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
-
 package ch.bbw.cms.models;
 
-import ch.bbw.cms.helper.Const;
 import ch.bbw.cms.inf.Log;
 import ch.bbw.cms.mock.DefaultLog;
 import java.util.ArrayList;
 import java.util.Date;
 
 /**
- *
- * @author 5ia13nosiegrist
+ * Used to save a simple post
  */
 public class Post extends Content{
     private String title;
@@ -24,6 +23,13 @@ public class Post extends Content{
 
     public Post(Integer postId, String title, String content, int userId, Date date) {
         super(postId, userId, content, date);
+        this.title = title;
+        this.comments = new ArrayList<>();
+        this.likes = new ArrayList<>();
+    }
+    
+    public Post(Integer postId, String title, String content, User user, Date date) {
+        super(postId, user, content, date);
         this.title = title;
         this.comments = new ArrayList<>();
         this.likes = new ArrayList<>();

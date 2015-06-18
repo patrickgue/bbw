@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author: 5ia13paguenthard
+ * @author: 5ia13nosiegrist
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
  */
 package ch.bbw.cms.bean;
 
@@ -28,12 +30,9 @@ import javax.faces.bean.*;
 public class IndexBean extends AllPageBean{
 
     private ArrayList<Post> postList;
-    private String cssFile;
     private String search = "Search Posts";
     private Post currentPost;
     private int currentPin;
-    private String userIdTest;
-    private ClosedList<String> cssFls;
     private String comment;
     private ArrayList<Comment> commentList;
     
@@ -43,12 +42,7 @@ public class IndexBean extends AllPageBean{
 
     
     public IndexBean() {
-	cssFls = new ClosedList<>(new String[]{"main.css", "main_alt_timo.css", "main_alt_pat.css"});
-	cssFile = cssFls.next();
-        
-        comment = "Enter comment";
-        
-        System.out.println("user id:" +getSessiondata().getUserId());
+	comment = "Enter comment";
         
         
         if(Const.LOG_DEBUG){
@@ -81,24 +75,7 @@ public class IndexBean extends AllPageBean{
     }
 
 
-    /**
-     * @return the cssFile
-     */
-    public String getCssFile() {
-        return cssFile;
-    }
-
-    /**
-     * @param cssFile the cssFile to set
-     */
-    public void setCssFile(String cssFile) {
-        this.cssFile = cssFile;
-    }
     
-    public String switchStyles(){
-	cssFile = cssFls.next();
-        return "main.xhtml";
-    }
 
     /**
      * @return the search
@@ -136,21 +113,8 @@ public class IndexBean extends AllPageBean{
         this.currentPost = currentPost;
     }
 
-    /**
-     * @return the userIdTest
-     */
-    public String getUserIdTest() {
-        userIdTest = "User Id: "+getSessiondata().getUserId();
-      
-        return userIdTest;
-    }
+    
 
-    /**
-     * @param userIdTest the userIdTest to set
-     */
-    public void setUserIdTest(String userIdTest) {
-        this.userIdTest = userIdTest;
-    }
     
     public String gotoNewPost(){
         getSessiondata().setCurrentPostId(-1);
@@ -172,10 +136,14 @@ public class IndexBean extends AllPageBean{
     
     public boolean renderPin(){
         if(Const.LOG_DEBUG){
-            logger.debug(""+getDatabase().getUser(getSessiondata().getUserId()));
+            logger.debug(""+getSessiondata().getUser());
         }
-        currentPin = getDatabase().getPinId(getSessiondata().getUserId(), currentPost.getPostId());
         
+        try{
+            currentPin = getDatabase().getPinId(getSessiondata().getUser().getUserId(), currentPost.getPostId());
+        } catch(NullPointerException ex){
+            logger.error("User is null", ex);
+        }
         return currentPin == -1;
     }
     
@@ -195,7 +163,7 @@ public class IndexBean extends AllPageBean{
     
     public boolean isEditor(){
         try{
-            return getDatabase().getUser(getSessiondata().getUserId()).getType().equals(UserType.content);
+            return getSessiondata().getUser().getType().equals(UserType.content);
         } catch(Exception ex){
             return false;
         }

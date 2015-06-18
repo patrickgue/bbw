@@ -1,5 +1,14 @@
+/* 
+ * source: stackoverflow.com
+ * integrated by: 5ia13paguenthard
+ * 
+ * Licensed under the GNU GPL v3
+ * NO WARRANTY
+ */
 package ch.bbw.cms.database.hibernate;
 
+import ch.bbw.cms.bean.SettingsBean;
+import ch.bbw.cms.inf.Log;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import org.hibernate.SessionFactory;  
@@ -13,6 +22,7 @@ public class HibernateUtil {
       
     private final SessionFactory sessionFactory;  
     private final ServiceRegistry serviceRegistry;  
+    private final Log logger = SettingsBean.logger();
       
     public HibernateUtil() {  
         Configuration conf = new Configuration();  
@@ -21,7 +31,7 @@ public class HibernateUtil {
         try {  
             sessionFactory = conf.buildSessionFactory(serviceRegistry);  
         } catch (Exception e) {  
-            System.err.println("Initial SessionFactory creation failed." + e);  
+            logger.error("Initial SessionFactory creation failed: ", e);  
             throw new ExceptionInInitializerError(e);  
         }         
     }  
