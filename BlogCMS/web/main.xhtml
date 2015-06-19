@@ -94,6 +94,7 @@ NO WARRANTY
                                 </h:form>
                                 <h:outputText escape="false" value="#{indexBean.currentPost.title}" />
                             </h2>
+                            <p><h:outputText escape="false" value="Post released by #{indexBean.currentPost.user.name} on #{indexBean.currentPost.dateString}" /></p>
                             <h:outputText escape="false" value="#{indexBean.currentPost.content}"/>
                             <div class="comments">
                                 <h3><h:outputText escape="false" value="Comments"/></h3>

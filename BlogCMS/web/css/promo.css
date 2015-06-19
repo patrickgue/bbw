@@ -70,9 +70,29 @@ header h1{
     width: 33%;
 }
 
+.grid-3 .grid-x2{
+    width: 66%;
+}
+
 .box-grid-box{
     float: left;
     text-align: center;
+}
+
+.box-grid-box.left{
+    text-align: left;
+}
+
+.box-grid-box.right{
+    text-align: right;
+}
+
+.line{
+    border-bottom: 1px solid #333;
+}
+
+.inset{
+    padding-left: 30px;
 }
 
 #mainPage{
