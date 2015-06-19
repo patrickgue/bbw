@@ -18,24 +18,42 @@
             </div>
             <div id="header-image">
                 <img id="header-image-img" src="../img/macbook-air-mockup-big.jpg"/>
-                <div id="scroll-down-text">
-                    <div class="center">
-                        <span>Scroll down</span>
-                        <i class="fa fa-chevron-down"></i>
+            </div>
+        </header>
+        <div id="scroll-down-text">
+            <div class="center">
+                <span>Scroll down</span>
+                <i class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+        <div id="mainPage">
+            <div class="center">
+                <h2>Your <i>Content Management System</i>!</h2>
+                <div class="box-grid grid-3">
+                    <div class="box-grid-box">
+                        <img src="../img/promo-easy.png" class="box-img"/>
+                        <h3>Easy to use</h3>
+                        <p>The CMS is made for everyone to use. No IT knowledge is needed to use it - 
+                            neither for content viewers nor for editors!</p>
+                    </div>
+                    <div class="box-grid-box">
+                        <img src="../img/promo-functionality.png" class="box-img"/>
+                        <h3>Functional</h3>
+                        <p>The Application is very functional. You can share, pin, comment and 
+                            search posts, search users and many more things. <a href="index.xhtml">Take a look!</a></p>
+                    </div><div class="box-grid-box">
+                        <img src="../img/promo-open.png" class="box-img"/>
+                        <h3>Open Source</h3>
+                        <p>The Project is completely Open-Source, the code and the libraries are all 
+                            <a href="http://www.gnu.org/philosophy/free-sw.html">free software</a>. 
+                            So if you are a developer, feel free to for it. Download the project 
+                            <a href="#">here</a></p>
                     </div>
                 </div>
             </div>
-        </header>
-        <script>
-            $(document).on("scroll", function(){
-                if($(this).scrollTop() > $(window).height()/3){
-                    if($(".scroll-down-text").css("display") == "block"){
-                        $(".scroll-down-text").fadeOut();
-                    }
-                }
-            });
-            
-        </script>
+        </div>
+        
+        <script src="../js/promo.js"></script>
     </h:body>
 </html>
 

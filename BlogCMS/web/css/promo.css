@@ -45,7 +45,7 @@ header h1{
 .center{
     width: 100%;
     margin: auto;
-    max-width: 960px;
+    max-width: 1080px;
 }
 
 #scroll-down-text{
@@ -57,8 +57,71 @@ header h1{
 }
 
 #scroll-down-text .center{
-    background-color: #fff;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    background-color: rgba(255,255,255,0.2);
     padding: 3px;
+    font-size: 250%;
+}
+
+.box-grid{
+    width: 100%;
+}
+
+.grid-3 .box-grid-box{
+    width: 33%;
+}
+
+.box-grid-box{
+    float: left;
+    text-align: center;
+}
+
+#mainPage{
+    padding: 10px;
+}
+
+#mainPage h1, #mainPage h2, #mainPage h3{
+    font-weight: 400;
+}
+
+#mainPage h1{
+    font-size: 48pt;
+}
+
+#mainPage h2{
+    font-size: 32pt;
+}
+
+#mainPage h3{
+    font-size: 24pt;
+}
+
+#mainPage p{
+    font-size: 18pt;
+}
+
+.clear{
+    clear: both;
+}
+
+.box-img{
+    width: 30%;
+    height: 30%;
+    border-radius: 100%;
+    padding: 15% 0;
+    transition: all 0.5s;
+}
+
+
+.box-img:hover{
+    width: 60%;
+    height: 30%;
+    padding: 0%;
+    border-radius: 10%;
+}
+
+@media all and (max-width: 640px){
+    .grid-3 .box-grid-box{
+        width: 100%;
+    }
+
 }
