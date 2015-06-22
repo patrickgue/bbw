@@ -14,7 +14,7 @@ public class Const {
     /**
      * Refresh Time in millisecs
      */
-    public static final int REFRESH_TIME = 10000;
+    public static final int REFRESH_TIME = 1000;
     /**
      * Turn on debug logging on or off
      */

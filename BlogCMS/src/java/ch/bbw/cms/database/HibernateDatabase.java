@@ -140,10 +140,10 @@ public class HibernateDatabase implements DatabaseControlInf{
             query = "from cms_post";
         } else {
             if(userIdOrSearchTerm instanceof String){
-                query = "from cms_post, cms_user where post_content LIKE '%"+(String)userIdOrSearchTerm +"%'"+
+                query = "from cms_post where post_content LIKE '%"+(String)userIdOrSearchTerm +"%'"+
                         "or post_title LIKE '%"+(String)userIdOrSearchTerm+"%' AND post_user_id = user_id";
             } else {
-                query = "from cms_post, cms_user where post_user_id = user_id AND post_user_id = "+(Integer)userIdOrSearchTerm;
+                query = "from cms_post where post_user_id = user_id AND post_user_id = "+(Integer)userIdOrSearchTerm;
             }
             
         }
