@@ -1,0 +1,30 @@
+.myPlayer{
+    width: 100%;
+    float: left;
+}
+
+.myPlayerWrapper{
+    width: 640px;
+    height: auto;
+    background-color: #000;
+    
+}
+
+.myPlayerWrapper button, .myPlayerWrapper input[type="range"]{
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    float: left;
+}
+
+.myPlayerWrapper button:hover{
+    color: rgb(100,120,250);
+}
+
+.myPlayerWrapper input[type="range"]{
+    width: 520px;
+}
