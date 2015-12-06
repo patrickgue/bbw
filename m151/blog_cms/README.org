@@ -1,0 +1,14 @@
+* Blog-CMS
+
+ - Small Blog-CMS
+ - School Project at BBW
+
+** Screenshots of the main page and the update page 2015-05-15
+*** main page
+[[./info/img/screenshot-main-2015-05-15.png]]
+
+*** update page
+[[./info/img/screenshot-update-2015-05-15.png]]
+
+** Screenshot of the main page 2015-05-08
+[[./info/img/screenshot-state-2015-05-08.png]]

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+@author: 5ia13paguenthard
+ 
+Licensed under the GNU GPL v3
+NO WARRANTY
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta charset="utf-8"/>
+        <title>Admin Page</title>
+        <link rel="stylesheet" href="../css/admin.css"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    </h:head>
+    <h:body>
+        <h1>Admin Page</h1>
+        <a href="../">
+            <button><span class="fa fa-bars"></span> Home</button>
+        </a>
+        <h:outputText rendered="#{adminBean.showError}" value="No permission!"/>
+        
+        <h:panelGroup rendered="#{adminBean.render}" layout="block">
+
+            <div class="settingsBlock">
+                <div class="label">
+                    <b>User list</b>
+                </div>
+                <div class="settings">
+                    <h:dataTable var="users" value="#{adminBean.users}">
+                        <h:column>
+                            <f:facet name="header">Name</f:facet>
+                            <h:outputText value="#{users.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Email</f:facet>
+                            <h:outputText value="#{users.email}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Gender</f:facet>
+                            <h:outputText value="#{users.gender}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Type</f:facet>
+                            <h:outputText value="#{users.userTypeString}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Edit Mode</f:facet>
+                            <h:form>
+                                <h:commandButton action="#{adminBean.editMode()}" value="edit">
+                                    <f:setPropertyActionListener target="#{adminBean.toChangeUser}" value="#{users}"/>
+                                </h:commandButton>
+                            </h:form>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Delete</f:facet>
+                            <h:form>
+                                <h:commandLink action='#{adminBean.deleteUser()}' value="x">
+                                    <f:setPropertyActionListener target="#{adminBean.toChangeUser}" value="#{users}"/>
+                                </h:commandLink>
+                            </h:form>
+                            
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+        </h:panelGroup>
+        
+    </h:body>
+</html>
+

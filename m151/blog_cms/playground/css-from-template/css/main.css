@@ -1,0 +1,33 @@
+body{
+    font-family: 'Helvetica';
+}
+
+button, input{
+    background-color: #1abc9c;
+    color: #fff;
+    min-width: 200px;
+    min-height: 40px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12pt;
+    font-weight: 600;
+    margin: 4px;
+}
+
+button:hover{
+    background-color: #48c9b0;
+}
+
+button:active{
+    background-color: #16a085;
+}
+
+input[type="text"], input[type="password"], select{
+    background-color: #fff;
+    color: #34495e;
+    min-height: 46px;
+    min-width: 176px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid #1abc9c;
+}

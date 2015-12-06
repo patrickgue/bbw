@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+@author: 5ia13paguenthard
+@author: 5ia13jethayalan
+ 
+Licensed under the GNU GPL v3
+NO WARRANTY
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Blog Template</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="../css/#{settingsBean.cssFile}"/>
+        <link rel="stylesheet" href="../css/general.css"/>
+        <script src="../js/jquery-1.11.1.js" type="text/javascript"></script>
+        <script src="../js/main.js" type="text/javascript"></script>
+    </h:head>
+    <h:body>
+        <header>
+        <div class="page-center">
+            <h1 class="h-centered">CMS Blog</h1>
+            <div class="header-body">
+                <h:form style="width: 240px;">
+                    <h:inputText value="#{profileBean.search}" class="user-search"/>
+                    <h:commandButton style="float: left;" value="go" action="#{profileBean.performSearch()}" />
+
+                </h:form>
+                <span style="float: right;">
+                    <a href="main.xhtml"><button id="profile-button-header">Home</button></a>
+                    <h:form style="float: right;"><h:commandButton action="#{loginSignupBean.logout()}" value="Log out"/></h:form>
+                </span>
+
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        </header>
+        <div class="content">
+            <div class="page-center">
+                <a href="main.xhtml"><button id="profile-button-menu">Home</button></a>
+                <button id="logout-button-menu">Log out</button>
+                <h2>Profil von User 1</h2>
+                <h:form>
+                    <div class="form-line-block">
+                        <label>New Password</label>
+                        <h:inputSecret value="#{profileBean.newPassword}"/>
+                    </div>
+                    <div class="form-line-block">
+                        <label>Repeat Password</label>
+                        <h:inputSecret value="#{profileBean.repeatPassword}"/><br></br>
+                        
+                    </div>
+                    <div class="form-line-block">
+                        <label></label>    
+                        <h:commandButton value="Save Changes" action="#{profileBean.change()}"></h:commandButton>    
+                    </div>
+                </h:form>
+                
+                <h:form>
+                <h2>User Daten</h2>
+                <h:outputText value="Username: #{profileBean.logedInUser.name}" id="username"/><br></br>
+               
+                <h:outputText value="Email: #{profileBean.logedInUser.email}" id="email"/><br></br>
+                <h:outputText value="Gender #{profileBean.logedInUser.gender.genderName}" id="gender"/><br></br>
+                </h:form>
+                
+                
+                <h2><h:outputText rendered="#{profileBean.showSearchList}" value="Users"/></h2>
+                <ul>
+                
+                <ui:repeat value="#{profileBean.searchedUsers}" rendered="#{profileBean.showSearchList}" var="users">
+                    <li>
+                        <h:form>
+                            <h:commandLink value="#{users.name}" action="profile.xhtml" >
+                                <f:setPropertyActionListener target="#{profileBean.currentUser}" value="#{users}"/>
+                            </h:commandLink>
+                        </h:form>
+                    </li>
+                </ui:repeat>
+                </ul>
+                
+                <div id="pinwall">
+                    <ui:repeat value="#{profileBean.pinedPosts}" var="post">
+                        <div class="pin">
+                            <div class="pin-header">
+                                <h:form>
+                                    <h:commandLink action="#{profileBean.deletePinedPost()}">
+                                        <span class="pin-action fa fa-times"></span>
+                                        <f:setPropertyActionListener target="#{profileBean.currentSelectedPost}" value="#{post}"/>
+                                    </h:commandLink>
+                                </h:form>
+                                <span class="pin-action fa fa-expand pin-expand">expand</span>
+                                
+                            </div>
+                            <div class="pin-inner">
+                                <h3><h:outputText value="#{post.title}"/></h3>
+                                <p><h:outputText value="By: #{post.user.name}"/></p>
+                                <span><h:outputText escape="false" value="#{post.summary}" class="pin-summary" /></span>
+                                <span><h:outputText escape="false" value="#{post.content}" class="pin-content" /></span>
+                            </div>
+                        </div>
+                    </ui:repeat>
+                </div>
+                <footer>
+                    (c) 2015 
+                </footer>
+                <div class="error-msg">
+                    <div class="error-msg-center">
+                        <h3 class="error-msg-title">Some message</h3>
+                        <p class="error-msg-message">Lorem Ipsum</p>
+                        <h:form><h:commandButton action="#{profileBean.closeError()}" value="Ok"/></h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function (){
+                $(".pin-content").css("display", "none");
+            });
+            
+            $(".pin-expand").on("click", function(){
+                if($(this).hasClass("fa-expand")){
+                    $(this).removeClass("fa-expand");
+                    $(this).addClass("fa-compress").html("close");
+                    $(this).parent().parent().css({"width": "100%", "height" : "auto"});
+
+                    $(this).parent().parent().find(".pin-summary").css("display", "none");
+                    $(this).parent().parent().find(".pin-content").css("display", "block");
+                } else {
+                    $(this).addClass("fa-expand");
+                    $(this).removeClass("fa-compress").html("expand");
+                    $(this).parent().parent().css({"width": "", "height" : ""});
+
+                    $(this).parent().parent().find(".pin-summary").css("display", "block");
+                    $(this).parent().parent().find(".pin-content").css("display", "none");
+                }
+                
+            });
+            
+            $(document).ready(function (){
+                if(#{profileBean.showError}){
+                    error("#{profileBean.errorTitle}", "#{profileBean.errorMessage}");
+                }
+            });
+            
+            function error(title, message){
+                $(".error-msg").css("display","block");
+                $(".error-msg-message").html(title);
+                $(".error-msg-message").html(message);
+            }
+        </script>
+    </h:body>
+</html>

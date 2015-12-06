@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="DBUser" table="cms_user">
+      <meta attribute="class-description">
+         This class contains users 
+      </meta>
+      <id name="id" type="int" column="user_id">
+         <generator class="native"/>
+      </id>
+      <property name="name" column="user_name" type="string"/>
+      <property name="email" column="user_email" type="string"/>
+      <property name="password" column="user_password" type="string"/>
+      <property name="type" column="user_type" type="string"/>
+      <property name="bio" column="user_bio" type="string"/>
+      <property name="age" column="user_age" type="int"/>
+      <property name="gender" column="user_gender" type="string"/>
+   </class>
+</hibernate-mapping>
