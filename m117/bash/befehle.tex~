@@ -1,0 +1,112 @@
+% Created 2015-12-06 Son 21:48
+\documentclass[11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\fontfamily{phv}\selectfont
+\usepackage[margin=0.5in]{geometry}
+\author{Patrick Günthard}
+\date{\today}
+\title{Befehls Dokumentation}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.4.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\part{Befehls Doku}
+\label{sec-1}
+
+\chapter{ls}
+\label{sec-1-1}
+\section{NAME}
+\label{sec-1-1-1}
+ls - list files
+\section{SYNOPSIS}
+\label{sec-1-1-2}
+ls [-l] [-a] [-H] [folder/file]
+\section{DESCRIPTION}
+\label{sec-1-1-3}
+Lists all files in a directory. This programm is part of the GNU coreutils
+
+\begin{center}
+\begin{tabular}{lll}
+-a & -all & show all, also hidden\\
+-l &  & print output as a list with additional information\\
+-h & --human-readable & print file size in human readable format (K, M, G) [only with -l]\\
+\end{tabular}
+\end{center}
+\chapter{du}
+\label{sec-1-2}
+\section{NAME}
+\label{sec-1-2-1}
+du - show estimated space of filed and folders
+\section{SYNOPSIS}
+\label{sec-1-2-2}
+du [-s] [-b]
+\section{DESCRIPTION}
+\label{sec-1-2-3}
+\begin{center}
+\begin{tabular}{lll}
+-s & --summarize & show only current folder, no subfolders\\
+-b & --bytes & show bytes\\
+\end{tabular}
+\end{center}
+\chapter{sort}
+\label{sec-1-3}
+\section{NAME}
+\label{sec-1-3-1}
+sort - sort file
+\section{SYNOPSIS}
+\label{sec-1-3-2}
+sort [-n] [-r] [-M] [file]
+
+\emph{can also be piped}
+\section{DESCRIPTION}
+\label{sec-1-3-3}
+\begin{center}
+\begin{tabular}{lll}
+-n & --numeric-sort & sort by number instead of text\\
+-r & --reverse & reverse output\\
+-M & --month-sort & sort by Month (JAN -> DEC)\\
+\end{tabular}
+\end{center}
+
+\chapter{cd}
+\label{sec-1-4}
+\section{NAME}
+\label{sec-1-4-1}
+cd - change directory
+\section{SYNOPSIS}
+\label{sec-1-4-2}
+cd [folder/path]
+\section{DESCRIPTION}
+\label{sec-1-4-3}
+\begin{center}
+\begin{tabular}{ll}
+cd [folder/path] & change current directory to specified folder\\
+cd & change current directory to home\\
+\end{tabular}
+\end{center}
+\chapter{cat}
+\label{sec-1-5}
+% Emacs 24.4.1 (Org mode 8.2.10)
+\end{document}

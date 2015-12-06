@@ -1,0 +1,25 @@
+* Befehls Doku
+** ls
+*** NAME
+ls - list files
+*** SYNOPSIS
+ls [-l] [-a] [-H] [folder/file]
+*** DESCRIPTION
+Lists all files in a directory. This programm is part of the GNU coreutils
+
+| -a | -all             | show all, also hidden                                             |
+| -l |                  | print output as a list with additional information                |
+| -h | --human-readable | print file size in human readable format (K, M, G) [only with -l] |
+
+*** EXAMPLES
+cmd -p
+
+** COMMENT structure
+*** NAME
+cmd - command
+*** SYNOPSIS
+command [options]
+*** DESCRIPTION
+-p --param
+*** EXAMPLES
+cmd -p

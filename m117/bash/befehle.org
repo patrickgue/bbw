@@ -1,0 +1,76 @@
+#+LATEX_HEADER: \usepackage{helvet}
+#+LATEX_CLASS: book
+#+LATEX_HEADER: \renewcommand{\familydefault}{\sfdefault}
+#+LATEX_HEADER: \fontfamily{phv}\selectfont
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+
+#+TITLE: Befehls Dokumentation
+* Befehls Doku
+
+** ls
+*** NAME
+ls - list files
+*** SYNOPSIS
+ls [-l] [-a] [-H] [folder/file]
+*** DESCRIPTION
+Lists all files in a directory. This programm is part of the GNU coreutils
+
+| -a | -all             | show all, also hidden                                             |
+| -l |                  | print output as a list with additional information                |
+| -h | --human-readable | print file size in human readable format (K, M, G) [only with -l] |
+** du
+*** NAME
+du - show estimated space of filed and folders
+*** SYNOPSIS
+du [-s] [-b]
+*** DESCRIPTION
+| -s | --summarize | show only current folder, no subfolders |
+| -b | --bytes     | show bytes                              |
+** sort
+*** NAME
+sort - sort file
+*** SYNOPSIS
+sort [-n] [-r] [-M] [file]
+
+/can also be piped/
+*** DESCRIPTION
+| -n | --numeric-sort | sort by number instead of text |
+| -r | --reverse      | reverse output                 |
+| -M | --month-sort   | sort by Month (JAN -> DEC)     |
+
+** cd
+*** NAME
+cd - change directory
+*** SYNOPSIS
+cd [folder/path]
+*** DESCRIPTION
+| cd [folder/path] | change current directory to specified folder |
+| cd               | change current directory to home             |
+** cat
+*** NAME
+cat - concatenate files
+*** SYNOPSIS
+cat [-n] [file]
+*** DESCRIPTION
+cat can be piped
+
+| -n | line numbers |
+
+** ps
+*** NAME
+ps - show all runnung processes
+*** SYNOPSIS
+ps [-e] [-u /user/ ]
+*** DESCRIPTION
+| -e | show all processes              |
+| -u | show processes of certain users |
+
+** COMMENT structure
+*** NAME
+cmd - command
+*** SYNOPSIS
+command [options]
+*** DESCRIPTION
+-p --param
+*** EXAMPLES
+cmd -p

@@ -1,0 +1,76 @@
+#!/bin/bash
+
+
+file1=""
+file2=""
+
+
+file1lines=()
+file2lines=()
+
+file1length=0
+file2length=0
+filelongerlength=0
+
+diffcounter=0
+
+
+difffiles()
+{
+    while IFS='' read -r line || [[ -n "$line" ]]; do
+	file1lines+=("$line")
+    done < "$file1"
+
+    while IFS='' read -r line || [[ -n "$line" ]]; do
+	file2lines+=("$line")
+    done < "$file2"
+
+    file1length=${#file1lines[@]}
+    file2length=${#file2lines[@]}
+    
+    if [ $file1length -gt $file2length ]
+    then
+	filelongerlength=$file1length
+    else
+	filelongerlength=$file2length
+    fi
+
+    for ((i = 0; i < $filelongerlength; i++))
+    do
+	if [ $file1length -lt $i ]
+	then
+	    echo ${file2lines[$i]}
+	    diffcounter=$((diffcounter + 1))
+	elif [ $file2length -lt $i ]
+	then
+	    echo ${file1lines[$i]}
+	    diffcounter=$((diffcounter + 1))
+	elif [ ${file1lines[$i]} != ${file2lines[$i]} ]
+	then
+	    echo "${file1lines[$i]} | ${file2lines[$i]}"
+	    diffcounter=$((diffcounter + 1))
+	fi
+    done
+
+    if [ $diffcounter -eq 0 ]
+    then
+	echo "file has no differences"
+    elif [ $diffcounter -eq 1 ]
+    then
+	echo "there is 1 difference in this files"
+    else
+	echo "there are $diffcounter differences in this files"
+    fi
+}
+
+
+if [ ! $# -eq 2 ]
+then
+    echo "Invalid number of paramenters. Usage: filediff [file1] [file2]"
+else
+    file1=$1
+    file2=$2
+
+    difffiles
+
+fi
