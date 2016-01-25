@@ -1,0 +1,33 @@
+\documentclass[12pt,twoside,a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{utopia}
+\usepackage[margin=1in]{geometry}
+%\usepackage[parfill]{parskip} % paragraph indent: uncomment if no paragaph indent is needed
+\usepackage{makeidx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{TITLE}
+\newcommand{\authorText}{AUTHOR}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+\end{document}
