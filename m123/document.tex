@@ -1,0 +1,52 @@
+\documentclass[12pt,twoside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{utopia}
+\usepackage[margin=1in]{geometry}
+%\usepackage[parfill]{parskip} % paragraph indent: uncomment if no paragaph indent is needed
+\usepackage{makeidx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{Terminalserver}
+\newcommand{\authorText}{Patrick Günthard}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\section{Wozu dient's?}
+	
+	Terminalserver dienen dazu z.B. Anwendungen auf einem zentralen Server laufen zu lassen auf welche Clients über das Netzwerk zugreifen können.
+	
+	\section{Wie entstand's?}
+	
+	Das Konzept wurde ursprünglich für die Grossrechner der 1970er und 1980er Jahre. Da es zu teuer gewesen wäre, jedem Arbeitsplatz einen eigener Rechner zur Verfügung zu stellen, wurden sogenannte Thin-Clients installiert welche sich mit . entworfen bei welchen mehrere Thin-Clients mit dem Rechner verbunden war. 
+	
+	\section{Wie funktioniert's?}
+	
+	Auf einem zentralen Server läuft ein Server auf welchen ein Client sich verbindet und 
+	
+	\section{Lösungen}
+	\begin{tabular}{lp{12cm}}
+		SSH & \textit{Secure Shell} ist ein Protokoll welches eine verschlüsselte Übertragung zulässt. Es wird hauptsächlich auf UNIX eingesetzt.\\
+	\end{tabular}
+	
+	
+	
+\end{document}

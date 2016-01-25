@@ -1,0 +1,5 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Wozu dient's?}{1}{section.1}
+\contentsline {section}{\numberline {2}Wie entstand's?}{1}{section.2}
+\contentsline {section}{\numberline {3}Wie funktioniert's?}{1}{section.3}
+\contentsline {section}{\numberline {4}L\IeC {\"o}sungen}{1}{section.4}
