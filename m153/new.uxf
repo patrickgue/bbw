@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>18</zoom_level>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>594</x>
+      <y>270</y>
+      <w>217</w>
+      <h>253</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+TblAusweis
+--
+P AusweisId
+F AmtId
+  Ausstelldatum
+  </panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=textHeight();
+
+drawRectangle(0,0,width,height);
+
+boolean b = false;
+
+drawLine(13,21,13,height);
+for(String textline : textlines) {
+	if(textline.equals("--")){
+		drawLine(0,y-13,width,y-13);
+	} else {
+		if(!b){
+			y += printCenter("*"+textline+"*",y);
+			
+			b = true;
+		} else {
+			printLeft(textline.substring(0,1), y);
+			y += print(textline.substring(2),20,y);
+		}
+	}
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>414</x>
+      <y>612</y>
+      <w>217</w>
+      <h>163</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+TblAdresse
+--
+P AdresseId
+  StrassenName
+F OrtId
+  </panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=textHeight();
+
+drawRectangle(0,0,width,height);
+
+boolean b = false;
+
+drawLine(13,21,13,height);
+for(String textline : textlines) {
+	if(textline.equals("--")){
+		drawLine(0,y-13,width,y-13);
+	} else {
+		if(!b){
+			y += printCenter("*"+textline+"*",y);
+			
+			b = true;
+		} else {
+			printLeft(textline.substring(0,1), y);
+			y += print(textline.substring(2),20,y);
+		}
+	}
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>162</x>
+      <y>270</y>
+      <w>217</w>
+      <h>289</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+TblPerson
+--
+P PersonId
+  Name
+  Vorname
+  Geburtsdatum
+  Adresse
+  AHVN°
+F WohnOrtId
+F HeimatortId
+  </panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=textHeight();
+
+drawRectangle(0,0,width,height);
+
+boolean b = false;
+
+drawLine(13,21,13,height);
+for(String textline : textlines) {
+	if(textline.equals("--")){
+		drawLine(0,y-13,width,y-13);
+	} else {
+		if(!b){
+			y += printCenter("*"+textline+"*",y);
+			
+			b = true;
+		} else {
+			printLeft(textline.substring(0,1), y);
+			y += print(textline.substring(2),20,y);
+		}
+	}
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>918</x>
+      <y>180</y>
+      <w>163</w>
+      <h>163</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+TblAmt
+--
+P AmtId
+  Name
+F OrtId</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=textHeight();
+
+drawRectangle(0,0,width,height);
+
+boolean b = false;
+
+drawLine(13,21,13,height);
+for(String textline : textlines) {
+	if(textline.equals("--")){
+		drawLine(0,y-13,width,y-13);
+	} else {
+		if(!b){
+			y += printCenter("*"+textline+"*",y);
+			
+			b = true;
+		} else {
+			printLeft(textline.substring(0,1), y);
+			y += print(textline.substring(2),20,y);
+		}
+	}
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>396</x>
+      <y>72</y>
+      <w>163</w>
+      <h>163</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+TblOrt
+--
+P OrtId
+  PLZ
+ OOrtName
+  </panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=textHeight();
+
+drawRectangle(0,0,width,height);
+
+boolean b = false;
+
+drawLine(13,21,13,height);
+for(String textline : textlines) {
+	if(textline.equals("--")){
+		drawLine(0,y-13,width,y-13);
+	} else {
+		if(!b){
+			y += printCenter("*"+textline+"*",y);
+			
+			b = true;
+		} else {
+			printLeft(textline.substring(0,1), y);
+			y += print(textline.substring(2),20,y);
+		}
+	}
+}</custom_code>
+  </element>
+</diagram>
