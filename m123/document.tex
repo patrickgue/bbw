@@ -39,17 +39,26 @@
         \begin{multicols}{2}
           Terminalserver dienen dazu z.B. Anwendungen auf einem zentralen Server laufen zu lassen auf welche Clients über das Netzwerk zugreifen können. Auch wird diese es für Fernwartung eingesetzt. 
 	\end{multicols}
-	\section{Wie entstand's?}
+	\section{Wie ist es entstanden?}
 	\begin{figure}
-            \centering
-            \includegraphics[width=5cm]{terminal}
-            \caption{figure}{VT100 Terminal}
-          \end{figure}
+          \phantomsection
+          \label{fig:term}
+          \centering
+          \includegraphics[width=5cm]{terminal}
+          \caption{VT100 }
+        \end{figure}
 
-          \begin{multicols}{2}
-          Das Konzept wurde ursprünglich für die Grossrechner der 1970er und 1980er Jahre. Da es zu teuer gewesen wäre, jedem Arbeitsplatz einen eigener Rechner zur Verfügung zu stellen, wurden sogenannte Thin-Clients installiert welche sich auf den Server einloggten. Zu dieser Zeit waren die Clients direkt über eine RS-232 Schnittstelle mit dem Host verbunden. Heutzutage (2016) werden diese Verbindungen über ein Netzwerk aufgebaut (meist über tcp/ip). 
+        \begin{multicols}{2}
+          Das Konzept wurde ursprünglich für die Grossrechner der 1970er und
+          1980er Jahre. Da es zu teuer gewesen wäre, jedem Arbeitsplatz einen
+          eigener Rechner zur Verfügung zu stellen, wurden sogenannte
+          Thin-Clients installiert welche sich auf den Server
+          einloggten\ref{fig:term}. Zu dieser Zeit waren die Clients direkt
+          über eine RS-232 Schnittstelle mit dem Host verbunden. Heutzutage
+          (2016) werden diese Verbindungen über ein Netzwerk aufgebaut
+          (üblicherweise über eine IP verbindung). 
 
-          Heuzutage haben Terminalserver auch ein neues anwendungsgebiet. Sie werden zur Fernwartung eingesetzt da Clients mitlerweile genug Leistung haben um ein eigenes System auszuführen. 
+          Heuzutage haben Terminalserver auch ein neues anwendungsgebiet. Sie werden zur Fernwartung eingesetzt da Clients mitlerweile genug Leistung haben um ein eigenes Betriebssystem auszuführen. 
 	\end{multicols}
           
 	\section{Wie funktioniert's?}
@@ -58,16 +67,23 @@
 	\end{multicols}
         
 	\section{Lösungen}
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
           \subsection{telnet}
-          Telnet ist ein Protokoll für die (unverschlüsselte) Übertragung von Text-basierten Daten. Telnet ist auf fast allen Netzwerkfähigen Systemen verfügbar, auch auf solchen welche auf Windows NT basieren\footnote{\url{http://windows.microsoft.com/en-us/windows/telnet-faq\#1TC=windows-7}}.
-          \subsection{SSH}
-          \textit{Secure Shell} ist ein Protokoll welches eine verschlüsselte Übertragung zulässt. Es wird hauptsächlich auf UNIX und UNIX-artigen Systemen eingesetzt, es gibt aber auch ports auf die win32 Architektur von Microsoft (2015 wurde von Microsoft angekündigt, SSH auch nativ zu unterstützen \footnote{\url{https://en.wikipedia.org/wiki/Secure_Shell\#cite_note-3}}). Mit SSH lassen sich verschiedene Protokolle übertragen wobei auch auf dem Server laufende X11 GUIs auf dem client angezeigt werden können.
+          Telnet ist ein Protokoll für die (unverschlüsselte) Übertragung von
+          Text-basierten Daten. Telnet ist auf fast allen Netzwerkfähigen
+          Systemen verfügbar, auch auf solchen welche auf Windows NT
+          basieren\footnote{\url{http://windows.microsoft.com/en-us/windows/telnet-faq\#1TC=windows-7}}.
+
+          \subsection{SSH} 
+          \textit{Secure Shell} ist ein Protokoll welches eine verschlüsselte
+          Übertragung verschiedener Daten zulässt. Es wird hauptsächlich auf UNIX und UNIX-artigen Systemen eingesetzt, es gibt aber auch ports auf die win32 Architektur von Microsoft (2015 wurde von Microsoft angekündigt, SSH auch nativ zu unterstützen \footnote{\url{https://en.wikipedia.org/wiki/Secure_Shell\#cite_note-3}}). Mit SSH lassen sich verschiedene Protokolle übertragen wobei auch auf dem Server laufende X11 GUIs auf dem client angezeigt werden können.
           
-	\end{multicols}
+	%\end{multicols}
 
 	\begin{thebibliography}{9}
-        \bibitem[Secure Shell - Wikipedia]{ssh}\url{https://en.wikipedia.org/wiki/Secure_Shell}
+        \bibitem[Secure Shell -
+          Wikipedia]{ssh}\url{https://en.wikipedia.org/wiki/Secure_Shell}
+        \bibitem[Telnet - Wikipedia]{telnet}\url{https://en.wikipedia.org/wiki/Telnet}
         \end{thebibliography}
 
 	

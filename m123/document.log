@@ -1,12 +1,15 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  28 JAN 2016 14:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2016.1.16)  31 JAN 2016 12:25
 entering extended mode
- file:line:error style messages enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**\input document.tex
-(./document.tex (/usr/share/texmf/tex/latex/base/article.cls
-Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+**document.tex
+(./document.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf/tex/latex/base/size11.clo
-File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -21,19 +24,19 @@ File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texmf/tex/latex/base/inputenc.sty
-Package: inputenc 2006/05/05 v1.1b Input encoding file
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
 (/usr/share/texmf/tex/latex/base/utf8.def
-File: utf8.def 2006/03/30 v1.1i UTF-8 support for inputenc
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
-... processing UTF-8 mapping file for font encodingT1
+... processing UTF-8 mapping file for font encoding T1
 
 (/usr/share/texmf/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -180,10 +183,10 @@ File: t1enc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
    defining Unicode char U+2423 (decimal 9251)
 )
 Now handling font encoding OT1 ...
-... processing UTF-8 mapping file for font encodingOT1
+... processing UTF-8 mapping file for font encoding OT1
 
 (/usr/share/texmf/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -211,10 +214,10 @@ File: ot1enc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
    defining Unicode char U+201D (decimal 8221)
 )
 Now handling font encoding OMS ...
-... processing UTF-8 mapping file for font encodingOMS
+... processing UTF-8 mapping file for font encoding OMS
 
 (/usr/share/texmf/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -238,33 +241,42 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 (/usr/share/texmf/tex/generic/babel/babel.sty
-Package: babel 2005/11/23 v3.8h The Babel package
+Package: babel 2013/05/16 v3.9f The Babel package
 
-(/usr/share/texmf/tex/generic/babel/english.ldf
-Language: english 2005/03/30 v3.3o English support from the babel system
+(/usr/share/texmf/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texmf/tex/generic/babel/babel.def
-File: babel.def 2005/11/23 v3.8h Babel common definitions
+File: babel.def 2013/05/16 v3.9f Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-(/usr/share/texmf/tex/generic/babel/germanb.ldf
-Language: germanb 2004/02/19 v2.6k German support from the babel system
+(/usr/share/texmf/tex/generic/babel-german/germanb.ldf
+Language: germanb 2008/06/01 v2.6m German support from the babel system
 \l@austrian = a dialect from \language\l@german 
-Package babel Info: Making " an active character on input line 91.
+Package babel Info: Making " an active character on input line 102.
 ))
 (/usr/share/texmf/tex/latex/geometry/geometry.sty
-Package: geometry 2002/07/08 v3.2 Page Geometry
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/share/texmf/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
+)
+(/usr/share/texmf/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texmf/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
 \Gm@cntv=\count89
@@ -273,16 +285,19 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \Gm@wd@mp=\dimen105
 \Gm@odd@mp=\dimen106
 \Gm@even@mp=\dimen107
+\Gm@layoutwidth=\dimen108
+\Gm@layoutheight=\dimen109
+\Gm@layouthoffset=\dimen110
+\Gm@layoutvoffset=\dimen111
 \Gm@dimlist=\toks17
 )
 (/usr/share/texmf/tex/latex/base/makeidx.sty
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
 (/usr/share/texmf/tex/latex/setspace/setspace.sty
-Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
-
-Package: `setspace' 6.7 <2000/12/01>
-) (/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -294,75 +309,136 @@ Package: `setspace' 6.7 <2000/12/01>
 \f@ncyO@orf=\skip51
 )
 (/usr/share/texmf/tex/latex/lastpage/lastpage.sty
-Package: lastpage 1994/06/25 v0.1b LaTeX2e package for refs to last page number
- (JPG)
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
 (/usr/share/texmf/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2007/02/07 v6.75r Hypertext links for LaTeX
-\@linkdim=\dimen108
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texmf/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texmf/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen112
 \Hy@linkcounter=\count91
 \Hy@pagecounter=\count92
 
 (/usr/share/texmf/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2007/02/07 v6.75r Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/usr/share/texmf/tex/latex/config/hyperref.cfg
+\Hy@SavedSpaceFactor=\count93
+
+(/usr/share/texmf/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2006/08/22 v2.4 Connects package keyval with LaTeX options (
-HO)
-)
-Package hyperref Info: Hyper figures OFF on input line 2288.
-Package hyperref Info: Link nesting OFF on input line 2293.
-Package hyperref Info: Hyper index ON on input line 2296.
-Package hyperref Info: Plain pages OFF on input line 2303.
-Package hyperref Info: Backreferencing OFF on input line 2308.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count94
 
-Implicit mode ON; LaTeX internals redefined
-Package hyperref Info: Bookmarks ON on input line 2444.
-(/usr/share/texmf/tex/latex/html/url.sty
-Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
- names
+(/usr/share/texmf/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 2599.
-\Fld@menulength=\count93
-\Field@Width=\dimen109
-\Fld@charsize=\dimen110
-\Choice@toks=\toks18
-\Field@toks=\toks19
-Package hyperref Info: Hyper figures OFF on input line 3102.
-Package hyperref Info: Link nesting OFF on input line 3107.
-Package hyperref Info: Hyper index ON on input line 3110.
-Package hyperref Info: backreferencing OFF on input line 3117.
-Package hyperref Info: Link coloring OFF on input line 3122.
-\Hy@abspage=\count94
-\c@Item=\count95
-\c@Hfootnote=\count96
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen113
+\Fld@menulength=\count95
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count96
+\c@Item=\count97
+\c@Hfootnote=\count98
 )
-*hyperref using default driver hpdftex*
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
 (/usr/share/texmf/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
-\Fld@listcount=\count97
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count99
+\c@bookmark@seq@number=\count100
+
+(/usr/share/texmf/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip52
 )
 (/usr/share/texmf/tex/latex/tools/multicol.sty
-Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
-\c@tracingmulticols=\count98
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count101
 \mult@box=\box26
-\multicol@leftmargin=\dimen111
-\c@unbalance=\count99
-\c@collectmore=\count100
-\doublecol@number=\count101
-\multicoltolerance=\count102
-\multicolpretolerance=\count103
-\full@width=\dimen112
-\page@free=\dimen113
-\premulticols=\dimen114
-\postmulticols=\dimen115
-\multicolsep=\skip52
-\multicolbaselineskip=\skip53
+\multicol@leftmargin=\dimen116
+\c@unbalance=\count102
+\c@collectmore=\count103
+\doublecol@number=\count104
+\multicoltolerance=\count105
+\multicolpretolerance=\count106
+\full@width=\dimen117
+\page@free=\dimen118
+\premulticols=\dimen119
+\postmulticols=\dimen120
+\multicolsep=\skip53
+\multicolbaselineskip=\skip54
 \partial@page=\box27
 \last@line=\box28
 \mult@rightbox=\box29
@@ -386,39 +462,40 @@ Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
-\c@columnbadness=\count104
-\c@finalcolumnbadness=\count105
-\last@try=\dimen116
-\multicolovershoot=\dimen117
-\multicolundershoot=\dimen118
+\c@columnbadness=\count107
+\c@finalcolumnbadness=\count108
+\last@try=\dimen121
+\multicolovershoot=\dimen122
+\multicolundershoot=\dimen123
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
+\multicol@sort@counter=\count109
 )
 (/usr/share/texmf/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box52
-\fn@width=\dimen119
+\fn@width=\dimen124
 )
 (/usr/share/texmf/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf/tex/latex/graphics/graphics.sty
-Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texmf/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 90.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
-\Gread@gobject=\count106
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count110
 ))
-\Gin@req@height=\dimen120
-\Gin@req@width=\dimen121
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
 ) (./document.aux)
 \openout1 = `document.aux'.
 
@@ -441,62 +518,93 @@ LaTeX Font Info:    Try loading font information for OT1+phv on input line 34.
 (/usr/share/texmf/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
--------------------- Geometry parameters
-paper: a4paper
-landscape: --
-twocolumn: --
-twoside: true
-asymmetric: --
-h-parts: 101.17755pt, 452.9679pt, 43.36243pt
-v-parts: 72.26999pt, 700.50687pt, 72.26999pt
-hmarginratio: --
-vmarginratio: --
-lines: --
-heightrounded: --
-bindingoffset: 0.0pt
-truedimen: --
-includehead: --
-includefoot: --
-includemp: --
-driver: pdftex
--------------------- Page layout dimensions and switches
-\paperwidth  597.50787pt
-\paperheight 845.04684pt
-\textwidth  452.9679pt
-\textheight 700.50687pt
-\oddsidemargin  28.90756pt
-\evensidemargin -28.90756pt
-\topmargin  -37.0pt
-\headheight 12.0pt
-\headsep    25.0pt
-\footskip   30.0pt
-\marginparwidth 103.0pt
-\marginparsep   10.0pt
-\columnsep  10.0pt
-\skip\footins  10.0pt plus 4.0pt minus 2.0pt
-\hoffset 0.0pt
-\voffset 0.0pt
-\mag 1000
-\@twosidetrue \@mparswitchtrue 
-(1in=72.27pt, 1cm=28.45pt)
------------------------
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(101.17755pt, 452.9679pt, 43.36243pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=28.90756pt
+* \evensidemargin=-28.90756pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=103.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 34.
+\AtBeginShipoutBox=\box53
 Package hyperref Info: Link coloring OFF on input line 34.
-
 (/usr/share/texmf/tex/latex/hyperref/nameref.sty
-Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/share/texmf/tex/latex/oberdiek/refcount.sty
-Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
+(/usr/share/texmf/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count107
+\c@section@level=\count111
 )
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
  (./document.out)
 (./document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
 
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count112
+\scratchdimen=\dimen127
+\scratchbox=\box54
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen128
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texmf/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texmf/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -516,37 +624,66 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `document.toc'.
 
- [1
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 37.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 37.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 37.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 37.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 37.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 37.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <terminal.jpg, id=45, 2786
-.41pt x 2473.24pt>
+[1
+
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 38.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 38.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 38.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 42.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 42.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 42.
+
+<terminal.jpg, id=42, 2786.41pt x 2473.24pt>
 File: terminal.jpg Graphic file (type jpg)
  <use terminal.jpg>
+Package pdftex.def Info: terminal.jpg used on input line 47.
+(pdftex.def)             Requested size: 142.26378pt x 126.2732pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 64.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 64.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 64.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 57.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 66.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 69.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 69.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 69.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 62.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 71.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 71.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 71.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 71.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 63.
+(Font)              <9> on input line 75.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 63.
-
-Underfull \hbox (badness 6825) in paragraph at lines 63--64
-\OT1/phv/m/n/10.95 Telnet ist ein Pro-to-koll f[]ur die (un-ver-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-\OT1/phv/m/n/10.95 Da-ten. Tel-net ist auf fast al-len Netz-
- []
-
-
-Overfull \vbox (8.04944pt too high) has occurred while \output is active []
-
-
-
-Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 2 might be wrong on input line 66.
+(Font)              <5> on input line 75.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -554,25 +691,74 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 77.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 77.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 77.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 77.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 77.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 77.
 [2
 
- <./terminal.jpg>] AED: lastpage setting LastPage [3] (./document.aux) ) 
+ <./terminal.jpg>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 77.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 77.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 77.
+ 
+AED: lastpage setting LastPage
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 90.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 90.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 90.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 90.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 90.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 90.
+[3]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language append on input line 90.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language append on input line 90.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language append on input line 90.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
+ (./document.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: EBB1BB83195E86071624761BF1D67788;312.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
+ ) 
 Here is how much of TeX's memory you used:
- 3740 strings out of 256214
- 50051 string characters out of 1917000
- 119089 words of memory out of 1500000
- 6953 multiletter control sequences out of 10000+200000
- 25815 words of font info for 52 fonts, out of 1200000 for 2000
- 645 hyphenation exceptions out of 8191
- 25i,11n,43p,564b,482s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/s
-hare/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/bluesky/cm
-/cmtt10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt9.pfb></usr/share/texm
-f/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/helveti
-c/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on document.pdf (3 pages, 2134324 bytes).
+ 6591 strings out of 493315
+ 94047 string characters out of 6145893
+ 193989 words of memory out of 5000000
+ 9929 multiletter control sequences out of 15000+600000
+ 25815 words of font info for 52 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 29i,11n,43p,508b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/p
+ublic/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/c
+mtt9.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texm
+f/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/helveti
+c/uhvro8a.pfb>
+Output written on document.pdf (3 pages, 2136564 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 131072)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 94 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
