@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="13.3">
+<diagram program="umlet" version="14.1.1">
   <zoom_level>18</zoom_level>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>594</x>
-      <y>270</y>
+      <x>684</x>
+      <y>324</y>
       <w>217</w>
       <h>253</h>
     </coordinates>
@@ -52,8 +52,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>414</x>
-      <y>612</y>
+      <x>144</x>
+      <y>0</y>
       <w>217</w>
       <h>163</h>
     </coordinates>
@@ -64,8 +64,8 @@ TblAdresse
 --
 P AdresseId
   StrassenName
-F OrtId
-  </panel_attributes>
+  PLZ
+  Ort</panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
 //
@@ -100,8 +100,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>162</x>
-      <y>270</y>
+      <x>126</x>
+      <y>306</y>
       <w>217</w>
       <h>289</h>
     </coordinates>
@@ -153,8 +153,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>918</x>
-      <y>180</y>
+      <x>720</x>
+      <y>36</y>
       <w>163</w>
       <h>163</h>
     </coordinates>
@@ -198,51 +198,52 @@ for(String textline : textlines) {
 }</custom_code>
   </element>
   <element>
-    <type>CustomElementImpl</type>
+    <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>72</y>
-      <w>163</w>
-      <h>163</h>
+      <x>324</x>
+      <y>432</y>
+      <w>396</w>
+      <h>90</h>
     </coordinates>
-    <panel_attributes>// Modify the text below and
-// observe the element preview.
-
-TblOrt
---
-P OrtId
-  PLZ
- OOrtName
-  </panel_attributes>
-    <additional_attributes/>
-    <custom_code>//Modify the code below to define the element's behavior.
-//
-//Example:  Change the line
-//  y += printCenter(textline,y);
-//to
-//  y += 2*printCenter(textline,y);
-//and observe the element preview.
-
-int y=textHeight();
-
-drawRectangle(0,0,width,height);
-
-boolean b = false;
-
-drawLine(13,21,13,height);
-for(String textline : textlines) {
-	if(textline.equals("--")){
-		drawLine(0,y-13,width,y-13);
-	} else {
-		if(!b){
-			y += printCenter("*"+textline+"*",y);
-			
-			b = true;
-		} else {
-			printLeft(textline.substring(0,1), y);
-			y += print(textline.substring(2),20,y);
-		}
-	}
-}</custom_code>
+    <panel_attributes>
+m1=1..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>90</y>
+      <w>414</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>144</y>
+      <w>90</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>180</y>
+      <w>108</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>m1=1..n
+m2=1..n</panel_attributes>
+    <additional_attributes>18.0;80.0;20.0;10.0</additional_attributes>
   </element>
 </diagram>
