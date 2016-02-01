@@ -1,0 +1,5 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Vulnrabilities defined by OWASP}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}A4: Insecure Direct Object Reference}{1}{subsection.1.1}
+\contentsline {paragraph}{Introduction}{1}{section*.2}
+\contentsline {paragraph}{Example}{1}{section*.3}

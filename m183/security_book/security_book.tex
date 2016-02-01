@@ -1,0 +1,52 @@
+\documentclass[11pt,twoside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{utopia}
+\usepackage[margin=1in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{makeidx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{Security Book}
+\newcommand{\authorText}{Patrick Günthard}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+        
+        \section{Vulnrabilities defined by OWASP}
+        \subsection{A4: Insecure Direct Object Reference}
+        
+        \paragraph{Introduction}
+        Insecure Direct Object Reference is a common vulnrability which exists
+        in web applications. It occurs if a parameter (e.g. a GET parameter)
+        references a object in the system. 
+
+        The atacker normally has to be authorized to this system but does not
+        have access to all data.
+        
+        \paragraph{Example}
+
+        A URL which looks like this:
+        \texttt{http://example.net/page.php?user=\textbf{myuser}} provides a
+        page which shows the user data of the logged in user. One can easily
+        change the parameter to show the data of another user:
+        \texttt{http://example.net/page.php?user=\textbf{someotheruser}}
+
+\end{document}
