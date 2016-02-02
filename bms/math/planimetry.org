@@ -1,0 +1,52 @@
+#+LATEX_HEADER:\usepackage[margin=1in]{geometry}
+* Planimetry
+** Aufgabe 66
+
+#+BEGIN_EXAMPLE
+ 
+   /-_
+  /|  -_a
+ / |    -_
+/al|______-_
+
+#+END_EXAMPLE
+
+\(h = \sqrt{b^2 - \frac{b}{3}^2}\)
+
+
+\(\frac{b}{sin(90^\circ)} = \frac{h}{\sin(\alpha)} = \frac{\frac{b}{3}}{\sin(\beta)}\)
+
+
+\(\alpha = \sin^{-1}(\sqrt{b^2 - \frac{b}{3}^2})\)
+
+
+\(\frac{b}{sin(90-\alpha)} = \frac{a}{sin(\alpha)}\)
+
+\(a = sin^{-1}(\sqrt{b^2 - \frac{b^2}{3}}) * 
+\frac{b}{sin(90-(sin^{-1}(\sqrt{b^2}- \frac{b^2}{3}))}} \)
+
+\(a = \sin^{-1}(\alpha) * \frac{b}{sin(90 - sin^{-1}(\alpha))}\)
+
+** Aufgabe 71
+
+#+BEGIN_EXAMPLE
+
+            _              __
+      a __--al-__b          |
+  A __--_________ --__B     | t
+__---------------------__  --
+#+END_EXAMPLE
+
+
+\(\frac{AC}{sin(90^\circ)} = \frac{t}{sin(30^\circ)} = 2t\) also \(\frac{AC}{1}
+= 2t\) also \(AC = 2t\)
+
+\(\frac{2t}{sin(30^\circ)} = \frac{r}{sin(60^\circ)} = 4t\) also \(\frac{r}{0.866025404} = 4t\) also \(r = 0.866025405 * 4t\) also \(r = 3.464101615t\)
+
+** Aufgabe 95
+
+\(s = \sqrt{40cm^2} = 6.32455532\)
+
+\(r = \sqrt{s^2 + \frac{s}{2}^2} = 7.071067812\)
+
+

@@ -1,0 +1,66 @@
+\documentclass[11pt,twoside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{utopia}
+\usepackage[margin=1in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{makeidx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{Notizen Physik}
+\newcommand{\authorText}{Patrick Günthard}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+
+        \section{Formeln}
+
+        \subsection{Beschleunigung}
+
+        \(F = m * a \)
+
+        \section{Aufgaben}
+
+        \subsection{26. Januar 2015}
+
+        \paragraph{179}
+
+        \textbf{geg}: \(m = 230 * 10^3 kg\)
+
+        \paragraph{180}
+
+        \textbf{geg:} \(m = 70000kg, K = 1900N\)\\
+        \textbf{ges(a):} \(a\)
+
+        \begin{verbatim}
+          __
+    c __-- |
+  __--30   |b
+------------
+    a
+        \end{verbatim}
+
+        \(\frac{a}{sin(\alpha)} = \frac{b}{sin(\beta}) = \frac{c}{sin(\gamma)}\)
+
+        \(\frac{a}{sin(60^\circ)} = \frac{b}{sin(30^\circ}) = \frac{1.9N}{sin(90^\circ)}\)
+
+        \(a = \frac{F}{m}, a = \frac{1900}{70000} = 0.027142857\)
+\end{document}
