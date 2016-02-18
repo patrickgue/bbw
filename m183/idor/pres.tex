@@ -8,7 +8,7 @@
 
 \usetheme{Montpellier}
 
-\definecolor{adngreen}{RGB}{0,167,127}
+\definecolor{adngreen}{RGB}{51,122,183} %d9534f %337ab7  0,167,127 | 51,122,183 | 235, 83, 79
 \setbeamercolor{title}{fg=white}
 
 \setbeamercolor{frametitle}{fg=white}
@@ -19,10 +19,16 @@
 
 
 
-\title{\textbf{Lightning Talk} \\Indirect Direct Object Reference}
+\title{\textbf{M183} \\Indirect Direct Object Reference}
 \author{Timo Bonomelli, Patrick Günthard}
 
-
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
 
 \begin{document}
 
@@ -91,7 +97,7 @@ $conn->query("UPDATE tbl_user SET password = '".$_GET['pw']."' WHERE username = 
     \hline
     & \textbf{Advantage} & \textbf{Disadvantage} \\\hline
     \textbf{Session Based} & Only one authorization has to be done, access data for Database etc. is saved on the server and is not accessible by the attacker & A session uses a lot of memory for each user. For applications with a high number of users, a session for each client is not possible i.e. a non-session solution has to be implemented \\\hline
-    \textbf{Authorization} & TBD & TBD\\\hline
+    \textbf{Authorization} & No Session is needed i.e. less memory is used and more users can access the application & Authorization is needed every time the user accesses data which is more complex to implement\\\hline
   \end{tabular}
 \end{frame}
 
