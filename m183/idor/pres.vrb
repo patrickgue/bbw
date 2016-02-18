@@ -1,0 +1,10 @@
+\label {examplecode}
+  \frametitle{Example: Code}
+  \textit{Example Website:}\\\tiny
+\dots
+\begin{verbatim}
+$conn = new mysqli(...);
+$conn->query("UPDATE tbl_user SET password = '".$_GET['pw']."' WHERE username = '".$_GET['user']."';)
+\end{verbatim}
+\dots
+\normalsize

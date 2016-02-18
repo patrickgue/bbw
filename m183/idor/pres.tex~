@@ -1,0 +1,66 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage[width=160,height=90]{geometry}
+
+\renewcommand{\sfdefault}{phv}
+
+\usetheme{Montpellier}
+
+\definecolor{adngreen}{RGB}{0,167,127}
+\setbeamercolor{title}{fg=white}
+
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{structure}{bg=adngreen,fg=adngreen}
+\setbeamercolor{subsection in sidebar}{fg=white}
+
+
+
+
+
+\title{\textbf{Lightning Talk} \\Indirect Direct Object Reference}
+\author{Patrick Günthard}
+
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+  \frametitle{Table of Contents}
+  \tableofcontents
+\end{frame}
+\section{Introduction}
+
+\begin{frame}
+  \frametitle{Introduction}
+\end{frame}
+
+\section{History}
+
+\begin{frame}
+  \frametitle{History}
+  
+\end{frame}
+
+\section{How it works}
+
+\begin{frame}
+  \frametitle{Technologies}
+  \begin{itemize}
+    \item Hinting
+    \item Anti-Aliasing
+      \begin{itemize}
+        \item Sub-Pixel Rendering
+      \end{itemize}
+  \end{itemize}
+  
+\end{frame}
+
+\subsection{Hinting}
+
+\begin{frame}
+  \frametitle{Hinting}
+\end{frame}
+
+\end{document}
