@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Account Info</title>
+    <style>
+      body{
+      font-family: 'Helvetica';
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1>Account Info for <i>myuser</i></h1>
+    </div>
+
+  </body>
+</html>

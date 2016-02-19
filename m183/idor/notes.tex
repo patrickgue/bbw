@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\renewcommand{\familydefault}{phv}
+
+\title{\textbf{M183}\\Insecure Direct Object Reference}
+\author{Timo Bonomelli, Patrick Günthard}
+\date{\today}
+
+\newcommand{\idor}{\textit{Indirect Object Reference}}
+
+\begin{document}
+\maketitle
+\section{About \idor}
+\subsection{What is \idor?}
+\idor are references to objects on a system (e.g. Database Keys) which are accessible by the user.
+\subsection{Who can attack?}
+Everyone who already has access to certain parts of the application but not to all data
+\subsection{How does the attack work?}
+The attacker manipulates the parameter that refers to a \textit{direct object}.
+
+\section{Example}
+\textit{See Presentation}
+\begin{itemize}
+  \item Java-Snippet
+  \item Web Page
+  \item Database example
+\end{itemize} 
+\section{Prevent attack}
+\begin{itemize}
+  \item Use Sessions 
+  \item Authenticate on every access
+\end{itemize}
+\subsection{Sessions}
+\begin{itemize}
+\item No direct references are necessary because they can be saved on the server side.
+\item Other references can be mapped
+  \begin{itemize}
+  \item Example: A dropdown can have own Ids which are mapped to direct object references on the server
+  \end{itemize}  
+\end{itemize}
+\subsection{Authentication}
+\begin{itemize}
+\item check authentication on every \idor access
+  \begin{itemize}
+    \item Example: A random token can be generated and sent to the user. The user can only access the authorized data with this token
+  \end{itemize}
+\end{itemize}
+\end{document}

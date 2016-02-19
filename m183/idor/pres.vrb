@@ -3,8 +3,11 @@
   \textit{Example Website:}\\\tiny
 \dots
 \begin{verbatim}
-$conn = new mysqli(...);
-$conn->query("UPDATE tbl_user SET password = '".$_GET['pw']."' WHERE username = '".$_GET['user']."';)
+String query = "SELECT * FROM accts WHERE account = ?";
+PreparedStatement pstmt = connection.prepareStatement(query , ... );
+pstmt.setString( 1, request.getParameter("acct"));
+ResultSet results = pstmt.executeQuery();
 \end{verbatim}
-\dots
+\dots\\
+\tiny\textit{2010 OWASP - CC-BY-SA}
 \normalsize
