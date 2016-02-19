@@ -28,7 +28,7 @@
 \AtBeginSection[]
 {
   \begin{frame}
-    \frametitle{Table of Contents}
+    \frametitle{Inhalt}
     \tableofcontents[currentsection]
   \end{frame}
 }
@@ -41,7 +41,7 @@
 %  \frametitle{Table of Contents}
 %  \tableofcontents
 %\end{frame}
-\section{Vulnerability}
+\section{Verwundbarkeit}
 
 
 \begin{frame}
@@ -49,23 +49,23 @@
   \includegraphics[width=8cm]{meme}
 \end{frame}
 
-\subsection{Threats}
+\subsection{Gefahren}
  
 \begin{frame}
-  \frametitle{Threats}
+  \frametitle{Gefahren}
   \begin{itemize}
-  \item \textbf{Threat Agents:} Any user who has only partial access to certain type of system data
-  \item \textbf{Attacker's Approach:} Attacker, an authorized system user, simply changes a parameter value that directly refers to a system object to another object the user isn't authorized to use
-  \item \textbf{Security Weakness:} Applications don’t always verify the user is authorized for target objects
+  \item \textbf{Von wem geht die Gefahr aus?} Jeder Benutzer welcher nur teilweisen Zugriff auf gewisse Daten hat
+  \item \textbf{Angriffsansatz:} Der Angriffer, ein authorisierter System-User, ändert ein parameter welcher direkt mit einem Systemobjekt/Parameter referenziert zu einem anderen Objekt/Parameter, zu dessem Zugriff er nicht berechtigt ist. 
+  \item \textbf{Sicherheits-Lücke:} Applilationen überprüfen nicht bei jedem Zugriff die authorisierung
   \end{itemize}
 \end{frame}
 
-\subsection{Example}
+\subsection{Beispiel}
 
 \begin{frame}[fragile]
   \label{examplecode}
   \frametitle{Example: Code}
-  \textit{Example Website:}\\\tiny
+  \textit{Beispiel Website:}\\\tiny
 \dots
 \begin{verbatim}
 String query = "SELECT * FROM accts WHERE account = ?";
@@ -80,30 +80,30 @@ ResultSet results = pstmt.executeQuery();
 
 
 \begin{frame}
-  \frametitle{Example: Attack}
+  \frametitle{Beispiel: Angriff}
   \begin{multicols}{2}
-   \LARGE{Normal behavior}\\\normalsize Example URL: \small\texttt{http://example.com/app/ accountInfo?acct=\textit{myacct}}\\
-   \normalsize{Result:}\\\includegraphics[width=5cm]{example_web_s1}\\
-   \LARGE{Attack behavior}\\\normalsize Example URL: \small\texttt{http://example.com/app/ accountInfo?acct=\textit{notmyacct}}\\
-   \normalsize{Result:}\\\includegraphics[width=5cm]{example_web_s2}\\
+   \LARGE{Normaler Zugriff}\\\normalsize Example URL: \small\texttt{http://example.com/app/ accountInfo?acct=\textit{myacct}}\\
+   \normalsize{Resultat:}\\\includegraphics[width=5cm]{example_web_s1}\\
+   \LARGE{Angriff}\\\normalsize Example URL: \small\texttt{http://example.com/app/ accountInfo?acct=\textit{notmyacct}}\\
+   \normalsize{Resultat:}\\\includegraphics[width=5cm]{example_web_s2}\\
   \end{multicols}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example: Attack}
-  This URL:\\ \texttt{app/accountInfo?acct=\textit{myacct'; DROP accts; }} (\ref{examplecode})
+  \frametitle{SQL Injection Attacke (OWASP A1)}
+  URL:\\ \texttt{app/accountInfo?acct=\textit{myacct'; DROP accts; }} (\ref{examplecode})
 \end{frame}
 
 
-\section{How to prevent an Attack}
+\section{Wie kann man sich vor Angriffen schützen?}
 
-\subsection{Session Based}
+\subsection{Session Basiert}
 
 \begin{frame}
   \frametitle{Session}
   \begin{itemize}
-    \item No \textit{Direct Object Reference} has to be sent to the client, the references can be saved on the session
-    \item In the case references are needed, they can differ from the server side data (i.e. database) an can be remapped on the server
+  \item Keine \textit{Direct Object Reference} müssen an den client gesendet werden, sie können auf dem Server in der Session gespeichert werden.
+  \item Wenn trotzdem Refernzen benötigt werden, können sie sich von den ursprünglichen daten unterscheiden und gemappt werden.
   \end{itemize}
 \end{frame}
 
