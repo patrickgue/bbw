@@ -1,7 +1,7 @@
 \documentclass[11pt,twoside,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-%\usepackage{utopia}
+\usepackage{utopia}
 \usepackage[margin=1in]{geometry}
 \usepackage[parfill]{parskip}
 \usepackage{makeidx}
@@ -11,7 +11,7 @@
 \usepackage{hyperref}
 \renewcommand{\sffamily}{phv}
 \renewcommand{\rmfamily}{ptm}
-\renewcommand{\familydefault}{\rmfamily}
+%\renewcommand{\familydefault}{\rmfamily}
 \newcommand{\titleText}{Security Book}
 \newcommand{\authorText}{Patrick Günthard}
 \newcommand{\dateText}{\today}
@@ -34,7 +34,7 @@
         \section{Vulnrabilities defined by OWASP}
         \subsection{A4: Insecure Direct Object Reference}
         
-        \paragraph{Introduction}
+        \subsubsection{Introduction}
         Insecure Direct Object Reference is a common vulnrability which exists
         in web applications. It occurs if a parameter (e.g. a GET parameter)
         references a object in the system. 
@@ -42,12 +42,35 @@
         The atacker normally has to be authorized to this system but does not
         have access to all data.
         
-        \paragraph{Example}
+        \subsubsection{Example}
 
         A URL which looks like this:
-        \texttt{http://example.net/page.php?user=\textbf{myuser}} provides a
+        \texttt{http://example.net/page.php?user=\textit{myuser}} provides a
         page which shows the user data of the logged in user. One can easily
         change the parameter to show the data of another user:
-        \texttt{http://example.net/page.php?user=\textbf{someotheruser}}
+        \texttt{http://example.net/page.php?user=\textit{someotheruser}}
+        
+        \subsubsection{How to prevent}
+        
+        \paragraph{Session Based}
+        
+        \begin{itemize}
+        	\item No \textit{Direct Object Reference} has to be sent to the client, the references can be saved on the session
+        	\item In the case references are needed, they can differ from the server side data (i.e. database) an can be remapped on the server
+        \end{itemize}
+        
+        \paragraph{Authorization}
+        \begin{itemize}
+        	\item Every access is checked if the user is authorized to do that. Example: A random token can be created for each user which then is checked every time the user accesses the page
+        \end{itemize}
 
+		\paragraph{Advantages}
+		
+		\begin{tabular}{|l|p{4cm}|p{4cm}|}
+			\hline
+			& \textbf{Advantage} & \textbf{Disadvantage} \\\hline
+			\textbf{Session Based} & Only one authorization has to be done, access data for Database etc. is saved on the server and is not accessible by the attacker & A session uses a lot of memory for each user. For applications with a high number of users, a session for each client is not possible i.e. a non-session solution has to be implemented \\\hline
+			\textbf{Authorization} & No Session is needed i.e. less memory is used and more users can access the application & Authorization is needed every time the user accesses data which is more complex to implement\\\hline
+		\end{tabular}
+		
 \end{document}
