@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Basic Security Arrangements</title>
+    <link rel="stylesheet" href="main.css"/>
+</h:head>
+
+<h:body>
+
+	<h1>Guestbook Form</h1>
+	
+	<!-- Alle Einträge ausgeben -->
+	<h:dataTable value="#{guestbookFormController.entries}" var="entry">   
+ 		<h:column>
+    		<f:facet name="header">
+    			<h:outputText value="Name, Firstname"/>
+    		</f:facet>
+    		<h:outputText value="#{entry.firstName}"/>
+  		</h:column>
+ 		<h:column>
+    		<f:facet name="header">
+    			<h:outputText value="Message"/>
+    		</f:facet>
+    		<h:outputText value="#{entry.message}"/>
+  		</h:column>
+   	</h:dataTable>
+	
+	<h2>Tragen Sie sich doch ins Gaestebuch ein:</h2>
+	
+	
+	<!-- Formular für neuen Eintrag -->
+	<h:form>
+		<h:panelGroup>
+        	<h:panelGrid columns="2">
+        		<h:outputText value="Firstname:" />
+				<h:inputText value="#{guestbookEntry.firstName}" size="100"/>
+				
+       			<h:outputText value="Lastname:" />
+				<h:inputText value="#{guestbookEntry.lastName}" size="100"/>
+				
+       			<h:outputText value="Email:" />
+				<h:inputText value="#{guestbookEntry.email}" size="100"/>
+				
+       			<h:outputText value="Message:" />
+				<h:inputTextarea value="#{guestbookEntry.message}" rows="4" cols="40"/>
+				
+      			<h:outputText value="" />
+				<h:commandButton action="#{guestbookFormController.formInsertAction}" value="save"/>
+			</h:panelGrid>
+		</h:panelGroup>
+	</h:form>
+
+
+</h:body>
+
+</html>
