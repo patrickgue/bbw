@@ -4,8 +4,8 @@
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>832</x>
-      <y>364</y>
+      <x>429</x>
+      <y>299</y>
       <w>157</w>
       <h>183</h>
     </coordinates>
@@ -52,8 +52,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>442</x>
-      <y>130</y>
+      <x>39</x>
+      <y>65</y>
       <w>157</w>
       <h>117</h>
     </coordinates>
@@ -100,8 +100,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>429</x>
-      <y>351</y>
+      <x>26</x>
+      <y>286</y>
       <w>157</w>
       <h>209</h>
     </coordinates>
@@ -153,8 +153,8 @@ for(String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>858</x>
-      <y>156</y>
+      <x>455</x>
+      <y>65</y>
       <w>117</w>
       <h>117</h>
     </coordinates>
@@ -200,8 +200,8 @@ for(String textline : textlines) {
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>572</x>
-      <y>442</y>
+      <x>169</x>
+      <y>377</y>
       <w>286</w>
       <h>65</h>
     </coordinates>
@@ -213,20 +213,20 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>195</y>
+      <x>182</x>
+      <y>130</y>
       <w>299</w>
-      <h>65</h>
+      <h>52</h>
     </coordinates>
     <panel_attributes>m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>210.0;20.0;10.0;10.0</additional_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>494</x>
-      <y>234</y>
+      <x>91</x>
+      <y>169</y>
       <w>65</w>
       <h>143</h>
     </coordinates>
@@ -237,20 +237,20 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>884</x>
-      <y>260</y>
+      <x>494</x>
+      <y>169</y>
       <w>78</w>
-      <h>130</h>
+      <h>156</h>
     </coordinates>
-    <panel_attributes>m1=1..n
+    <panel_attributes>m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>18.0;80.0;20.0;10.0</additional_attributes>
+    <additional_attributes>18.0;100.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>832</x>
-      <y>650</y>
+      <x>429</x>
+      <y>585</y>
       <w>157</w>
       <h>183</h>
     </coordinates>
@@ -297,8 +297,8 @@ for(String textline : textlines) {
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>897</x>
-      <y>533</y>
+      <x>494</x>
+      <y>468</y>
       <w>65</w>
       <h>143</h>
     </coordinates>
@@ -306,5 +306,20 @@ for(String textline : textlines) {
 m1=1
 m2=1..n</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>741</x>
+      <y>117</y>
+      <w>260</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>Beschreibung
+--
+Eine Person hat eine Adresse
+Ein Ausweis ist an ein Amt gebunden
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

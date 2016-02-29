@@ -1,0 +1,9 @@
+ - Fax
+ - VoIP
+ - Geschlossener Standard
+ - UDP
+
+| *implementierung* | *lizenz*             |
+| Ekiga             | GPL                  |
+| OpenH323          | MPL                  |
+| NetMeeting        | Freeware, Proprietär |

@@ -1,0 +1,932 @@
+#+LATEX_HEADER: \usepackage{utopia}
+#+LATEX_HEADER: \usepackage[left=1in; top=1in; right=1in; bottom=1in;]{geometric}
+#+HTML_HEAD: <style>body{font-family: 'Univers';}</style>
+* Schule 5. Semester
+** Hausaufgaben
+*** Prüfungstermine
+ - Physik
+   - Termine 
+     - 29. 09. 2015
+       - Stoff: Skript S. 1 - 13:
+       - gleichförmige Bewegung
+       - gleichmässige beschleunigung
+       - DPK ZA Blatt Kinematik 1 + 2
+       - Häsli/Humm ZA Kinematik 1
+       - 1 A4 Spick
+     - 17. 11. 2015
+     - 05. 01. 2015
+   - Hilfsmittel
+     - TR ohne Grafik
+     - 1 A4 Blatt Spick
+     - Fundamentum
+ - Mathematik
+   - 19. 09. 2015 Zwischenprüfung
+     - Bis zu diesem Zeitpunkt: Repetition
+   - 17. 11. 2015 2. Prüfung
+   - 19. 01. 2015 1. Prüfung für nächstes Semester
+ - Deutsch
+   - 08. 09. 2015 Buchvorstellung 
+   - 22. 09. 2015 Aufsatz zu /Am Hang - Markus Werner/
+   - 15. 12. 2015 Hausaufsatz
+*** 2015-08-18
+ - Projekt
+   - Gruppen bilden
+     - gleiche intressen
+   - Ideen sammeln
+ - Geschichte
+   - Google: Viktorianisches Zeitalter
+   - Dossier Wettlauf um Afria S275 s280
+     - Zeitstrahl
+ - Mathematik
+ - Deutsch
+   - Kapitel 1
+*** 2015-08-25
+**** Physik
+ - Aufgaben 1,2,4,5,6
+**** Deutsch
+ - Charakterisierung um Loos und Clarin (/Am Hang/ bis S. 50) 
+   - 1x A4 12pt
+   - 3 Zitate auf Satzebene
+   - 3 Zitate auf Wortebene
+   - 2 Zitate mit Doppelpunkt
+ - Mailen bis 30. August 2015 23:59
+*** 2015-09-01
+**** Physik
+ - Aufgabenblatt (1. Aufgabe)
+**** Deutsch
+ - Buch vorstellen
+   - Zusammenfassung
+   - Material zu diesem Buch?
+   - Subjektive einschätzung
+*** 2015-11-10
+**** Physik
+ * Skript S. 14 - 16
+ * ZA II, Nr.19
+ * ZA III vollständig
+ * HH Kinematik 6 (Diagramme, S27-30)
+ * HH Kinematik 2 (Treffpunktaufgaben ohne Nr. 12)
+** Notizen
+*** 2015-08-19
+**** Mathe
+Aufgabe 1)
+u = 2.0m
+u = (pi)*r + 2r + 2xm
+2.0m = (pi)*r + 2r + 2xm
+???
+
+Aufgabe 2)
+   1
+--------
+1 + tan^2(a)
+
+
+   1
+--------
+cos^2(a)
+
+**** Deutsch
+*Metatext*
+meta|text
+
+meta|kognition
+----+---------
+Über|Wissen
+
+Metatext => "Text über den Inhalt des Textes" 
+*** 2015-08-25
+**** Physik
+
+#+BEGIN_EXAMPLE
+    s2 - s1
+v = -------
+    t2 - t1
+#+END_EXAMPLE
+
+[delta] = Delta
+[delta]x = x2 - x1
+
+/falls s1 = 0 dann schreibt man nur s statt s2, gleiches bei t/
+
+
+Umrechnung 1 km/h = 1000m / 3600s = 1/3.6 m/s (= 0.2777 m/s)
+
+
+Frage: Wie kann eine negative Geschwindigkeit im s-t Diagramm erkannt werden?
+
+/Die Steigung ist negativ/ 
+ 
+
+***** Die Geschwindigkeit im s-t-Diagramm
+
+
+#+BEGIN_EXAMPLE
+    [delta]y   y2 - y1
+a = -- = -------
+    [delta]x   x2 - x1
+#+END_EXAMPLE
+
+Im Orts-Zeit Diagramm ist die Steigung daher
+
+#+BEGIN_EXAMPLE
+    [delta]s
+m = -- = v
+    [delta]t
+#+END_EXAMPLE
+
+Zurückgelegter Weg
+A = [delta]s
+
+
+[delta]s = A = 1/2 [delta]v * [delta]t
+#+BEGIN_EXAMPLE
+ v2-------x
+         /|
+       /  |
+[delta]v   /    |
+   /  A   |
+ /        |
+0----------
+   [delta]t
+#+END_EXAMPLE
+
+
+*Weg-Zeit Funktion*
+
+f(x) = ax + b -> s(t) = vt + s0
+
+#+BEGIN_EXAMPLE
+s |      __--
+  |  __--
+s0|--
+  |
+  |
+  ---------------------
+#+END_EXAMPLE
+s(t) = v * (t - t0) + s0
+
+t0 = startzeit
+
+***** Aufgaben
+
+ - Aufgabe 1
+   - schätzen
+     1) ca. 15m
+     2) 0.001s
+     3) 0.000001s
+     4) 300m
+     5) 10cm
+     6) 15km/h
+   - berechnen
+     1) 60 km/h -> 60000m / 3600s -> *16m/s*
+     2) 340m/s -> 34000m / 1s -> 10m / 34000m * 1s = 0.00029412s
+     3) Lichtgeschwindigkeit im vaakum: 29'979'200'000 cm/s, 10 / lightspeed = 3.3356460479265624e-010 = 0.00000000033357s
+     4) Lichtgeschwindigkeit im vaakum: 29'979'200'000 cm/s, * 1/1000s = 29979200cm = 299792m
+     5) 110 km/h -> 110000m / 3600s -> 0.061m = 6.1cm
+     6) (/ (/ 100  13.2) (/ 1000.0 3600.0)) = 27.273
+ - Aufgabe 2
+   - 1.6s * 1400m = 2240m; 2240 / 2 = *1120m*
+ - Aufgabe 4
+
+*** 2015-09-01
+**** Projekt
+ - Film über Gentrifikation (e.g. Kreuzberg)
+**** Physik
+\begin{equation}
+60km/h * t = -80km/h * t + 430km | + 80km * t
+\end{equation}
+\begin{equation}
+140km/h * t = 430km | 140km/h
+\end{equation}
+\begin{equation}
+t = 340km/140km/h
+\end{equation}
+\begin{equation}
+t = \frac{34}{14}h = 3.07h
+\end{equation}
+**** Deutsch
+ - 
+*** 2015-09-08
+**** English
+ - Test on 2015-09-22
+   - present perfect simple vs present perfect continious
+   - Collotations
+
+*** 2015-09-15
+**** Physik
+ - Repetition Treffpunktaufgaben
+J: 09:00
+G: 11:00
+
+v_j: Mach 0.9 = 297m/s
+v_g: Mach 2.4 = 813.6m/s
+
+t_d (Zeitdifferenz) = 2h
+
+s_j = v_j * t
+s_g = v_g * t - t_d
+
+
+2928.96km/h * t[h] = 1069.2km/h * (t[h] - 2h)
+
+
+\begin{equation}
+t = \frac{-v_g * t_d}{v_j - v_g} 
+\end{equation} 
+**** English
+
+*** 2015-09-22
+**** Physik
+
+Beschleunigung:
+\begin{equation}
+a = \frac{d_v}{d_t}
+\end{equation}
+
+\begin{equation}
+[a] = \frac{\frac{m}{s}}{s} = \frac{m}{s^2} = m * s^{-2}
+\end{equation}
+
+\begin{equation}
+v = a * t
+\end{equation}
+
+Am Beispiel eines Autos; "von 0 auf 100 in 15.4s"
+
+\begin{equation}
+a = \frac{\frac{100m}{3.6s} - 0\frac{m}{s}}{15.4s} = 1.80 \frac{m}{s^2}
+\end{equation}
+
+Der zurückgelegte Weg entspricht der Fläche des folgenden Diagramms
+
+#+BEGIN_EXAMPLE
+km/h
+|      /|- lineare beschleunigung
+      / |
+_____/__|/konstante geschwindigkeit
+|   /   |
+|  /    |
+| /     |
+|/______| t
+#+END_EXAMPLE
+
+Geschwindigkeit eliminieren
+\begin{equation}
+v = \frac{1}{2} at^2
+\end{equation}
+
+Strecke eliminieren
+\begin{equation}
+s = \frac{v^2}{2a}
+\end{equation}
+
+Wichtige Formeln:
+\begin{equation}
+s = \frac{1}{2}vt
+\end{equation}
+
+\begin{equation}
+v = a * t
+\end{equation}
+
+
+*Aufgaben*
+
+Aufgabe 9
+
+
+\begin{equation}
+g = 9.81\frac{m}{s}
+\end{equation}
+
+
+\begin{equation}
+a_{max} = 10g, v = 7900 \frac{m}{s}
+\end{equation}
+
+\begin{equation}
+s = \frac{v^2}{2a} = \frac{(7900\frac{m}{s})^2}{2 * 10 * 9,81\frac{m}{s^2}} = 318km
+\end{equation}
+
+Aufgabe 13)
+
+ 1) 
+ 2) 
+\begin{equation}
+s = \frac{v^2}{2a} = \frac{(360km/h)^2}{(2*3.9m/s)^2} = \frac{10000m/s}{7.8m/s^2} = 1282.05m
+\end{equation}
+
+eine 1.2km lange Piste ist also 82.05m zu kurz
+
+ 3)
+\begin{equation}
+v = \frac{\sqrt[]{as}}{2}
+\end{equation}
+
+
+Aufgabe 16)
+
+\begin{equation}
+a = 2.5\frac{m}{s^2}
+\end{equation}
+
+
+
+
+**** Mathe
+***** Lineare Gleichungen mit 2 Unbekannten
+
+
+\begin{equation}
+ax + by = x | -ax
+\end{equation}
+
+\begin{equation}
+by = -ax + c | / b
+\end{equation}
+
+\begin{equation}
+y = - \frac{a}{b}x + \frac{c}{b}
+\end{equation}
+
+*Aufgaben*
+
+/380b/
+
+
+\begin{equation}
+2x + 5y = 30 | -2x
+\end{equation}
+
+\begin{equation}
+5y = 30 -2x | / 5
+\end{equation}
+
+\begin{equation}
+y = -\frac{2}{5}x + 30
+\end{equation}
+
+/182a/
+
+\begin{equation}
+3x + y = 73
+\end{equation}
+\begin{equation}
+2x -y = 32 | +
+\end{equation}
+\begin{equation}
+5x = 105
+\end{equation}
+\begin{equation}
+x = 21
+\end{equation}
+\begin{equation}
+63 + y = 73 | - 63
+\end{equation}
+\begin{equation}
+y = 10
+\end{equation}
+/182d/
+
+\begin{equation}
+3a - 7b = 2 | *-5
+\end{equation}
+\begin{equation}
+15a - 35b = 12
+\end{equation}
+
+\begin{equation}
+-15a - 35b = -10 
+\end{equation}
+\begin{equation}
+15a - 35b = 12
+\end{equation}
+*** 2015-09-29
+**** Mathematik
+Aufgabe 389a)
+
+Gleichung:
+
+
+\begin{equation}
+\frac{3}{f} + \frac{8}{g} = 3
+\end{equation}
+
+\begin{equation}
+\frac{15}{f} - \frac{4}{g} = 4
+\end{equation}
+
+Substitution:
+\begin{equation}
+\frac{3}{f}
+\end{equation}
+
+\begin{equation}
+\frac{4}{g} = 4
+\end{equation}
+
+
+
+
+
+
+\begin{equation}
+x + 2 y = 3
+\end{equation}
+
+\begin{equation}
+5x - y = 4 | * 2
+\end{equation}
+
+y fällt weg
+ --
+\begin{equation}
+x = 1
+\end{equation}
+
+\begin{equation}
+5 -4 = y
+\end{equation}
+
+\begin{equation}
+y = 1
+\end{equation}
+
+*Lösung:*
+
+\begin{equation}
+\frac{3}{f} = 1; f = 3
+\end{equation}
+
+\begin{equation}
+\frac{4}{g}; g = 4
+\end{equation}
+
+
+Aufgabe 389d)
+
+Substitution:
+
+\begin{equation}
+u = \frac{1}{s}
+\end{equation}
+\begin{equation}
+v = \frac{1}{t}
+\end{equation}
+
+--
+
+Aufgabe 392a)
+
+\begin{equation}
+2x - 3x = -5u
+\end{equation}
+\begin{equation}
+3x - 2y = -5v
+\end{equation}
+
+
+**** Deutsch
+***** Stil
+
+*** 2015-10-20
+**** Physik
+
+*Aufgabe 26*
+
+geg:
+\begin{equation}
+v_0 = \frac{90}{3.6}\frac{m}{s}
+\end{equation}
+\begin{equation}
+t = 2.5s
+\end{equation}
+\begin{equation}
+s_0 = 0m
+\end{equation}
+ges
+\begin{equation}
+a
+\end{equation}
+
+formulas:
+\begin{equation}
+s = v_0 t + \frac{1}{2}at^2 | -v_0 * t 
+\end{equation}
+\begin{equation}
+s-v_0t = \frac{1}{2}at^2 | *\frac{2}{t^2}
+\end{equation}
+\begin{equation}
+\frac{2(s-v_0t)}{t^2} = a
+\end{equation}
+\begin{equation}
+\frac{2(55m - \frac{90m}{3.6s}*2.5s)}{(2.5s)^2}
+\end{equation}
+
+*Aufgabe 21*
+
+geg.
+\begin{equation}
+v = 50\frac{km}{h}
+\end{equation}
+\begin{equation}
+a = -6.8\frac{m}{s^2}
+\end{equation}
+\begin{equation}
+s = 14m
+\end{equation}
+
+ges:
+
+\begin{equation}
+v_0
+\end{equation}
+
+**** Mathematik
+
+
+
+
+
+*** 2015-10-27
+**** Physik
+
+*Aufgabe 29* 
+
+\begin{equation}
+s_{tot} = s_R + s_B
+\end{equation}
+\begin{equation}
+s_R = t_R * v_0
+\end{equation}
+\begin{equation}
+s_B = \frac{v^2}{2a}
+\end{equation}
+
+
+*Aufgabe 33*
+
+s = Strecke Zürich Bern
+
+v-t Diagram:
+
+
+#+BEGIN_EXAMPLE
+  v[km/h]           __126
+  | \              /
+  |  \            /
+  |   \          /
+18|    \________/
+  |____|________|____________t 
+         1.3 km
+#+END_EXAMPLE
+
+\begin{equation}
+v_0 = \frac{126m}{3.6s} = 35\frac{m}{s}
+\end{equation}
+\begin{equation}
+v_1 = \frac{18m}{3.6s} = 5\frac{m}{s}
+\end{equation}
+\begin{equation}
+t_1 = -\frac{v_0 - v_1}{a} = \frac{-35\frac{m}{s} - 5\frac{m}{s}}{-0.6\frac{m}{s^2}} = 50s
+\end{equation}
+\begin{equation}
+t_2 = \frac{s_2}{v_1} = \frac{1300m}{5\frac{m}{s}} = 260s
+\end{equation}
+\begin{equation}
+t_3 = \frac{v_0 - v_1}{a_2} = \frac{30\frac{m}{s}}{0.5\frac{m}{s^2}} = 60s
+\end{equation}
+\begin{equation}
+t_{tot} = t_1 + t_2 + t_3 = 370s
+\end{equation}
+\begin{equation}
+s_1 = \frac{(5\frac{m}{s})^2 - (5\frac{m}{s})^2}{2*(-6\frac{m}{s^2}} = 1000;
+\end{equation}
+\begin{equation}
+s_1 = \frac{(5\frac{m}{s})^2 - (35\frac{m}{s})^2}{2*(-6\frac{m}{s^2}} = 1000;
+\end{equation}
+
+*Aufgabe 31*
+
+Geschwindigkeit während der Fahrt
+\begin{equation}
+v = 12\frac{m}{s}
+\end{equation}
+
+\begin{equation}
+s = 300m
+\end{equation}
+\begin{equation}
+a_1 = 1.5\frac{m}{s^2}
+\end{equation}
+\begin{equation}
+a_2 = 1\frac{m}{s^2}
+\end{equation}
+
+Also:
+\begin{equation}
+t_1 = 12s 
+\end{equation}
+\begin{equation}
+t_2 = 18s
+\end{equation}
+\begin{equation}
+a = \frac{\delta v}{\delta t} -> v = a*t
+\end{equation}
+\begin{equation}
+v = 1.0\frac{m}{s^2} * 12s
+\end{equation}
+
+
+
+#+BEGIN_EXAMPLE
+s
+|
+|		    /--
+|             /-----
+|        /----
+|  /-----
++-- s=v_0 * t + s_0
+|
+|
++----------------------- t
+ 			  
+ 			  
+v    			  
+|    			  
+|    			  
+|    			      
+| v = v_0 = konstant   	      
++-------------------------    
+|	    		      
+|	    		      
+|	    		      
++------------------------- t  
+
+		   .
+|		  ..
+|		 ..
+|	       ..
+|	    ...
+|	 ....
+..........
+|
++-------------------------
+			
+v			
+|	              /---
+|               /-----	
+|         /-----	
+|   /-----  v = v_0 + at
++---			
+|
++-----------------------------t
+
+	    		      
+a     	    		      
+|      	      		      
+|      	      		      
+| a = konstant		      
++---------------------------- 
+|			      
+|			      
+|			      
++----------------------------a
+#+END_EXAMPLE
+**** Mathematik
+
+Vektoren sind grössen welche nicht nur einen *Betrag* haben sondern auch eine *Richtung*
+
+
+*Vektor Beispiele*
+
+
+#+BEGIN_EXAMPLE
+
+Base:
+
+
+
+								  
+							        /\`
+						                  \
+						                   \
+						                    \
+							             \
+							              \
+							             c \
+							   	        \
+							   	         \
+							   		  \
+							     `/|
+							     /
+							    /
+							   /
+							  /
+							 / 
+			      \				/ b
+	----------------------o			       /  
+		   a   	      /	       	       	      /	  
+					     	     /
+
+2.
+
+
+				             \
+					      \
+					       \
+					        \
+					         \
+					          \
+					           \
+						    \
+						     X
+						    /
+						   /
+						  /
+						 /
+					        /
+					       /
+					      /
+					     /
+					o   /
+			     \  
+     -------------------------  
+			     /   
+#+END_EXAMPLE
+
+
+*Aufgabe 3*
+
+1) (AM,) MD, BC, FE
+2) (AF,) BM, ME, CD
+
+
+*Aufgabe 5*
+
+Der Betrag von a und b muss positiv sein
+
+*Aufgabe 6*
+
+1) true
+2) true
+3)
+
+*** 2015-12-01
+**** Physik
+4)
+\begin{equation}
+sin(f) = \frac{v_s}{v_b} = f = arcsin(\frac{v_s}{v_b}) = sin^{-1}(\frac{0.9}{4.5}) = 11.5°
+\end{equation}
+
+
+\begin{equation}
+g = \frac{2s}{t^2}
+\end{equation}
+
+
+| 0.33s |
+| 0.57m |
+
+
+Fallgeschwindigkeit formeln
+
+
+\begin{equation}
+F_G = G * \frac{m*M}{r^2}
+\end{equation}
+
+\begin{equation}
+g = G*\frac{M}{r^2}
+\end{equation}
+
+
+#+BEGIN_EXAMPLE
+80|
+70|
+60|
+50|            /
+40|          _/
+30|        _-
+20|      _-
+10|  __--
+ 0|--__________________________
+  0  .1  .2  .3  .4  .5  .6  .7
+#+END_EXAMPLE
+
+
+Durchschnittliches s
+
+
+\begin{equation}
+s=0.1 => t = \sqrt{\frac{2s}{g}}
+\end{equation}
+
+ 
+
+*Aufgaben*
+
+a48)
+
+
+\begin{equation}
+t = \sqrt{\frac{2*39m}{9.8\frac{m}{s^2}}} = 2.8212s
+\end{equation}
+\begin{equation}
+v = \sqrt{2gh} = \sqrt{2 * 9.8\frac{m}{s^2} * 39m} = 27.658\frac{m}{s}
+\end{equation}
+**** 
+**** 
+**** 
+**** 
+
+
+
+
+**** Geschichte
+
+Quelle 1:
+ * Angst
+ * jedoch ist die Gefahr auch ohne diese Warnung offensichtlich
+
+Quelle 2:
+ * Spannungen mit den USA
+   * Vieleicht Kriegseintritt
+ * Schneller Sieg
+
+Quelle 3:
+ * Er meint, der U-Boot Krieg sei ein Krieg gegen die Menschheit
+ * Schon vor 100 Jahren hat man bezug auf die /perfekte demokratie/ genommen
+   * Damals gab es in den USA noch nicht einmal das Frauenstimm resp Wahlrecht (1919)
+ * Die BürgerInnen der USA seien die "Vorkämpfer[Innen] für die Rechte der Menschheit"
+
+*** 2015-12-15
+
+*Wörter*
+
+/Wörter können nur in einem Satz bestimmt werden/
+
+ * Verben
+ * Nomen
+ * Pronomen
+ * Adjektive
+   * 
+ * Partikel
+   * Konjunktionen
+   * Präpositionen
+   * Adverben
+   * Interjektionen
+
+
+** Hausaufgaben
+*** auf 2015-09-08
+**** Physik
+
+Aufgabe 2)
+
+Geschwindigkeit[v]: 1400m/s
+
+Zeit[t]: \begin{equation} \frac{1.6s}{2} = 0.8s\end{equation}
+
+Resultat Strecke[s]: \begin{equation}0.8s * 1400m/s = 1120m\end{equation}
+
+**** Mathematik
+
+24) 
+2(x^2 + 4)^2 - 49(x^2 +4) + 300 = 0 | u = x^2 + 4
+2u^2 - 49u + 300 = 0
+\begin{equation}
+u = \frac{49 +- \sqrt[]{2401 - 2400}}{4} = \frac{49 +- 1}{4}
+\end{equation}
+
+
+\begin{equation}
+x^2 + 4 = 12 | -4
+\end{equation}
+\begin{equation}
+x^2 = 8 | sqrt
+\end{equation}
+\begin{equation}
+x = \sqrt[]{8}
+\end{equation}
+
+\begin{equation}
+x^2 + 4 = 12.5 | -4
+\end{equation}
+\begin{equation}
+x^2 = 8.5
+\end{equation}
+
+Aufgabe 15)
+
+\begin{equation}
+3(\frac{5}{6}x - \frac{16}{5}) + \frac{11}{3}x = 2(\frac{11}{2} + \frac{8}{3}x) - 11.6
+\end{equation}
+
+\begin{equation}
+\frac{15}{6}x - \frac{48}{5} + \frac{10}{3}x = \frac{22}{2} + \frac{16}{3}x - \frac{11.6}{1} | \frac{n}{6}x; \frac{n}{10}
+\end{equation}
+
+\begin{equation}
+\frac{15}{6}x - \frac{96}{10} + \frac{20}{6}x = \frac{110}{10} + \frac{32}{6}x - \frac{116}{10}
+\end{equation}
+

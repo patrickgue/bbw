@@ -1,0 +1,5 @@
+CREATE OR REPLACE DATABASE fuehrerschein;
+
+USE fuehrerschein
+
+CREATE OR REPLACE TABLE

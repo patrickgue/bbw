@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>main</title>
+<!-- 2016-01-12 Di. 14:54 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<style>body{font-family: 'Univers';}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">main</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Schule 5. Semester</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Hausaufgaben</a>
+<ul>
+<li><a href="#sec-1-1-1">1.1.1. Prüfungstermine</a></li>
+<li><a href="#sec-1-1-2">1.1.2. 2015-08-18</a></li>
+<li><a href="#sec-1-1-3">1.1.3. 2015-08-25</a></li>
+<li><a href="#sec-1-1-4">1.1.4. 2015-09-01</a></li>
+<li><a href="#sec-1-1-5">1.1.5. 2015-11-10</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-2">1.2. Notizen</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1. 2015-08-19</a></li>
+<li><a href="#sec-1-2-2">1.2.2. 2015-08-25</a></li>
+<li><a href="#sec-1-2-3">1.2.3. 2015-09-01</a></li>
+<li><a href="#sec-1-2-4">1.2.4. 2015-09-08</a></li>
+<li><a href="#sec-1-2-5">1.2.5. 2015-09-15</a></li>
+<li><a href="#sec-1-2-6">1.2.6. 2015-09-22</a></li>
+<li><a href="#sec-1-2-7">1.2.7. 2015-09-29</a></li>
+<li><a href="#sec-1-2-8">1.2.8. 2015-10-20</a></li>
+<li><a href="#sec-1-2-9">1.2.9. 2015-10-27</a></li>
+<li><a href="#sec-1-2-10">1.2.10. 2015-12-01</a></li>
+<li><a href="#sec-1-2-11">1.2.11. 2015-12-15</a></li>
+<li><a href="#sec-1-2-12">1.2.12. 2016-01-12</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-3">1.3. Hausaufgaben</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. auf 2015-09-08</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Schule 5. Semester</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Hausaufgaben</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> Prüfungstermine</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li>Physik
+<ul class="org-ul">
+<li>Termine 
+<ul class="org-ul">
+<li>29. 09. 2015
+<ul class="org-ul">
+<li>Stoff: Skript S. 1 - 13:
+</li>
+<li>gleichförmige Bewegung
+</li>
+<li>gleichmässige beschleunigung
+</li>
+<li>DPK ZA Blatt Kinematik 1 + 2
+</li>
+<li>Häsli/Humm ZA Kinematik 1
+</li>
+<li>1 A4 Spick
+</li>
+</ul>
+</li>
+<li>17. 11. 2015
+</li>
+<li>05. 01. 2015
+</li>
+</ul>
+</li>
+<li>Hilfsmittel
+<ul class="org-ul">
+<li>TR ohne Grafik
+</li>
+<li>1 A4 Blatt Spick
+</li>
+<li>Fundamentum
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mathematik
+<ul class="org-ul">
+<li>19. 09. 2015 Zwischenprüfung
+<ul class="org-ul">
+<li>Bis zu diesem Zeitpunkt: Repetition
+</li>
+</ul>
+</li>
+<li>17. 11. 2015 2. Prüfung
+</li>
+<li>19. 01. 2015 1. Prüfung für nächstes Semester
+</li>
+</ul>
+</li>
+<li>Deutsch
+<ul class="org-ul">
+<li>08. 09. 2015 Buchvorstellung 
+</li>
+<li>22. 09. 2015 Aufsatz zu <i>Am Hang - Markus Werner</i>
+</li>
+<li>15. 12. 2015 Hausaufsatz
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> 2015-08-18</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li>Projekt
+<ul class="org-ul">
+<li>Gruppen bilden
+<ul class="org-ul">
+<li>gleiche intressen
+</li>
+</ul>
+</li>
+<li>Ideen sammeln
+</li>
+</ul>
+</li>
+<li>Geschichte
+<ul class="org-ul">
+<li>Google: Viktorianisches Zeitalter
+</li>
+<li>Dossier Wettlauf um Afria S275 s280
+<ul class="org-ul">
+<li>Zeitstrahl
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mathematik
+</li>
+<li>Deutsch
+<ul class="org-ul">
+<li>Kapitel 1
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3"><span class="section-number-4">1.1.3</span> 2015-08-25</h4>
+<div class="outline-text-4" id="text-1-1-3">
+</div><ol class="org-ol"><li><a id="sec-1-1-3-1" name="sec-1-1-3-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-1-3-1">
+<ul class="org-ul">
+<li>Aufgaben 1,2,4,5,6
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-1-1-3-2" name="sec-1-1-3-2"></a>Deutsch<br  /><div class="outline-text-5" id="text-1-1-3-2">
+<ul class="org-ul">
+<li>Charakterisierung um Loos und Clarin (<i>Am Hang</i> bis S. 50) 
+<ul class="org-ul">
+<li>1x A4 12pt
+</li>
+<li>3 Zitate auf Satzebene
+</li>
+<li>3 Zitate auf Wortebene
+</li>
+<li>2 Zitate mit Doppelpunkt
+</li>
+</ul>
+</li>
+<li>Mailen bis 30. August 2015 23:59
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4"><span class="section-number-4">1.1.4</span> 2015-09-01</h4>
+<div class="outline-text-4" id="text-1-1-4">
+</div><ol class="org-ol"><li><a id="sec-1-1-4-1" name="sec-1-1-4-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-1-4-1">
+<ul class="org-ul">
+<li>Aufgabenblatt (1. Aufgabe)
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-1-1-4-2" name="sec-1-1-4-2"></a>Deutsch<br  /><div class="outline-text-5" id="text-1-1-4-2">
+<ul class="org-ul">
+<li>Buch vorstellen
+<ul class="org-ul">
+<li>Zusammenfassung
+</li>
+<li>Material zu diesem Buch?
+</li>
+<li>Subjektive einschätzung
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-1-5" class="outline-4">
+<h4 id="sec-1-1-5"><span class="section-number-4">1.1.5</span> 2015-11-10</h4>
+<div class="outline-text-4" id="text-1-1-5">
+</div><ol class="org-ol"><li><a id="sec-1-1-5-1" name="sec-1-1-5-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-1-5-1">
+<ul class="org-ul">
+<li>Skript S. 14 - 16
+</li>
+<li>ZA II, Nr.19
+</li>
+<li>ZA III vollständig
+</li>
+<li>HH Kinematik 6 (Diagramme, S27-30)
+</li>
+<li>HH Kinematik 2 (Treffpunktaufgaben ohne Nr. 12)
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Notizen</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> 2015-08-19</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div><ol class="org-ol"><li><a id="sec-1-2-1-1" name="sec-1-2-1-1"></a>Mathe<br  /><div class="outline-text-5" id="text-1-2-1-1">
+<p>
+Aufgabe 1)
+u = 2.0m
+u = (pi)*r + 2r + 2xm
+2.0m = (pi)*r + 2r + 2xm
+???
+</p>
+
+<p>
+Aufgabe 2)
+   1
+</p>
+<hr  />
+<p>
+1 + tan<sup>2</sup>(a)
+</p>
+
+
+<p>
+1
+</p>
+<hr  />
+<p>
+cos<sup>2</sup>(a)
+</p>
+</div>
+</li>
+
+<li><a id="sec-1-2-1-2" name="sec-1-2-1-2"></a>Deutsch<br  /><div class="outline-text-5" id="text-1-2-1-2">
+<p>
+<b>Metatext</b>
+meta|text
+</p>
+
+<p>
+meta|kognition
+-&#x2014;+&#x2014;&#x2014;&#x2014;
+Über|Wissen
+</p>
+
+<p>
+Metatext =&gt; "Text über den Inhalt des Textes" 
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> 2015-08-25</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div><ol class="org-ol"><li><a id="sec-1-2-2-1" name="sec-1-2-2-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-2-2-1">
+<pre class="example">
+    s2 - s1
+v = -------
+    t2 - t1
+</pre>
+
+<p>
+[delta] = Delta
+[delta]x = x2 - x1
+</p>
+
+<p>
+<i>falls s1 = 0 dann schreibt man nur s statt s2, gleiches bei t</i>
+</p>
+
+
+<p>
+Umrechnung 1 km/h = 1000m / 3600s = 1/3.6 m/s (= 0.2777 m/s)
+</p>
+
+
+<p>
+Frage: Wie kann eine negative Geschwindigkeit im s-t Diagramm erkannt werden?
+</p>
+
+<p>
+<i>Die Steigung ist negativ</i> 
+</p>
+</div>
+
+
+<ol class="org-ol"><li><a id="sec-1-2-2-1-1" name="sec-1-2-2-1-1"></a>Die Geschwindigkeit im s-t-Diagramm<br  /><div class="outline-text-6" id="text-1-2-2-1-1">
+<pre class="example">
+    [delta]y   y2 - y1
+a = -- = -------
+    [delta]x   x2 - x1
+</pre>
+
+<p>
+Im Orts-Zeit Diagramm ist die Steigung daher
+</p>
+
+<pre class="example">
+    [delta]s
+m = -- = v
+    [delta]t
+</pre>
+
+<p>
+Zurückgelegter Weg
+A = [delta]s
+</p>
+
+
+<p>
+[delta]s = A = 1/2 [delta]v * [delta]t
+</p>
+<pre class="example">
+ v2-------x
+         /|
+       /  |
+[delta]v   /    |
+   /  A   |
+ /        |
+0----------
+   [delta]t
+</pre>
+
+
+<p>
+<b>Weg-Zeit Funktion</b>
+</p>
+
+<p>
+f(x) = ax + b -&gt; s(t) = vt + s0
+</p>
+
+<pre class="example">
+s |      __--
+  |  __--
+s0|--
+  |
+  |
+  ---------------------
+</pre>
+<p>
+s(t) = v * (t - t0) + s0
+</p>
+
+<p>
+t0 = startzeit
+</p>
+</div>
+</li>
+
+<li><a id="sec-1-2-2-1-2" name="sec-1-2-2-1-2"></a>Aufgaben<br  /><div class="outline-text-6" id="text-1-2-2-1-2">
+<ul class="org-ul">
+<li>Aufgabe 1
+<ul class="org-ul">
+<li>schätzen
+<ol class="org-ol">
+<li>ca. 15m
+</li>
+<li>0.001s
+</li>
+<li>0.000001s
+</li>
+<li>300m
+</li>
+<li>10cm
+</li>
+<li>15km/h
+</li>
+</ol>
+</li>
+<li>berechnen
+<ol class="org-ol">
+<li>60 km/h -&gt; 60000m / 3600s -&gt; <b>16m/s</b>
+</li>
+<li>340m/s -&gt; 34000m / 1s -&gt; 10m / 34000m * 1s = 0.00029412s
+</li>
+<li>Lichtgeschwindigkeit im vaakum: 29'979'200'000 cm/s, 10 / lightspeed = 3.3356460479265624e-010 = 0.00000000033357s
+</li>
+<li>Lichtgeschwindigkeit im vaakum: 29'979'200'000 cm/s, * 1/1000s = 29979200cm = 299792m
+</li>
+<li>110 km/h -&gt; 110000m / 3600s -&gt; 0.061m = 6.1cm
+</li>
+<li>(/ (/ 100  13.2) (/ 1000.0 3600.0)) = 27.273
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Aufgabe 2
+<ul class="org-ul">
+<li>1.6s * 1400m = 2240m; 2240 / 2 = <b>1120m</b>
+</li>
+</ul>
+</li>
+<li>Aufgabe 4
+</li>
+</ul>
+</div>
+</li></ol>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> 2015-09-01</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div><ol class="org-ol"><li><a id="sec-1-2-3-1" name="sec-1-2-3-1"></a>Projekt<br  /><div class="outline-text-5" id="text-1-2-3-1">
+<ul class="org-ul">
+<li>Film über Gentrifikation (e.g. Kreuzberg)
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-1-2-3-2" name="sec-1-2-3-2"></a>Physik<br  /><div class="outline-text-5" id="text-1-2-3-2">
+\begin{equation}
+60km/h * t = -80km/h * t + 430km | + 80km * t
+\end{equation}
+\begin{equation}
+140km/h * t = 430km | 140km/h
+\end{equation}
+\begin{equation}
+t = 340km/140km/h
+\end{equation}
+\begin{equation}
+t = \frac{34}{14}h = 3.07h
+\end{equation}
+</div>
+</li>
+<li><a id="sec-1-2-3-3" name="sec-1-2-3-3"></a>Deutsch<br  /><div class="outline-text-5" id="text-1-2-3-3">
+<ul class="org-ul">
+<li></li>
+</ul>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-2-4" class="outline-4">
+<h4 id="sec-1-2-4"><span class="section-number-4">1.2.4</span> 2015-09-08</h4>
+<div class="outline-text-4" id="text-1-2-4">
+</div><ol class="org-ol"><li><a id="sec-1-2-4-1" name="sec-1-2-4-1"></a>English<br  /><div class="outline-text-5" id="text-1-2-4-1">
+<ul class="org-ul">
+<li>Test on 2015-09-22
+<ul class="org-ul">
+<li>present perfect simple vs present perfect continious
+</li>
+<li>Collotations
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-5" class="outline-4">
+<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> 2015-09-15</h4>
+<div class="outline-text-4" id="text-1-2-5">
+</div><ol class="org-ol"><li><a id="sec-1-2-5-1" name="sec-1-2-5-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-2-5-1">
+<ul class="org-ul">
+<li>Repetition Treffpunktaufgaben
+</li>
+</ul>
+<p>
+J: 09:00
+G: 11:00
+</p>
+
+<p>
+v<sub>j</sub>: Mach 0.9 = 297m/s
+v<sub>g</sub>: Mach 2.4 = 813.6m/s
+</p>
+
+<p>
+t<sub>d</sub> (Zeitdifferenz) = 2h
+</p>
+
+<p>
+s<sub>j</sub> = v<sub>j</sub> * t
+s<sub>g</sub> = v<sub>g</sub> * t - t<sub>d</sub>
+</p>
+
+
+<p>
+2928.96km/h * t[h] = 1069.2km/h * (t[h] - 2h)
+</p>
+
+
+\begin{equation}
+t = \frac{-v_g * t_d}{v_j - v_g} 
+\end{equation} 
+</div>
+</li>
+<li><a id="sec-1-2-5-2" name="sec-1-2-5-2"></a>English<br  /></li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-6" class="outline-4">
+<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> 2015-09-22</h4>
+<div class="outline-text-4" id="text-1-2-6">
+</div><ol class="org-ol"><li><a id="sec-1-2-6-1" name="sec-1-2-6-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-2-6-1">
+<p>
+Beschleunigung:
+</p>
+\begin{equation}
+a = \frac{d_v}{d_t}
+\end{equation}
+
+\begin{equation}
+[a] = \frac{\frac{m}{s}}{s} = \frac{m}{s^2} = m * s^{-2}
+\end{equation}
+
+\begin{equation}
+v = a * t
+\end{equation}
+
+<p>
+Am Beispiel eines Autos; "von 0 auf 100 in 15.4s"
+</p>
+
+\begin{equation}
+a = \frac{\frac{100m}{3.6s} - 0\frac{m}{s}}{15.4s} = 1.80 \frac{m}{s^2}
+\end{equation}
+
+<p>
+Der zurückgelegte Weg entspricht der Fläche des folgenden Diagramms
+</p>
+
+<pre class="example">
+km/h
+|      /|- lineare beschleunigung
+      / |
+_____/__|/konstante geschwindigkeit
+|   /   |
+|  /    |
+| /     |
+|/______| t
+</pre>
+
+<p>
+Geschwindigkeit eliminieren
+</p>
+\begin{equation}
+v = \frac{1}{2} at^2
+\end{equation}
+
+<p>
+Strecke eliminieren
+</p>
+\begin{equation}
+s = \frac{v^2}{2a}
+\end{equation}
+
+<p>
+Wichtige Formeln:
+</p>
+\begin{equation}
+s = \frac{1}{2}vt
+\end{equation}
+
+\begin{equation}
+v = a * t
+\end{equation}
+
+
+<p>
+<b>Aufgaben</b>
+</p>
+
+<p>
+Aufgabe 9
+</p>
+
+
+\begin{equation}
+g = 9.81\frac{m}{s}
+\end{equation}
+
+
+\begin{equation}
+a_{max} = 10g, v = 7900 \frac{m}{s}
+\end{equation}
+
+\begin{equation}
+s = \frac{v^2}{2a} = \frac{(7900\frac{m}{s})^2}{2 * 10 * 9,81\frac{m}{s^2}} = 318km
+\end{equation}
+
+<p>
+Aufgabe 13)
+</p>
+
+<ol class="org-ol">
+<li></li>
+<li></li>
+</ol>
+\begin{equation}
+s = \frac{v^2}{2a} = \frac{(360km/h)^2}{(2*3.9m/s)^2} = \frac{10000m/s}{7.8m/s^2} = 1282.05m
+\end{equation}
+
+<p>
+eine 1.2km lange Piste ist also 82.05m zu kurz
+</p>
+
+<ol class="org-ol">
+<li></li>
+</ol>
+\begin{equation}
+v = \frac{\sqrt[]{as}}{2}
+\end{equation}
+
+
+<p>
+Aufgabe 16)
+</p>
+
+\begin{equation}
+a = 2.5\frac{m}{s^2}
+\end{equation}
+</div>
+</li>
+
+
+
+
+<li><a id="sec-1-2-6-2" name="sec-1-2-6-2"></a>Mathe<br  /><ol class="org-ol"><li><a id="sec-1-2-6-2-1" name="sec-1-2-6-2-1"></a>Lineare Gleichungen mit 2 Unbekannten<br  /><div class="outline-text-6" id="text-1-2-6-2-1">
+\begin{equation}
+ax + by = x | -ax
+\end{equation}
+
+\begin{equation}
+by = -ax + c | / b
+\end{equation}
+
+\begin{equation}
+y = - \frac{a}{b}x + \frac{c}{b}
+\end{equation}
+
+<p>
+<b>Aufgaben</b>
+</p>
+
+<p>
+<i>380b</i>
+</p>
+
+
+\begin{equation}
+2x + 5y = 30 | -2x
+\end{equation}
+
+\begin{equation}
+5y = 30 -2x | / 5
+\end{equation}
+
+\begin{equation}
+y = -\frac{2}{5}x + 30
+\end{equation}
+
+<p>
+<i>182a</i>
+</p>
+
+\begin{equation}
+3x + y = 73
+\end{equation}
+\begin{equation}
+2x -y = 32 | +
+\end{equation}
+\begin{equation}
+5x = 105
+\end{equation}
+\begin{equation}
+x = 21
+\end{equation}
+\begin{equation}
+63 + y = 73 | - 63
+\end{equation}
+\begin{equation}
+y = 10
+\end{equation}
+<p>
+<i>182d</i>
+</p>
+
+\begin{equation}
+3a - 7b = 2 | *-5
+\end{equation}
+\begin{equation}
+15a - 35b = 12
+\end{equation}
+
+\begin{equation}
+-15a - 35b = -10 
+\end{equation}
+\begin{equation}
+15a - 35b = 12
+\end{equation}
+</div>
+</li></ol>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-2-7" class="outline-4">
+<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> 2015-09-29</h4>
+<div class="outline-text-4" id="text-1-2-7">
+</div><ol class="org-ol"><li><a id="sec-1-2-7-1" name="sec-1-2-7-1"></a>Mathematik<br  /><div class="outline-text-5" id="text-1-2-7-1">
+<p>
+Aufgabe 389a)
+</p>
+
+<p>
+Gleichung:
+</p>
+
+
+\begin{equation}
+\frac{3}{f} + \frac{8}{g} = 3
+\end{equation}
+
+\begin{equation}
+\frac{15}{f} - \frac{4}{g} = 4
+\end{equation}
+
+<p>
+Substitution:
+</p>
+\begin{equation}
+\frac{3}{f}
+\end{equation}
+
+\begin{equation}
+\frac{4}{g} = 4
+\end{equation}
+
+
+
+
+
+
+\begin{equation}
+x + 2 y = 3
+\end{equation}
+
+\begin{equation}
+5x - y = 4 | * 2
+\end{equation}
+
+<p>
+y fällt weg
+ &#x2013;
+</p>
+\begin{equation}
+x = 1
+\end{equation}
+
+\begin{equation}
+5 -4 = y
+\end{equation}
+
+\begin{equation}
+y = 1
+\end{equation}
+
+<p>
+<b>Lösung:</b>
+</p>
+
+\begin{equation}
+\frac{3}{f} = 1; f = 3
+\end{equation}
+
+\begin{equation}
+\frac{4}{g}; g = 4
+\end{equation}
+
+
+<p>
+Aufgabe 389d)
+</p>
+
+<p>
+Substitution:
+</p>
+
+\begin{equation}
+u = \frac{1}{s}
+\end{equation}
+\begin{equation}
+v = \frac{1}{t}
+\end{equation}
+
+<p>
+&#x2013;
+</p>
+
+<p>
+Aufgabe 392a)
+</p>
+
+\begin{equation}
+2x - 3x = -5u
+\end{equation}
+\begin{equation}
+3x - 2y = -5v
+\end{equation}
+</div>
+</li>
+
+
+<li><a id="sec-1-2-7-2" name="sec-1-2-7-2"></a>Deutsch<br  /><ol class="org-ol"><li><a id="sec-1-2-7-2-1" name="sec-1-2-7-2-1"></a>Stil<br  /></li></ol>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-8" class="outline-4">
+<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> 2015-10-20</h4>
+<div class="outline-text-4" id="text-1-2-8">
+</div><ol class="org-ol"><li><a id="sec-1-2-8-1" name="sec-1-2-8-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-2-8-1">
+<p>
+<b>Aufgabe 26</b>
+</p>
+
+<p>
+geg:
+</p>
+\begin{equation}
+v_0 = \frac{90}{3.6}\frac{m}{s}
+\end{equation}
+\begin{equation}
+t = 2.5s
+\end{equation}
+\begin{equation}
+s_0 = 0m
+\end{equation}
+<p>
+ges
+</p>
+\begin{equation}
+a
+\end{equation}
+
+<p>
+formulas:
+</p>
+\begin{equation}
+s = v_0 t + \frac{1}{2}at^2 | -v_0 * t 
+\end{equation}
+\begin{equation}
+s-v_0t = \frac{1}{2}at^2 | *\frac{2}{t^2}
+\end{equation}
+\begin{equation}
+\frac{2(s-v_0t)}{t^2} = a
+\end{equation}
+\begin{equation}
+\frac{2(55m - \frac{90m}{3.6s}*2.5s)}{(2.5s)^2}
+\end{equation}
+
+<p>
+<b>Aufgabe 21</b>
+</p>
+
+<p>
+geg.
+</p>
+\begin{equation}
+v = 50\frac{km}{h}
+\end{equation}
+\begin{equation}
+a = -6.8\frac{m}{s^2}
+\end{equation}
+\begin{equation}
+s = 14m
+\end{equation}
+
+<p>
+ges:
+</p>
+
+\begin{equation}
+v_0
+\end{equation}
+</div>
+</li>
+
+<li><a id="sec-1-2-8-2" name="sec-1-2-8-2"></a>Mathematik<br  /></li></ol>
+</div>
+
+
+
+
+
+<div id="outline-container-sec-1-2-9" class="outline-4">
+<h4 id="sec-1-2-9"><span class="section-number-4">1.2.9</span> 2015-10-27</h4>
+<div class="outline-text-4" id="text-1-2-9">
+</div><ol class="org-ol"><li><a id="sec-1-2-9-1" name="sec-1-2-9-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-2-9-1">
+<p>
+<b>Aufgabe 29</b> 
+</p>
+
+\begin{equation}
+s_{tot} = s_R + s_B
+\end{equation}
+\begin{equation}
+s_R = t_R * v_0
+\end{equation}
+\begin{equation}
+s_B = \frac{v^2}{2a}
+\end{equation}
+
+
+<p>
+<b>Aufgabe 33</b>
+</p>
+
+<p>
+s = Strecke Zürich Bern
+</p>
+
+<p>
+v-t Diagram:
+</p>
+
+
+<pre class="example">
+  v[km/h]           __126
+  | \              /
+  |  \            /
+  |   \          /
+18|    \________/
+  |____|________|____________t 
+         1.3 km
+</pre>
+
+\begin{equation}
+v_0 = \frac{126m}{3.6s} = 35\frac{m}{s}
+\end{equation}
+\begin{equation}
+v_1 = \frac{18m}{3.6s} = 5\frac{m}{s}
+\end{equation}
+\begin{equation}
+t_1 = -\frac{v_0 - v_1}{a} = \frac{-35\frac{m}{s} - 5\frac{m}{s}}{-0.6\frac{m}{s^2}} = 50s
+\end{equation}
+\begin{equation}
+t_2 = \frac{s_2}{v_1} = \frac{1300m}{5\frac{m}{s}} = 260s
+\end{equation}
+\begin{equation}
+t_3 = \frac{v_0 - v_1}{a_2} = \frac{30\frac{m}{s}}{0.5\frac{m}{s^2}} = 60s
+\end{equation}
+\begin{equation}
+t_{tot} = t_1 + t_2 + t_3 = 370s
+\end{equation}
+\begin{equation}
+s_1 = \frac{(5\frac{m}{s})^2 - (5\frac{m}{s})^2}{2*(-6\frac{m}{s^2}} = 1000;
+\end{equation}
+\begin{equation}
+s_1 = \frac{(5\frac{m}{s})^2 - (35\frac{m}{s})^2}{2*(-6\frac{m}{s^2}} = 1000;
+\end{equation}
+
+<p>
+<b>Aufgabe 31</b>
+</p>
+
+<p>
+Geschwindigkeit während der Fahrt
+</p>
+\begin{equation}
+v = 12\frac{m}{s}
+\end{equation}
+
+\begin{equation}
+s = 300m
+\end{equation}
+\begin{equation}
+a_1 = 1.5\frac{m}{s^2}
+\end{equation}
+\begin{equation}
+a_2 = 1\frac{m}{s^2}
+\end{equation}
+
+<p>
+Also:
+</p>
+\begin{equation}
+t_1 = 12s 
+\end{equation}
+\begin{equation}
+t_2 = 18s
+\end{equation}
+\begin{equation}
+a = \frac{\delta v}{\delta t} -> v = a*t
+\end{equation}
+\begin{equation}
+v = 1.0\frac{m}{s^2} * 12s
+\end{equation}
+
+
+
+<pre class="example">
+s
+|
+|		    /--
+|             /-----
+|        /----
+|  /-----
++-- s=v_0 * t + s_0
+|
+|
++----------------------- t
+ 			  
+ 			  
+v    			  
+|    			  
+|    			  
+|    			      
+| v = v_0 = konstant   	      
++-------------------------    
+|	    		      
+|	    		      
+|	    		      
++------------------------- t  
+
+		   .
+|		  ..
+|		 ..
+|	       ..
+|	    ...
+|	 ....
+..........
+|
++-------------------------
+			
+v			
+|	              /---
+|               /-----	
+|         /-----	
+|   /-----  v = v_0 + at
++---			
+|
++-----------------------------t
+
+	    		      
+a     	    		      
+|      	      		      
+|      	      		      
+| a = konstant		      
++---------------------------- 
+|			      
+|			      
+|			      
++----------------------------a
+</pre>
+</div>
+</li>
+<li><a id="sec-1-2-9-2" name="sec-1-2-9-2"></a>Mathematik<br  /><div class="outline-text-5" id="text-1-2-9-2">
+<p>
+Vektoren sind grössen welche nicht nur einen <b>Betrag</b> haben sondern auch eine <b>Richtung</b>
+</p>
+
+
+<p>
+<b>Vektor Beispiele</b>
+</p>
+
+
+<pre class="example">
+Base:
+
+
+
+								  
+							        /\`
+						                  \
+						                   \
+						                    \
+							             \
+							              \
+							             c \
+							   	        \
+							   	         \
+							   		  \
+							     `/|
+							     /
+							    /
+							   /
+							  /
+							 / 
+			      \				/ b
+	----------------------o			       /  
+		   a   	      /	       	       	      /	  
+					     	     /
+
+2.
+
+
+				             \
+					      \
+					       \
+					        \
+					         \
+					          \
+					           \
+						    \
+						     X
+						    /
+						   /
+						  /
+						 /
+					        /
+					       /
+					      /
+					     /
+					o   /
+			     \  
+     -------------------------  
+			     /
+</pre>
+
+
+<p>
+<b>Aufgabe 3</b>
+</p>
+
+<ol class="org-ol">
+<li>(AM,) MD, BC, FE
+</li>
+<li>(AF,) BM, ME, CD
+</li>
+</ol>
+
+
+<p>
+<b>Aufgabe 5</b>
+</p>
+
+<p>
+Der Betrag von a und b muss positiv sein
+</p>
+
+<p>
+<b>Aufgabe 6</b>
+</p>
+
+<ol class="org-ol">
+<li>true
+</li>
+<li>true
+</li>
+<li></li>
+</ol>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-10" class="outline-4">
+<h4 id="sec-1-2-10"><span class="section-number-4">1.2.10</span> 2015-12-01</h4>
+<div class="outline-text-4" id="text-1-2-10">
+</div><ol class="org-ol"><li><a id="sec-1-2-10-1" name="sec-1-2-10-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-2-10-1">
+<ol class="org-ol">
+<li></li>
+</ol>
+\begin{equation}
+sin(f) = \frac{v_s}{v_b} = f = arcsin(\frac{v_s}{v_b}) = sin^{-1}(\frac{0.9}{4.5}) = 11.5°
+\end{equation}
+
+
+\begin{equation}
+g = \frac{2s}{t^2}
+\end{equation}
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">0.33s</td>
+</tr>
+
+<tr>
+<td class="left">0.57m</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+Fallgeschwindigkeit formeln
+</p>
+
+
+\begin{equation}
+F_G = G * \frac{m*M}{r^2}
+\end{equation}
+
+\begin{equation}
+g = G*\frac{M}{r^2}
+\end{equation}
+
+
+<pre class="example">
+80|
+70|
+60|
+50|            /
+40|          _/
+30|        _-
+20|      _-
+10|  __--
+ 0|--__________________________
+  0  .1  .2  .3  .4  .5  .6  .7
+</pre>
+
+
+<p>
+Durchschnittliches s
+</p>
+
+
+\begin{equation}
+s=0.1 => t = \sqrt{\frac{2s}{g}}
+\end{equation}
+
+
+
+<p>
+<b>Aufgaben</b>
+</p>
+
+<p>
+a48)
+</p>
+
+
+\begin{equation}
+t = \sqrt{\frac{2*39m}{9.8\frac{m}{s^2}}} = 2.8212s
+\end{equation}
+\begin{equation}
+v = \sqrt{2gh} = \sqrt{2 * 9.8\frac{m}{s^2} * 39m} = 27.658\frac{m}{s}
+\end{equation}
+</div>
+</li>
+<li><a id="sec-1-2-10-2" name="sec-1-2-10-2"></a><br  /></li>
+<li><a id="sec-1-2-10-3" name="sec-1-2-10-3"></a><br  /></li>
+<li><a id="sec-1-2-10-4" name="sec-1-2-10-4"></a><br  /></li>
+<li><a id="sec-1-2-10-5" name="sec-1-2-10-5"></a><br  /></li>
+
+
+
+
+<li><a id="sec-1-2-10-6" name="sec-1-2-10-6"></a>Geschichte<br  /><div class="outline-text-5" id="text-1-2-10-6">
+<p>
+Quelle 1:
+</p>
+<ul class="org-ul">
+<li>Angst
+</li>
+<li>jedoch ist die Gefahr auch ohne diese Warnung offensichtlich
+</li>
+</ul>
+
+<p>
+Quelle 2:
+</p>
+<ul class="org-ul">
+<li>Spannungen mit den USA
+<ul class="org-ul">
+<li>Vieleicht Kriegseintritt
+</li>
+</ul>
+</li>
+<li>Schneller Sieg
+</li>
+</ul>
+
+<p>
+Quelle 3:
+</p>
+<ul class="org-ul">
+<li>Er meint, der U-Boot Krieg sei ein Krieg gegen die Menschheit
+</li>
+<li>Schon vor 100 Jahren hat man bezug auf die <i>perfekte demokratie</i> genommen
+<ul class="org-ul">
+<li>Damals gab es in den USA noch nicht einmal das Frauenstimm resp Wahlrecht (1919)
+</li>
+</ul>
+</li>
+<li>Die BürgerInnen der USA seien die "Vorkämpfer[Innen] für die Rechte der Menschheit"
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-11" class="outline-4">
+<h4 id="sec-1-2-11"><span class="section-number-4">1.2.11</span> 2015-12-15</h4>
+<div class="outline-text-4" id="text-1-2-11">
+<p>
+<b>Wörter</b>
+</p>
+
+<p>
+<i>Wörter können nur in einem Satz bestimmt werden</i>
+</p>
+
+<ul class="org-ul">
+<li>Verben
+</li>
+<li>Nomen
+</li>
+<li>Pronomen
+</li>
+<li>Adjektive
+<ul class="org-ul">
+<li></li>
+</ul>
+</li>
+<li>Partikel
+<ul class="org-ul">
+<li>Konjunktionen
+</li>
+<li>Präpositionen
+</li>
+<li>Adverben
+</li>
+<li>Interjektionen
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-12" class="outline-4">
+<h4 id="sec-1-2-12"><span class="section-number-4">1.2.12</span> 2016-01-12</h4>
+<div class="outline-text-4" id="text-1-2-12">
+</div><ol class="org-ol"><li><a id="sec-1-2-12-1" name="sec-1-2-12-1"></a>Deutsch<br  /><div class="outline-text-5" id="text-1-2-12-1">
+<p>
+<b>Wortarten</b>
+</p>
+</div>
+
+<ol class="org-ol"><li><a id="sec-1-2-12-1-1" name="sec-1-2-12-1-1"></a>veränderbar<br  /><ol class="org-ol"><li><a id="sec-1-2-12-1-1-1" name="sec-1-2-12-1-1-1"></a>Nomen<br  /></li>
+<li><a id="sec-1-2-12-1-1-2" name="sec-1-2-12-1-1-2"></a>Pronomen<br  /></li>
+<li><a id="sec-1-2-12-1-1-3" name="sec-1-2-12-1-1-3"></a>Verben<br  /></li>
+<li><a id="sec-1-2-12-1-1-4" name="sec-1-2-12-1-1-4"></a>Adjektive<br  /><div class="outline-text-7" id="text-1-2-12-1-1-4">
+<p>
+<b>auf Nomen bezogen</b>
+</p>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-1-2-12-1-2" name="sec-1-2-12-1-2"></a>nicht veränderbar<br  /><ol class="org-ol"><li><a id="sec-1-2-12-1-2-1" name="sec-1-2-12-1-2-1"></a>Partikel<br  /><ol class="org-ol"><li><a id="sec-1-2-12-1-2-1-1" name="sec-1-2-12-1-2-1-1"></a>auf Verb bezogen: Adverben<br  /></li></ol>
+</li></ol>
+</li></ol>
+</li></ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Hausaufgaben</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> auf 2015-09-08</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div><ol class="org-ol"><li><a id="sec-1-3-1-1" name="sec-1-3-1-1"></a>Physik<br  /><div class="outline-text-5" id="text-1-3-1-1">
+<p>
+Aufgabe 2)
+</p>
+
+<p>
+Geschwindigkeit[v]: 1400m/s
+</p>
+
+<p>
+Zeit[t]: \begin{equation} \frac{1.6s}{2} = 0.8s\end{equation}
+</p>
+
+<p>
+Resultat Strecke[s]: \begin{equation}0.8s * 1400m/s = 1120m\end{equation}
+</p>
+</div>
+</li>
+
+<li><a id="sec-1-3-1-2" name="sec-1-3-1-2"></a>Mathematik<br  /><div class="outline-text-5" id="text-1-3-1-2">
+<ol class="org-ol">
+<li></li>
+</ol>
+<p>
+2(x<sup>2</sup> + 4)<sup>2</sup> - 49(x<sup>2</sup> +4) + 300 = 0 | u = x<sup>2</sup> + 4
+2u<sup>2</sup> - 49u + 300 = 0
+</p>
+\begin{equation}
+u = \frac{49 +- \sqrt[]{2401 - 2400}}{4} = \frac{49 +- 1}{4}
+\end{equation}
+
+
+\begin{equation}
+x^2 + 4 = 12 | -4
+\end{equation}
+\begin{equation}
+x^2 = 8 | sqrt
+\end{equation}
+\begin{equation}
+x = \sqrt[]{8}
+\end{equation}
+
+\begin{equation}
+x^2 + 4 = 12.5 | -4
+\end{equation}
+\begin{equation}
+x^2 = 8.5
+\end{equation}
+
+<p>
+Aufgabe 15)
+</p>
+
+\begin{equation}
+3(\frac{5}{6}x - \frac{16}{5}) + \frac{11}{3}x = 2(\frac{11}{2} + \frac{8}{3}x) - 11.6
+\end{equation}
+
+\begin{equation}
+\frac{15}{6}x - \frac{48}{5} + \frac{10}{3}x = \frac{22}{2} + \frac{16}{3}x - \frac{11.6}{1} | \frac{n}{6}x; \frac{n}{10}
+\end{equation}
+
+\begin{equation}
+\frac{15}{6}x - \frac{96}{10} + \frac{20}{6}x = \frac{110}{10} + \frac{32}{6}x - \frac{116}{10}
+\end{equation}
+</div>
+</li></ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2016-01-12 Di. 14:54</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

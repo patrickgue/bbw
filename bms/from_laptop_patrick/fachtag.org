@@ -1,0 +1,9 @@
+* Fachtag
+** Modul 117
+*** 2015-09-14
+ - Simplex
+   - Nur seden
+ - Duplex
+   - senden + empfangen
+ - half duplex
+   - beide senden + empfangen aber nicht gleichzeitig
