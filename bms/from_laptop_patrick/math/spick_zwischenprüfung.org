@@ -1,0 +1,67 @@
+#+OPTIONS: tex:t    
+* quadratische Gleichungen
+
+** Mitternachtsformel
+
+Basic formula:
+\begin{equation}
+\frac{-b \pm \sqrt[]{b^2 - 4ac}}{2c}
+\end{equation}
+
+alternative formula:
+\begin{equation}
+x^2 + px + q = 0
+\end{equation}
+\begin{equation}
+x_1, x_2 = - \frac{p}{2} \pm \sqrt[]{ (\frac{p}{2})^2 - q }
+\end{equation}
+
+** scheitelpunkt:
+
+*** Wenn a und b bekannt:
+
+\begin{equation}
+\frac{-b}{2a}
+\end{equation}
+
+*** Wenn a oder b unbekannt
+Basis: Mitternachtsformel
+\begin{equation}
+\frac{-b \pm \sqrt[]{b^2 - 4ac}}{2a}
+\end{equation}
+
+Formel Scheitelpunkt, die /Diskriminante/:
+
+\begin{equation}
+b^2 - 4ac = 0
+\end{equation}
+Diese Gleichung hat nur eine lösung
+
+* Brüche
+** Mehrfachbrüche
+
+\begin{equation}
+\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} * \frac{d}{c}
+\end{equation}
+
+* Substitution
+
+Beispiel:
+\begin{equation}
+2*cos(x)^2 + cos(x)
+\end{equation}
+\begin{equation}
+u = cos(x)
+\end{equation}
+\begin{equation}
+2u^2 + u = 0
+\end{equation}
+\begin{equation}
+u_1, u_2 = \frac{-2 \pm \sqrt[]{1 - 0}}{4}
+\end{equation}
+\begin{equation}
+u_1 = -\frac{3}{4}
+\end{equation}
+\begin{equation}
+u_2 = -\frac{1}{4}
+\end{equation}

@@ -1,0 +1,86 @@
+* Repetitionsaufgaben Mathematik
+** Arithmetik
+*** Faktorisierung
+*Aufgabe 1*
+
+3a^2 - 7b^2 = (3a - 7b) (3a + 7b)
+
+*Aufgabe 2*
+
+u^3 - 25u = u(u^2 - 25) = u (u - 5) (u + 5)
+
+*Aufgabe 3*
+
+3a^2 + 13a - 30 = (3a - 5)(a + 6)
+
+*** Mehrfachbrüche
+
+*Aufgabe 4*
+
+#+BEGIN_EXAMPLE 
+        y - x   (y + x)(y - x) - y - x
+x - y - -----   ----------------------
+        y + x            y + x           y(x + y)((y + x)(y - x) - y - x)
+------------- = ---------------------- = ------------------------------
+ x     x           x(x + y) - xy         (y + x) (
+ - - -----      ----------------------
+ y   x + y           y(x + y)
+#+END_EXAMPLE
+
+*** Polynomdivision
+
+\begin{equation}
+\frac
+{4x^4 + 2x^3 + 6x^2 + 4x - 4}
+{2x^2 + x - 1}
+\end{equation}
+
+\begin{equation}
+4x^4 + 2x^3 + 6x^2 + 4x - 4 : 2x^2 + x - 1 = 2x^2 + 2
+\end{equation}
+\begin{equation}
+- (4x^4 + 2x^3 - 2x^2)
+\end{equation}
+
+\begin{equation}
+4x^2 + 4x - 4
+\end{equation}
+\begin{equation}
+4x^2 + 2x - 2
+\end{equation}
+
+\begin{equation}
+2x - 6
+\end{equation}
+
+
+*** Betrag
+
+*Aufgabe 6*
+\begin{equation}
+\|\|-3\| - \|-4\|\| = 1
+\end{equation}
+
+*Aufgabe 7*
+
+\begin{equation}
+\|x - 3\|  = 2
+\end{equation}
+x = {1, 5}
+
+*** Potenzen
+
+
+\begin{equation}
+(\frac
+{6x^2y^{-2}}
+{a^{n+1}b^{2n}}) :
+(\frac
+{2(ab)^2}
+{(xy)^{-1}}
+*
+\frac
+{a^{n}b^{2n}}
+{3xy^{-2}})^{-2}
+
+\end{equation}

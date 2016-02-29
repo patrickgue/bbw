@@ -1,0 +1,20 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Summary}{2}{section.1}
+\contentsline {section}{\numberline {2}Characters}{3}{section.2}
+\contentsline {paragraph}{Basil Hallward}{3}{section.2}
+\contentsline {paragraph}{Lord Henry Wotton}{3}{section.2}
+\contentsline {paragraph}{Dorian Gray}{4}{section.2}
+\contentsline {paragraph}{Lord George Fermor}{4}{section.2}
+\contentsline {paragraph}{Sibyl Vane}{4}{section.2}
+\contentsline {paragraph}{Mrs Vane}{4}{section.2}
+\contentsline {paragraph}{James Vane}{4}{section.2}
+\contentsline {paragraph}{Mr Isaacs}{4}{section.2}
+\contentsline {paragraph}{Victor}{4}{section.2}
+\contentsline {paragraph}{Mr Hubbard}{4}{section.2}
+\contentsline {paragraph}{Adrian Singleton}{4}{section.2}
+\contentsline {paragraph}{Alan Campbell}{5}{section.2}
+\contentsline {paragraph}{Lady Narborough}{5}{section.2}
+\contentsline {paragraph}{Sir Geoffrey Clouston}{5}{section.2}
+\contentsline {paragraph}{Lady Alice Chapman}{5}{section.2}
+\contentsline {paragraph}{Duchess of Monmouth}{5}{section.2}
+\contentsline {paragraph}{Hetty Merton}{5}{section.2}

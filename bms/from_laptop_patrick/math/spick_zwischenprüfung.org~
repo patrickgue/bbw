@@ -1,0 +1,8 @@
+* Spick zwischenprüfung
+** quadratische Gleichungen
+*** scheitelpunkt:
+
+Basis: Mitternachtsformel
+\begin{equation}
+\frac{-b \pm \sqrt[]{b^2 - 4ac}}{2c}
+\end{eqiation}

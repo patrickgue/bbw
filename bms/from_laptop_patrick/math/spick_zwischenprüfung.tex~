@@ -1,0 +1,77 @@
+% Created 2015-09-18 Fr. 15:58
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\date{\today}
+\title{spick\_zwischenprüfung}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Spick zwischenprüfung}
+\label{sec-1}
+\subsection{quadratische Gleichungen}
+\label{sec-1-1}
+
+\subsubsection{Mitternachtsformel}
+\label{sec-1-1-1}
+
+Basic formula:
+\begin{equation}
+\frac{-b \pm \sqrt[]{b^2 - 4ac}}{2c}
+\end{equation}
+
+alternative formula:
+\begin{equation}
+x^2 + px + q = 0
+\end{equation}
+\begin{equation}
+x_1, x_2 = - \frac{p}{2} \pm \sqrt[]{ (\frac{p}{2})^2 - q }
+\end{equation}
+
+\subsubsection{scheitelpunkt:}
+\label{sec-1-1-2}
+
+\begin{enumerate}
+\item Wenn a und b bekannt:
+\label{sec-1-1-2-1}
+
+\begin{equation}
+\frac{-b}{2a}
+\end{equation}
+
+\item Wenn a oder b unbekannt
+\label{sec-1-1-2-2}
+Basis: Mitternachtsformel
+\begin{equation}
+\frac{-b \pm \sqrt[]{b^2 - 4ac}}{2c}
+\end{equation}
+
+Formel Scheitelpunkt, die \emph{Diskriminante}:
+
+\begin{equation}
+b^2 - 4ac = 0
+\end{equation}
+Diese Gleichung hat nur eine lösung
+\end{enumerate}
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}

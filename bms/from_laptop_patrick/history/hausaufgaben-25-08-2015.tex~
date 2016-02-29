@@ -1,0 +1,80 @@
+% Created 2015-08-23 So. 14:46
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\date{\today}
+\title{hausaufgaben-25-08-2015}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Hausaufgaben auf 25. August 2015}
+\label{sec-1}
+\subsection{Aufgabe 9}
+\label{sec-1-1}
+Die \emph{East India Company} und das \emph{britische Königreich} vertraten grundsätzlich ökonomische 
+Interessen. Anfangs ging es vor allem um den Handel mit verschiedenen Güter, hauptsächlich
+Rohstoffe. Mit der Entwicklung des Kapitalismus in die Phase des Monopolkapitalismus wurden
+aufgund der immer häufiger werdenden Tendenzen der Überproduktion weitere Absatzmärkte nötig.
+Aus diesem Grund wurde Indien und andere britische Kolonien mit billigen Industrieprodukten
+aus Grossbritanien überflutet.
+
+(quelle: \emph{Der Imperialismus als höchstes Stadium des Kapitalismus} von \emph{Wladimir Lenin})
+
+\subsection{Aufgabe 10}
+\label{sec-1-2}
+Eine Voraussetzung war der technische und ökonomische Fortschritt. Erst durch die 
+Industrialisierung wurde es möglich einerseits eine riesige Masse an waren zu produzieren
+und diese dann auch günstig zu transportieren - über die ganze Welt. Ökonomisch wurde 
+es zur notwendigkeit, da im Herkunftsland alle möglichkeiten zur Profitmaximierung
+bereits ausgeschöpft wurden. 
+
+\subsection{Aufgabe 11}
+\label{sec-1-3}
+Nach der Übernahme des britischen Königreiches zwar eine Regierung eingesetzt welche de facto
+die gesamte Macht über den Kontinent hatte, regional wurden jedoch die bisherigen Herrscher
+(e.g. Fürstentümer etc.) beibehalten. Diese mussten sich der britischen Kolonialregierung
+beugen, da sie sonst mit Konsequenzen (u.a. militärisch) rechnen mussten. 
+
+Diese feudalen Strukturen wurden mit der Zeit abgeschaft und von den Briten eine Bürokratie
+eingesetzt welche ab dann die Macht übernahmen
+
+\subsection{Aufgabe 12}
+\label{sec-1-4}
+Die ökonomischen Strukturen wurden vollständig zerstört. Vor der Kolonialisierung war in 
+Indien die sog. \emph{Asiatische Produktionsweise (nach Marx)} vorherschend. Es wurde auf einfachste
+Weise Ackerbau betrieben. Da die objektiven Bedingungen für dieses System Ideal war 
+(i.e. sehr fruchtbarer Boden etc.) blieb die diese Produktionsweise für etwa 2000 Jahre
+fast unverändert bestehen. (quelle: Kapitel 2 in \emph{Pakistan's other Story} von \emph{Lal Khan} 
+ISBN: 978-93-5002-001-2)
+
+Mit der Kolonialisierung wurde Teilweise eine Industrialisierung vorangetrieben, jedoch
+nicht im grossen Stil.
+
+Die gesellschaftlichen Strukturen wurden mehr oder weniger beibehalten. Das Kasten System
+des Hinduismus spielte der Kolonialmacht in die Hände, da es schon ein vorherschendes
+Klassen-System gab welches man ebenfalls zur unterdrückung einsetzten konnte. Zu beachten
+ist, dass erst durch kolonialisierung die Religion Hinduismus überhaupt entstand. 
+Ursprünglich bestand der Hinduismus aus verschiedenen Religionen welche dann 
+zu einer Religion zusammengefügt wurde.
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}

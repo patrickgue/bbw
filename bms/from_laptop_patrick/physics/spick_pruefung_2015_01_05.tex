@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{utopia}
+%\renewcommand{\familydefault}{\sfdefault}
+%\fontfamily{phv}\selectfont
+\usepackage[margin=1in, a4paper]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{fixltx2e}
+\usepackage[onehalfspacing]{setspace}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Spick Prüfung vom}
+\chead{\today}
+\rhead{Patrick Günthard \& Janes Thomas}
+\cfoot{\thepage von \pageref{LastPage}}
+
+
+\title{Spick Prüfung vom 5. Januar 2016}
+\author{Patrick Günthard \& Janes Thomas}
+\date{\today}
+
+
+\begin{document}
+	\maketitle
+	
+	\tableofcontents
+	
+	\section{Freier Fall}
+	
+	\subsection{Konstanten}
+	
+	Durchschnittliche Anziehungskraft auf der Erde: \(a = -g = -9.81\frac{m}{s^2}\)
+	
+	\subsection{Formel}
+	
+	\subsubsection{Ohne Anfangsgeschwindigkeit}
+	
+	\begin{tabular}{r l}
+		Geschwindigkeit \textsubscript{(Zeit)} & \(v(t) = gt\) \\
+		Höhe \textsubscript{(Zeit)} & \( h(t) = \frac{g * t^2}{2}\)\\
+		Zeit \textsubscript{(Höhe)}	 & \(t(h) = \sqrt{\frac{2h}{g}} \)\\
+		Geschwindigkeit \textsubscript{(Höhe)} & \(v(h) = \sqrt{2gh}\) \\
+	
+	\end{tabular}
+	
+	\subsubsection{Mit Anfangsgeschwindigkeit}
+	
+	\begin{tabular}{r l}
+		Höhe \textsubscript{(Zeit)} & \(s(t) = \frac{1}{2}gt^2 + v_0t \) \\
+		Geschwindigkeit \textsubscript{(Zeit)} & \(v(t) = v_0 - gt\) \\
+	\end{tabular}
+	
+	\subsection{Beispiele}
+	
+	\subsubsection{Fallhöhe}
+	
+	\textbf{Geg:} \(t = 5s; v_0 = 0\frac{m}{s}\)\\
+	\textbf{Ges:} \(h (s)\)\\
+	
+	\textbf{Berechnung:}\\
+	\(h (t) = |-\frac{1}{2} * 9.81 * t^2 | \rightarrow h(5s) = |-\frac{1}{2} * 9.81 * 25s | = 122.625m\)
+\end{document}
