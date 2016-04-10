@@ -44,6 +44,18 @@
 
         Die grundlegende Aufgabe bestand darin, auf einer Linux-VM einen DHCP Server zu installieren und diesen dann mit einem Windows-Client (ebenfalls auf einer VM) zu testen.
 
+        \paragraph{Aufgaben}
+        \begin{enumerate}
+        \item Installation der VM
+          \begin{itemize}
+          \item Debian GNU/Linux 8
+          \item Microsoft Windows Server 2012
+          \end{itemize}
+        \item Installation des DHCP Servers
+        \item Konfiguration des Netzwerks
+        \item Konfiguration des DHCP Servers
+        \end{enumerate}
+
         \section{Vorgehen}
 
         \subsection{Hürden}
@@ -51,6 +63,12 @@
         Es gab verschiedene Hürden beim aufsetzten des DHCP-Servers. Zu begin war nicht klar, welches package installiert werden sollte, da im Debian-Repository mehrere Implementierungen vorhanden sind. Ich entschied mich dann für den \textit{isc-dhcp-server} welcher weit verbreitet ist.
         
         \subsection{Lösungen}
+
+        \begin{tabular}{lp{10cm}}
+            DHCP Server & Das Packet \textit{isc-dhcp-server} eignet sich sehr gut für diese Aufgabe \\
+            IP Konfiguration & Für eine korrekte verwendung muss die IP Adresse des Servers manuell gesetzt werden. Auf Unix-artigen Systemen wird dafür \textit{ifconfig} verwendet: \texttt{sudo ifconfig eth1 172.20.1.1 netmask 255.255.255.192}\\
+            DHCP Konfiguration & 
+        \end{tabular}
         
         \section{Ergebnis \& Testprotokoll}
 
@@ -80,7 +98,10 @@
         \begin{tabular}{|l|l|p{5cm}|}
           \hline
           \textbf{Aufgabe} & \textbf{Status \ref{statusref}} & \textbf{Kommentar} \\\hline
-          Server OS Aufsetzen & & \\\hline
+          Server OS Aufsetzen & E & \begin{itemize}
+          \item Debian
+          \item Windows
+          \end{itemize} \\\hline
         \end{tabular}
 
         \label{statusref}
