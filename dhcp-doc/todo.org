@@ -1,0 +1,12 @@
+* todo
+** Basis
+
+| *Server*      | Debian 8 jessie     |
+| *Client*      | Windows Server 2012 |
+| *dhcp server* | isc-dhcp-server     |
+** Aufgabenstellung
+** Vorgehen
+*** Hürden
+*** Lösungen
+** Ergebnis / Testprotokoll
+** Reflexion

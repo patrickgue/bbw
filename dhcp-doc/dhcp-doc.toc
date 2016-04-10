@@ -1,0 +1,10 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Software Basis}{2}{section.1}
+\contentsline {section}{\numberline {2}Aufgabenstellung}{2}{section.2}
+\contentsline {section}{\numberline {3}Vorgehen}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}H\IeC {\"u}rden}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}L\IeC {\"o}sungen}{3}{subsection.3.2}
+\contentsline {section}{\numberline {4}Ergebnis \& Testprotokoll}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Ergebnis}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Testprotokoll}{4}{subsection.4.2}
+\contentsline {section}{\numberline {5}Reflexion}{4}{section.5}

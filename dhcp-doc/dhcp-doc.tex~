@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{utopia}
+\usepackage[margin=1in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fancyhdr}
+%\usepackage{lastpage}
+\usepackage{hyperref}
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{DHCP Aufgabe Dokumentation}
+\newcommand{\authorText}{Patrick Günthard}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage}% \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+
+        \section{Software Basis}
+
+        \begin{tabular}{|l|l|}
+          \hline
+          \textbf{Server OS} & Debian 8 Jessie \\\hline
+          \textbf{Client OS} & Windows Server 2012 R2 \\\hline
+          \textbf{DHCP Server} & isc-dhcp-server \\\hline
+        \end{tabular}
+
+        \section{Aufgabenstellung}
+
+        Die grundlegende Aufgabe bestand darin, auf einer Linux-VM einen DHCP Server zu installieren und diesen dann mit einem Windows-Client (ebenfalls auf einer VM) zu testen.
+
+        \section{Vorgehen}
+
+        \subsection{Hürden}
+
+        \subsection{Lösungen}
+        
+        \section{Ergebnis \& Testprotokoll}
+
+        \subsection{Ergebnis}
+
+        \begin{figure}
+          \center
+          \label{fig:dynip}
+          \includegraphics[width=8cm]{cmd_ipconfig_dynamic_ip}
+          \caption{Dynamische IP}
+        \end{figure}
+        
+        Das Endergebnis war eine Debian 8 Maschine mit funktionierendem DHCP Server. Das richtige funktionieren des Servers wurde mit einem Windows-Client getestet welcher beim starten automatisch eine IP des im Server definierten Bereiches übernahm \ref{fig:dynip}.
+
+        \subsection{Testprotokoll}
+
+
+        \begin{tabular}{|l|l|}
+          \hline
+          \textbf{Was} & \textbf{Status \ref{statusref}} \\\hline
+          
+        \end{tabular}
+
+        \label{statusref}
+        \textit{E} = erreicht, \textit{T} = teilweise erreicht, \textit{N} = nicht erreicht 
+        
+        \section{Reflexion}
+        
+        
+\end{document}
