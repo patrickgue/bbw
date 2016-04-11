@@ -16,14 +16,14 @@
 \newcommand{\authorText}{Patrick Günthard}
 \newcommand{\dateText}{\today}
 
-\title{\titleText}
+\title{\textbf{M123}\\\titleText}
 \author{\authorText}
 \date{\dateText}
 
 \pagestyle{fancy}
 \fancyhf{}
 
-\fancyhead[EL]{\titleText}
+\fancyhead[EL]{\textbf{M123} \titleText}
 \fancyhead[OR]{\authorText}
 \cfoot{\thepage}% \space von \pageref{LastPage}}
 
@@ -76,6 +76,7 @@
             IP Konfiguration & Für eine korrekte verwendung muss die IP Adresse des Servers manuell gesetzt werden. Auf Unix-artigen Systemen wird dafür \textit{ifconfig} verwendet: \texttt{sudo ifconfig eth1 172.20.1.1 netmask 255.255.255.192}\\
             DHCP Konfiguration & Für die Konfiguration des DHCP Servers müssen 2 Dateien im \texttt{/etc/} modifiziert werden. Zum einen muss \texttt{/etc/default/isc-dhcp-server} modifiziert werden. Hier muss angegeben werden, auf welchem Netzwerk Interface der DHCP Server laufen wird. Wie schon im Beispiel der IP-Konfiguration wird hier das Interface \texttt{eth1} angegeben (Figure \ref{iscdhcpserver}). Auch muss die Datei \texttt{/etc/dhcp/dhcpd.conf} modifiziert werden (Figure \ref{dhcpdconf}). Hier muss die korrekte IP-Range definiert werden.\\
 	        DHCP Server starten & Der DHCP Server wird mit dem Befehl \texttt{sudo /etc/init.d/isc-dhcp-server start} gestartet.\\
+	        Windows-Client Konfigurieren & Standardmässig muss man den Windows-Client nicht konfigurieren, da dieser normalerweise das abrufen einer IP-Adresse über ein DHCP Server bereits aktiviert hat. Ist dies nicht der Fall, kann man dies über das Control-Panel nachholen: Control-Panel / Network and Internet / Network and Sharing Center / \textit{Your active Connection} / Properties / IPv4/v6 / Properties / Optain an IP Address automatically.
         \end{tabular}
         
         
@@ -131,7 +132,7 @@
         \subsection{Testprotokoll}
 
 
-        \begin{tabular}{|l|l|p{5cm}|}
+        \begin{tabular}{|l|l|p{7cm}|}
           \hline
           \textbf{Aufgabe} & \textbf{Status \ref{statusref}} & \textbf{Kommentar} \\\hline
           Virtual Box aufsetzen & E & - \\\hline
@@ -156,6 +157,8 @@
         \textit{E} = erreicht, \textit{T} = teilweise erreicht, \textit{N} = nicht erreicht 
         
         \section{Reflexion}
+        
+        Die Aufgabe war für mich eine Herausforderung, wenn auch keine grosse. Da ich schon einige Erfahrungen im Betrieb von Applikationen dieser Art auf GNU/Linux Systeme hatte, kam ich schnell voran bei der Konfiguration des DHCP Servers.
         
         
 \end{document}

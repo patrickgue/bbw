@@ -7,5 +7,5 @@
 \contentsline {subsection}{\numberline {3.2}L\IeC {\"o}sungen}{4}{subsection.3.2}
 \contentsline {section}{\numberline {4}Ergebnis \& Testprotokoll}{5}{section.4}
 \contentsline {subsection}{\numberline {4.1}Ergebnis}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Testprotokoll}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Testprotokoll}{6}{subsection.4.2}
 \contentsline {section}{\numberline {5}Reflexion}{7}{section.5}
