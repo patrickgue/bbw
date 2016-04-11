@@ -33,10 +33,10 @@
 
         \section{Software Basis}
 
-        \begin{tabular}{|l|l|}
+        \begin{tabular}{|l|p{7cm}|}
           \hline
-          \textbf{Server OS} & Debian GNU/Linux 8 Jessie \footnote{Im Text einfachheitshalber \textit{Debian-Server} oder \textit{Debian-System}}\\\hline
-          \textbf{Client OS} & Windows Server 2012 R2 \footnote{Im Text einfachheitshalber \textit{Windows-Client} oder \textit{Windows-System}} \\\hline
+          \textbf{Server OS} & Debian GNU/Linux 8 Jessie (Im Text einfachheitshalber \textit{Debian-Server} oder \textit{Debian-System})\\\hline
+          \textbf{Client OS} & Windows Server 2012 R2 (Im Text einfachheitshalber \textit{Windows-Client} oder \textit{Windows-System}) \\\hline
           \textbf{DHCP Server} & isc-dhcp-server \\\hline
         \end{tabular}
 
@@ -63,11 +63,21 @@
         Es gab verschiedene Hürden beim aufsetzten des DHCP-Servers. Zu begin war nicht klar, welches package installiert werden sollte, da im Debian-Repository mehrere Implementierungen vorhanden sind. Ich entschied mich dann für den \textit{isc-dhcp-server} welcher weit verbreitet ist.
         
         \subsection{Lösungen}
+        
+        \begin{figure}
+        	\texttt{INTERFACES="eth1"}
+        	\caption{\label{iscdhcpserver} Konfiguration der Datei auf dem Pfad \texttt{/etc/default/isc-dhcp-server}}
+        \end{figure}
+        
+        \begin{figure}
+        	\texttt{subnet 172.20.1.0 netmask 255.255.255.192 \{\\\space range 172.20.1.1 172.20.1.50;\\\}}\\
+        	\caption{\label{dhcpdconf} Konfiguration des IP-Ranges in \texttt{/etc/dhcp/dhcpd.conf}}
+        \end{figure}
 
         \begin{tabular}{lp{10cm}}
             DHCP Server & Das Packet \textit{isc-dhcp-server} eignet sich sehr gut für diese Aufgabe \\
             IP Konfiguration & Für eine korrekte verwendung muss die IP Adresse des Servers manuell gesetzt werden. Auf Unix-artigen Systemen wird dafür \textit{ifconfig} verwendet: \texttt{sudo ifconfig eth1 172.20.1.1 netmask 255.255.255.192}\\
-            DHCP Konfiguration & 
+            DHCP Konfiguration & Für die Konfiguration des DHCP Servers müssen 2 Dateien im \texttt{/etc/} modifiziert werden. Zum einen muss \texttt{/etc/default/isc-dhcp-server} modifiziert werden. Hier muss angegeben werden, auf welchem Netzwerk Interface der DHCP Server laufen wird. Wie schon im Beispiel der IP-Konfiguration wird hier das Interface \texttt{eth1} angegeben (Figure \ref{iscdhcpserver}). Auch muss die Datei \texttt{/etc/dhcp/dhcpd.conf} modifiziert werden (Figure \ref{dhcpdconf}). Hier muss die korrekte IP-Range definiert werden.
         \end{tabular}
         
         \section{Ergebnis \& Testprotokoll}
@@ -76,21 +86,21 @@
 
         \begin{figure}
           \center
-          \label{fig:dynip}
+          
           \includegraphics[width=8cm]{cmd_ipconfig_dynamic_ip}
-          \caption{Dynamische IP}
+          \caption{\label{dynip} Dynamisch zugewiesene IP auf Windows in \texttt{ipconfig}}
         \end{figure}
 
         \begin{figure}
           \center
-          \label{fig:webserver}
+          
           \includegraphics[width=8cm]{ie_web_example}
-          \caption{Erfolgreicher Zugriff vom Windows Client auf den Webserver auf dem Debian Server}
+          \caption{\label{webserver} Erfolgreicher Zugriff vom Windows Client auf den Webserver auf dem Debian Server}
         \end{figure}
         
-        Das Endergebnis war eine Debian 8 Maschine mit funktionierendem DHCP Server. Das richtige funktionieren des Servers wurde mit einem Windows-Client getestet welcher beim starten automatisch eine IP des im Server definierten Bereiches übernahm \ref{fig:dynip}.
+        Das Endergebnis war eine Debian 8 Maschine mit funktionierendem DHCP Server. Das richtige funktionieren des Servers wurde mit einem Windows-Client getestet welcher beim starten automatisch eine IP des im Server definierten Bereiches übernahm (Figure \ref{dynip}).
 
-        Um zu testen ob auch eine Verbindung zwischen den beiden virtuellen Maschinen möglich ist, installierte ich auf dem Debian System ein Web-Server auf welchen ich auf dem Windows System erfolgreich zugreifen konnte \ref{fig:webserver}.
+        Um zu testen ob auch eine Verbindung zwischen den beiden virtuellen Maschinen möglich ist, installierte ich auf dem Debian System ein Web-Server auf welchen ich auf dem Windows System erfolgreich zugreifen konnte (Figure \ref{webserver}).
 
         \subsection{Testprotokoll}
 
