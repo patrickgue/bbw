@@ -35,8 +35,9 @@
 
         \begin{tabular}{|l|p{7cm}|}
           \hline
-          \textbf{Server OS} & Debian GNU/Linux 8 Jessie (Im Text einfachheitshalber \textit{Debian-Server} oder \textit{Debian-System})\\\hline
-          \textbf{Client OS} & Windows Server 2012 R2 (Im Text einfachheitshalber \textit{Windows-Client} oder \textit{Windows-System}) \\\hline
+          \textbf{Virtualisierungs-Software} & Oracle VirtualBox 5\\\hline
+          \textbf{Server OS} & Debian GNU/Linux 8 Jessie (Im Text einfachheitshalber \textit{Debian-Server} oder \textit{Debian-System} genannt.)\\\hline
+          \textbf{Client OS} & Windows Server 2012 R2 (Im Text einfachheitshalber \textit{Windows-Client} oder \textit{Windows-System} genannt.) \\\hline
           \textbf{DHCP Server} & isc-dhcp-server \\\hline
         \end{tabular}
 
@@ -54,6 +55,9 @@
         \item Installation des DHCP Servers
         \item Konfiguration des Netzwerks
         \item Konfiguration des DHCP Servers
+        \item starten des DHCP Servers
+        \item Netzwerk Konfiguration auf dem Windows-Client
+        \item Testen auf dem Windows-Client
         \end{enumerate}
 
         \section{Vorgehen}
@@ -62,40 +66,62 @@
 
         Es gab verschiedene Hürden beim aufsetzten des DHCP-Servers. Zu begin war nicht klar, welches package installiert werden sollte, da im Debian-Repository mehrere Implementierungen vorhanden sind. Ich entschied mich dann für den \textit{isc-dhcp-server} welcher weit verbreitet ist.
         
+        Bei der Konfiguration des DHCP Servers gab es mehrere Probleme. Die im Aufgabenblatt beschriebenen Files existierten für das installierte Packet nicht sodass ich im Internet nach Lösungen suchen musste. Nach einiger Zeit ist es mir auch gelungen den Server richtig zu konfigurieren und ohne Fehler zu starten.
         \subsection{Lösungen}
         
-        \begin{figure}
-        	\texttt{INTERFACES="eth1"}
-        	\caption{\label{iscdhcpserver} Konfiguration der Datei auf dem Pfad \texttt{/etc/default/isc-dhcp-server}}
-        \end{figure}
         
-        \begin{figure}
-        	\texttt{subnet 172.20.1.0 netmask 255.255.255.192 \{\\\space range 172.20.1.1 172.20.1.50;\\\}}\\
-        	\caption{\label{dhcpdconf} Konfiguration des IP-Ranges in \texttt{/etc/dhcp/dhcpd.conf}}
-        \end{figure}
-
         \begin{tabular}{lp{10cm}}
+        	Konfiguration der VirtualBox & Bei der virtuellen Maschine des Servers muss eine zweite virtuelle Netzwerkkarte hinzugefügt werden. Es wird die Einstellung \textit{Internes Netzwerk} verwendet (Figure \ref{vboxconfig})\\
             DHCP Server & Das Packet \textit{isc-dhcp-server} eignet sich sehr gut für diese Aufgabe \\
             IP Konfiguration & Für eine korrekte verwendung muss die IP Adresse des Servers manuell gesetzt werden. Auf Unix-artigen Systemen wird dafür \textit{ifconfig} verwendet: \texttt{sudo ifconfig eth1 172.20.1.1 netmask 255.255.255.192}\\
-            DHCP Konfiguration & Für die Konfiguration des DHCP Servers müssen 2 Dateien im \texttt{/etc/} modifiziert werden. Zum einen muss \texttt{/etc/default/isc-dhcp-server} modifiziert werden. Hier muss angegeben werden, auf welchem Netzwerk Interface der DHCP Server laufen wird. Wie schon im Beispiel der IP-Konfiguration wird hier das Interface \texttt{eth1} angegeben (Figure \ref{iscdhcpserver}). Auch muss die Datei \texttt{/etc/dhcp/dhcpd.conf} modifiziert werden (Figure \ref{dhcpdconf}). Hier muss die korrekte IP-Range definiert werden.
+            DHCP Konfiguration & Für die Konfiguration des DHCP Servers müssen 2 Dateien im \texttt{/etc/} modifiziert werden. Zum einen muss \texttt{/etc/default/isc-dhcp-server} modifiziert werden. Hier muss angegeben werden, auf welchem Netzwerk Interface der DHCP Server laufen wird. Wie schon im Beispiel der IP-Konfiguration wird hier das Interface \texttt{eth1} angegeben (Figure \ref{iscdhcpserver}). Auch muss die Datei \texttt{/etc/dhcp/dhcpd.conf} modifiziert werden (Figure \ref{dhcpdconf}). Hier muss die korrekte IP-Range definiert werden.\\
+	        DHCP Server starten & Der DHCP Server wird mit dem Befehl \texttt{sudo /etc/init.d/isc-dhcp-server start} gestartet.\\
         \end{tabular}
         
-        \section{Ergebnis \& Testprotokoll}
+        
 
-        \subsection{Ergebnis}
+		\begin{figure}
+			\hrulefill\\
+			\texttt{INTERFACES="eth1"}
+			\caption{\label{iscdhcpserver} Konfiguration der Datei auf dem Pfad \texttt{/etc/default/isc-dhcp-server}}
+			\hrulefill
+		\end{figure}
+		
+		\begin{figure}
+			\hrulefill\\
+			\texttt{subnet 172.20.1.0 netmask 255.255.255.192 \{\\\hspace*{8pt} range 172.20.1.1 172.20.1.50;\\\}}\\
+			\caption{\label{dhcpdconf} Konfiguration des IP-Ranges in \texttt{/etc/dhcp/dhcpd.conf}}
+			\hrulefill
+		\end{figure}
 
+
+		\begin{figure}
+			\hrulefill\\
+			\center
+			
+			\includegraphics[width=8cm]{vbox_network_config}
+			\caption{\label{vboxconfig} Netzwerk-Konfiguration der VirtualBox Maschine.}
+			\hrulefill
+		\end{figure}
+
+		\section{Ergebnis \& Testprotokoll}
+		
+		\subsection{Ergebnis}
+		
         \begin{figure}
+          \hrulefill\\
           \center
-          
           \includegraphics[width=8cm]{cmd_ipconfig_dynamic_ip}
           \caption{\label{dynip} Dynamisch zugewiesene IP auf Windows in \texttt{ipconfig}}
+          \hrulefill
         \end{figure}
 
         \begin{figure}
-          \center
-          
+	      \hrulefill\\
+	      \center
           \includegraphics[width=8cm]{ie_web_example}
           \caption{\label{webserver} Erfolgreicher Zugriff vom Windows Client auf den Webserver auf dem Debian Server}
+          \hrulefill
         \end{figure}
         
         Das Endergebnis war eine Debian 8 Maschine mit funktionierendem DHCP Server. Das richtige funktionieren des Servers wurde mit einem Windows-Client getestet welcher beim starten automatisch eine IP des im Server definierten Bereiches übernahm (Figure \ref{dynip}).
@@ -108,10 +134,22 @@
         \begin{tabular}{|l|l|p{5cm}|}
           \hline
           \textbf{Aufgabe} & \textbf{Status \ref{statusref}} & \textbf{Kommentar} \\\hline
-          Server OS Aufsetzen & E & \begin{itemize}
+          Virtual Box aufsetzen & E & - \\\hline
+          OS installieren & E & \begin{itemize}
           \item Debian
           \item Windows
           \end{itemize} \\\hline
+          Server konfigurieren & E & \begin{itemize}
+          	\item IP Adresse festsetzen
+          	\item DHCP Server konfigurieren
+          	\item DHCP Server starten
+          \end{itemize}\\\hline 
+          Client OS konfigurieren & E & Automatische IP \\\hline
+          System testen & E & \begin{itemize}
+          	\item Wird der DHCP Server erfolgreich gestartet?
+          	\item Bekommt der Windows-Client eine automatische IP?
+          	\item Kann der Client mit dem Server kommunizieren?
+          \end{itemize}\\\hline
         \end{tabular}
 
         \label{statusref}
