@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  17 APR 2016 13:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  17 APR 2016 14:07
 entering extended mode
 **analyse.tex
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.tex
@@ -564,7 +564,10 @@ Underfull \hbox (badness 1221) in paragraph at lines 41--42
 \OT1/put/m/n/12 men-te, so wird die Co-mic-fi-gur \OT1/put/m/it/12 Po-peye
  []
 
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
@@ -588,6 +591,11 @@ Underfull \hbox (badness 1360) in paragraph at lines 52--53
  []
 
 
+Underfull \hbox (badness 1005) in paragraph at lines 54--55
+\OT1/put/m/it/12 nachtspl[]atzchen'' \OT1/put/m/n/12 ist ei-ne []Ubertreibung
+ []
+
+
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -603,22 +611,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
  (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
-
-
-Package rerunfilecheck Warning: File `analyse.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `analyse.out':
-(rerunfilecheck)             Before: 067693E5893BF96ED701CFE9CF64A0C6;148
-(rerunfilecheck)             After:  2E4F06E80138D9F0E88B54B68F683F87;199.
+Package rerunfilecheck Info: File `analyse.out' has not changed.
+(rerunfilecheck)             Checksum: 2E4F06E80138D9F0E88B54B68F683F87;199.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 5531 strings out of 493921
- 81648 string characters out of 3144870
+ 5532 strings out of 493921
+ 81659 string characters out of 3144870
  169090 words of memory out of 3000000
- 8754 multiletter control sequences out of 15000+200000
+ 8755 multiletter control sequences out of 15000+200000
  42445 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,10n,43p,801b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -626,9 +627,9 @@ Here is how much of TeX's memory you used:
 m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on analyse.pdf (2 pages, 60099 bytes).
+Output written on analyse.pdf (2 pages, 61603 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 65 PDF objects out of 1000 (max. 8388607)
  16 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
