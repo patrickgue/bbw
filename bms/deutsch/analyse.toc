@@ -1,0 +1,11 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}
+\contentsline {section}{\numberline {2}Zitat 1, S. 149}{1}{section.2}
+\contentsline {paragraph}{Kontext:}{1}{section*.2}
+\contentsline {paragraph}{Kritik:}{1}{section*.3}
+\contentsline {section}{\numberline {3}Zitat 3, S. 170}{1}{section.3}
+\contentsline {paragraph}{Kontext:}{1}{section*.4}
+\contentsline {paragraph}{Kritik:}{1}{section*.5}
+\contentsline {section}{\numberline {4}Zitat 5, S. 184}{2}{section.4}
+\contentsline {paragraph}{Kontext:}{2}{section*.6}
+\contentsline {paragraph}{Kritik:}{2}{section*.7}

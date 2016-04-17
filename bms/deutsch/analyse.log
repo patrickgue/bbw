@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  29 FEB 2016 14:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  17 APR 2016 13:53
 entering extended mode
-**spick_pruefung_2016-03-01.tex
-
-(C:\Users\Patrick\Desktop\DATA\notes\school\physics\spick_pruefung_2016-03-01.t
-ex
+**analyse.tex
+(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -17,8 +15,8 @@ an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -249,17 +247,6 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip43
-\f@ncyO@elh=\skip44
-\f@ncyO@erh=\skip45
-\f@ncyO@olh=\skip46
-\f@ncyO@orh=\skip47
-\f@ncyO@elf=\skip48
-\f@ncyO@erf=\skip49
-\f@ncyO@olf=\skip50
-\f@ncyO@orf=\skip51
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
@@ -286,7 +273,14 @@ Language: germanb 2008/06/01 v2.6m German support from the babel system
 \l@austrian = a dialect from \language\l@german 
 Package babel Info: Making " an active character on input line 102.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\utopia.sty"
+Package: utopia 2005/04/12 PSNFSS-v9.2a (P.Dyballa) 
+
+
+Package utopia Warning: This package is to be regarded as obsolete.
+(utopia)                See the PSNFSS documentation.
+
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
@@ -318,14 +312,22 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks17
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\parskip.sty"
-Package: parskip 2001/04/09 non-zero parskip adjustments
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
 
@@ -445,94 +447,25 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
-Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count101
-\mult@box=\box26
-\multicol@leftmargin=\dimen116
-\c@unbalance=\count102
-\c@collectmore=\count103
-\doublecol@number=\count104
-\multicoltolerance=\count105
-\multicolpretolerance=\count106
-\full@width=\dimen117
-\page@free=\dimen118
-\premulticols=\dimen119
-\postmulticols=\dimen120
-\multicolsep=\skip53
-\multicolbaselineskip=\skip54
-\partial@page=\box27
-\last@line=\box28
-\mult@rightbox=\box29
-\mult@grightbox=\box30
-\mult@gfirstbox=\box31
-\mult@firstbox=\box32
-\@tempa=\box33
-\@tempa=\box34
-\@tempa=\box35
-\@tempa=\box36
-\@tempa=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\c@columnbadness=\count107
-\c@finalcolumnbadness=\count108
-\last@try=\dimen121
-\multicolovershoot=\dimen122
-\multicolundershoot=\dimen123
-\mult@nat@firstbox=\box50
-\colbreak@box=\box51
-\multicol@sort@counter=\count109
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+put on input line 29.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
-)
-Package graphics Info: Driver file: pdftex.def on input line 91.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count110
-))
-\Gin@req@height=\dimen124
-\Gin@req@width=\dimen125
-)
-(C:\Users\Patrick\Desktop\DATA\notes\school\physics\spick_pruefung_2016-03-01.a
-ux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 25.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1put.fd"
+File: ot1put.fd 2001/06/04 font definitions for OT1/put.
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -542,27 +475,27 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(86.72377pt, 438.51411pt, 72.26999pt)
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=438.51411pt
+* \textwidth=452.9679pt
 * \textheight=700.50687pt
-* \oddsidemargin=14.45378pt
+* \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=111.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=48.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumnfalse
+* \@twocolumntrue
 * \@twosidetrue
 * \@mparswitchtrue
 * \@reversemarginfalse
@@ -570,227 +503,132 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 25.
-\AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 25.
+(lastpage)             ! on input line 29.
+\AtBeginShipoutBox=\box26
+Package hyperref Info: Link coloring OFF on input line 29.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count111
+\c@section@level=\count101
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
 
-(C:\Users\Patrick\Desktop\DATA\notes\school\physics\spick_pruefung_2016-03-01.o
-ut)
-(C:\Users\Patrick\Desktop\DATA\notes\school\physics\spick_pruefung_2016-03-01.o
-ut)
+(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.out)
+(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.out)
 \@outlinefile=\write3
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count112
-\scratchdimen=\dimen126
-\scratchbox=\box53
-\nofMPsegments=\count113
-\nofMParguments=\count114
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count115
-\MPscratchDim=\dimen127
-\MPnumerator=\count116
-\makeMPintoPDFobject=\count117
-\everyMPtoPDFconversion=\toks19
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <14.4> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 27.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 27.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              <7> on input line 31.
 
-(C:\Users\Patrick\Desktop\DATA\notes\school\physics\spick_pruefung_2016-03-01.t
-oc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
-)
+(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.toc)
 \tf@toc=\write4
- [1
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 35.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
+Underfull \hbox (badness 7433) in paragraph at lines 39--40
+ []\OT1/put/b/n/12 Kontext:[] \OT1/put/m/n/12 Die Per-son \OT1/put/m/it/12 Po-p
+eye \OT1/put/m/n/12 kommt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-<img/wurf_example.png, id=58, 481.8pt x 441.65pt>
-File: img/wurf_example.png Graphic file (type png)
- <use img/wurf_example.png>
-Package pdftex.def Info: img/wurf_example.png used on input line 65.
-(pdftex.def)             Requested size: 170.71652pt x 156.48695pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
+Underfull \hbox (badness 3895) in paragraph at lines 41--42
+ []\OT1/put/b/n/12 Kritik:[] \OT1/put/m/n/12 Der Erz[]ahler kri-ti-siert \OT1/p
+ut/m/it/12 Po-peye
  []
 
 
-Overfull \vbox (56.48695pt too high) has occurred while \output is active []
+Underfull \hbox (badness 7273) in paragraph at lines 41--42
+\OT1/put/m/n/12 we-gen sei-nem ag-gres-si-ven Ver-hal-ten.
+ []
 
 
-Overfull \vbox (55.48695pt too high) has occurred while \output is active []
+Underfull \hbox (badness 1817) in paragraph at lines 41--42
+\OT1/put/m/it/12 weis-se Ele-fan-ten zu ach-ten'' \OT1/put/m/n/12 und \OT1/put/
+m/it/12 ,,von
+ []
 
 
-Overfull \vbox (54.48695pt too high) has occurred while \output is active []
+Underfull \hbox (badness 1221) in paragraph at lines 41--42
+\OT1/put/m/n/12 men-te, so wird die Co-mic-fi-gur \OT1/put/m/it/12 Po-peye
+ []
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-Overfull \vbox (53.48695pt too high) has occurred while \output is active []
+]
+Underfull \hbox (badness 5696) in paragraph at lines 52--53
+ []\OT1/put/b/n/12 Kontext:[] \OT1/put/m/n/12 Der Satz steht im Kon-text
+ []
 
 
-Overfull \vbox (52.48695pt too high) has occurred while \output is active []
+Underfull \hbox (badness 3189) in paragraph at lines 52--53
+\OT1/put/m/n/12 ei-ner gan-zen Rei-he von in-di-vi-du-el-len
+ []
 
 
-Overfull \vbox (51.48695pt too high) has occurred while \output is active []
+Underfull \hbox (badness 2837) in paragraph at lines 52--53
+\OT1/put/m/n/12 Ei-gen-hei-ten von Men-schen. So meint
+ []
 
 
-Overfull \vbox (50.48695pt too high) has occurred while \output is active []
+Underfull \hbox (badness 1360) in paragraph at lines 52--53
+\OT1/put/m/n/12 der Prot-ago-nist, es ge-be Leu-te, de-nen
+ []
 
 
-Overfull \vbox (49.48695pt too high) has occurred while \output is active []
+AED: lastpage setting LastPage
 
-
-Overfull \vbox (48.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (47.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (46.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (45.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (44.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (43.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (42.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (41.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (40.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (39.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (38.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (37.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (36.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (35.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (34.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (33.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (32.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (31.48695pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (30.48695pt too high) has occurred while \output is active []
-
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [2
 
- <C:/Users/Patrick/Desktop/DATA/notes/school/physics/img/wurf_example.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 77.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
+ (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
 
-<img/force_example.png, id=84, 404.51125pt x 283.0575pt>
-File: img/force_example.png Graphic file (type png)
+Package rerunfilecheck Warning: File `analyse.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-<use img/force_example.png>
-Package pdftex.def Info: img/force_example.png used on input line 82.
-(pdftex.def)             Requested size: 142.26378pt x 99.55103pt.
- 
-AED: lastpage setting LastPage
-[3 <C:/Users/Patrick/Desktop/DATA/notes/school/physics/img/force_example.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
-
-(C:\Users\Patrick\Desktop\DATA\notes\school\physics\spick_pruefung_2016-03-01.a
-ux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
-Package rerunfilecheck Info: File `spick_pruefung_2016-03-01.out' has not chang
-ed.
-(rerunfilecheck)             Checksum: DFAE746C9F2E56265876702DA31ECDE9;569.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
+Package rerunfilecheck Info: Checksums for `analyse.out':
+(rerunfilecheck)             Before: 067693E5893BF96ED701CFE9CF64A0C6;148
+(rerunfilecheck)             After:  2E4F06E80138D9F0E88B54B68F683F87;199.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 6362 strings out of 493921
- 93283 string characters out of 3144870
- 186163 words of memory out of 3000000
- 9548 multiletter control sequences out of 15000+200000
- 26265 words of font info for 48 fonts, out of 3000000 for 9000
+ 5531 strings out of 493921
+ 81648 string characters out of 3144870
+ 169090 words of memory out of 3000000
+ 8754 multiletter control sequences out of 15000+200000
+ 42445 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,11n,43p,292b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,10n,43p,801b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
-/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
-8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on spick_pruefung_2016-03-01.pdf (3 pages, 193421 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on analyse.pdf (2 pages, 60099 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
