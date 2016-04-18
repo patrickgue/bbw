@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  18 APR 2016 20:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  18 APR 2016 20:23
 entering extended mode
 **spick.tex
 
@@ -631,7 +631,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 3.
 )
 \tf@toc=\write4
- <se1.png, id=28, 315.42844pt x 259.7203pt>
+ <se1.png, id=33, 315.42844pt x 259.7203pt>
 File: se1.png Graphic file (type png)
  <use se1.png>
 Package pdftex.def Info: se1.png used on input line 38.
@@ -642,8 +642,18 @@ Overfull \hbox (27.94115pt too wide) in paragraph at lines 38--39
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Overfull \hbox (18.40765pt too wide) in paragraph at lines 40--40
+[]\OT1/put/b/n/12 Hangantriebskraft 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
 \OT1/put/b/n/12 der schie-fen Ebe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]\OT1/put/b/n/12 Gekoppelte
  []
 
 
@@ -652,22 +662,22 @@ AED: lastpage setting LastPage
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Patrick/Document
 s/GitHub/bbw.blog-cms/bms/physics/spick_2016_04_19/se1.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
 
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\physics\spick_2016_04_19\sp
 ick.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `spick.out' has not changed.
-(rerunfilecheck)             Checksum: 0132643ED39BFC70BBC124C7C6528E35;317.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
+(rerunfilecheck)             Checksum: 1CA00DE7968DF708CF7223D949AA1A9F;395.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 6324 strings out of 493921
- 92912 string characters out of 3144870
- 185111 words of memory out of 3000000
- 9524 multiletter control sequences out of 15000+200000
+ 6326 strings out of 493921
+ 92942 string characters out of 3144870
+ 186111 words of memory out of 3000000
+ 9525 multiletter control sequences out of 15000+200000
  31000 words of font info for 39 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,7n,43p,238b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -678,9 +688,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/adobe/utopia/putr8a.pfb>
-Output written on spick.pdf (1 page, 127406 bytes).
+Output written on spick.pdf (1 page, 131459 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
