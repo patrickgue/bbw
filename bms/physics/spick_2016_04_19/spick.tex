@@ -1,0 +1,47 @@
+\documentclass[11pt,twoside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{utopia}
+\usepackage[margin=1in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{makeidx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{multicol}
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{Spick Physikprüfung}
+\newcommand{\authorText}{Janes Thomas, Patrick Günthard}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\section{Formeln}
+	\begin{multicols}{3}
+		
+		\includegraphics[width=5cm]{se1}
+		
+		\subsection{Normalkraft}
+		\(F_N = \cos\alpha*F_G\)
+		\subsection{Reibungskraft}
+		\subsection{Kräftezerlegung auf der schiefen Ebene}
+		\subsection{Körper}
+	\end{multicols}
+	
+\end{document}
