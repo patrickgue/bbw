@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside,titlepage]{article}
+\documentclass[12pt,a4paper,twoside,titlepage]{article} 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{utopia}
@@ -58,6 +58,9 @@
         \item starten des DHCP Servers
         \item Netzwerk Konfiguration auf dem Windows-Client
         \item Testen auf dem Windows-Client
+          \begin{itemize}
+          \item Wireshark
+          \end{itemize}
         \end{enumerate}
 
         \section{Vorgehen}
@@ -120,6 +123,13 @@
         \begin{figure}
 	      \hrulefill\\
 	      \center
+          \includegraphics[width=8cm]{wireshark_dhcp}
+          \caption{\label{wireshark} Wireshark auf dem Windows-Client}
+          \hrulefill
+        \end{figure}
+        \begin{figure}
+	      \hrulefill\\
+	      \center
           \includegraphics[width=8cm]{ie_web_example}
           \caption{\label{webserver} Erfolgreicher Zugriff vom Windows Client auf den Webserver auf dem Debian Server}
           \hrulefill
@@ -127,7 +137,14 @@
         
         Das Endergebnis war eine Debian 8 Maschine mit funktionierendem DHCP Server. Das richtige funktionieren des Servers wurde mit einem Windows-Client getestet welcher beim starten automatisch eine IP des im Server definierten Bereiches übernahm (Figure \ref{dynip}).
 
-        Um zu testen ob auch eine Verbindung zwischen den beiden virtuellen Maschinen möglich ist, installierte ich auf dem Debian System ein Web-Server auf welchen ich auf dem Windows System erfolgreich zugreifen konnte (Figure \ref{webserver}).
+        Um die Verbindung genauer zu testen, kann Wireshark verwendet werden:
+        \begin{itemize}
+        \item Zuerst muss der DHCP Server auf dem Debian-Server abgeschalten werden um eine Abfrage aufzeichnen zu können.
+        \item Dann kann man in Wireshark die Aufzeichnung starten.
+        \item Der DHCP-Server kann dann wieder gestartet werden und die DHCP Verbindung wird hergestellt. Sie sollte jetzt im Wireshark aufgezeichnet werden (Figure \ref{wireshark}).
+        \end{itemize}
+        
+        Auch eine Möglichkeit die Verbindung zwischen den beiden virtuellen Maschinen zu testen ist, auf dem Debian System ein Web-Server zu installieren und mit dem Windows System darauf zuzugreifen (Figure \ref{webserver}).
 
         \subsection{Testprotokoll}
 
@@ -150,6 +167,7 @@
           	\item Wird der DHCP Server erfolgreich gestartet?
           	\item Bekommt der Windows-Client eine automatische IP?
           	\item Kann der Client mit dem Server kommunizieren?
+                \item Wird die DHCP Verbindung in einem Wireshark Scan angezeigt?
           \end{itemize}\\\hline
         \end{tabular}
 
@@ -159,6 +177,8 @@
         \section{Reflexion}
         
         Die Aufgabe war für mich eine Herausforderung, wenn auch keine grosse. Da ich schon einige Erfahrungen im Betrieb von Applikationen dieser Art auf GNU/Linux Systeme hatte, kam ich schnell voran bei der Konfiguration des DHCP Servers.
+
+        Das Testen war zu Begin nicht leicht da ich nicht wusste wie ich an die Aufgabe herangehen sollte. Als ich dann angefangen habe Wireshark zu benutzen, war es aber kein Problem mehr. 
         
         
 \end{document}
