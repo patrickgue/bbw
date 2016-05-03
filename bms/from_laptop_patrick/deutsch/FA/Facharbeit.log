@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  19 APR 2016 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  3 MAY 2016 22:14
 entering extended mode
 **Facharbeit.tex
 
@@ -627,27 +627,27 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
 \FA\Facharbeit.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 37.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Try loading font information for OT1+put on input line 34.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Try loading font information for OT1+put on input line 37.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1put.fd"
 File: ot1put.fd 2001/06/04 font definitions for OT1/put.
 )
@@ -667,9 +667,9 @@ File: ot1put.fd 2001/06/04 font definitions for OT1/put.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 34.
+(lastpage)             ! on input line 37.
 \AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 34.
+Package hyperref Info: Link coloring OFF on input line 37.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -678,9 +678,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count108
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
+LaTeX Info: Redefining \ref on input line 37.
+LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \nameref on input line 37.
 
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
 \FA\Facharbeit.out)
@@ -722,26 +722,13 @@ LaTeX Info: Redefining \nameref on input line 34.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<metamorphosis-kafka.jpg, id=35, 602.25pt x 669.50125pt>
-File: metamorphosis-kafka.jpg Graphic file (type jpg)
-
-<use metamorphosis-kafka.jpg>
-Package pdftex.def Info: metamorphosis-kafka.jpg used on input line 36.
-(pdftex.def)             Requested size: 199.16928pt x 221.40602pt.
-LaTeX Font Info:    Try loading font information for TS1+put on input line 36.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1put.fd"
-File: ts1put.fd 2001/06/04 font definitions for TS1/put.
-)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 36.
+(Font)              <14.4> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 36.
- [1
+(Font)              <7> on input line 39.
+[1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Patrick/Document
-s/GitHub/bbw.blog-cms/bms/from_laptop_patrick/deutsch/FA/metamorphosis-kafka.jp
-g>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
 \FA\Facharbeit.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -759,50 +746,67 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 65.
+[2
 
-Overfull \hbox (31.64719pt too wide) in paragraph at lines 75--76
+]
+LaTeX Font Info:    Try loading font information for TS1+put on input line 55.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1put.fd"
+File: ts1put.fd 2001/06/04 font definitions for TS1/put.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 68.
+ [3
+
+]
+Overfull \hbox (31.64719pt too wide) in paragraph at lines 78--79
 \OT1/put/m/n/12 Ver[]anderung der Be-zie-hun-gen zwi-schen den Per-so-nen pas-s
 ie-ren oft nach ei-nem []ahnlichen
  []
 
-[3]
-Overfull \hbox (29.85982pt too wide) in paragraph at lines 91--92
+[4]
+Overfull \hbox (29.85982pt too wide) in paragraph at lines 94--95
 \OT1/put/m/n/12 schich-te im-mer mehr ab und er-reicht kurz vor dem Tod des Pro
 t-ago-ni-sten den H[]ohepunkt. 
  []
 
-[4] 
+[5
+
+] [6] [7] [8
+
+] [9
+
+] 
 AED: lastpage setting LastPage
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+[10
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
 
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
 \FA\Facharbeit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
 Package rerunfilecheck Info: File `Facharbeit.out' has not changed.
-(rerunfilecheck)             Checksum: F90E1E7B7B7EA068D014B34AC77B4DB8;581.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
+(rerunfilecheck)             Checksum: D3EC5C31644C861D90EA2628CFA51621;630.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
  ) 
 Here is how much of TeX's memory you used:
- 6774 strings out of 493921
- 99241 string characters out of 3144870
- 184474 words of memory out of 3000000
- 9947 multiletter control sequences out of 15000+200000
- 56901 words of font info for 55 fonts, out of 3000000 for 9000
+ 6777 strings out of 493921
+ 99171 string characters out of 3144870
+ 184421 words of memory out of 3000000
+ 9941 multiletter control sequences out of 15000+200000
+ 50179 words of font info for 50 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,11n,43p,586b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,11n,43p,588b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on Facharbeit.pdf (5 pages, 124179 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on Facharbeit.pdf (10 pages, 97625 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
