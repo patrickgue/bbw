@@ -1,18 +1,12 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2015.10.1)  4 MAY 2016 08:12
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.2)  4 MAY 2016 15:17
 entering extended mode
-**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx\HCode\def\HCod
-e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
-@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\doc
-umentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname te
-x4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HC
-ode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  Facharbeit.tex
-
-(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
-\FA\Facharbeit.tex
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\input Facharbeit.tex
+(./Facharbeit.tex (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -26,34 +20,20 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\tex4ht.sty"
-version 2008-10-27-17:23
-Package: tex4ht 
---------------------------------------
---- Note --- for _ at preamble, use the command line option `early_'
---------------------------------------
---------------------------------------
---- Note --- for ^ at preamble, use the command line option `early^'
---------------------------------------
-\tmp:toks=\toks14
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\usepackage.4ht"
-version 2009-05-21-09:32
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2006/05/05 v1.1b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf/tex/latex/base/utf8.def
+File: utf8.def 2006/03/30 v1.1i UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
-... processing UTF-8 mapping file for font encoding T1
+... processing UTF-8 mapping file for font encodingT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -200,10 +180,10 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+2423 (decimal 9251)
 )
 Now handling font encoding OT1 ...
-... processing UTF-8 mapping file for font encoding OT1
+... processing UTF-8 mapping file for font encodingOT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -231,10 +211,10 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+201D (decimal 8221)
 )
 Now handling font encoding OMS ...
-... processing UTF-8 mapping file for font encoding OMS
+... processing UTF-8 mapping file for font encodingOMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -257,70 +237,61 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2005/11/23 v3.8h The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+(/usr/share/texmf/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2005/11/23 v3.8h Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\germanb.ldf"
-Language: germanb 2008/06/01 v2.6m German support from the babel system
+(/usr/share/texmf/tex/generic/babel/germanb.ldf
+Language: germanb 2004/02/19 v2.6k German support from the babel system
 \l@austrian = a dialect from \language\l@german 
-Package babel Info: Making " an active character on input line 102.
+Package babel Info: Making " an active character on input line 91.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\utopia.sty"
-Package: utopia 2005/04/12 PSNFSS-v9.2a (P.Dyballa) 
-
-
-Package utopia Warning: This package is to be regarded as obsolete.
-(utopia)                See the PSNFSS documentation.
-
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+(/usr/share/texmf/tex/latex/base/makeidx.sty
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks16
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texmf/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+(/usr/share/texmf/tex/latex/config/graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 90.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvips.def"
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
+\Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+(/usr/share/texmf/tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -331,130 +302,61 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
-
-LaTeX Warning: You have requested release `2014/05/01' of LaTeX,
-               but only release `2011/06/27' is available.
-
-Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+(/usr/share/texmf/tex/latex/lastpage/lastpage.sty
+Package: lastpage 1994/06/25 v0.1b LaTeX2e package for refs to last page number
+ (JPG)
 )
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
-)
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
-)
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-
-
-Package auxhook Warning: Cannot patch \document,
-(auxhook)                using \AtBeginDocument instead.
-
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2007/02/07 v6.75r Hypertext links for LaTeX
 \@linkdim=\dimen106
-\Hy@linkcounter=\count88
-\Hy@pagecounter=\count89
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2007/02/07 v6.75r Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count90
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/share/texmf/tex/latex/config/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count91
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
-\Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2006/08/22 v2.4 Connects package keyval with LaTeX options (
+HO)
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen107
-\Fld@menulength=\count92
-\Field@Width=\dimen108
-\Fld@charsize=\dimen109
+Package hyperref Info: Hyper figures OFF on input line 2288.
+Package hyperref Info: Link nesting OFF on input line 2293.
+Package hyperref Info: Hyper index ON on input line 2296.
+Package hyperref Info: Plain pages OFF on input line 2303.
+Package hyperref Info: Backreferencing OFF on input line 2308.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2444.
+(/usr/share/texmf/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+)
+LaTeX Info: Redefining \url on input line 2599.
+\Fld@menulength=\count91
+\Field@Width=\dimen107
+\Fld@charsize=\dimen108
+\Choice@toks=\toks17
 \Field@toks=\toks18
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring ON on input line 6313.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count93
-
-
-Package hyperref Message: Stopped early.
-
+Package hyperref Info: Hyper figures OFF on input line 3102.
+Package hyperref Info: Link nesting OFF on input line 3107.
+Package hyperref Info: Hyper index ON on input line 3110.
+Package hyperref Info: backreferencing OFF on input line 3117.
+Package hyperref Info: Link coloring OFF on input line 3122.
+\Hy@abspage=\count92
+\c@Item=\count93
+\c@Hfootnote=\count94
 )
-
-Package hyperref Message: Driver: htex4ht.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\htex4ht.def"
-File: htex4ht.def 2012/11/06 v6.83m Hyperref driver for TeX4ht
-Package hyperref Info: tex4ht is already loaded.
+*hyperref using default driver hpdftex*
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
+\Fld@listcount=\count95
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+(/usr/share/texmf/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -469,13 +371,13 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+(/usr/share/texmf/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
-File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2006/03/30 v1.1i UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00A4 (decimal 164)
@@ -578,612 +480,211 @@ Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
 Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
 Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
 Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
-Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
-Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
-Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
-Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
-Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
-Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
-Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
-Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
-Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
-Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
-Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
-Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
-Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
-Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
-Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
-Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
-Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
-Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
-Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
-Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
-Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
-Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
-Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
-Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
-Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
-Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
-Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
-Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
-Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count94
-\Gm@cntv=\count95
-\c@Gm@tempcnt=\count96
-\Gm@bindingoffset=\dimen110
-\Gm@wd@mp=\dimen111
-\Gm@odd@mp=\dimen112
-\Gm@even@mp=\dimen113
-\Gm@layoutwidth=\dimen114
-\Gm@layoutheight=\dimen115
-\Gm@layouthoffset=\dimen116
-\Gm@layoutvoffset=\dimen117
+(/usr/share/texmf/tex/latex/geometry/geometry.sty
+Package: geometry 2002/07/08 v3.2 Page Geometry
+\Gm@cnth=\count96
+\Gm@cntv=\count97
+\c@Gm@tempcnt=\count98
+\Gm@bindingoffset=\dimen109
+\Gm@wd@mp=\dimen110
+\Gm@odd@mp=\dimen111
+\Gm@even@mp=\dimen112
 \Gm@dimlist=\toks19
+) (./Facharbeit.aux)
+\openout1 = `Facharbeit.aux'.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\tex4ht.4ht"
-version 2009-01-07-07:11
---------------------------------------
---- Note --- for additional information, use the command line option `info'
---------------------------------------
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 38.
 
-::::::::::::::::::::::::::::::::::::::::::
- TeX4ht info is available in the log file 
-::::::::::::::::::::::::::::::::::::::::::
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\tex4ht.sty"
-version 2008-10-27-17:23
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: dvips.def on input line 130.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
-File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-))
---- needs --- tex4ht Facharbeit ---
-\tmp:cnt=\count97
-
-(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
-\FA\Facharbeit.tmp)
-\tmp:dim=\skip52
---------------------------------------
---- Note --- for XML code, use the command line option `xml' or `xhtml'
---------------------------------------
-
-(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
-\FA\Facharbeit.xref)
-\:refout=\write3
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
---------------------------------------
---- Note --- to remove the <?xml version=...?> processing instruction use the c
-ommand line option `no-VERSION'
---------------------------------------
---------------------------------------
---- Note --- to remove the DOCTYPE declaration use the command line option `no-
-DOCTYPE'
---------------------------------------
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-)
---------------------------------------
---- Note --- for marking of the base font, use the command line option `fonts+'
-
---------------------------------------
---------------------------------------
---- Note --- for non active _, use the command line option `no_'
---------------------------------------
---------------------------------------
---- Note --- for _ of catcode 13, use the command line option `_13'
---------------------------------------
---------------------------------------
---- Note --- for non active ^, use the command line option `no^'
---------------------------------------
---------------------------------------
---- Note --- for ^ of catcode 13, use the command line option `^13'
---------------------------------------
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
---------------------------------------
---- Note --- for alternative charset, use the command line option `charset=...'
-
---------------------------------------
---------------------------------------
---- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
-on
---------------------------------------
---------------------------------------
---- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for content and toc in 2 frames, use the command line option `fram
-es'
---------------------------------------
---------------------------------------
---- Note --- for content, toc, and footnotes in 3 frames, use the command line 
-option `frames-fn'
---------------------------------------
---------------------------------------
---- Note --- for file extension name xht, use the command line option `xht'
---------------------------------------
-TeX4ht package options: html
---------------------------------------
---- Note --- to ignore CSS code, use the command line option `-css
---------------------------------------
---------------------------------------
---- Note --- for inline CSS code, use the command line option `css-in'
---------------------------------------
---------------------------------------
---- Note --- for pop ups on mouse over, use the command line option `mouseover'
-
---------------------------------------
---------------------------------------
---- Note --- for addressing images in a subdirectory, use the command line opti
-on `imgdir:.../'
---------------------------------------
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-)
-\:tokwrite=\toks20
-\:tokpage=\toks21
---------------------------------------
---- Note --- for back links to toc, use the command line option `sections+'
---------------------------------------
---------------------------------------
---- Note --- for linear crosslinks of pages, use the command line option `next'
-
---------------------------------------
-\:tocout=\write4
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\latex.4ht"
-version 2009-05-21-09:32
---------------------------------------
---- Note --- for links into captions, instead of float heads, use the command l
-ine option `refcaption'
---------------------------------------
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
---------------------------------------
---- Note --- For mini tocs immediately aftter the header use the command line o
-ption `minitoc<'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements with valued data, use the command lin
-e option `enumerate+'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements li's with value attributes, use the c
-ommand line option `enumerate-'
---------------------------------------
---------------------------------------
---- Note --- for CSS2 code, use the command line option `css2'
---------------------------------------
---------------------------------------
---- Note --- for pictorial tabular, use the command line option `pic-tabular'
---------------------------------------
---------------------------------------
---- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
---------------------------------------
---------------------------------------
---- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
-
---------------------------------------
---------------------------------------
---- Note --- for inline footnotes use command line option `fn-in'
---------------------------------------
---------------------------------------
---- Note --- for tracing of latex font commands, use the command line option `f
-onts'
---------------------------------------
---------------------------------------
---- Note --- for width specifications of tabular p entries, use the `p-width' c
-ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
-style="width:\HColWidth"}}
---------------------------------------
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
---------------------------------------
---- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
-
---------------------------------------
---------------------------------------
---- Note --- for pictorial array, use the command line option `pic-array'
---------------------------------------
---------------------------------------
---- Note --- for pictorial $...$ environments, use the command line option `pic
--m' (not recommended!!)
---------------------------------------
---------------------------------------
---- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
-he command line option `pic-m+' (not safe!!)
---------------------------------------
---------------------------------------
---- Note --- for pictorial array, use the command line option `pic-array'
---------------------------------------
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\fontmath.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\article.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
---------------------------------------
---- Note --- for automatic sectioning pagination, use the command line option `
-1', `2', `3', '4', '5', '6', or '7'
---------------------------------------
---------------------------------------
---- Note --- for files named derived from section titles, use the command line 
-option `sec-filename'
---------------------------------------
---------------------------------------
---- Note --- for i-columns index, use the command line option `index=i' (e.g., 
-index=2)
---------------------------------------
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\inputenc.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\utf8.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\babel.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\english.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\germanb.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\makeidx.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\graphicx.4ht"
-version 2015-08-05-15:37
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\graphics.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
---------------------------------------
---- Note --- if included graphics are of degraded quality, try the command line
- options `graphics-num' or `graphics-'. The `num' should provide the density of
- pixels in the bitmaps (e.g., 110). 
---------------------------------------
---------------------------------------
---- Note --- for key dimensions try the option `Gin-dim'; for key dimensions wh
-en bounding box is unavailable try `Gin-dim+'; neither is recommended
---------------------------------------
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\dvips.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\hyperref.4ht"
-version 2011-01-30-16:01
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count98
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\nameref.4ht"
-version 2013-06-28-15:01
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-LaTeX Info: Redefining \autoref on input line 100.
-\Hy@SectionHShift=\skip53
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\pd1enc.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\url.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
---------------------------------------
---- Note --- for URL encoding within href use the command line option `url-enc'
-
---------------------------------------
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\color.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\dvipsnam.4ht"
-version 2009-05-21-09:32
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4.4ht"
-version 2015-01-26-15:58
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\tex4ht\html4-math.4ht"
-version 2009-05-18-23:01
-))
-(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
-\FA\Facharbeit.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 37.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+(/usr/share/texmf/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Try loading font information for OT1+put on input line 37.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1put.fd"
-File: ot1put.fd 2001/06/04 font definitions for OT1/put.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 38.
+
+(/usr/share/texmf/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-Package lastpage Info: Please have a look at the pageslts package at
-(lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 37.
-\AtBeginShipoutBox=\box26
-Package hyperref Info: Link coloring ON on input line 37.
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+Package hyperref Info: Link coloring OFF on input line 38.
 
-*geometry* driver: auto-detecting
-*geometry* detected driver: dvips
-*geometry* verbose mode - [ preamble ] result:
-* driver: dvips
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=452.9679pt
-* \textheight=700.50687pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=85.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
---- file Facharbeit.css ---
-[1
+(/usr/share/texmf/tex/latex/oberdiek/refcount.sty
+Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
+)
+\c@section@level=\count99
+)
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+ (./Facharbeit.out)
+(./Facharbeit.out)
+\@outlinefile=\write3
+\openout3 = `Facharbeit.out'.
 
-]
+-------------------- Geometry parameters
+paper: a4paper
+landscape: --
+twocolumn: --
+twoside: true
+asymmetric: --
+h-parts: 72.26999pt, 452.9679pt, 72.26999pt
+v-parts: 72.26999pt, 700.50687pt, 72.26999pt
+hmarginratio: --
+vmarginratio: --
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  597.50787pt
+\paperheight 845.04684pt
+\textwidth  452.9679pt
+\textheight 700.50687pt
+\oddsidemargin  0.0pt
+\evensidemargin 0.0pt
+\topmargin  -37.0pt
+\headheight 12.0pt
+\headsep    25.0pt
+\footskip   30.0pt
+\marginparwidth 85.0pt
+\marginparsep   10.0pt
+\columnsep  10.0pt
+\skip\footins  10.8pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+\@twosidetrue \@mparswitchtrue 
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+ <metamorphosis-kafka.jpg, id=43, 602.25pt x 669.50125pt>
+File: metamorphosis-kafka.jpg Graphic file (type jpg)
+
+<use metamorphosis-kafka.jpg>
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 38.
+(Font)              <14.4> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 38.
- [1] [2]
-(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
-\FA\Facharbeit.4ct) [3
+(Font)              <7> on input line 40.
+ [1
 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./metamorphosis-kafka.jpg>
 ]
-LaTeX Font Info:    Try loading font information for TS1+put on input line 55.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1put.fd"
-File: ts1put.fd 2001/06/04 font definitions for TS1/put.
-) [4
-
-]
---- file Facharbeit2.html ---
- [5
-
-]
---- file Facharbeit3.html ---
---- file Facharbeit4.html ---
---- file Facharbeit5.html ---
---- file Facharbeit6.html ---
-
-[6
-
-
-
-
-
-]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 41.
+ (./Facharbeit.toc
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 104.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 104.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 104.
---- file Facharbeit7.html ---
---- file Facharbeit8.html ---
---- file Facharbeit9.html ---
---- file Facharbeit10.html ---
---- file Facharbeit11.html ---
- [7
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `Facharbeit.toc'.
 
 
 
-]
---- file Facharbeit12.html ---
---- file Facharbeit13.html ---
---- file Facharbeit14.html ---
- [8
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2
 
 ]
---- file Facharbeit15.html ---
---- file Facharbeit16.html ---
---- file Facharbeit17.html ---
- [9
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 46.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 53.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 56.
+ (/usr/share/texmf/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 69.
+ [3
 
-] [10] [11
+] [4] [5
 
-] [12
+] [6]
+Overfull \hbox (2.04114pt too wide) in paragraph at lines 150--152
+[]\OT1/phv/m/sl/12 ,,[Der Va-ter] mach-te sich un-ter F[]u^^Yestampfen dar-an, 
+Gre-gor durch Schwen-
+ []
 
-] 
-AED: lastpage setting LastPage
-[13
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
- [14
+Overfull \hbox (7.74149pt too wide) in paragraph at lines 157--158
+\OT1/phv/m/n/12 Ein schwach ge-wor-fe-ner Ap-fel streif-te Gre-gors R[]ucken, g
+litt aber unsch[]adlich
+ []
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 
-(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\from_laptop_patrick\deutsch
-\FA\Facharbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 192.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
- ) 
+Overfull \hbox (5.37744pt too wide) in paragraph at lines 157--158
+\OT1/phv/m/n/12 ab. Ein ihm so-fort nach-flie-gen-der drang da-ge-gen f[]ormlic
+h in Gre-gors R[]ucken
+ []
+
+[7] [8
+
+] [9
+
+] AED: lastpage setting LastPage [10
+
+] (./Facharbeit.aux) ) 
 Here is how much of TeX's memory you used:
- 10119 strings out of 493922
- 138804 string characters out of 3144893
- 345790 words of memory out of 3000000
- 13181 multiletter control sequences out of 15000+200000
- 21642 words of font info for 39 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 37i,6n,46p,1045b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 4152 strings out of 256214
+ 56039 string characters out of 1917000
+ 118559 words of memory out of 1500000
+ 7334 multiletter control sequences out of 10000+200000
+ 29552 words of font info for 53 fonts, out of 1200000 for 2000
+ 645 hyphenation exceptions out of 8191
+ 28i,11n,43p,595b,394s stack positions out of 5000i,500n,6000p,200000b,15000s
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share
+/texmf/fonts/type1/bluesky/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/urw/helve
+tic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/shar
+e/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Facharbeit.pdf (10 pages, 122190 bytes).
+PDF statistics:
+ 176 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 131072)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on Facharbeit.dvi (15 pages, 56712 bytes).
