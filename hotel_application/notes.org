@@ -1,0 +1,8 @@
+#+TITLE:Notes for /Hotel Application/
+#+AUTHOR: Z. Isler & P. Günthard
+* Tables
+** Table /Leistung/
+
+Prices have to be defined inside /Leistung/ whereas they are defined 
+now inside /position/. Prices for a certain category differ so this 
+has to be discussed. Maybe the teacher has to be asked.

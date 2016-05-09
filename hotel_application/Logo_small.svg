@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="199.63654mm"
-   height="119.94444mm"
-   viewBox="0 0 707.37353 425"
+   width="210mm"
+   height="22.57778mm"
+   viewBox="0 0 744.09446 80.000007"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -21,14 +21,14 @@
      id="defs4" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#fce26f"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="715.22705"
-     inkscape:cy="114.50368"
+     inkscape:cx="715.22708"
+     inkscape:cy="-62.677729"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -50,8 +50,6 @@
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title></dc:title>
-        <cc:license
-           rdf:resource="" />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,12 +57,12 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-5.000034,-472.57391)">
+     transform="translate(-5.0000005,-967.3622)">
     <flowRoot
        xml:space="preserve"
        id="flowRoot3336"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(1.0048082,0,0,1.0123579,-12.332938,-373.6419)"><flowRegion
+       transform="matrix(1.0048082,0,0,1.0123579,-12.332941,26.358126)"><flowRegion
          id="flowRegion3338"><rect
            id="rect3340"
            width="241.42647"
@@ -88,17 +86,17 @@
        xml:space="preserve"
        id="flowRoot3362"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.47924274,0,0,0.4780806,-99.754519,196.99071)"><flowRegion
+       transform="matrix(0.99999996,0,0,0.99757731,1.4166488,3.785105)"><flowRegion
          id="flowRegion3364"><rect
            id="rect3366"
-           width="469.36331"
-           height="341.62051"
+           width="429.31485"
+           height="83.842697"
            x="218.19295"
            y="968.51953" /></flowRegion><flowPara
          id="flowPara3368"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.67486954px;font-family:'Futura LT';-inkscape-font-specification:'Futura LT'">Where Bacon &amp; Eggs love you more than your significant other.</flowPara></flowRoot>    <image
-       y="472.57391"
-       x="287.37357"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:'Futura LT';-inkscape-font-specification:'Futura LT'">Where Bacon &amp; Eggs love you more than your significant other.</flowPara></flowRoot>    <image
+       y="967.36084"
+       x="669.21124"
        id="image3390"
        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAloAAAJaCAYAAAD3W+nqAAAABmJLR0QA/wD/AP+gvaeTAAAACXBI
 WXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4AUJDwAD/S1nXwAAIABJREFUeNrs3XmcpEWB5vEnIt73
@@ -1231,7 +1229,7 @@ izHWQWwRWYwxRmgxxjqCHGnDBpHFGGOEFmOsA9iyRBZjjBFajLHOoIfIYowxQosx1kH8yBX6OEQW
 Y4wRWowRW0QWY4wRWoyxXsAWkcUYY1em/x+P27KgGghgywAAAABJRU5ErkJggg==
 "
        preserveAspectRatio="none"
-       height="425"
-       width="425" />
+       height="80"
+       width="80" />
   </g>
 </svg>
