@@ -5,3 +5,8 @@ This is a repo containig various files from the IT Education Programm teached
 in the Canton of Zurich, Switzerland. All the things included here, were teached
 at BBW, Berufsbildungsschule Winterthur. If you are attending another school,
 the things might differ in detail.
+
+** Contributors
+ * [[https://github.com/patrickgue][patrickgue]]
+ * [[https://github.com/AyaneTuan][AyaneTuan]]
+ * [[https://github.com/KajTorvaldGrey][KajTorvaldGrey]]
