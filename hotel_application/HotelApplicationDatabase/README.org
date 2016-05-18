@@ -1,0 +1,5 @@
+* Info
+
+Das ERD kann mit folgendem Programm bearbeitet werden:
+ * [[http://www.umplet.com][Umlet]]
+ * [[http://www.umlet.com/umletino/umletino.html][Umlet Online]]
