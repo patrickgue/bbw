@@ -180,6 +180,7 @@ input {
 .img.open {
     position: fixed;
     width: 40%;
+    height: auto;
     left: 30%;
     top: 30px;
     box-shadow: 0px 0px 40px rgba(32,32,32,.8);
