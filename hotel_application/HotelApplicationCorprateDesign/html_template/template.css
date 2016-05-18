@@ -8,7 +8,7 @@ body {
     font-family: Univers, "Helvetica Neue", "Helvetica", "Nimbus Sans L", sans-serif;
     color: #333;
     background-color: #eee;
-    padding-top: 64px;
+    padding: 72px 2px 2px 2px;
 }
 
 
@@ -19,6 +19,13 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-size: 12pt;
     text-align: justify;
+}
+
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    float: none;
 }
 
 button, input[type=submit]{
@@ -86,7 +93,7 @@ header h1 {
 
 nav {
     position: fixed;
-    left: 0px;
+    /*left: 0px;*/
     top: 64px;
     min-width: 320px;
     padding: 10px 0px;
@@ -152,12 +159,16 @@ input {
     text-align: right;
 }
 
+.box50p img, .box33p img, .box25p img{
+    width: 100%;
+}
+
 .box50p{
     width: 49.5%;
 }
 
 .box33p{
-    width: 33%;
+    width: 32.5%;
 }
 
 .box25p{
@@ -165,3 +176,33 @@ input {
 }
 
 
+
+.img.open {
+    position: fixed;
+    width: 40%;
+    left: 30%;
+    top: 30px;
+    box-shadow: 0px 0px 40px rgba(32,32,32,.8);
+}
+
+@media (max-width: 640px) {
+    header h1 {
+	font-size: 16px;
+	padding: 24px 2px;
+    }
+
+    header .logo {
+	padding: 20px 2px;
+    }
+
+    .box50p, .box33p, .box25p{
+	width: 100%;
+    }
+
+    .img.open {
+	width: 98%;
+	left: 1%;
+	top: 2px;
+    }
+
+}
