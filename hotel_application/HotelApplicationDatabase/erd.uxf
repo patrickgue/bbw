@@ -28,8 +28,8 @@ fontfamily=Monospaced;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>650</y>
+      <x>90</x>
+      <y>640</y>
       <w>230</w>
       <h>90</h>
     </coordinates>
@@ -44,8 +44,8 @@ PK UserID      INT      NN
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>370</y>
+      <x>510</x>
+      <y>360</y>
       <w>230</w>
       <h>90</h>
     </coordinates>
@@ -60,8 +60,8 @@ FK PersID      INT
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>370</y>
+      <x>90</x>
+      <y>360</y>
       <w>260</w>
       <h>60</h>
     </coordinates>
@@ -74,8 +74,8 @@ PK LeistungID     INT      NN
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>950</x>
-      <y>350</y>
+      <x>940</x>
+      <y>340</y>
       <w>260</w>
       <h>140</h>
     </coordinates>
@@ -94,8 +94,8 @@ PK PersID         INT      NN
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>410</y>
+      <x>730</x>
+      <y>400</y>
       <w>230</w>
       <h>40</h>
     </coordinates>
@@ -106,8 +106,8 @@ m2=0..1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>570</y>
+      <x>510</x>
+      <y>560</y>
       <w>230</w>
       <h>160</h>
     </coordinates>
@@ -125,8 +125,8 @@ FK UserID      INT
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>450</y>
+      <x>610</x>
+      <y>440</y>
       <w>60</w>
       <h>140</h>
     </coordinates>
@@ -137,8 +137,8 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>680</y>
+      <x>310</x>
+      <y>670</y>
       <w>220</w>
       <h>40</h>
     </coordinates>
@@ -149,8 +149,8 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>390</y>
+      <x>340</x>
+      <y>380</y>
       <w>190</w>
       <h>260</h>
     </coordinates>
@@ -161,8 +161,8 @@ m2=0..1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>190</y>
+      <x>90</x>
+      <y>180</y>
       <w>230</w>
       <h>90</h>
     </coordinates>
@@ -177,8 +177,8 @@ PK PreisID     INT     NN
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>270</y>
+      <x>210</x>
+      <y>260</y>
       <w>60</w>
       <h>120</h>
     </coordinates>
@@ -189,8 +189,8 @@ m2=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>230</x>
-      <y>100</y>
+      <x>220</x>
+      <y>90</y>
       <w>280</w>
       <h>70</h>
     </coordinates>
