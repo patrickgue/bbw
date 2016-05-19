@@ -8,12 +8,17 @@ body {
     font-family: Univers, "Helvetica Neue", "Helvetica", "Nimbus Sans L", sans-serif;
     color: #333;
     background-color: #eee;
-    padding: 72px 2px 2px 2px;
+    padding: 72px 0px 0px 0px;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alte DIN 1451 Mittelschrift', Avenir, Univers, monospace;
+}
+
+a {
+    font-weight: bold;
+    color: #000;
 }
 
 p {
@@ -26,6 +31,11 @@ p {
     max-width: 960px;
     margin: auto;
     float: none;
+    padding: 10px;
+}
+
+header .container {
+    padding: 0px;
 }
 
 button, input[type=submit]{
@@ -100,6 +110,7 @@ nav {
     background-color: #ddd;
     display: none;
     box-shadow: 0px 0px 5px rgba(32,32,32,.4);
+    margin-left: -10px;
 }
 
 nav.open {
@@ -134,6 +145,7 @@ input {
 
 .input-block {
     width: 100%;
+    margin: 8px 0px;
 }
 
 .input-block label {
@@ -177,6 +189,10 @@ input {
 
 
 
+.img {
+    width: 100%;
+}
+
 .img.open {
     position: fixed;
     width: 40%;
@@ -184,6 +200,18 @@ input {
     left: 30%;
     top: 30px;
     box-shadow: 0px 0px 40px rgba(32,32,32,.8);
+}
+
+
+footer {
+    background-color: #333;
+    color: #eee;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+footer a{
+    color: #FCE26F;
 }
 
 @media (max-width: 640px) {
@@ -206,4 +234,11 @@ input {
 	top: 2px;
     }
 
+}
+
+
+
+.template_beak {
+    height: 500px;
+    display: block;
 }
