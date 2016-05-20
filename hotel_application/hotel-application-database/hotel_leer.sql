@@ -99,6 +99,21 @@ INSERT INTO `leistung` VALUES (1,'Zimmerreservation inklusive erste Nacht\r'),(2
 UNLOCK TABLES;
 
 --
+-- Table structure for table `preis`
+--
+
+DROP TABLE IF EXISTS `preis`;
+CREATE TABLE `preis` (
+    `PreisID`       INTEGER NOT NULL AUTO_INCREMENT,
+    `Preis`         DOUBLE  NOT NULL,
+    `Rabatt`        DOUBLE  NOT NULL DEFAULT 0,
+    `Datum`         DATE    NOT NULL,
+    `LeistungID`    INTEGER NOT NULL,
+    
+);
+
+
+--
 -- Table structure for table `person`
 --
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  19 APR 2016 14:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  17 MAY 2016 15:13
 entering extended mode
 **analyse.tex
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.tex
@@ -488,14 +488,14 @@ File: ot1put.fd 2001/06/04 font definitions for OT1/put.
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=48.0pt
+* \marginparwidth=85.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumntrue
+* \@twocolumnfalse
 * \@twosidetrue
 * \@mparswitchtrue
 * \@reversemarginfalse
@@ -537,132 +537,47 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 35.
 
-Underfull \hbox (badness 7433) in paragraph at lines 39--40
- []\OT1/put/b/n/12 Kontext:[] \OT1/put/m/n/12 Die Per-son \OT1/put/m/it/12 Po-p
-eye \OT1/put/m/n/12 kommt
+Overfull \hbox (16.81497pt too wide) in paragraph at lines 41--42
+\OT1/put/m/n/12 tik be-zieht sich auf ver-schie-de-ne Aspek-te sei-nes Auf-tre-
+tens. Es gibt vie-le []Ubertreibungen
  []
 
+[1
 
-Underfull \hbox (badness 3895) in paragraph at lines 41--42
- []\OT1/put/b/n/12 Kritik:[] \OT1/put/m/n/12 Der Erz[]ahler kri-ti-siert \OT1/p
-ut/m/it/12 Po-peye
- []
-
-
-Underfull \hbox (badness 7273) in paragraph at lines 41--42
-\OT1/put/m/n/12 we-gen sei-nem ag-gres-si-ven Ver-hal-ten.
- []
-
-
-Underfull \hbox (badness 1817) in paragraph at lines 41--42
-\OT1/put/m/it/12 weis-se Ele-fan-ten zu ach-ten'' \OT1/put/m/n/12 und \OT1/put/
-m/it/12 ,,von
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 41--42
-\OT1/put/m/n/12 men-te, so wird die Co-mic-fi-gur \OT1/put/m/it/12 Po-peye
- []
-
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-Underfull \hbox (badness 1867) in paragraph at lines 52--53
- []\OT1/put/b/n/12 Kontext:[] \OT1/put/m/n/12 Der Prot-ago-nist ging in ein
- []
-
-
-Underfull \hbox (badness 5696) in paragraph at lines 61--62
- []\OT1/put/b/n/12 Kontext:[] \OT1/put/m/n/12 Der Satz steht im Kon-text
- []
-
-
-Underfull \hbox (badness 3189) in paragraph at lines 61--62
-\OT1/put/m/n/12 ei-ner gan-zen Rei-he von in-di-vi-du-el-len
- []
-
-
-Underfull \hbox (badness 2837) in paragraph at lines 61--62
-\OT1/put/m/n/12 Ei-gen-hei-ten von Men-schen. So meint
- []
-
-
-Underfull \hbox (badness 1360) in paragraph at lines 61--62
-\OT1/put/m/n/12 der Prot-ago-nist, es ge-be Leu-te, de-nen
- []
-
-
-Underfull \hbox (badness 1005) in paragraph at lines 63--64
-\OT1/put/m/it/12 nachtspl[]atzchen'' \OT1/put/m/n/12 ist ei-ne []Ubertreibung
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
- []\OT1/put/b/n/12 Kontext:[] \OT1/put/m/n/12 In die-ser Text-stel-le nimmt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-\OT1/put/m/n/12 sich der Prot-ago-nist vor, sich
- []
-
-
-Underfull \hbox (badness 2521) in paragraph at lines 69--70
-\OT1/put/m/n/12 zur[]uckzuziehen, um ei-ner Per-son na-
- []
-
-
-Underfull \hbox (badness 1596) in paragraph at lines 71--72
- []\OT1/put/b/n/12 Kritik:[] \OT1/put/m/n/12 Mit der Aus-sa-ge \OT1/put/m/it/12
- ,,Die Vor-stel-
- []
-
-
-Underfull \hbox (badness 3668) in paragraph at lines 71--72
-\OT1/put/m/it/12 lung (...) ge-fiel mir aus ir-gend-ei-nem
- []
-
-
-AED: lastpage setting LastPage
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
+[2] 
+AED: lastpage setting LastPage
+[3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
  (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\deutsch\analyse.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
-
-
-Package rerunfilecheck Warning: File `analyse.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `analyse.out':
-(rerunfilecheck)             Before: 6635AF26D8A377CA0CA7D4098914F9C1;301
-(rerunfilecheck)             After:  11D2899F8558ACD66FDDFCFFE590D64A;301.
+Package rerunfilecheck Info: File `analyse.out' has not changed.
+(rerunfilecheck)             Checksum: 11D2899F8558ACD66FDDFCFFE590D64A;301.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
  ) 
 Here is how much of TeX's memory you used:
- 5540 strings out of 493921
- 81741 string characters out of 3144870
- 169090 words of memory out of 3000000
- 8757 multiletter control sequences out of 15000+200000
+ 5539 strings out of 493921
+ 81704 string characters out of 3144870
+ 168074 words of memory out of 3000000
+ 8755 multiletter control sequences out of 15000+200000
  42445 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,10n,43p,801b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,11n,43p,801b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on analyse.pdf (2 pages, 64888 bytes).
+Output written on analyse.pdf (3 pages, 65601 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
