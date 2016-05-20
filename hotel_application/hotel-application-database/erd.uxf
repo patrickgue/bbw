@@ -28,7 +28,7 @@ fontfamily=Monospaced;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
+      <x>100</x>
       <y>570</y>
       <w>230</w>
       <h>90</h>
@@ -44,7 +44,7 @@ PK UserID      INT      NN
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
+      <x>520</x>
       <y>290</y>
       <w>230</w>
       <h>90</h>
@@ -60,7 +60,7 @@ FK PersID      INT
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
+      <x>100</x>
       <y>290</y>
       <w>260</w>
       <h>60</h>
@@ -74,7 +74,7 @@ PK LeistungID     INT      NN
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
+      <x>950</x>
       <y>270</y>
       <w>260</w>
       <h>140</h>
@@ -94,7 +94,7 @@ PK PersID         INT      NN
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
+      <x>740</x>
       <y>330</y>
       <w>230</w>
       <h>40</h>
@@ -106,7 +106,7 @@ m2=0..1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
+      <x>520</x>
       <y>490</y>
       <w>230</w>
       <h>160</h>
@@ -114,18 +114,17 @@ m2=0..1</panel_attributes>
     <panel_attributes>position
 --
 PK PositionID  INT      NN
-FK BuchungID   INT
+FK BuchungID   INT      NN
 FK LeistungID  INT
 FK UserID      INT
    Anzahl      INT
-   Rabatt      DOUBLE
    Datum       DATE</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
+      <x>620</x>
       <y>370</y>
       <w>60</w>
       <h>140</h>
@@ -137,7 +136,7 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
+      <x>320</x>
       <y>600</y>
       <w>220</w>
       <h>40</h>
@@ -149,7 +148,7 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
+      <x>350</x>
       <y>310</y>
       <w>190</w>
       <h>260</h>
@@ -161,35 +160,36 @@ m2=0..1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
+      <x>100</x>
       <y>110</y>
       <w>230</w>
-      <h>90</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>preis
 --
 PK PreisID     INT     NN
    Preis       DOUBLE  NN   
-   Datum       DATE
-   LeistungID  INT</panel_attributes>
+   Rabatt      DOUBLE  NN
+   Datum       DATE    NN
+   LeistungID  INT     NN</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>190</y>
+      <x>220</x>
+      <y>200</y>
       <w>60</w>
-      <h>120</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>m1=1..n
 m2=1</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>150</x>
+      <x>230</x>
       <y>20</y>
       <w>280</w>
       <h>70</h>
