@@ -109,7 +109,7 @@ CREATE TABLE `preis` (
     `Rabatt`        DOUBLE  NOT NULL DEFAULT 0,
     `Datum`         DATE    NOT NULL,
     `LeistungID`    INTEGER NOT NULL,
-    
+    PRIMARY KEY(`PreisID`)
 );
 
 
