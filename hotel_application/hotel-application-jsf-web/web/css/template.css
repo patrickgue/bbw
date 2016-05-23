@@ -1,0 +1,244 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Univers, "Helvetica Neue", "Helvetica", "Nimbus Sans L", sans-serif;
+    color: #333;
+    background-color: #eee;
+    padding: 72px 0px 0px 0px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alte DIN 1451 Mittelschrift', Avenir, Univers, monospace;
+}
+
+a {
+    font-weight: bold;
+    color: #000;
+}
+
+p {
+    font-size: 12pt;
+    text-align: justify;
+}
+
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    float: none;
+    padding: 10px;
+}
+
+header .container {
+    padding: 0px;
+}
+
+button, input[type=submit]{
+    min-width: 60px;
+    min-height: 30px;
+    border: 1px solid #aaa;
+    background-color: #ddd;
+    border-radius: 1px;
+    margin: 2px 0px;
+}
+
+header {
+    background-color: #FCE26F;
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0px 0px 5px rgba(32,32,32,.4);
+}
+
+header button{
+    background-color: transparent;
+    border: none;
+    min-height: 64px;
+    margin: 0px;
+}
+
+header .logo{
+    height: 64px;
+    padding: 2px;
+}
+
+header * {
+    float: left;
+}
+
+header button:hover, header button.active{
+    background-color: rgba(32,32,32,.2);
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 28px;
+    padding: 15px;
+}
+
+.bar-box {
+    width: 64px;
+    height: 64px;
+    padding: 22px;
+    overflow-y: hidden;
+    
+}
+
+.bar {
+    width: 20px;
+    height: 4px;
+    margin-bottom: 4px;
+    background-color: #333;
+    border-radius: 1px;
+    
+}
+
+
+nav {
+    position: fixed;
+    /*left: 0px;*/
+    top: 64px;
+    min-width: 320px;
+    padding: 10px 0px;
+    background-color: #ddd;
+    display: none;
+    box-shadow: 0px 0px 5px rgba(32,32,32,.4);
+    margin-left: -10px;
+}
+
+nav.open {
+    display: block;
+}
+
+
+nav button{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    min-height: 40px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+nav button:hover { 
+    background-color: rgba(32,32,32,.2);
+}
+
+
+.main{
+    padding: 20px;
+}
+
+input {
+    padding: 4px;
+    border: 1px solid #ddd;
+}
+
+
+.input-block {
+    width: 100%;
+    margin: 8px 0px;
+}
+
+.input-block label {
+    width: 20%;
+    font-weight: bold;
+    text-align: right;
+    display: inline-block;
+}
+
+.input-block input {
+    width: 78%;
+    display: inline-block;
+}
+
+
+.box50p, .box33p, .box25p {
+    display: inline-block;
+    min-height: 20px;
+    vertical-align: top;
+}
+
+.box50p.r, .box33p.r, .box25p.r {
+    text-align: right;
+}
+
+.box50p img, .box33p img, .box25p img{
+    width: 100%;
+}
+
+.box50p{
+    width: 49.5%;
+}
+
+.box33p{
+    width: 32.5%;
+}
+
+.box25p{
+    width: 24.5%;
+}
+
+
+
+.img {
+    width: 100%;
+}
+
+.img.open {
+    position: fixed;
+    width: 40%;
+    height: auto;
+    left: 30%;
+    top: 30px;
+    box-shadow: 0px 0px 40px rgba(32,32,32,.8);
+}
+
+
+footer {
+    background-color: #333;
+    color: #eee;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+footer a{
+    color: #FCE26F;
+}
+
+@media (max-width: 640px) {
+    header h1 {
+	font-size: 16px;
+	padding: 24px 2px;
+    }
+
+    header .logo {
+	padding: 20px 2px;
+    }
+
+    .box50p, .box33p, .box25p{
+	width: 100%;
+    }
+
+    .img.open {
+	width: 98%;
+	left: 1%;
+	top: 2px;
+    }
+
+}
+
+
+
+.template_beak {
+    height: 500px;
+    display: block;
+}
