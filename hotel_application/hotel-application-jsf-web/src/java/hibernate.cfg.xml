@@ -4,12 +4,13 @@
     "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
+      <!--jdbc:mysql://db55.netzone.ch/rogerguenthar4-->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://db55.netzone.ch/rogerguenthar4</property>
-    <property name="hibernate.connection.username">rogerguenthar4</property>
-    <property name="hibernate.connection.password">334fgF</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/hotel</property>
+    <property name="hibernate.connection.username">root</property><!-- rogerguenthar4 -->
+    <property name="hibernate.connection.password">kinney94</property><!-- 334fgF -->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.show_sql">true</property>
-    <mapping class="ch.eggbacon.app.entity.Benutzer" file="src/java/ch/eggbacon/app/entity/Benutzer.hbm.xml" jar="" package="ch.eggbacon.app.entity" resource=""></mapping>
+    <mapping class="ch.eggbacon.app.entity.Benutzer" resource="ch/eggbacon/app/entity/Benutzer.hbm.xml"></mapping>
   </session-factory>
 </hibernate-configuration>
