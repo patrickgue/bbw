@@ -118,7 +118,7 @@ nav.open {
 }
 
 
-nav button{
+nav button, nav input[type=submit]{
     width: 100%;
     border: none;
     background-color: transparent;
@@ -128,7 +128,7 @@ nav button{
     padding: 5px;
 }
 
-nav button:hover { 
+nav button:hover, nav input[type=submit]:hover { 
     background-color: rgba(32,32,32,.2);
 }
 

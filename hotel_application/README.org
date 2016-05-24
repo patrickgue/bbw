@@ -1,6 +1,6 @@
 #+TITLE:Hotel Application
 * Description
 This Application is a project defined as a task in module 150. This is a group project by Zoe Isler
-and Patrick Günthard.
+and Patrick GÃ¼nthard.
 ** Notes
  * [[file:notes.org][notes]]

@@ -7,10 +7,11 @@
     >
     <h:body>
         <ui:composition template="template.xhtml">
-            <ui:define name="title">Home</ui:define>
+            <ui:define name="title">Login</ui:define>
             <ui:define name="content">
-                <p>Willkommen im Egg &amp; Bacon Hotel!</p>
-                <img src="img/le_bacon_hotel.png" class="img"/>
+                <h:form>
+                    <h:inputText value="${loginController.username}" />
+                </h:form>
             </ui:define>
         </ui:composition>
     </h:body>

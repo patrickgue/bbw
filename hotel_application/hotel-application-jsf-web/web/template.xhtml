@@ -2,8 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
 >
-<html xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:ui="http://java.sun.com/jsf/facelets">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
     <meta charset="utf-8"/>
     <title>Template</title>
@@ -24,9 +25,12 @@
     </header>
     <div class="container">
       <nav id="menu">
-	<button>Home</button>
-	<button>Buchungen</button>
+          <h:form>
+          <h:commandButton action="index.xhtml" value="Home"/>
+          <h:commandButton action="login.xhtml" value="Login"/>
+          <button>Buchungen</button>
 	<button>Login</button>
+          </h:form>
       </nav>
   
         <h2><ui:insert name="title"></ui:insert></h2>

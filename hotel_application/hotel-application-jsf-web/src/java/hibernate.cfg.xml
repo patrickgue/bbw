@@ -2,10 +2,12 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
-    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/sample</property>
-    <property name="hibernate.connection.username">app</property>
-    <property name="hibernate.connection.password">app</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://db55.netzone.ch/rogerguenthar4</property>
+    <property name="hibernate.connection.username">rogerguenthar4</property>
+    <property name="hibernate.connection.password">334fgF</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping class="ch.eggbacon.app.entity.Benutzer" file="" jar="" package="ch.eggbacon.app.entity" resource=""/>
   </session-factory>
 </hibernate-configuration>

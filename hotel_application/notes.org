@@ -1,8 +1,12 @@
 #+TITLE:Notes for /Hotel Application/
-#+AUTHOR: Z. Isler & P. Günthard
+#+AUTHOR: Z. Isler & P. GÃ¼nthard
 * Tables
 ** Table /Leistung/
 
-Prices have to be defined inside /Leistung/ whereas they are defined 
-now inside /position/. Prices for a certain category differ so this 
+Prices have to be defined inside /Leistung/ whereas they are defined
+now inside /position/. Prices for a certain category differ so this
 has to be discussed. Maybe the teacher has to be asked.
+
+* Major events
+** 2016-05-24 17:32
+*Patrick:* run sql on database.
