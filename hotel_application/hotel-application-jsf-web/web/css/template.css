@@ -43,8 +43,14 @@ button, input[type=submit]{
     min-height: 30px;
     border: 1px solid #aaa;
     background-color: #ddd;
+    color: #333;
     border-radius: 1px;
     margin: 2px 0px;
+}
+
+input {
+    background-color: #fff;
+    color: #333;
 }
 
 header {
@@ -126,6 +132,7 @@ nav button, nav input[type=submit]{
     min-height: 40px;
     cursor: pointer;
     padding: 5px;
+    color: #333;
 }
 
 nav button:hover, nav input[type=submit]:hover { 
@@ -212,6 +219,20 @@ footer {
 
 footer a{
     color: #FCE26F;
+}
+
+
+html {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #555;
+    padding: 2px;
 }
 
 @media (max-width: 640px) {

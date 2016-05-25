@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+          
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:body>
+        <ui:composition template="template.xhtml">
+            <ui:define name="title"><span title="Kunden">Personen</span></ui:define>
+            <ui:define name="content">
+                <h:form>
+                    <h:inputText />
+                </h:form>
+                <h:dataTable value="${personController.personList}" var="pers">
+                    <h:column>
+                        <f:facet name="header">Vorname</f:facet>
+                        ${pers.vorname}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Nachname</f:facet>
+                        ${pers.nachname}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Strasse</f:facet>
+                        ${pers.strasse}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Ort</f:facet>
+                        ${pers.ort}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Anrede</f:facet>
+                        ${pers.anrede}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Eingabedatum</f:facet>
+                        ${pers.eingabedatum}
+                    </h:column>
+                    
+                </h:dataTable>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+          
+</html>

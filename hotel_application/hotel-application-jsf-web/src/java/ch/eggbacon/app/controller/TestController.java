@@ -71,10 +71,13 @@ public class TestController {
         try {
             String str = "";
             List<Object> list = session.createQuery(getQueryString()).list();
+            System.out.println(getQueryString());
+            System.out.println(list.size());
             for(Object o : list){
                 System.out.println(o.toString());
                 str += o.toString() + "<br/>";
             }
+            System.out.println(str);
             setOutputString(str);
         } catch (Exception ex) {
             ex.printStackTrace();
