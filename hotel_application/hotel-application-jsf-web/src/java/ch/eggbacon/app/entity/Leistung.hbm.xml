@@ -7,11 +7,9 @@
       <meta attribute="class-description">
          This class contains the employee detail. 
       </meta>
-      <id name="positionId" type="long" column="LeistungID">
+      <id name="leistungId" type="long" column="LeistungID">
          <generator class="native"/>
       </id>
-      <property name="buchung" column="Buchung" type="string"/>
-      <property name="passwort" column="Passwort" type="string"/>
-      <property name="ganzerName" column="GanzerName" type="string"/>
+      <property name="beschreibung" column="Beschreibung" type="string"/>
    </class>
 </hibernate-mapping>

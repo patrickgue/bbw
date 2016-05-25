@@ -3,15 +3,15 @@
  "-//Hibernate/Hibernate Mapping DTD//EN"
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 <hibernate-mapping>
-   <class name="ch.eggbacon.app.entity.Benutzer" table="benutzer">
+   <class name="ch.eggbacon.app.entity.Buchung" table="buchung">
       <meta attribute="class-description">
          This class contains the employee detail. 
       </meta>
-      <id name="userId" type="long" column="UserID">
+      <id name="buchungId" type="long" column="BuchungID">
          <generator class="native"/>
       </id>
-      <property name="benutzer" column="Benutzer" type="string"/>
-      <property name="passwort" column="Passwort" type="string"/>
-      <property name="ganzerName" column="GanzerName" type="string"/>
+      <many-to-one name="person" column="PersID" class="ch.eggbacon.app.entity.Person" />
+      <property name="ankunft" column="Ankunft" type="date"/>
+      <property name="abreise" column="Abreise" type="date"/>
    </class>
 </hibernate-mapping>

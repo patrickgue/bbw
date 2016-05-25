@@ -10,8 +10,10 @@
             <ui:define name="title">Login</ui:define>
             <ui:define name="content">
                 <h:form>
-                    <h:inputText value="${loginController.username}" />
+                    <h:inputText value="${testController.queryString}" />
+                    <h:commandButton action="${testController.runQuery()}" value="run"/>
                 </h:form>
+                <h:outputText escape="false" value="${testController.outputString}"/>
             </ui:define>
         </ui:composition>
     </h:body>

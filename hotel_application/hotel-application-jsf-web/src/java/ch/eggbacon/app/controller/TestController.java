@@ -16,8 +16,12 @@
  */
 package ch.eggbacon.app.controller;
 
+import ch.eggbacon.app.entity.Benutzer;
+import ch.eggbacon.app.util.HibernateUtil;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 /**
@@ -30,5 +34,56 @@ public class TestController {
     private String queryString = "";
     private String outputString = "";
     private SessionFactory fc;
+    private Session session;
+
+    public TestController() {
+        try {
+            this.fc = HibernateUtil.getSessionFactory();
+            session = fc.openSession();
+
+            
+        } catch (Exception ex) {
+            
+            ex.printStackTrace();
+        }
+    }
+
+    
+    
+    public String getQueryString() {
+        return queryString;
+    }
+
+    public void setQueryString(String queryString) {
+        this.queryString = queryString;
+    }
+
+    public String getOutputString() {
+        return outputString;
+    }
+
+    public void setOutputString(String outputString) {
+        this.outputString = outputString;
+    }
+
+    
+    public String runQuery(){
+        try {
+            String str = "";
+            List<Object> list = session.createQuery(getQueryString()).list();
+            for(Object o : list){
+                System.out.println(o.toString());
+                str += o.toString() + "<br/>";
+            }
+            setOutputString(str);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            setOutputString("<i>Error</i>");
+        }
+        return "test.xhtml";
+    }
+  
+    
+    
     
 }

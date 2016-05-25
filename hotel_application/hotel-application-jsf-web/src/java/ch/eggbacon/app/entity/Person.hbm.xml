@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+   <class name="ch.eggbacon.app.entity.Person" table="person">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="persId" type="long" column="PersID">
+         <generator class="native"/>
+      </id>
+      <property name="vorname" column="Vorname" type="string"/>
+      <property name="nachname" column="Name" type="string"/>
+      <property name="strasse" column="Strasse" type="string"/>
+      <property name="ort" column="Ort" type="string"/>
+      <property name="anrede" column="Anrede" type="string"/>
+      <property name="privattelefon" column="Privattelefon" type="string"/>
+      <property name="eingabedatum" column="Eingabedatum" type="date" not-null="false" />
+   </class>
+</hibernate-mapping>

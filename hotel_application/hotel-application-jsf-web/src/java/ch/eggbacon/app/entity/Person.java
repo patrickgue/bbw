@@ -17,6 +17,7 @@
 package ch.eggbacon.app.entity;
 
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -54,6 +55,128 @@ public class Person {
     @Column(name="Privattelefon")
     private String privattelefon;
     
-    @Column(name="Vorname")
+    @Column(name="Eingabedatum")
     private Date eingabedatum;
+
+    public Long getPersId() {
+        return persId;
+    }
+
+    public void setPersId(Long persId) {
+        this.persId = persId;
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    public void setNachname(String nachname) {
+        this.nachname = nachname;
+    }
+
+    public String getStrasse() {
+        return Strasse;
+    }
+
+    public void setStrasse(String Strasse) {
+        this.Strasse = Strasse;
+    }
+
+    public String getOrt() {
+        return ort;
+    }
+
+    public void setOrt(String ort) {
+        this.ort = ort;
+    }
+
+    public String getAnrede() {
+        return anrede;
+    }
+
+    public void setAnrede(String anrede) {
+        this.anrede = anrede;
+    }
+
+    public String getPrivattelefon() {
+        return privattelefon;
+    }
+
+    public void setPrivattelefon(String privattelefon) {
+        this.privattelefon = privattelefon;
+    }
+
+    public Date getEingabedatum() {
+        return eingabedatum;
+    }
+
+    public void setEingabedatum(Date eingabedatum) {
+        this.eingabedatum = eingabedatum;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "persId=" + persId + ", vorname=" + vorname + ", nachname=" + nachname + ", Strasse=" + Strasse + ", ort=" + ort + ", anrede=" + anrede + ", privattelefon=" + privattelefon + ", eingabedatum=" + eingabedatum + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + Objects.hashCode(this.persId);
+        hash = 71 * hash + Objects.hashCode(this.vorname);
+        hash = 71 * hash + Objects.hashCode(this.nachname);
+        hash = 71 * hash + Objects.hashCode(this.Strasse);
+        hash = 71 * hash + Objects.hashCode(this.ort);
+        hash = 71 * hash + Objects.hashCode(this.anrede);
+        hash = 71 * hash + Objects.hashCode(this.privattelefon);
+        hash = 71 * hash + Objects.hashCode(this.eingabedatum);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Person other = (Person) obj;
+        if (!Objects.equals(this.persId, other.persId)) {
+            return false;
+        }
+        if (!Objects.equals(this.vorname, other.vorname)) {
+            return false;
+        }
+        if (!Objects.equals(this.nachname, other.nachname)) {
+            return false;
+        }
+        if (!Objects.equals(this.Strasse, other.Strasse)) {
+            return false;
+        }
+        if (!Objects.equals(this.ort, other.ort)) {
+            return false;
+        }
+        if (!Objects.equals(this.anrede, other.anrede)) {
+            return false;
+        }
+        if (!Objects.equals(this.privattelefon, other.privattelefon)) {
+            return false;
+        }
+        if (!Objects.equals(this.eingabedatum, other.eingabedatum)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    
 }

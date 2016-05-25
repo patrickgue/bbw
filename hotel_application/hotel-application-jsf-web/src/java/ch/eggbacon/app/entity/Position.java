@@ -38,7 +38,7 @@ public class Position implements Serializable {
     private Leistung leistung;
     
     @ManyToOne
-    @Column(name="LeistungID")
+    @Column(name="UserID")
     private Benutzer benutzer;
     
     @Column(name="Anzahl")

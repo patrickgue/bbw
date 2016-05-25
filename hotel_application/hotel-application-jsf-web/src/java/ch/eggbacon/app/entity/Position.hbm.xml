@@ -10,8 +10,13 @@
       <id name="positionId" type="long" column="PositionID">
          <generator class="native"/>
       </id>
-      <property name="buchung" column="Buchung" type="string"/>
-      <property name="passwort" column="Passwort" type="string"/>
-      <property name="ganzerName" column="GanzerName" type="string"/>
+      <many-to-one name="buchung" column="BuchungID" class="ch.eggbacon.app.entity.Buchung" />
+      <many-to-one name="leistung" column="LeistungID" class="ch.eggbacon.app.entity.Leistung" />
+      <many-to-one name="benutzer" column="UserID" class="ch.eggbacon.app.entity.Benutzer" />
+      <!--<property name="buchung" column="BuchungID" type="long"/>
+      <property name="leistung" column="LeistungID" type="long"/>
+      <property name="benutzer" column="UserID" type="long"/>-->
+      
+      <property name="anzahl" column="Anzahl" type="long"/>
    </class>
 </hibernate-mapping>

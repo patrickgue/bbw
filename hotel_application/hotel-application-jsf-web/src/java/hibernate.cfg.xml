@@ -6,11 +6,15 @@
   <session-factory>
       <!---->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://db55.netzone.ch/rogerguenthar4</property>
-    <property name="hibernate.connection.username">rogerguenthar4</property><!-- rogerguenthar4 -->
-    <property name="hibernate.connection.password">334fgF</property><!-- 334fgF -->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/hotel</property><!-- jdbc:mysql://db55.netzone.ch/rogerguenthar4 -->
+    <property name="hibernate.connection.username">root</property><!-- rogerguenthar4 -->
+    <property name="hibernate.connection.password"></property><!-- 334fgF -->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.show_sql">true</property>
     <mapping class="ch.eggbacon.app.entity.Benutzer" resource="ch/eggbacon/app/entity/Benutzer.hbm.xml"></mapping>
+    <mapping class="ch.eggbacon.app.entity.Position" resource="ch/eggbacon/app/entity/Position.hbm.xml"></mapping>
+    <mapping class="ch.eggbacon.app.entity.Leistung" resource="ch/eggbacon/app/entity/Leistung.hbm.xml"></mapping>
+    <mapping class="ch.eggbacon.app.entity.Buchung"  resource="ch/eggbacon/app/entity/Buchung.hbm.xml"></mapping>
+    <mapping class="ch.eggbacon.app.entity.Person"   resource="ch/eggbacon/app/entity/Person.hbm.xml"></mapping>
   </session-factory>
 </hibernate-configuration>

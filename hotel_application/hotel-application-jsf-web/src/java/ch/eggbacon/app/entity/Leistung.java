@@ -35,7 +35,7 @@ public class Leistung implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="UserID")
-    private Long userId;
+    private Long leistungId;
     
     @Column(name="Beschreibung")
     private String beschreibung;
@@ -43,15 +43,15 @@ public class Leistung implements Serializable{
     /**
      * @return the userId
      */
-    public Long getUserId() {
-        return userId;
+    public Long getLeistungId() {
+        return leistungId;
     }
 
     /**
-     * @param userId the userId to set
+     * @param leistungId the userId to set
      */
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setLeistungId(Long leistungId) {
+        this.leistungId = leistungId;
     }
 
     /**
@@ -70,13 +70,13 @@ public class Leistung implements Serializable{
 
     @Override
     public String toString() {
-        return "Leistung{" + "userId=" + userId + ", beschreibung=" + beschreibung + '}';
+        return "Leistung{" + "userId=" + leistungId + ", beschreibung=" + beschreibung + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 31 * hash + Objects.hashCode(this.userId);
+        hash = 31 * hash + Objects.hashCode(this.leistungId);
         hash = 31 * hash + Objects.hashCode(this.beschreibung);
         return hash;
     }
@@ -96,7 +96,7 @@ public class Leistung implements Serializable{
         if (!Objects.equals(this.beschreibung, other.beschreibung)) {
             return false;
         }
-        if (!Objects.equals(this.userId, other.userId)) {
+        if (!Objects.equals(this.leistungId, other.leistungId)) {
             return false;
         }
         return true;
