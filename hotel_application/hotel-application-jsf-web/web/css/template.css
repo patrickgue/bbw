@@ -230,10 +230,40 @@ table {
     border-collapse: collapse;
 }
 
-td, th {
-    border: 1px solid #555;
-    padding: 2px;
+thead tr {
+    border-bottom: 3px solid #333;
 }
+
+tbody tr {
+    border-bottom: 1px solid #999; 
+}
+
+tr:hover {
+    background-color: rgba(32,32,32,0.2);
+}
+
+td, th {
+    padding: 2px;
+    text-align: left;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+#scroll-up-button {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #333;
+    color: #eee;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    display: none;
+}
+
+
 
 @media (max-width: 640px) {
     header h1 {

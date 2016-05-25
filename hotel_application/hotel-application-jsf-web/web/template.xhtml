@@ -7,6 +7,8 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
     <meta charset="utf-8"/>
+    
+    <meta name="viewport" content="width=device-width"/>
     <title>Template</title>
     <link rel="stylesheet" href="css/template.css"/>
     
@@ -27,9 +29,9 @@
       <nav id="menu">
           <h:form>
           <h:commandButton action="index.xhtml" value="Home"/>
+          <h:commandButton action="person.xhtml" value="Personen / Kunden"/>
           <h:commandButton action="login.xhtml" value="Login"/>
-          <button>Buchungen</button>
-	<button>Login</button>
+          
           </h:form>
       </nav>
   
@@ -43,7 +45,9 @@
 	<p>Diese Seite ist Teil eines Projekts an der <a href="http://www.bbw.ch">Berufsbildungsschule Winterthur</a>. Mehr Informationen zum Projekt gibt es <a href="https://github.com/patrickgue/bbw/tree/master/hotel_application">hier</a>.</p>
       </div>
     </footer>
+      <button id="scroll-up-button">scroll up</button>
     <script src="js/menu.js"></script>
     <script src="js/img.js"></script>
+    <script src="js/scrollup.js"></script>
   </h:body>
 </html>
