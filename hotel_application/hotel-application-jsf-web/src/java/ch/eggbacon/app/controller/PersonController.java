@@ -17,6 +17,8 @@
 package ch.eggbacon.app.controller;
 
 import ch.eggbacon.app.entity.Person;
+import ch.eggbacon.app.interf.PersonService;
+import ch.eggbacon.app.service.PersonServiceImpl;
 import ch.eggbacon.app.util.HibernateUtil;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -32,23 +34,16 @@ import org.hibernate.SessionFactory;
 @SessionScoped
 public class PersonController {
     private List<Person> personList;
-    private SessionFactory fc;
-    private Session session;
+    private PersonService service;
     
     private String filterString;
 
     public PersonController () {
-        try {
-            fc = HibernateUtil.getSessionFactory();
-            session = fc.openSession();
+        
+        service = new PersonServiceImpl();
 
-            personList = session.createQuery("FROM Person").list();
-            
-            
-        } catch (Exception ex) {
-            
-            ex.printStackTrace();
-        }
+        personList = service.searchAllPerson();
+
     }
 
     public List<Person> getPersonList() {
@@ -58,22 +53,6 @@ public class PersonController {
     public void setPersonList(List<Person> personList) {
         this.personList = personList;
     }
-
-    public SessionFactory getFc() {
-        return fc;
-    }
-
-    public void setFc(SessionFactory fc) {
-        this.fc = fc;
-    }
-
-    public Session getSession() {
-        return session;
-    }
-
-    public void setSession(Session session) {
-        this.session = session;
-    }
-    
+  
     
 }

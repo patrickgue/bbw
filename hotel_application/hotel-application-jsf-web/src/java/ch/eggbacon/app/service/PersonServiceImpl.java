@@ -26,7 +26,7 @@ import java.util.List;
  */
 public class PersonServiceImpl extends DatabaseService implements PersonService {
 
-    private final String TABLE_NAME = "person";
+    private final String TABLE_NAME = "Person";
     
     @Override
     public List<Person> searchAllPerson() {
