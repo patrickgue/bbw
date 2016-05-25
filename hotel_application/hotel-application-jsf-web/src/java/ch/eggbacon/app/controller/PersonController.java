@@ -20,7 +20,11 @@ import ch.eggbacon.app.entity.Person;
 import ch.eggbacon.app.interf.PersonService;
 import ch.eggbacon.app.service.PersonServiceImpl;
 import ch.eggbacon.app.util.HibernateUtil;
+import ch.eggbacon.util.logger.Logger;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import org.hibernate.Session;
@@ -33,8 +37,14 @@ import org.hibernate.SessionFactory;
 @ManagedBean
 @SessionScoped
 public class PersonController {
+    
+    private Logger LOG = new Logger(this.getClass().getName()); 
+
+    
     private List<Person> personList;
-    private PersonService service;
+    private PersonServiceImpl service;
+    private Person newPerson;
+    private SimpleDateFormat sdtF = new SimpleDateFormat("dd.MM.yyyy",Locale.GERMAN);
     
     private String filterString;
 
@@ -43,6 +53,7 @@ public class PersonController {
         service = new PersonServiceImpl();
 
         personList = service.searchAllPerson();
+        newPerson = new Person();
 
     }
 
@@ -53,6 +64,41 @@ public class PersonController {
     public void setPersonList(List<Person> personList) {
         this.personList = personList;
     }
+
+    /**
+     * @return the newPerson
+     */
+    public Person getNewPerson() {
+        return newPerson;
+    }
+
+    /**
+     * @param newPerson the newPerson to set
+     */
+    public void setNewPerson(Person newPerson) {
+        this.newPerson = newPerson;
+    }
+    
+    
+    public String createNewPerson(){
+        
+        newPerson.setEingabedatum(new Date());
+        LOG.info(newPerson.toString());
+        if(service.persist(newPerson)){
+            personList = service.searchAllPerson();
+        }
+        
+        return "person.xhtml";
+    }
+
+    /**
+     * @return the sdtF
+     */
+    public SimpleDateFormat getSdtF() {
+        return sdtF;
+    }
+    
+    
   
     
 }

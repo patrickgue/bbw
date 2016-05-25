@@ -18,6 +18,7 @@ package ch.eggbacon.app.util;
  */
 
 
+import ch.eggbacon.util.logger.Logger;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
 
@@ -30,15 +31,17 @@ import org.hibernate.SessionFactory;
 public class HibernateUtil {
 
     private static final SessionFactory sessionFactory;
+    private static final Logger LOG;
     
     static {
+        LOG = new Logger(HibernateUtil.class.getName());
         try {
             // Create the SessionFactory from standard (hibernate.cfg.xml) 
             // config file.
             sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
         } catch (Throwable ex) {
             // Log the exception. 
-            System.err.println("Initial SessionFactory creation failed." + ex);
+            LOG.error("Initial SessionFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }

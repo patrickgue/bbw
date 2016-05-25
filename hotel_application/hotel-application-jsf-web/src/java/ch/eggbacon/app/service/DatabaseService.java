@@ -26,7 +26,7 @@ import org.hibernate.SessionFactory;
  *
  * @author guenthard
  */
-public class DatabaseService {
+public class DatabaseService<T> {
     
     private SessionFactory sf;
     private Session session;
@@ -46,6 +46,32 @@ public class DatabaseService {
     
     public Session getSession(){
         return this.session;
+    }
+    
+    
+    public boolean persist(T obj){
+        try {
+            
+            getSession().getTransaction().begin();
+            
+            getSession().save(obj);
+            if(!getSession().getTransaction().wasCommitted())
+                getSession().getTransaction().commit();
+            LOG.info("Persistance successful" + obj.toString());
+            return true;
+        } catch(Exception ex) {
+            LOG.error("Persistance failed: " + ex);
+            return false;
+        }
+    }
+    
+    public boolean delete(T obj){
+        try {
+            getSession().delete(obj);
+            return true;
+        } catch(Exception ex) {
+            return false;
+        }
     }
     
     

@@ -29,7 +29,7 @@ fontfamily=Monospaced;
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>550</y>
+      <y>620</y>
       <w>230</w>
       <h>90</h>
     </coordinates>
@@ -45,7 +45,7 @@ PK UserID      INT      NN
     <id>UMLClass</id>
     <coordinates>
       <x>420</x>
-      <y>270</y>
+      <y>340</y>
       <w>230</w>
       <h>90</h>
     </coordinates>
@@ -61,7 +61,7 @@ FK PersID      INT
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>270</y>
+      <y>340</y>
       <w>260</w>
       <h>60</h>
     </coordinates>
@@ -75,7 +75,7 @@ PK LeistungID     INT      NN
     <id>UMLClass</id>
     <coordinates>
       <x>850</x>
-      <y>250</y>
+      <y>320</y>
       <w>260</w>
       <h>140</h>
     </coordinates>
@@ -95,7 +95,7 @@ PK PersID         INT      NN
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>310</y>
+      <y>380</y>
       <w>230</w>
       <h>40</h>
     </coordinates>
@@ -107,7 +107,7 @@ m2=0..1</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>420</x>
-      <y>470</y>
+      <y>540</y>
       <w>230</w>
       <h>160</h>
     </coordinates>
@@ -125,7 +125,7 @@ FK UserID      INT
     <id>Relation</id>
     <coordinates>
       <x>520</x>
-      <y>350</y>
+      <y>420</y>
       <w>60</w>
       <h>140</h>
     </coordinates>
@@ -137,7 +137,7 @@ m2=0..1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>580</y>
+      <y>650</y>
       <w>220</w>
       <h>40</h>
     </coordinates>
@@ -149,7 +149,7 @@ m2=0..1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>250</x>
-      <y>290</y>
+      <y>360</y>
       <w>190</w>
       <h>260</h>
     </coordinates>
@@ -161,7 +161,7 @@ m2=0..1</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>90</y>
+      <y>160</y>
       <w>230</w>
       <h>100</h>
     </coordinates>
@@ -178,7 +178,7 @@ PK PreisID     INT     NN
     <id>Relation</id>
     <coordinates>
       <x>120</x>
-      <y>180</y>
+      <y>250</y>
       <w>60</w>
       <h>110</h>
     </coordinates>
@@ -190,7 +190,7 @@ m2=1</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>130</x>
-      <y>0</y>
+      <y>70</y>
       <w>280</w>
       <h>70</h>
     </coordinates>

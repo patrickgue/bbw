@@ -39,11 +39,8 @@ public class TestController {
     public TestController() {
         try {
             this.fc = HibernateUtil.getSessionFactory();
-            session = fc.openSession();
-
-            
+            session = fc.openSession();            
         } catch (Exception ex) {
-            
             ex.printStackTrace();
         }
     }
