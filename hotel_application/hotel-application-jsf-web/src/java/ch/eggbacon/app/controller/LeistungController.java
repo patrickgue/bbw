@@ -19,13 +19,9 @@ package ch.eggbacon.app.controller;
 import ch.eggbacon.app.entity.Leistung;
 import ch.eggbacon.app.interf.LeistungService;
 import ch.eggbacon.app.service.LeistungServiceImpl;
-import ch.eggbacon.app.service.PersonServiceImpl;
 import ch.eggbacon.app.util.Constants;
 import ch.eggbacon.util.logger.Logger;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 

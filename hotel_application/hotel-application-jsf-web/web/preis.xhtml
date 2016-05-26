@@ -13,15 +13,45 @@
                 <h:form>
                     <div class="box50p">
                         <div class="input-block">
-                            <label>Leistung</label>
-                            <h:selectOneMenu>
+                            <label for="inputLeistungList">Leistung</label>
+                            <h:selectOneMenu id="inputLeistungList" value="${preisController.newPreis.leistung}">
                                 <f:selectItems value="${preisController.leistungList}" var="v" itemLabel="${v.beschreibung}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label>Datum</label>
+                            Y: <h:inputText class="small" value="${preisController.newPreis.datum.year}" />
+                            M: <h:inputText class="small" value="${preisController.newPreis.datum.month}"  />
+                            D: <h:inputText class="small" value="${preisController.newPreis.datum.day}"  />
+
+                        </div>
+                    </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inputPreis">Preis</label>
+                            <h:inputText value="${preisController.newPreis.preis}" id="inputPreis" />
+                        </div>
+                    </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inputRabatt">Rabatt</label>
+                            <h:inputText value="${preisController.newPreis.rabatt}" id="inputRabatt" />
+                        </div>
+                    </div>
+                    <h:commandButton action="${preisController.addNewPreis()}" value="Speichern"/>
                     
                     
                 </h:form>
+                
+                <h:dataTable value="${preisController.preise}">
+                    <h:column>
+                        <f:facet name="header">Preis</f:facet>
+                        
+                    </h:column>
+                
+                </h:dataTable>
                 
             </ui:define>
         </ui:composition>

@@ -23,4 +23,5 @@ package ch.eggbacon.app.util;
 public class Constants {
     public static final String PERSON_SITE = "person.xhtml";
     public static final String LEISTUNG_SITE = "leistung.xhtml";
+    public static final String PREIS_SITE = "preis.xhtml";
 }

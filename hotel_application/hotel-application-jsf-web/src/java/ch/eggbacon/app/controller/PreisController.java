@@ -22,6 +22,7 @@ import ch.eggbacon.app.interf.LeistungService;
 import ch.eggbacon.app.interf.PreisService;
 import ch.eggbacon.app.service.LeistungServiceImpl;
 import ch.eggbacon.app.service.PreisServiceImpl;
+import ch.eggbacon.app.util.Constants;
 import ch.eggbacon.util.logger.Logger;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -38,18 +39,23 @@ public class PreisController {
     private Leistung selectedLeistung;
     private List<Leistung> leistungList;
     private List<Preis> preise;
+    private Preis newPreis;
     
     private PreisService service;
     private LeistungService leistungService;
     
     public PreisController() {
-        LOG.debug("Load leistung Service");
         leistungService = new LeistungServiceImpl();
-        LOG.debug("Load preis Service");
         service = new PreisServiceImpl();
-        LOG.debug("Load all leistung");
-        leistungList = leistungService.getAllLeistung();      
-        LOG.debug("all leistung loaded");
+        
+        loadAllLeistung();
+        loadAllPreis();
+
+    }
+    
+    public String addNewPreis(){
+        service.addPreis(newPreis);
+        return Constants.PREIS_SITE;
     }
 
     public Leistung getSelectedLeistung() {
@@ -75,5 +81,26 @@ public class PreisController {
     public void setPreise(List<Preis> preise) {
         this.preise = preise;
     }
+
+    /**
+     * @return the newPreis
+     */
+    public Preis getNewPreis() {
+        return newPreis;
+    }
+
+    /**
+     * @param newPreis the newPreis to set
+     */
+    public void setNewPreis(Preis newPreis) {
+        this.newPreis = newPreis;
+    }
     
+    private void loadAllLeistung(){
+        leistungList = leistungService.getAllLeistung();
+    }
+    
+    private void loadAllPreis(){
+        preise = service.getAllPreis();
+    }
 }
