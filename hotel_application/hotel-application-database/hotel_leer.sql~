@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS `buchung`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `buchung` (
-  `BuchungID` int(11) NOT NULL AUTO_INCREMENT,
+  `BuchungID` int(11) NOT NULL DEFAULT '0',
   `PersID` int(11) DEFAULT NULL,
   `Ankunft` datetime DEFAULT NULL,
   `Abreise` datetime DEFAULT NULL,
@@ -84,7 +84,7 @@ DROP TABLE IF EXISTS `leistung`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `leistung` (
-  `LeistungID` int(11) NOT NULL AUTO_INCREMENT,
+  `LeistungID` int(11) NOT NULL DEFAULT '0',
   `Beschreibung` varchar(70) DEFAULT NULL,
   PRIMARY KEY (`LeistungID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -24,7 +24,7 @@ import java.util.List;
  *
  * @author Patrick
  */
-public class LeistungServiceImpl extends DatabaseService<Leistung> implements LeistungService{
+public class LeistungServiceImpl extends DatabaseServiceImpl<Leistung> implements LeistungService{
 
     private final String TABLE_NAME = "Leistung";
     

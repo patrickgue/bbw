@@ -20,6 +20,7 @@
     var scrollUpButton = document.getElementById("scroll-up-button");
     var doc = document.documentElement;
     scrollUpButton.style.display = "none";
+    
     window.onscroll = function(){
         
         var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);

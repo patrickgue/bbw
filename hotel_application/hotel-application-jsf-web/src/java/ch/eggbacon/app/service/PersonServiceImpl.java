@@ -24,7 +24,7 @@ import java.util.List;
  *
  * @author guenthard
  */
-public class PersonServiceImpl extends DatabaseService<Person> implements PersonService {
+public class PersonServiceImpl extends DatabaseServiceImpl<Person> implements PersonService {
 
     private final String TABLE_NAME = "Person";
     

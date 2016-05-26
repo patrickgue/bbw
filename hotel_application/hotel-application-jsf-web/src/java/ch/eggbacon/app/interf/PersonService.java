@@ -23,7 +23,7 @@ import java.util.List;
  *
  * @author guenthard
  */
-public interface PersonService {
+public interface PersonService extends DatabaseService<Person>{
     public List<Person> searchAllPerson();
     
 }

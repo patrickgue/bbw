@@ -16,6 +16,7 @@
  */
 package ch.eggbacon.app.service;
 
+import ch.eggbacon.app.interf.DatabaseService;
 import ch.eggbacon.app.util.HibernateUtil;
 import ch.eggbacon.util.logger.Logger;
 import org.hibernate.HibernateException;
@@ -26,13 +27,13 @@ import org.hibernate.SessionFactory;
  *
  * @author guenthard
  */
-public class DatabaseService<T> {
+public class DatabaseServiceImpl<T> implements DatabaseService<T>{
     
     private SessionFactory sf;
     private Session session;
     private final Logger LOG = new Logger(this.getClass().getName());
 
-    public DatabaseService() {
+    public DatabaseServiceImpl() {
         sf = HibernateUtil.getSessionFactory();
         try {
             session = sf.getCurrentSession();
@@ -57,12 +58,11 @@ public class DatabaseService<T> {
             getSession().save(obj);
             if(!getSession().getTransaction().wasCommitted()){
                 getSession().getTransaction().commit();
-            } else {
-                getSession().getTransaction().rollback();
             }
             LOG.info("Persistance successful" + obj.toString());
             return true;
         } catch(Exception ex) {
+            getSession().getTransaction().rollback();
             LOG.error("Persistance failed: " + ex);
             return false;
         }
@@ -76,11 +76,11 @@ public class DatabaseService<T> {
             
             if(!getSession().getTransaction().wasCommitted()) {
                 getSession().getTransaction().commit();
-            } else {
-                getSession().getTransaction().rollback();
             }
+            
             return true;
         } catch(Exception ex) {
+            getSession().getTransaction().rollback();
             return false;
         }
     }

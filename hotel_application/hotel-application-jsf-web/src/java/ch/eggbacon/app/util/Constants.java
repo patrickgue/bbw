@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Patrick
+ * Copyright (C) 2016 guenthard
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,15 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package ch.eggbacon.app.interf;
-
-import ch.eggbacon.app.entity.Leistung;
-import java.util.List;
+package ch.eggbacon.app.util;
 
 /**
  *
- * @author Patrick
+ * @author guenthard
  */
-public interface LeistungService extends DatabaseService<Leistung>{
-    public List<Leistung> getAllLeistung();
+public class Constants {
+    public static final String PERSON_SITE = "person.xhtml";
+    public static final String LEISTUNG_SITE = "leistung.xhtml";
 }

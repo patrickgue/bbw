@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Patrick
+ * Copyright (C) 2016 guenthard
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,13 +16,11 @@
  */
 package ch.eggbacon.app.interf;
 
-import ch.eggbacon.app.entity.Leistung;
-import java.util.List;
-
 /**
  *
- * @author Patrick
+ * @author guenthard
  */
-public interface LeistungService extends DatabaseService<Leistung>{
-    public List<Leistung> getAllLeistung();
+public interface DatabaseService<T> {
+    public boolean persist(T obj);
+    public boolean delete(T obj);
 }

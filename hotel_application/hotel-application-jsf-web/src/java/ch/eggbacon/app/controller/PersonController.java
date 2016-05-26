@@ -19,7 +19,7 @@ package ch.eggbacon.app.controller;
 import ch.eggbacon.app.entity.Person;
 import ch.eggbacon.app.interf.PersonService;
 import ch.eggbacon.app.service.PersonServiceImpl;
-import ch.eggbacon.app.util.HibernateUtil;
+import ch.eggbacon.app.util.Constants;
 import ch.eggbacon.util.logger.Logger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,8 +27,6 @@ import java.util.List;
 import java.util.Locale;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 
 /**
  *
@@ -42,11 +40,9 @@ public class PersonController {
 
     
     private List<Person> personList;
-    private PersonServiceImpl service;
+    private PersonService service;
     private Person newPerson;
     private SimpleDateFormat sdtF = new SimpleDateFormat("dd.MM.yyyy",Locale.GERMAN);
-    
-    private String filterString;
 
     public PersonController () {
         
@@ -86,14 +82,14 @@ public class PersonController {
             loadPersonList();
             newPerson = new Person();
         }
-        return "person.xhtml";
+        return Constants.PERSON_SITE;
     }
 
     public String deletePerson(Person pers){
         if(service.delete(pers)){
             loadPersonList();
         }
-        return "person.xhtml";
+        return Constants.PERSON_SITE;
     }
     
     private void loadPersonList(){

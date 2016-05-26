@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+          
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:body>
+        <ui:composition template="template.xhtml">
+            <ui:define name="title"><span title="Kunden">Preis</span></ui:define>
+            <ui:define name="content">
+                <h:form>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label>Leistung</label>
+                            <h:selectOneMenu>
+                                <f:selectItems value="${preisController.leistungList}" var="v" itemLabel="${v.beschreibung}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    
+                    
+                </h:form>
+                <!--<div class="table-wrap">
+                    <h:dataTable value="${preisController}" var="pers">
+                        <h:column>
+                            <f:facet name="header">Vorname</f:facet>
+                            ${pers.vorname}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Nachname</f:facet>
+                            ${pers.nachname}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Strasse</f:facet>
+                            ${pers.strasse}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Ort</f:facet>
+                            ${pers.ort}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Anrede</f:facet>
+                            ${pers.anrede}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Eingabedatum</f:facet>
+                            ${personController.sdtF.format(pers.eingabedatum)}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Delete</f:facet>
+                            <h:form>
+                                <h:commandButton action="${personController.deletePerson(pers)}" value="&times;"/>
+                            </h:form>
+                        </h:column>
+
+                    </h:dataTable>
+                </div>-->
+            </ui:define>
+        </ui:composition>
+    </h:body>
+          
+</html>

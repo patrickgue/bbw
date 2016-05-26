@@ -168,18 +168,22 @@ input {
 }
 
 
-.box50p, .box33p, .box25p {
+.box50p, .box33p, .box25p, .box75p {
     display: inline-block;
     min-height: 20px;
     vertical-align: top;
 }
 
-.box50p.r, .box33p.r, .box25p.r {
+.box50p.r, .box33p.r, .box25p.r, .box75p r {
     text-align: right;
 }
 
-.box50p img, .box33p img, .box25p img{
+.box50p img, .box33p img, .box25p img, .box75p img{
     width: 100%;
+}
+
+.box75p{
+    width: 74.5%;
 }
 
 .box50p{
@@ -275,7 +279,7 @@ td, th {
 	padding: 20px 2px;
     }
 
-    .box50p, .box33p, .box25p{
+    .box50p, .box33p, .box25p, .box75p{
 	width: 100%;
     }
 

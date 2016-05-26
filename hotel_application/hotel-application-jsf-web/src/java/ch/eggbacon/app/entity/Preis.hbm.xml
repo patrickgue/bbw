@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+   <class name="ch.eggbacon.app.entity.Preis" table="preis">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="preisId" type="long" column="PreisID">
+         <generator class="native"/>
+      </id>
+      <property name="preis" column="Preis" type="double"/>
+      <property name="rabatt" column="Rabatt" type="double"/>
+      <property name="datum" column="Datum" type="date"/>
+      <many-to-one name="leistung" column="LeistungID" class="ch.eggbacon.app.entity.Leistung" />
+      
+   </class>
+</hibernate-mapping>
