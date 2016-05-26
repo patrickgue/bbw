@@ -6,9 +6,9 @@
   <session-factory>
       <!---->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://db55.netzone.ch/rogerguenthar4</property><!-- jdbc:mysql://db55.netzone.ch/rogerguenthar4 -->
-    <property name="hibernate.connection.username">rogerguenthar4</property><!--  -->
-    <property name="hibernate.connection.password">334fgF</property><!--  -->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/hotel</property><!-- jdbc:mysql://db55.netzone.ch/rogerguenthar4 -->
+    <property name="hibernate.connection.username">root</property><!--  -->
+    <property name="hibernate.connection.password">kinney94</property><!--  -->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.show_sql">true</property>
     <mapping class="ch.eggbacon.app.entity.Benutzer" resource="ch/eggbacon/app/entity/Benutzer.hbm.xml"></mapping>

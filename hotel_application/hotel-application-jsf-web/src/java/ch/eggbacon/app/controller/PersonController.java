@@ -81,16 +81,25 @@ public class PersonController {
     
     
     public String createNewPerson(){
-        
         newPerson.setEingabedatum(new Date());
-        LOG.info(newPerson.toString());
         if(service.persist(newPerson)){
-            personList = service.searchAllPerson();
+            loadPersonList();
+            newPerson = new Person();
         }
-        
         return "person.xhtml";
     }
 
+    public String deletePerson(Person pers){
+        if(service.delete(pers)){
+            loadPersonList();
+        }
+        return "person.xhtml";
+    }
+    
+    private void loadPersonList(){
+        personList = service.searchAllPerson();
+    }
+    
     /**
      * @return the sdtF
      */

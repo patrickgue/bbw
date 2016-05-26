@@ -55,8 +55,11 @@ public class DatabaseService<T> {
             getSession().getTransaction().begin();
             
             getSession().save(obj);
-            if(!getSession().getTransaction().wasCommitted())
+            if(!getSession().getTransaction().wasCommitted()){
                 getSession().getTransaction().commit();
+            } else {
+                getSession().getTransaction().rollback();
+            }
             LOG.info("Persistance successful" + obj.toString());
             return true;
         } catch(Exception ex) {
@@ -67,7 +70,15 @@ public class DatabaseService<T> {
     
     public boolean delete(T obj){
         try {
+            getSession().getTransaction().begin();
+            
             getSession().delete(obj);
+            
+            if(!getSession().getTransaction().wasCommitted()) {
+                getSession().getTransaction().commit();
+            } else {
+                getSession().getTransaction().rollback();
+            }
             return true;
         } catch(Exception ex) {
             return false;
