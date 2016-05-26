@@ -38,7 +38,7 @@ header .container {
     padding: 0px;
 }
 
-button, input[type=submit]{
+button, select, input[type=submit]{
     min-width: 60px;
     min-height: 30px;
     border: 1px solid #aaa;

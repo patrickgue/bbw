@@ -45,9 +45,10 @@ public class PersonController {
     private SimpleDateFormat sdtF = new SimpleDateFormat("dd.MM.yyyy",Locale.GERMAN);
 
     public PersonController () {
+
         
         service = new PersonServiceImpl();
-
+        
         personList = service.searchAllPerson();
         newPerson = new Person();
 

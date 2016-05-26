@@ -22,6 +22,7 @@ import ch.eggbacon.app.interf.LeistungService;
 import ch.eggbacon.app.interf.PreisService;
 import ch.eggbacon.app.service.LeistungServiceImpl;
 import ch.eggbacon.app.service.PreisServiceImpl;
+import ch.eggbacon.util.logger.Logger;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -33,7 +34,7 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class PreisController {
-    
+    private Logger LOG = new Logger(this.getClass().getName()); 
     private Leistung selectedLeistung;
     private List<Leistung> leistungList;
     private List<Preis> preise;
@@ -42,10 +43,13 @@ public class PreisController {
     private LeistungService leistungService;
     
     public PreisController() {
+        LOG.debug("Load leistung Service");
         leistungService = new LeistungServiceImpl();
+        LOG.debug("Load preis Service");
         service = new PreisServiceImpl();
-        
-        leistungList = leistungService.getAllLeistung();        
+        LOG.debug("Load all leistung");
+        leistungList = leistungService.getAllLeistung();      
+        LOG.debug("all leistung loaded");
     }
 
     public Leistung getSelectedLeistung() {
@@ -54,14 +58,6 @@ public class PreisController {
 
     public void setSelectedLeistung(Leistung selectedLeistung) {
         this.selectedLeistung = selectedLeistung;
-    }
-
-    public PreisService getService() {
-        return service;
-    }
-
-    public void setService(PreisService service) {
-        this.service = service;
     }
 
     public List<Leistung> getLeistungList() {
