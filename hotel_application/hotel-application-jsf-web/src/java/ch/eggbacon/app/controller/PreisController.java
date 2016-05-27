@@ -24,6 +24,7 @@ import ch.eggbacon.app.service.LeistungServiceImpl;
 import ch.eggbacon.app.service.PreisServiceImpl;
 import ch.eggbacon.app.util.Constants;
 import ch.eggbacon.util.logger.Logger;
+import java.util.Date;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -45,6 +46,9 @@ public class PreisController {
     private LeistungService leistungService;
     
     public PreisController() {
+        newPreis = new Preis();
+        newPreis.setDatum(new Date());
+        
         leistungService = new LeistungServiceImpl();
         service = new PreisServiceImpl();
         

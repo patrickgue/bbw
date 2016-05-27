@@ -70,8 +70,10 @@ public class Leistung implements Serializable{
 
     @Override
     public String toString() {
-        return "Leistung{" + "userId=" + leistungId + ", beschreibung=" + beschreibung + '}';
+        return "Leistung{" + "leistungId=" + leistungId + ", beschreibung=" + beschreibung + '}';
     }
+
+    
 
     @Override
     public int hashCode() {
