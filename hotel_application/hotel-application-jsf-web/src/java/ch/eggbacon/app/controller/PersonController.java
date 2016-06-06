@@ -66,6 +66,7 @@ public class PersonController {
      * @return the newPerson
      */
     public Person getNewPerson() {
+        LOG.debug(newPerson.toString());
         return newPerson;
     }
 
@@ -79,9 +80,10 @@ public class PersonController {
     
     public String createNewPerson(){
         newPerson.setEingabedatum(new Date());
+        LOG.debug(newPerson.toString());
         if(service.persist(newPerson)){
             loadPersonList();
-            newPerson = new Person();
+            //newPerson = new Person();
         }
         return Constants.PERSON_SITE;
     }
