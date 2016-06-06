@@ -64,6 +64,7 @@ public class DatabaseServiceImpl<T> implements DatabaseService<T>{
         } catch(Exception ex) {
             getSession().getTransaction().rollback();
             LOG.error("Persistance failed: " + ex);
+            LOG.error(obj.toString());
             return false;
         }
     }

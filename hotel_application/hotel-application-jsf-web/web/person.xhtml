@@ -14,40 +14,48 @@
                     <div class="box50p">
                         <div class="input-block">
                             <label for="inVorname">Vorname</label>
-                            <h:inputText id="inVorname" value="${personController.newPerson.vorname}" />
-                        </div>
-                        <div class="input-block">
-                            <label for="inStrasse">Strasse</label>
-                            <h:inputText id="inStrasse" value="${personController.newPerson.strasse}" />
-                        </div>
-                        <div class="input-block">
-                            <label for="inAnrede">Anrede</label>
-                            <h:inputText id="inAnrede" value="${personController.newPerson.anrede}" />
+                            <h:inputText id="inVorname" value="#{personController.newPerson.vorname}" />
                         </div>
                     </div>
-                    
                     <div class="box50p">
                         <div class="input-block">
                             <label for="inNachname">Nachname</label>
-                            <h:inputText id="inNachname" value="${personController.newPerson.nachname}" />
-                        </div>
-                        <div class="input-block">
-                            <label for="inOrt">Ort</label>
-                            <h:inputText id="inOrt" value="${personController.newPerson.ort}" />
-                        </div>
-                        <div class="input-block">
-                            <label for="inTel">Tel.</label>
-                            <h:inputText id="inTel" value="${personController.newPerson.privattelefon}" />
+                            <h:inputText id="inNachname" value="#{personController.newPerson.nachname}" />
                         </div>
                     </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inAnrede">Anrede</label>
+                            <h:inputText id="inAnrede" value="#{personController.newPerson.anrede}" />
+                        </div>
+                    </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inTel">Tel.</label>
+                            <h:inputText id="inTel" value="#{personController.newPerson.privattelefon}" />
+                        </div>
+                    </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inStrasse">Strasse</label>
+                            <h:inputText id="inStrasse" value="#{personController.newPerson.strasse}" />
+                        </div>
+                    </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inOrt">Ort</label>
+                            <h:inputText id="inOrt" value="#{personController.newPerson.ort}" />
+                        </div>
+                    </div>
+                    
                     <div class="r">
-                        <h:commandButton action="${personController.createNewPerson()}" value="Save"/>
+                        <h:commandButton action="#{personController.createNewPerson()}" value="Save"/>
                     </div>
                     
                     
                 </h:form>
                 <div class="table-wrap">
-                    <h:dataTable value="${personController.personList}" var="pers">
+                    <h:dataTable value="#{personController.personList}" var="pers">
                         <h:column>
                             <f:facet name="header">Vorname</f:facet>
                             ${pers.vorname}
