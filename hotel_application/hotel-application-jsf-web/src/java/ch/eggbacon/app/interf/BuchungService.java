@@ -16,19 +16,13 @@
  */
 package ch.eggbacon.app.interf;
 
-import ch.eggbacon.app.entity.Leistung;
-import ch.eggbacon.app.entity.Preis;
-import java.util.Date;
+import ch.eggbacon.app.entity.Buchung;
 import java.util.List;
 
 /**
  *
  * @author guenthard
  */
-public interface PreisService extends DatabaseService<Preis>{
-    public List<Preis> getAllPreis();
-    public List<Preis> getPreisByLeistung(Leistung l);
-    public List<Preis> getPreisByDatum(Date d);
-    public boolean addPreis(Preis p);
-    
+public interface BuchungService extends DatabaseService<Buchung> {
+    public List<Buchung> searchAllBuchung();
 }

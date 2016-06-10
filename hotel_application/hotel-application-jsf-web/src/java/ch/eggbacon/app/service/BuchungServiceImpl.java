@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 guenthard
+ * Copyright (C) 2016 Patrick
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,21 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package ch.eggbacon.app.interf;
+package ch.eggbacon.app.service;
 
-import ch.eggbacon.app.entity.Leistung;
-import ch.eggbacon.app.entity.Preis;
-import java.util.Date;
+import ch.eggbacon.app.entity.Buchung;
+import ch.eggbacon.app.interf.BuchungService;
 import java.util.List;
 
 /**
  *
- * @author guenthard
+ * @author Patrick
  */
-public interface PreisService extends DatabaseService<Preis>{
-    public List<Preis> getAllPreis();
-    public List<Preis> getPreisByLeistung(Leistung l);
-    public List<Preis> getPreisByDatum(Date d);
-    public boolean addPreis(Preis p);
+public class BuchungServiceImpl extends DatabaseServiceImpl<Buchung> implements BuchungService{
+
+    private final String TABLE_NAME = "Buchung";
+
+    @Override
+    public List<Buchung> searchAllBuchung() {
+        return getSession().createQuery("FROM " +  TABLE_NAME).list();
+    }
+    
+   
     
 }

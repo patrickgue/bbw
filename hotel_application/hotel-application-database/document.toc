@@ -1,0 +1,4 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Neues ERD}{1}{section.1}
+\contentsline {section}{\numberline {2}\IeC {\"A}nderungen}{1}{section.2}
+\contentsline {section}{\numberline {3}SQL}{3}{section.3}
