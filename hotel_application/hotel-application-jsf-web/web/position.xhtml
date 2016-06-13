@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+          
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:body>
+        <ui:composition template="template.xhtml">
+            <ui:define name="title"><span title="Position">Position</span></ui:define>
+            <ui:define name="content">
+                <h:dataTable value="#{positionController.positionList}" var="position">
+                    <h:column>
+                        <f:facet name="header">Person</f:facet>
+                        #{position.buchung.person.nachname}, #{position.buchung.person.vorname} 
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Datum</f:facet>
+                        #{position.datum}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Leistung</f:facet>
+                        #{position.leistung.beschreibung}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Anzahl</f:facet>
+                        #{position.anzahl}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Benutzer</f:facet>
+                        #{position.benutzer.benutzer}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Delete</f:facet>
+                        <h:form>
+                            <h:commandButton action="#{positionController.delete(position)}" value="&times;"/>
+                        </h:form>
+                    </h:column>
+                    
+                </h:dataTable>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+          
+</html>

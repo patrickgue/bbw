@@ -30,7 +30,7 @@ public class PositionServiceImpl extends DatabaseServiceImpl<Position> implement
 
     @Override
     public List<Position> searchAllPosition() {
-        return getSession().createQuery("FROM " +  TABLE_NAME).list();
+        return getSession().createQuery("FROM " +  TABLE_NAME + " ORDER BY Datum").list();
     }
     
    
