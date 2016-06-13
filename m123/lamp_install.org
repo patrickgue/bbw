@@ -1,0 +1,24 @@
+#+TITLE:LAMP Installation
+
+* Preconditions
+ * Running System: e.g. Debian GNU/Linux
+ * root - access on this system
+* Installation
+** apache
+#+BEGIN_EXAMPLE
+# apt-get install apache2
+#+END_EXAMPLE
+** PHP
+#+BEGIN_EXAMPLE
+# apt-get install php5
+#+END_EXAMPLE 
+** MySQL
+#+BEGIN_EXAMPLE
+# apt-get install mysql-server
+#+END_EXAMPLE 
+** Configuration
+The location of the configuration files are at the following places:
+| apache2 | /etc/apache2/ |
+| php     | /etc/php/     |
+| mysql   | /etc/mysql/   |
+
