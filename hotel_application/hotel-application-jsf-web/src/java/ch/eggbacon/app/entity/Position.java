@@ -6,6 +6,7 @@
 package ch.eggbacon.app.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -43,6 +44,9 @@ public class Position implements Serializable {
     
     @Column(name="Anzahl")
     private Long anzahl;
+    
+    @Column(name="Datum")
+    Date datum;
 
     public Long getPositionId() {
         return positionId;
@@ -84,6 +88,16 @@ public class Position implements Serializable {
         this.anzahl = anzahl;
     }
 
+    public Date getDatum() {
+        return datum;
+    }
+
+    public void setDatum(Date datum) {
+        this.datum = datum;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Position{" + "positionId=" + positionId + ", buchung=" + buchung + ", leistung=" + leistung + ", benutzer=" + benutzer + ", anzahl=" + anzahl + '}';

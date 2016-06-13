@@ -25,7 +25,7 @@ import java.util.List;
  *
  * @author guenthard
  */
-public interface PreisService {
+public interface PreisService extends DatabaseService<Preis>{
     public List<Preis> getAllPreis();
     public List<Preis> getPreisByLeistung(Leistung l);
     public List<Preis> getPreisByDatum(Date d);

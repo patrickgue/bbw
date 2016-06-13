@@ -13,6 +13,7 @@
       <many-to-one name="buchung" column="BuchungID" class="ch.eggbacon.app.entity.Buchung" />
       <many-to-one name="leistung" column="LeistungID" class="ch.eggbacon.app.entity.Leistung" />
       <many-to-one name="benutzer" column="UserID" class="ch.eggbacon.app.entity.Benutzer" />
+      <property name="datum" column="Datum" type="date" />
       <!--<property name="buchung" column="BuchungID" type="long"/>
       <property name="leistung" column="LeistungID" type="long"/>
       <property name="benutzer" column="UserID" type="long"/>-->

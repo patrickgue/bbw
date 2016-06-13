@@ -1,0 +1,8 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Projektbeschrieb}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Ausgangslage}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Beschreibung}{1}{subsection.1.2}
+\contentsline {section}{\numberline {2}Konzeptionelles ERD}{3}{section.2}
+\contentsline {section}{\numberline {3}Logisches ERD}{4}{section.3}
+\contentsline {section}{\numberline {4}SQL}{5}{section.4}
+\contentsline {section}{\numberline {5}Prototype}{7}{section.5}
