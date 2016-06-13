@@ -1,6 +1,7 @@
 package ch.scheissegal.crypt.gui;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -20,13 +21,13 @@ public class Gui extends JFrame{
 	private JPanel mainPanel = new JPanel(new BorderLayout());
 	private JTextArea cryptPwArea = new JTextArea();
 	
-	private JPanel controlPanel = new JPanel(new GridLayout(0, 1));
+	private JPanel controlPanel = new JPanel(new WrapLayout(FlowLayout.LEFT));
 	
 	private JTextField pwInputField = new JTextField(10);
 	private JButton unlockButton = new JButton("unlock");
 	
-	private JTextField inputNewPasswordKind = new JTextField();
-	private JPasswordField inputNewPassword = new JPasswordField();
+	private JTextField inputNewPasswordKind = new JTextField(10);
+	private JPasswordField inputNewPassword = new JPasswordField(10);
 	
 	
 	public Gui() {
@@ -36,11 +37,11 @@ public class Gui extends JFrame{
 		controlPanel.add(pwInputField);
 		controlPanel.add(unlockButton);
 		controlPanel.add(new JSeparator(JSeparator.HORIZONTAL));
-		controlPanel.add(new JLabel("Input Password:"));
+		controlPanel.add(new JLabel("New Password:"));
 		controlPanel.add(inputNewPasswordKind);
 		controlPanel.add(inputNewPassword);
 		
-		
+		controlPanel.setSize(new Dimension(100, 1));
 		
 		
 		mainPanel.add(cryptPwArea, BorderLayout.CENTER);
