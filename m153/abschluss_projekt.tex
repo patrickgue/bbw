@@ -10,10 +10,12 @@
 \usepackage{lastpage}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{courier}
 \renewcommand{\sffamily}{phv}
 
 \newcommand{\titleText}{Modul 153 Projekt\\\textbf{Anti-Social}}
-\newcommand{\authorText}{T. Bonomelli, P. Günthard}
+\newcommand{\authorText}{T. Bonomelli, P. Günthard an der Berufsschule Winterthur}
 \newcommand{\dateText}{\today}
 
 \title{\titleText}
@@ -26,6 +28,10 @@
 \fancyhead[EL]{\titleText}
 \fancyhead[OR]{\today\\\textbf{\authorText}}
 \cfoot{\thepage \space von \pageref{LastPage}}
+
+\lstset{ %
+	basicstyle=\footnotesize\ttfamily        % the size of the fonts that are used for the code
+}
 
 \begin{document}
 	\maketitle
@@ -60,8 +66,21 @@
 	
 	\includegraphics[width=15cm]{ucprj}
 	
-	\section{Logisches ERD}
+	\section{Konzeptionelles ERD}
 	\includegraphics[width=15cm]{erd_a}
+	
+	\section{Logisches ERD}
+	\includegraphics[width=15cm]{erm}
+	
+	\section{SQL}
+	
+	
+	\lstinputlisting[language=SQL]{prototype/anti_social.sql}
+	
+	\section{Prototype}
+	
+	TODO
+	
 	
 	
 	
