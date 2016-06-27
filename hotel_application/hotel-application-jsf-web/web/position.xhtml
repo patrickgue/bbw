@@ -10,6 +10,15 @@
         <ui:composition template="template.xhtml">
             <ui:define name="title"><span title="Position">Position</span></ui:define>
             <ui:define name="content">
+                <h:form>
+                    <div>
+                        <div class="box50p">
+                            <h:selectOneMenu value="#{positionController.newPosition}">
+                                <f:attributes value="#{positionController.buchungen}" />
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                </h:form>
                 <h:dataTable value="#{positionController.positionList}" var="position">
                     <h:column>
                         <f:facet name="header">Person</f:facet>

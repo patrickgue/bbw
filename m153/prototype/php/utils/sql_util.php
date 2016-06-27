@@ -1,3 +1,3 @@
 <?php
-  $connection = new mysqli("localhost","root","kinney94","DB_ANTI_SOCIAL");
+  $connection = new mysqli("localhost","root","","DB_ANTI_SOCIAL");
  ?>

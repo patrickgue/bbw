@@ -16,8 +16,11 @@
  */
 package ch.eggbacon.app.controller;
 
+import ch.eggbacon.app.entity.Buchung;
 import ch.eggbacon.app.entity.Position;
+import ch.eggbacon.app.interf.BuchungService;
 import ch.eggbacon.app.interf.PositionService;
+import ch.eggbacon.app.service.BuchungServiceImpl;
 import ch.eggbacon.app.service.PositionServiceImpl;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -32,12 +35,18 @@ import javax.faces.bean.SessionScoped;
 public class PositionController {
     
     private PositionService positionService;
+    private BuchungService buchungService;
     
     private List<Position> positionList;
+    private List<Buchung> buchungen;
+    
+    private Position newPosition;
     
     public PositionController() {
         positionService = new PositionServiceImpl();
+        buchungService = new BuchungServiceImpl();
         
+        buchungen = buchungService.searchAllBuchung();
         loadList();
     }
 
@@ -51,6 +60,7 @@ public class PositionController {
     
     private void loadList(){
         positionList = positionService.searchAllPosition();
+        newPosition = positionList.get(0);
     }
     
     public String delete(Position pos){
@@ -58,4 +68,28 @@ public class PositionController {
         loadList();
         return "position.xhtml";
     }
+
+    public Position getNewPosition() {
+        return newPosition;
+    }
+
+    public void setNewPosition(Position newPosition) {
+        this.newPosition = newPosition;
+    }
+    
+    
+    public String saveNewPosition(){
+        return "position.xhtml";
+    }
+        
+    public List<Buchung> getBuchungen() {
+        return buchungen;
+    }
+
+    public void setBuchungen(List<Buchung> buchungen) {
+        this.buchungen = buchungen;
+    }
+        
+    
 }
+

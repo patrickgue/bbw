@@ -1,0 +1,2 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Analyse der Vorgabe}{1}{section.1}
