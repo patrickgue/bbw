@@ -1,0 +1,38 @@
+\documentclass[10pt,twoside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{utopia}
+\usepackage[margin=.5in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{makeidx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{multicol}
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{Formelsammlung Physik}
+\newcommand{\authorText}{Patrick Günthard}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\section{Kreisbewegung}
+	\subsection{Gleichförmige Kreisbewegung}
+	
+	\(T = \Delta t\)
+\end{document}

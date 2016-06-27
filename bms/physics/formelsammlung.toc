@@ -1,0 +1,3 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Kreisbewegung}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Gleichf\IeC {\"o}rmige Kreisbewegung}{1}{subsection.1.1}
