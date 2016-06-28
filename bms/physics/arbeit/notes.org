@@ -1,0 +1,43 @@
+* Ergebnisse
+** Grundwerte
+*** Gewicht
+\(1.51g \pm 0.04g\)
+*** Höhe
+\(5.6cm\)
+*** Radius
+\(6.5cm\)
+*** Grundfläche
+\((6.5cm)^2 * \pi = 132.736 cm^2 \)
+
+** Messergebnisse
+*** Ein Kegel
+\( v = -1.245 \frac{m}{s} \)
+
+
+*** Zwei Kegel
+\( v = -1.79 \frac{m}{s} \)
+
+
+*** Drei Kegel
+
+\( v = -2.1 \frac{m}{s} \)
+
+*** Vier Kegel
+
+\( v = -2.55 \frac{m}{s} \)
+
+
+*** Fünf Kegel
+
+\( v = -2.98 \frac{m}{s} \)
+
+
+*** Zusammenfassung
+
+| *Kegel* | \(v[\frac{m}{s}]\) | \(m[g]\) |
+|---------+--------------------+----------|
+|       1 |             -1.245 |      1.5 |
+|       2 |             -1.790 |        3 |
+|       3 |             -2.100 |      4.5 |
+|       4 |             -2.550 |        6 |
+|       5 |             -2.980 |      7.5 |

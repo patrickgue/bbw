@@ -1,0 +1,85 @@
+% Created 2016-06-14 Di. 09:39
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\date{\today}
+\title{notes}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Ergebnisse}
+\label{sec-1}
+\subsection{Grundwerte}
+\label{sec-1-1}
+\subsubsection{Gewicht}
+\label{sec-1-1-1}
+\(1.51g \pm 0.04g\)
+\subsubsection{Höhe}
+\label{sec-1-1-2}
+\(5.6cm\)
+\subsubsection{Radius}
+\label{sec-1-1-3}
+\(6.5cm\)
+\subsubsection{Grunffläche}
+\label{sec-1-1-4}
+\((6.5cm)^2 * \pi = 132.736 cm^2 \)
+
+\subsection{Messergebnisse}
+\label{sec-1-2}
+\subsubsection{Ein Kegel}
+\label{sec-1-2-1}
+\( v = -1.245 \frac{m}{s} \)
+
+
+\subsubsection{Zwei Kegel}
+\label{sec-1-2-2}
+\( v = -1.79 \frac{m}{s} \)
+
+
+\subsubsection{Drei Kegel}
+\label{sec-1-2-3}
+
+\( v = -2.1 \frac{m}{s} \)
+
+\subsubsection{Vier Kegel}
+\label{sec-1-2-4}
+
+\( v = -2.55 \frac{m}{s} \)
+
+
+\subsubsection{Fünf Kegel}
+\label{sec-1-2-5}
+
+\( v = -2.98 \frac{m}{s} \)
+
+
+\subsubsection{Zusammenfassung}
+\label{sec-1-2-6}
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Kegel} & \(v[\frac{m}{s}]\)\\
+\end{tabular}
+\end{center}
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}
