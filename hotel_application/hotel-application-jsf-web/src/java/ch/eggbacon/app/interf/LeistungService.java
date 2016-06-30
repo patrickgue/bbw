@@ -25,4 +25,6 @@ import java.util.List;
  */
 public interface LeistungService extends DatabaseService<Leistung>{
     public List<Leistung> getAllLeistung();
+    public Leistung getLeistungByBeschreibung(String besch);
+    public Leistung getLeistungById(Long id);
 }

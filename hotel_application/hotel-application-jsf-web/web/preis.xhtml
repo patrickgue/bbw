@@ -14,7 +14,7 @@
                     <div class="box50p">
                         <div class="input-block">
                             <label for="inputLeistungList">Leistung</label>
-                            <h:selectOneMenu id="inputLeistungList" value="${preisController.newPreis.leistung}">
+                            <h:selectOneMenu converter="${leistungConverter}" id="inputLeistungList" value="${preisController.newPreis.leistung}">
                                 <f:selectItems value="${preisController.leistungList}" var="v" itemLabel="${v.beschreibung}"/>
                             </h:selectOneMenu>
                         </div>
@@ -22,9 +22,9 @@
                     <div class="box50p">
                         <div class="input-block">
                             <label>Datum</label>
-                            Y: <h:inputText class="small" value="${preisController.newPreis.datum.year}" />
-                            M: <h:inputText class="small" value="${preisController.newPreis.datum.month}"  />
-                            D: <h:inputText class="small" value="${preisController.newPreis.datum.day}"  />
+                            Y: <h:inputText class="small" value="${preisController.newPreisYear}" />
+                            M: <h:inputText class="small" value="${preisController.newPreisMonth}"  />
+                            D: <h:inputText class="small" value="${preisController.newPreisDay}"  />
 
                         </div>
                     </div>

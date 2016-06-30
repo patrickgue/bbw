@@ -19,6 +19,7 @@ package ch.eggbacon.app.service;
 import ch.eggbacon.app.entity.Leistung;
 import ch.eggbacon.app.interf.LeistungService;
 import java.util.List;
+import org.hibernate.Query;
 
 /**
  *
@@ -32,5 +33,22 @@ public class LeistungServiceImpl extends DatabaseServiceImpl<Leistung> implement
     public List<Leistung> getAllLeistung() {
         return getSession().createQuery("FROM " +  TABLE_NAME).list();
     }
+    
+    
+    @Override
+    public Leistung getLeistungByBeschreibung(String beschreibung) {
+        Query q = getSession().createQuery("FROM " + TABLE_NAME + " WHERE Beschreibung = :beschr");
+        q.setParameter("beschr", beschreibung);
+        return ((Leistung)q.uniqueResult());
+    }
+
+    @Override
+    public Leistung getLeistungById(Long id) {
+        Query q = getSession().createQuery("FROM" + TABLE_NAME + "WHERE LeistungID = :id");
+        
+        return q.list().get(0);
+    }
+    
+    
     
 }

@@ -23,6 +23,7 @@ import ch.eggbacon.app.interf.PreisService;
 import ch.eggbacon.app.service.LeistungServiceImpl;
 import ch.eggbacon.app.service.PreisServiceImpl;
 import ch.eggbacon.app.util.Constants;
+import ch.eggbacon.app.util.TimeUtil;
 import ch.eggbacon.util.logger.Logger;
 import java.util.Date;
 import java.util.List;
@@ -40,7 +41,11 @@ public class PreisController {
     private Leistung selectedLeistung;
     private List<Leistung> leistungList;
     private List<Preis> preise;
+    
     private Preis newPreis;
+    private Integer newPreisYear;
+    private Integer newPreisMonth;
+    private Integer newPreisDay;
     
     private PreisService service;
     private LeistungService leistungService;
@@ -107,4 +112,32 @@ public class PreisController {
     private void loadAllPreis(){
         preise = service.getAllPreis();
     }
+
+    public Integer getNewPreisYear() {
+        return newPreisYear;
+    }
+
+    public void setNewPreisYear(Integer newPreisYear) {
+        this.newPreisYear = newPreisYear;
+        this.newPreis.setDatum(TimeUtil.setYear(this.newPreis.getDatum(), newPreisYear));
+    }
+
+    public Integer getNewPreisMonth() {
+        return newPreisMonth;
+    }
+
+    public void setNewPreisMonth(Integer newPreisMonth) {
+        this.newPreisMonth = newPreisMonth;
+        this.newPreis.setDatum(TimeUtil.setMonth(this.newPreis.getDatum(), newPreisMonth));
+    }
+
+    public Integer getNewPreisDay() {
+        return newPreisDay;
+    }
+
+    public void setNewPreisDay(Integer newPreisDay) {
+        this.newPreisDay = newPreisDay;
+        this.newPreis.setDatum(TimeUtil.setDay(this.newPreis.getDatum(), newPreisDay));
+    }
+    
 }

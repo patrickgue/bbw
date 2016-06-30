@@ -39,6 +39,8 @@ public class LeistungController {
     private List<Leistung> leistungList;
     private LeistungService service;
     private Leistung newLeistung;
+    
+    
 
     public LeistungController () {
         
@@ -83,7 +85,7 @@ public class LeistungController {
     public void setNewLeistung(Leistung newLeistung) {
         this.newLeistung = newLeistung;
     }
-    
+
     
     
     
