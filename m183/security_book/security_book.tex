@@ -28,68 +28,79 @@
 \cfoot{\thepage \space von \pageref{LastPage}}
 
 \begin{document}
-	\maketitle
-	\tableofcontents
-        
-        \section{Vulnrabilities defined by OWASP}
-        \subsection{A4: Insecure Direct Object Reference}
-        
-        \subsubsection{Introduction}
-        Insecure Direct Object Reference is a common vulnrability which exists
-        in web applications. It occurs if a parameter (e.g. a GET parameter)
-        references a object in the system. 
+\maketitle
+\tableofcontents
 
-        The atacker normally has to be authorized to this system but does not
-        have access to all data.
-        
-        \subsubsection{Example}
+\section{Vulnrabilities defined by OWASP}
+\subsection{A4: Insecure Direct Object Reference}
 
-        A URL which looks like this:
-        \texttt{http://example.net/page.php?user=\textit{myuser}} provides a
-        page which shows the user data of the logged in user. One can easily
-        change the parameter to show the data of another user:
-        \texttt{http://example.net/page.php?user=\textit{someotheruser}}
-        
-        \subsubsection{How to prevent}
-        
-        \paragraph{Session Based}
-        
-        \begin{itemize}
-        	\item No \textit{Direct Object Reference} has to be sent to the client, the references can be saved on the session
-        	\item In the case references are needed, they can differ from the server side data (i.e. database) an can be remapped on the server
-        \end{itemize}
-        
-        \paragraph{Authorization}
-        \begin{itemize}
-        	\item Every access is checked if the user is authorized to do that. Example: A random token can be created for each user which then is checked every time the user accesses the page
-        \end{itemize}
+\subsubsection{Introduction}
+Insecure Direct Object Reference is a common vulnrability which exists
+in web applications. It occurs if a parameter (e.g. a GET parameter)
+references a object in the system. 
 
-		\paragraph{Advantages}
-		
-		\begin{tabular}{|l|p{4cm}|p{4cm}|}
-			\hline
-			& \textbf{Advantage} & \textbf{Disadvantage} \\\hline
-			\textbf{Session Based} & Only one authorization has to be done, access data for Database etc. is saved on the server and is not accessible by the attacker & A session uses a lot of memory for each user. For applications with a high number of users, a session for each client is not possible i.e. a non-session solution has to be implemented \\\hline
-			\textbf{Authorization} & No Session is needed i.e. less memory is used and more users can access the application & Authorization is needed every time the user accesses data which is more complex to implement\\\hline
-		\end{tabular}
-		
-		\section{Symetrical encryption}
-		\subsection{How does it work?}
-		
-		In symetrical encryption you en- \& decrypt with the same key. 
-		
-		\subsection{Examples}
-		
-		\begin{itemize}
-			\item AES
-		\end{itemize}
-		
-		\section{Authentication / Authorization}
-		\section{Crypt Workshop}
-		\subsection{Reflexion}
-		\section{Signatures}
-		\subsection{Thoughts about collisions}
-		\subsection{THoughts about signatures of passwords and files}
-		\section{Key exchange}
-		\section{Encryption in the Java programming language}
+The atacker normally has to be authorized to this system but does not
+have access to all data.
+
+\subsubsection{Example}
+
+A URL which looks like this:
+\texttt{http://example.net/page.php?user=\textit{myuser}} provides a
+page which shows the user data of the logged in user. One can easily
+change the parameter to show the data of another user:
+\texttt{http://example.net/page.php?user=\textit{someotheruser}}
+
+\subsubsection{How to prevent}
+
+\paragraph{Session Based}
+
+\begin{itemize}
+\item No \textit{Direct Object Reference} has to be sent to the client, the references can be saved on the session
+\item In the case references are needed, they can differ from the server side data (i.e. database) an can be remapped on the server
+\end{itemize}
+
+\paragraph{Authorization}
+\begin{itemize}
+\item Every access is checked if the user is authorized to do that. Example: A random token can be created for each user which then is checked every time the user accesses the page
+\end{itemize}
+
+\paragraph{Advantages}
+
+\begin{tabular}{|l|p{4cm}|p{4cm}|}
+  \hline
+  & \textbf{Advantage} & \textbf{Disadvantage} \\\hline
+  \textbf{Session Based} & Only one authorization has to be done, access data for Database etc. is saved on the server and is not accessible by the attacker & A session uses a lot of memory for each user. For applications with a high number of users, a session for each client is not possible i.e. a non-session solution has to be implemented \\\hline
+  \textbf{Authorization} & No Session is needed i.e. less memory is used and more users can access the application & Authorization is needed every time the user accesses data which is more complex to implement\\\hline
+\end{tabular}
+
+\section{Symetrical encryption}
+\subsection{How does it work?}
+
+In symetrical encryption you en- \& decrypt with the same key. 
+
+\subsection{Examples}
+
+\begin{itemize}
+\item AES
+\end{itemize}
+
+\section{Authentication / Authorization}
+\subsection{Authentication}
+
+\textit{Authentication} is the process of checking if someone \textit{(e.g. a user of a multiuser application)} is the persone he or she pretends to be.
+
+\subsection{Authorization}
+
+\textit{Authentication} is the process of checkin if an authenticated User
+
+\section{Crypt Workshop}
+\subsection{Reflexion}
+\section{Signatures}
+\subsection{Thoughts about collisions}
+\subsection{Thoughts about signatures of passwords and files}
+\section{Key exchange}
+\section{Encryption in the Java programming language}
+\begin{thebibliography}{3}
+\bibitem[marke]{bezug} Literaturangabe
+\end{thebibliography}
 \end{document}

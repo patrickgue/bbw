@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  27 JUN 2016 15:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  4 JUL 2016 14:34
 entering extended mode
 **document.tex
 
-(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.te
+(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.te
 x
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
@@ -452,7 +452,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.au
+(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.au
 x)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -523,9 +523,9 @@ LaTeX Info: Redefining \ref on input line 29.
 LaTeX Info: Redefining \pageref on input line 29.
 LaTeX Info: Redefining \nameref on input line 29.
 
-(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.ou
+(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.ou
 t)
-(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.ou
+(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.ou
 t)
 \@outlinefile=\write3
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -535,46 +535,79 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 31.
 
-(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.to
+(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.to
 c)
 \tf@toc=\write4
+
+! Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                    
+l.38         \texttt{# apt-get install proftpd}
+                                               
+? git add *
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? q
+OK, entering \batchmode...
+! Illegal parameter number in definition of \reserved@b.
+<to be read again> 
+                   }
+l.38         \texttt{# apt-get install proftpd}
+                                               
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! You can't use `macro parameter character #' in horizontal mode.
+<recently read> ##
+                  
+l.38         \texttt{# apt-get install proftpd}
+                                               
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
  
 AED: lastpage setting LastPage
-[1
+ [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
 
-(C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.au
+(c:\Users\Patrick\Documents\GitHub\bbw.blog-cms\m123\modul_pruefung\document.au
 x)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
-
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 
 Package rerunfilecheck Warning: File `document.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  025FC6C9F14B69E1A015279CBC10620A;55.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 35.
+(rerunfilecheck)             Before: 025FC6C9F14B69E1A015279CBC10620A;55
+(rerunfilecheck)             After:  B7842DFF221AD0B8FE70C2CF54CC6D97;111.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 5502 strings out of 493921
- 81599 string characters out of 3144870
- 164123 words of memory out of 3000000
- 8741 multiletter control sequences out of 15000+200000
- 22968 words of font info for 33 fonts, out of 3000000 for 9000
+ 5509 strings out of 493921
+ 81668 string characters out of 3144870
+ 165123 words of memory out of 3000000
+ 8745 multiletter control sequences out of 15000+200000
+ 26844 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,7n,43p,186b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb>
-Output written on document.pdf (1 page, 30364 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb>
+Output written on document.pdf (1 page, 46290 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 32 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
+ 9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

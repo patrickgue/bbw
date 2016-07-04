@@ -11,10 +11,12 @@
 \contentsline {subsection}{\numberline {2.1}How does it work?}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Examples}{3}{subsection.2.2}
 \contentsline {section}{\numberline {3}Authentication / Authorization}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Authentication}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Authorization}{3}{subsection.3.2}
 \contentsline {section}{\numberline {4}Crypt Workshop}{3}{section.4}
 \contentsline {subsection}{\numberline {4.1}Reflexion}{3}{subsection.4.1}
 \contentsline {section}{\numberline {5}Signatures}{3}{section.5}
 \contentsline {subsection}{\numberline {5.1}Thoughts about collisions}{3}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}THoughts about signatures of passwords and files}{3}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}Thoughts about signatures of passwords and files}{3}{subsection.5.2}
 \contentsline {section}{\numberline {6}Key exchange}{3}{section.6}
 \contentsline {section}{\numberline {7}Encryption in the Java programming language}{3}{section.7}
