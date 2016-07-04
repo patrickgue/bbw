@@ -45,7 +45,21 @@ public class BuchungController {
     }
     
     public void loadBuchungList(){
-     buchungList = service.searchAllBuchung();
+        setBuchungList(service.searchAllBuchung());
+    }
+
+    /**
+     * @return the buchungList
+     */
+    public List<Buchung> getBuchungList() {
+        return buchungList;
+    }
+
+    /**
+     * @param buchungList the buchungList to set
+     */
+    public void setBuchungList(List<Buchung> buchungList) {
+        this.buchungList = buchungList;
     }
 }
 

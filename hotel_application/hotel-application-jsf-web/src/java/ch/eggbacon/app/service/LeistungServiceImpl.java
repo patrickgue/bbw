@@ -46,7 +46,7 @@ public class LeistungServiceImpl extends DatabaseServiceImpl<Leistung> implement
     public Leistung getLeistungById(Long id) {
         Query q = getSession().createQuery("FROM" + TABLE_NAME + "WHERE LeistungID = :id");
         
-        return q.list().get(0);
+        return (Leistung)q.list().get(0);
     }
     
     
