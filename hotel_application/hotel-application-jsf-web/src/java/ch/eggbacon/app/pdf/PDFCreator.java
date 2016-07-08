@@ -21,6 +21,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
 /**
  *
@@ -29,7 +30,7 @@ import org.apache.pdfbox.pdmodel.font.PDType1Font;
 public class PDFCreator {
     public static void drawTable(PDPage page, PDPageContentStream contentStream,
                              float y, float margin,
-                             String[][] content) throws IOException {
+                             String[][] content, PDDocument doc) throws IOException {
         final int rows = content.length;
         final int cols = content[0].length;
         final float rowHeight = 20f;
@@ -38,6 +39,10 @@ public class PDFCreator {
         final float colWidth = tableWidth/(float)cols;
         final float cellMargin=5f;
 
+        PDImageXObject img = PDImageXObject.createFromFile("web/img/logo.png", doc);
+        
+        contentStream.drawImage(img, 50,730,100,50);
+        
         //draw the rows
         float nexty = y ;
         for (int i = 0; i <= rows; i++) {
@@ -53,7 +58,7 @@ public class PDFCreator {
         }
 
         //now add the text
-        contentStream.setFont( PDType1Font.HELVETICA_BOLD , 12 );
+        contentStream.setFont( PDType1Font.HELVETICA , 12 );
 
         float textx = margin+cellMargin;
         float texty = y-15;
@@ -78,14 +83,14 @@ public class PDFCreator {
         PDPageContentStream contentStream = new PDPageContentStream(doc, page);
 
         String[][] content = {
-            {"Name"," Time "},
-            {"HTC","01:25"},
-            {"Samsung Tab2","05:30"}
+            {"Buchung"," Person "},
+            {"123","Person1"},
+            {"456","Person2"}
         } ;
 
-        drawTable(page, contentStream, 700, 100, content);
+        drawTable(page, contentStream, 720, 50, content, doc);
 
         contentStream.close();
-        doc.save("E:\\test.pdf" );
+        doc.save("/tmp/test.pdf" );
     } 
 }
