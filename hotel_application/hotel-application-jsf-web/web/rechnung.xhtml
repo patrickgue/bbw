@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+          
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:body>
+        <ui:composition template="template.xhtml">
+            <ui:define name="title">Rechnungen</ui:define>
+            <ui:define name="content">
+                <h:dataTable value="#{rechnungController.rechnungen}" var="r">
+                    <h:column>
+                        <f:facet name="header">Person</f:facet>
+                        #{r.buchung.person.nachname}, #{r.buchung.person.vorname}
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">Erstellt</f:facet>
+                        #{r.erstellungsDatum}
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">Fällig</f:facet>
+                        #{r.zahlungsfristDatum}
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header">Eingang</f:facet>
+                        #{r.zahlungseingangsDatum}
+                    </h:column>
+                </h:dataTable>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+          
+</html>

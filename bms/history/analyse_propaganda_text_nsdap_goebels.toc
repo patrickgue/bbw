@@ -1,0 +1,4 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Fragestellung}{1}{section.1}
+\contentsline {section}{\numberline {2}Schlagw\IeC {\"o}rter}{1}{section.2}
+\contentsline {section}{\numberline {3}Analyse}{2}{section.3}

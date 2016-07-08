@@ -207,3 +207,16 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2016-04-13 13:54:00
+
+
+DROP TABLE IF EXISTS `rechnung`;
+
+CREATE TABLE `rechnung` (
+       `RechnungId` INTEGER NOT NULL AUTO_INCREMENT,
+       `BuchungId` INTEGER NOT NULL,
+       `ErstellungsDatum` DATETIME NOT NULL,
+       `ZahlungsFristDatum` DATETIME NOT NULL,
+       `ZahlungseingangsDatum` DATETIME,
+
+       PRIMARY KEY(`RechnungID`)
+);

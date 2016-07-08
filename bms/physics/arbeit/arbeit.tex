@@ -1,0 +1,49 @@
+\documentclass[11pt,twoside,a4paper,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{utopia}
+\usepackage[margin=1in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{makeidx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\renewcommand{\sffamily}{phv}
+
+\newcommand{\titleText}{Experiment\\Berechnung des Luftwiderstands}
+\newcommand{\authorText}{N. Meier, P. Günthard\\Berufsbildungsschule Winterthur, 6MT13v}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL]{\titleText}
+\fancyhead[OR]{\authorText}
+\cfoot{\thepage \space von \pageref{LastPage}}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+
+    \section{Einleitung}
+    
+    \input{sections/einleitung.tex}
+    
+    \section{Beschreibung des Experiments}
+    
+    \section{Ergebnisse}
+    
+    \section{Analyse}
+
+	\section{Formeln}
+	
+	\input{sections/formeln.tex}
+    
+    \section{Schlussfolgerung \& Fazit}
+    
+\end{document}

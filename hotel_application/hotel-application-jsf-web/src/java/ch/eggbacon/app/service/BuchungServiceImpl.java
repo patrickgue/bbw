@@ -19,6 +19,7 @@ package ch.eggbacon.app.service;
 import ch.eggbacon.app.entity.Buchung;
 import ch.eggbacon.app.interf.BuchungService;
 import java.util.List;
+import org.hibernate.Query;
 
 /**
  *
@@ -31,6 +32,13 @@ public class BuchungServiceImpl extends DatabaseServiceImpl<Buchung> implements 
     @Override
     public List<Buchung> searchAllBuchung() {
         return getSession().createQuery("FROM " +  TABLE_NAME).list();
+    }
+
+    @Override
+    public List<Buchung> searchBuchungenByPersonId(Long id) {
+        Query q = getSession().createQuery("FROM " + TABLE_NAME + " WHERE PersID = :personId");
+        q.setLong("personId", id);
+        return q.list();
     }
     
    
