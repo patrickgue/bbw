@@ -28,7 +28,7 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
  * @author Patrick
  */
 public class PDFCreator {
-    public static void drawTable(PDPage page, PDPageContentStream contentStream,
+    public static void drawPage(PDPage page, PDPageContentStream contentStream,
                              float y, float margin,
                              String[][] content, PDDocument doc) throws IOException {
         final int rows = content.length;
@@ -41,7 +41,13 @@ public class PDFCreator {
 
         PDImageXObject img = PDImageXObject.createFromFile("web/img/logo.png", doc);
         
-        contentStream.drawImage(img, 50,730,100,50);
+        contentStream.drawImage(img, 50,728,94,60);
+        
+        contentStream.setFont( PDType1Font.HELVETICA_BOLD , 24 );
+        contentStream.beginText();
+        contentStream.moveTextPositionByAmount(155,750);
+        contentStream.drawString("Egg & Bacon Hotel");
+        contentStream.endText();
         
         //draw the rows
         float nexty = y ;
@@ -88,7 +94,7 @@ public class PDFCreator {
             {"456","Person2"}
         } ;
 
-        drawTable(page, contentStream, 720, 50, content, doc);
+        drawPage(page, contentStream, 720, 50, content, doc);
 
         contentStream.close();
         doc.save("/tmp/test.pdf" );
