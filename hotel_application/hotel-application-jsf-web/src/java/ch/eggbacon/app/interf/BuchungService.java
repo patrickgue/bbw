@@ -25,4 +25,6 @@ import java.util.List;
  */
 public interface BuchungService extends DatabaseService<Buchung> {
     public List<Buchung> searchAllBuchung();
+
+    public List<Buchung> searchBuchungenByPersonId(Long id);
 }

@@ -23,9 +23,7 @@ import ch.eggbacon.app.interf.RechnungService;
 import ch.eggbacon.app.service.BuchungServiceImpl;
 import ch.eggbacon.app.service.RechungServiceImpl;
 import ch.eggbacon.app.util.Constants;
-import ch.eggbacon.app.util.TimeUtil;
 import ch.eggbacon.util.logger.Logger;
-import java.util.Date;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -36,48 +34,37 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean
 @SessionScoped
-public class BuchungController {
+public class RechnungController {
     
     private Logger log = new Logger(this.getClass().getName());
     
-    private List<Buchung> buchungList;
+    private List<Rechnung> rechnungen;
     
-    private BuchungService service;
-    private RechnungService rechSer;
-    private Buchung newBuchung;
+    private RechnungService service;
     
-    public BuchungController(){
-         service = new BuchungServiceImpl();
-         rechSer = new RechungServiceImpl();
-         newBuchung = new Buchung();
-         loadBuchungList();
+    public RechnungController(){
+         service = new RechungServiceImpl();
+         loadRechnungList();
     }
     
-    public void loadBuchungList(){
-        setBuchungList(service.searchAllBuchung());
+    public void loadRechnungList(){
+        setRechnungen(service.searchAllRechnungen());
     }
 
-    /**
-     * @return the buchungList
-     */
-    public List<Buchung> getBuchungList() {
-        return buchungList;
+    public List<Rechnung> getRechnungen() {
+        return rechnungen;
     }
 
-    /**
-     * @param buchungList the buchungList to set
-     */
-    public void setBuchungList(List<Buchung> buchungList) {
-        this.buchungList = buchungList;
+    public void setRechnungen(List<Rechnung> rechnungen) {
+        this.rechnungen = rechnungen;
     }
     
-    public String addRechnung(Buchung b) {
-        Rechnung tmpRech = new Rechnung();
-        tmpRech.setBuchung(b);
-        tmpRech.setErstellungsDatum(new Date());
-        tmpRech.setZahlungsfristDatum(TimeUtil.setMonth(new Date(), new Date().getMonth()));
-        rechSer.persist(tmpRech);
-        return "rechnung.xhtml";
+    public String getRechnung(Rechnung r) {
+        return "";
     }
+
+    
+    
+
 }
 

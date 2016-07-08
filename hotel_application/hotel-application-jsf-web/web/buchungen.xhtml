@@ -10,14 +10,55 @@
         <ui:composition template="template.xhtml">
             <ui:define name="title">Buchungen</ui:define>
             <ui:define name="content">
-                <h2>Neue Buchung</h2>
-                <h:form></h:form>
+                <h3>Neue Buchung</h3>
+                <h:form>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inPerson">Person</label>
+                            <h:inputText id="inPerson"/>
+                        </div>
+
+                    </div>
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inAnkunft">Ankunft</label>
+                            <h:inputText id="inAnkunft"/>
+                        </div>
+                    </div>
+                    
+                    <div class="box50p">
+                        <div class="input-block">
+                            <label for="inAbreise">Abreise</label>
+                            <h:inputText id="inAbreise"/>
+                        </div>
+                    </div>
+                </h:form>
                 
-                <h2>Bestehende Buchungen</h2>
+                <h3>Bestehende Buchungen</h3>
                 
-                    <h:column>
-                        <f:facet name="header"></f:facet>
-                    </h:column>
+                <div class="table-wrap">
+                    <h:dataTable var="b" value="#{buchungController.buchungList}">
+                        <h:column>
+                            <f:facet name="header">Person</f:facet>
+                            #{b.person.nachname}, #{b.person.vorname}
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">Ankunft</f:facet>
+                            #{b.ankunft}
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">Abreise</f:facet>
+                            #{b.abreise}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">rechnung</f:facet>
+                            <h:form><h:commandButton action="#{buchungController.addRechnung(b)}" value="create rechnung"/></h:form>
+                        </h:column>
+
+                    </h:dataTable>
+                </div>
                 
             </ui:define>
         </ui:composition>

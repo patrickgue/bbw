@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC 
-    "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
-    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-      <!---->
+    <!---->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://db55.netzone.ch/rogerguenthar4</property>
-    <property name="hibernate.connection.username">rogerguenthar4</property><!--  -->
-    <property name="hibernate.connection.password">334fgF</property><!--  -->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/hotel</property>
+    <!-- db55.netzone.ch/rogerguenthar4 -->
+    <property name="hibernate.connection.username">root</property>
+    <!-- rogerguenthar4  -->
+    <property name="hibernate.connection.password">kinney94</property>
+    <!-- 334fgF  -->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.show_sql">true</property>
-    <mapping class="ch.eggbacon.app.entity.Benutzer" resource="ch/eggbacon/app/entity/Benutzer.hbm.xml"></mapping>
-    <mapping class="ch.eggbacon.app.entity.Position" resource="ch/eggbacon/app/entity/Position.hbm.xml"></mapping>
-    <mapping class="ch.eggbacon.app.entity.Leistung" resource="ch/eggbacon/app/entity/Leistung.hbm.xml"></mapping>
-    <mapping class="ch.eggbacon.app.entity.Buchung"  resource="ch/eggbacon/app/entity/Buchung.hbm.xml"></mapping>
-    <mapping class="ch.eggbacon.app.entity.Person"   resource="ch/eggbacon/app/entity/Person.hbm.xml"></mapping>
-    <mapping class="ch.eggbacon.app.entity.Preis"   resource="ch/eggbacon/app/entity/Preis.hbm.xml"></mapping>
+    <mapping class="ch.eggbacon.app.entity.Benutzer" resource="ch/eggbacon/app/entity/Benutzer.hbm.xml"/>
+    <mapping class="ch.eggbacon.app.entity.Position" resource="ch/eggbacon/app/entity/Position.hbm.xml"/>
+    <mapping class="ch.eggbacon.app.entity.Leistung" resource="ch/eggbacon/app/entity/Leistung.hbm.xml"/>
+    <mapping class="ch.eggbacon.app.entity.Buchung" resource="ch/eggbacon/app/entity/Buchung.hbm.xml"/>
+    <mapping class="ch.eggbacon.app.entity.Person" resource="ch/eggbacon/app/entity/Person.hbm.xml"/>
+    <mapping class="ch.eggbacon.app.entity.Preis" resource="ch/eggbacon/app/entity/Preis.hbm.xml"/>
+    <mapping class="ch.eggbacon.app.entity.Rechnung" resource="ch/eggbacon/app/entity/Rechnung.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

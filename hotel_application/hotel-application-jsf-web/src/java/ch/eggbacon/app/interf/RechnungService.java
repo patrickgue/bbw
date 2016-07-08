@@ -14,33 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package ch.eggbacon.app.service;
+package ch.eggbacon.app.interf;
 
-import ch.eggbacon.app.entity.Buchung;
-import ch.eggbacon.app.interf.BuchungService;
+import ch.eggbacon.app.entity.Rechnung;
 import java.util.List;
-import org.hibernate.Query;
 
 /**
  *
  * @author Patrick
  */
-public class BuchungServiceImpl extends DatabaseServiceImpl<Buchung> implements BuchungService{
-
-    private final String TABLE_NAME = "Buchung";
-
-    @Override
-    public List<Buchung> searchAllBuchung() {
-        return getSession().createQuery("FROM " +  TABLE_NAME).list();
-    }
-
-    @Override
-    public List<Buchung> searchBuchungenByPersonId(Long id) {
-        Query q = getSession().createQuery("FROM " + TABLE_NAME + " WHERE PersID = :personId");
-        q.setLong("personId", id);
-        return q.list();
-    }
-    
-   
-    
+public interface RechnungService extends DatabaseService<Rechnung> {
+    public List<Rechnung> searchRechnungenByPersonId(Long id);
+    public List<Rechnung> searchAllRechnungen();
 }
