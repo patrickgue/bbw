@@ -17,16 +17,21 @@
 package ch.eggbacon.app.controller;
 
 import ch.eggbacon.app.entity.Buchung;
+import ch.eggbacon.app.entity.Person;
 import ch.eggbacon.app.entity.Rechnung;
 import ch.eggbacon.app.interf.BuchungService;
 import ch.eggbacon.app.interf.RechnungService;
+import ch.eggbacon.app.pdf.PDFCreator;
 import ch.eggbacon.app.service.BuchungServiceImpl;
 import ch.eggbacon.app.service.RechungServiceImpl;
 import ch.eggbacon.app.util.Constants;
 import ch.eggbacon.util.logger.Logger;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
 
 /**
  *
@@ -42,9 +47,18 @@ public class RechnungController {
     
     private RechnungService service;
     
+    private Person absender;
+    
     public RechnungController(){
          service = new RechungServiceImpl();
          loadRechnungList();
+         absender = new Person();
+         absender.setAnrede("Frau/Herr");
+         absender.setVorname("Jamie");
+         absender.setNachname("Doe");
+         absender.setStrasse("Egg & Bacon Hotel");
+         absender.setOrt("8400 Winterthur");
+         absender.setPrivattelefon("+41 52 123 45 67");
     }
     
     public void loadRechnungList(){
@@ -59,8 +73,36 @@ public class RechnungController {
         this.rechnungen = rechnungen;
     }
     
-    public String getRechnung(Rechnung r) {
-        return "";
+    public String getRechnungPDF(Rechnung r) throws IOException{
+        String filename = "E:/rechnung.pdf";
+        PDFCreator creator = new PDFCreator();
+        PDPageContentStream stream = creator.addPage();
+        Person []addre = {
+            absender,
+            r.getBuchung().getPerson()
+        };
+        
+        String[] str = {
+            " - " + r.getBuchung().toString(),
+            " - Erstellungsdatum" + r.getErstellungsDatum(),
+            " - Zahlungsfrist" + r.getErstellungsDatum()
+        };
+        creator.drawTitlePage("Rechung", addre, str, stream);
+        stream.close();
+        
+        stream = creator.addPage();
+        String[][] tmpStr = {
+            {r.getBuchung().getAbreise().toString(), r.getBuchung().getAbreise().toString()}
+        };
+        
+        creator.drawTablePage(stream, tmpStr);
+        stream.close();
+        
+        creator.save(filename);
+        
+
+        
+        return "rechnung";
     }
 
     

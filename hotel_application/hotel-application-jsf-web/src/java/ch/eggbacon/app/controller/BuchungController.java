@@ -75,7 +75,7 @@ public class BuchungController {
         Rechnung tmpRech = new Rechnung();
         tmpRech.setBuchung(b);
         tmpRech.setErstellungsDatum(new Date());
-        tmpRech.setZahlungsfristDatum(TimeUtil.setMonth(new Date(), new Date().getMonth()));
+        tmpRech.setZahlungsfristDatum(TimeUtil.setMonth(new Date(), new Date().getMonth() + 2));
         rechSer.persist(tmpRech);
         return "rechnung.xhtml";
     }

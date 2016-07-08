@@ -155,7 +155,7 @@ public class PDFCreator {
         PDPage page = new PDPage(PDFConstants.PAPER_SIZE);
         doc.addPage(page);
         PDPageContentStream contentStream = new PDPageContentStream(doc, page);
-        drawHeader(contentStream);
+        //drawHeader(contentStream);
         drawFooter(pageNumber, contentStream);
         
         return contentStream;
