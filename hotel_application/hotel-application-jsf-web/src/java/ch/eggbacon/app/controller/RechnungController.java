@@ -100,8 +100,6 @@ public class RechnungController {
         
         creator.save(filename);
         
-
-        
         return "rechnung";
     }
 
