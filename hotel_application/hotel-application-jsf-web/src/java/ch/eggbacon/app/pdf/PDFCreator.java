@@ -31,8 +31,15 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
  * @author Patrick
  */
 public class PDFCreator {
+    private int pageCounter = 1;
+    private PDDocument doc;
+        
+    public PDFCreator() {
+        doc = new PDDocument();
+    }
     
-    public static void drawHeader(PDPage page, PDPageContentStream contentStream, PDDocument doc) throws IOException{
+    public void drawHeader(PDPageContentStream contentStream) throws IOException{
+        
         PDImageXObject img = PDImageXObject.createFromFile("web/img/logo.png", doc);
         
         contentStream.drawImage(img, PDFConstants.MARGIN,PDFConstants.PAPER_HEIGHT - 40,47,30);
@@ -40,11 +47,11 @@ public class PDFCreator {
         contentStream.setFont( PDType1Font.HELVETICA_BOLD , 18 );
         contentStream.beginText();
         contentStream.moveTextPositionByAmount(PDFConstants.MARGIN + 50,PDFConstants.PAPER_HEIGHT - 30);
-        contentStream.drawString("Egg & Bacon Hotel - Rechnung");
+        contentStream.drawString("Egg & Bacon Hotel");
         contentStream.endText();
     }
     
-    public static void drawFooter(int pageNr, PDPage page, PDPageContentStream contentStream, PDDocument doc) throws IOException {
+    public void drawFooter(int pageNr, PDPageContentStream contentStream) throws IOException {
         contentStream.setFont(PDType1Font.HELVETICA, 12);
         contentStream.beginText();
         contentStream.moveTextPositionByAmount(PDFConstants.MARGIN, 20);
@@ -53,7 +60,7 @@ public class PDFCreator {
     }
     
     
-    public static void drawTitlePage(String title, Person[] addr, String[] strs, PDPage page, PDPageContentStream contentStream, PDDocument doc) throws IOException{
+    public void drawTitlePage(String title, Person[] addr, String[] strs,PDPageContentStream contentStream) throws IOException{
         
         
         float ypos = PDFConstants.PAPER_HEIGHT - PDFConstants.MARGIN;
@@ -98,14 +105,13 @@ public class PDFCreator {
         
     }
     
-    public static void drawTablePage(PDPage page, PDPageContentStream contentStream,
-                             String[][] content, PDDocument doc) throws IOException {
+    public void drawTablePage(PDPageContentStream contentStream, String[][] content) throws IOException {
         final float y = PDFConstants.PAPER_HEIGHT - PDFConstants.MARGIN;
         final int margin = PDFConstants.MARGIN;
         final int rows = content.length;
         final int cols = content[0].length;
         final float rowHeight = 20f;
-        final float tableWidth = page.getCropBox().getWidth() - (2 * margin);
+        final float tableWidth = PDFConstants.PAPER_WIDTH - (2 * margin);
         final float tableHeight = rowHeight * rows;
         final float colWidth = tableWidth/(float)cols;
         final float cellMargin=5f;
@@ -145,12 +151,28 @@ public class PDFCreator {
         }
     }
     
-    public static void main(String[] args) throws IOException {
-        int pageCounter = 1;
-        PDDocument doc = new PDDocument();
+    public PDPageContentStream addPage(int pageNumber) throws IOException{
         PDPage page = new PDPage(PDFConstants.PAPER_SIZE);
-        doc.addPage( page );
+        doc.addPage(page);
         PDPageContentStream contentStream = new PDPageContentStream(doc, page);
+        drawHeader(contentStream);
+        drawFooter(pageNumber, contentStream);
+        
+        return contentStream;
+    }
+    
+    public PDPageContentStream addPage() throws IOException {
+        return addPage(pageCounter++);
+    }
+    
+    public void save(String path) throws IOException{
+        doc.save(path);
+    }
+    
+    public static void main(String[] args) throws IOException {
+        
+        PDFCreator document = new PDFCreator();
+        
 
         String[][] content = {
             {"Buchung"," Person ", " Preis "},
@@ -174,17 +196,14 @@ public class PDFCreator {
             {"456","Person2", "624.20"}
         } ;
 
-        drawTablePage(page, contentStream, content, doc);
-        drawHeader(page, contentStream, doc);
-        drawFooter(pageCounter, page, contentStream, doc);
-        contentStream.close();
-
-        pageCounter++;
+        PDPageContentStream firstPageStream = document.addPage();
         
-        PDPage page2 = new PDPage(PDFConstants.PAPER_SIZE);
-        doc.addPage(page2);
-        contentStream = new PDPageContentStream(doc, page2);
-        drawHeader(page, contentStream, doc);
+        document.drawTablePage(firstPageStream, content);
+        firstPageStream.close();
+
+        PDPageContentStream secondPageStream = document.addPage();
+        
+        
         String[] strings = {};
         
         Person p = new Person();
@@ -198,10 +217,10 @@ public class PDFCreator {
             p,
             p
         }; 
-        drawTitlePage("Rechnung", addresses, strings, page, contentStream, doc);
-        drawFooter(pageCounter, page, contentStream, doc);
+        document.drawTitlePage("Rechnung", addresses, strings, secondPageStream);
+        secondPageStream.close();
         
-        contentStream.close();
-        doc.save("web/tmp/test.pdf" );
+        
+        document.save("web/tmp/test.pdf" );
     } 
 }
