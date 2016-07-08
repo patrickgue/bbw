@@ -19,7 +19,11 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
+<<<<<<< HEAD
+                    <file>${libs.jsf20.classpath}</file>
+=======
                     <file>${file.reference.pdfbox-app-2.0.2.jar}</file>
+>>>>>>> origin/master
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
