@@ -1,0 +1,5 @@
+#+TTILE:FTP Installation
+
+#+BEGIN_EXAMPLE
+# apt-get install vsftpd
+#+END_EXAMPLE

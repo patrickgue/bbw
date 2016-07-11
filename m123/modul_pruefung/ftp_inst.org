@@ -1,0 +1,17 @@
+#+TTILE:FTP Installation
+
+* Installation
+#+BEGIN_EXAMPLE
+# apt-get update
+# apt-get install vsftpd
+#+END_EXAMPLE
+
+* Starten und stoppen des Server
+*Starten*
+#+BEGIN_EXAMPLE
+# /etc/init.d/vsftpd start
+#+END_EXAMPLE
+*Stoppen*
+#+BEGIN_EXAMPLE
+# /etc/init.d/vsftpd stop
+#+END_EXAMPLE

@@ -1,0 +1,49 @@
+% Created 2016-07-11 Mo. 13:59
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\date{\today}
+\title{ftp\_inst}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Installation}
+\label{sec-1}
+\begin{verbatim}
+# apt-get update
+# apt-get install vsftpd
+\end{verbatim}
+
+\section{Starten und stoppen des Server}
+\label{sec-2}
+\textbf{Starten}
+\begin{verbatim}
+# /etc/init.d/vsftpd start
+\end{verbatim}
+\textbf{Stoppen}
+\begin{verbatim}
+# /etc/init.d/vsftpd stop
+\end{verbatim}
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}
