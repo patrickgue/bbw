@@ -97,9 +97,85 @@ In symetrical encryption you en- \& decrypt with the same key.
 \subsection{Reflexion}
 \section{Signatures}
 \subsection{Thoughts about collisions}
+In some signature algorythms like MD5 collisions have been found. This means that two different values result in the same signature. Eventhought they happem rarely, this can be a security issue because in some cases a bruteforce attack can be easier. There is no completely secure method to solve this problem but always using the newest and most complex algorythms makes it harder for the attacker. E.g. there are no known collisions with algorythms like SHA-256.
 \subsection{Thoughts about signatures of passwords and files}
+\begin{itemize}
+	\item Passwords should be hashed and not encrypted so there is no other possibility to crack it other than brutforce. If a password is encryptet the attacker can access the data if he or she gets the key.
+	\item If a signature of a file is available which can be downloaded, this hash can be compared with the hash of the downloaded file. If the two hashes are equal, the user can be sure that the downloaded file is actually the one which was intended to be distributet and not something else like a virus. \textit{(There still are some security issues, see section about signature collisions.)}
+\end{itemize}
 \section{Key exchange}
 \section{Encryption in the Java programming language}
+In the java programming language there are some built-in (i.e. in the JDK) libraries for the en- and decryption of data.
+
+Example of a class for encrypting data with the AES algorythm:
+\begin{verbatim}
+package ch.patrickguenthard.crypt.aes;
+
+import java.nio.charset.Charset;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
+
+public class Encrypt {
+	private byte[] key;
+	private byte[] data;
+	private Cipher c;
+	private SecretKeySpec k;
+
+
+	public Encrypt(String key, String data){
+
+		try {
+			c = Cipher.getInstance("AES");
+		} catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
+			e.printStackTrace();
+		}
+
+		setData(data);
+		setKey(key);
+	}
+
+public void setKey(String key){
+setKey(key.getBytes(Charset.defaultCharset()));
+}
+
+public void setKey(byte[] key){
+this.key = key;
+k = new SecretKeySpec(key, "AES");
+try {
+c.init(Cipher.ENCRYPT_MODE, k);
+} catch (InvalidKeyException e) {
+// TODO Auto-generated catch block
+e.printStackTrace();
+}
+}
+
+
+public void setData(String data){
+setData(data.getBytes(Charset.defaultCharset()));
+}
+
+public void setData(byte[] data){
+this.data = data;
+}
+
+public byte[] encrypt(){
+try {
+return c.doFinal(data);
+} catch (IllegalBlockSizeException | BadPaddingException e) {
+// TODO Auto-generated catch block
+e.printStackTrace();
+return null;
+}
+}
+}
+
+\end{verbatim}
 \begin{thebibliography}{3}
 \bibitem[marke]{bezug} Literaturangabe
 \end{thebibliography}
