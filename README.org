@@ -10,5 +10,5 @@ the things might differ in detail.
  * [[https://github.com/patrickgue][patrickgue]]
  * [[https://github.com/AyaneTuan][AyaneTuan]]
  * [[https://github.com/KajTorvaldGrey][KajTorvaldGrey]]
- * [[https://github.com/trehex][TreHex]]
+# * [[https://github.com/trehex][TreHex]]
  * [[https://github.com/nicolasmeier][Nicolas Meier]]
