@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  28 AUG 2016 20:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.23)  28 AUG 2016 21:37
 entering extended mode
 **arbeit.tex
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\physics\arbeit\arbeit.tex
@@ -654,8 +654,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
 (C:\Users\Patrick\Documents\GitHub\bbw.blog-cms\bms\physics\arbeit\arbeit.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
-Package rerunfilecheck Info: File `arbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 7059F833349E1BABF244996A8877CCA8;640.
+
+
+Package rerunfilecheck Warning: File `arbeit.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `arbeit.out':
+(rerunfilecheck)             Before: 7059F833349E1BABF244996A8877CCA8;640
+(rerunfilecheck)             After:  19086DD1FE90D71601DB29116BF1DAE0;640.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
@@ -675,7 +682,7 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/adobe/utopia/putri8a.pfb>
-Output written on arbeit.pdf (4 pages, 215855 bytes).
+Output written on arbeit.pdf (4 pages, 216018 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  19 named destinations out of 1000 (max. 500000)
