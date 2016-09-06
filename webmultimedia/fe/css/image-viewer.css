@@ -1,0 +1,61 @@
+#imgvMainLayer{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16,16,16,0.98);
+    z-index: 100;
+}
+
+#imgvClose{
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    top: 0px;
+    color: rgba(255,255,255,0.4);
+    height: 100px;
+    cursor: pointer;
+}
+
+#imgvClose:hover{
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+
+#imgvImg{
+    margin: auto;
+    marign-top: 5%;
+    /*transition: all .1s;*/
+}
+
+#imgvPrev, #imgvNext{
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    vertical-align: middle;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+
+#imgvPrev span, #imgvNext span, #imgvClose span{
+    display: block;
+    margin: 10px;
+}
+
+#imgvPrev:hover, #imgvNext:hover{
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+#imgvPrev{
+    left: 0px;
+}
+
+#imgvNext{
+    right: 0px;
+    text-align: right;
+}

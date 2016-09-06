@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8"/>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/image-viewer.css"/>
+    <title>Media</title>
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  
+  <body ng-controller="appController">
+    <nav>
+      <div class="container">
+	<div class="nav-wrapper">
+	  <a href="#!" class="brand-logo">Media</a>
+	  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	  <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+	  </ul>
+	  <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+	  </ul>
+	</div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div ng-repeat="med in media" class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img data-image="allmedia" ng-attr-src="{{med.picture}}">
+              <span class="card-title">{{med.title}}</span>
+            </div>
+            <div class="card-content">
+              <p>{{med.text}}</p>
+	      <div ng-show="med.uri">
+		<audio controls ng-attr-src="{{med.uri}}"></audio>
+	      </div>
+            </div>
+	    <div ng-hide="isPhoto(med)" class="card-action">
+              <a href="#">Open</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/app.controller.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/image-viewer.js"></script>
+  </body>
+</html>
