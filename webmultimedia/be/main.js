@@ -77,13 +77,14 @@ app.post(PATH_PREFIX + "/user/add", function(req, res) {
 });
 
 
+
 /*
 =Login=
 
 POST Parameters: 
 
 {
-  userId : number,
+  userName : string,
   password : string
 }
 
@@ -101,14 +102,16 @@ Return Error:
 
 */
 app.post(PATH_PREFIX + "/user/login", function(req, res) {
-    var userId = req.body.userId;
-    var password = sha1(req.body.userPassword);
+    var userName = req.body.userName;
+    var plainPassword = req.body.userPassword;
+    var password = sha1(plainPassword);
     
-    database.select("SELECT * FROM TMUL_USER WHERE userId = " + userId, function(data) {
+    database.select("SELECT * FROM TMUL_USER WHERE userName = \"" + userName + "\"", function(data) {
+	console.log("SELECT * FROM TMUL_USER WHERE userName = \"" + userName + "\"");
 	if(data.length > 0) {
 	    for(let user of data) {
 		if(user.userPassword == password) {
-		    res.end(JSON.stringify({userId : userId}));
+		    res.end(JSON.stringify({userId : user.userId}));
 		}
 		else {
 		    res.status(500).end(JSON.stringify(new error("Wrong password")));

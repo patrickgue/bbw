@@ -19,10 +19,14 @@ class AudioElement extends MediaElement {
     }
 }
 
-angular.module("app").controller("appController", function($scope) {
+angular.module("app").controller("appController", function($scope,httpServicem LocalStorageService) {
 
     $scope.media = [];
+    $scope.loginUserName = "";
+    $scope.loginPassword = "";
 
+
+    
     function addItem(it) {
 	$scope.media.push(it);
 	setTimeout(function() {
@@ -49,21 +53,48 @@ angular.module("app").controller("appController", function($scope) {
 	"http://www.bythom.com/Images/lineage-chart.jpg"
     ));
 
-    $scope.$onChange = function() {
-	$(".materialboxed").materialbox();
-    }
-
-    $scope.$watch("media", function(v) {
-	$(".materialboxed").materialbox();
-    });
     
-    $scope.$init = function() {
-	$(".materialboxed").materialbox();
-    };
-
     $scope.isPhoto = function(elm) {
 	return elm instanceof PictureElement;
-    }
+    };
+
+    $scope.login = function() {
+	httpService.post("user/login",
+			 {
+			     userName : $scope.loginUserName,
+			     userPassword : $scope.loginPassword
+			 },
+			 function(data) {
+			     $("#loginModal").closeModal();
+			     console.log(data);
+			 },
+			 function(data) {
+			     $scope.loginError = data.data.message;
+			     console.log(data);
+			 }
+			);
+    };
+
+    $scope.signup = function() {
+	if($scope.signupPassword === $scope.signupPasswordRep) {
+	    httpService.post("user/add",
+			     {
+				 userName: $scope.signupUserName,
+				 userPassword: $scope.signupPassword
+			     },
+			     function(data) { //success
+				 $("#signupModal").closeModal();
+			     },
+			     function(data) {//error
+				 $scope.error = data.data.message;
+			     }
+			    );
+	    
+	}
+	else {
+	    $scope.signupError = "Passwords are not equal";
+	} 
+    };
 
 });
 
