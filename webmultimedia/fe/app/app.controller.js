@@ -3,6 +3,14 @@ class MediaElement{
 	this.title = title;
 	this.text = text;
 	this.picture = picture;
+	this.attr = [];
+    }
+
+    addAttr(desc, value) {
+	this.attr.push({
+	    "descr" : desc,
+	    "value" : value
+	});
     }
 }
 
@@ -19,11 +27,16 @@ class AudioElement extends MediaElement {
     }
 }
 
-angular.module("app").controller("appController", function($scope,httpServicem LocalStorageService) {
+angular.module("app").controller("appController", function($scope,httpService, LocalStorageService) {
 
     $scope.media = [];
     $scope.loginUserName = "";
     $scope.loginPassword = "";
+    
+    $scope.signupUserName = "";
+    $scope.signupPassword = "";
+
+    $scope.showLogin = true;
 
 
     
@@ -66,11 +79,16 @@ angular.module("app").controller("appController", function($scope,httpServicem L
 			 },
 			 function(data) {
 			     $("#loginModal").closeModal();
-			     console.log(data);
+			     LocalStorageService.store("userId", data);
+			     LocalStorageService.store("userName", $scope.loginName);
+			     $scope.currentUser = $scope.loginUserName;
+			     $scope.loginUserName = "";
+			     $scope.loginPassword = "";
+			     $scope.showLogin = false;
+
 			 },
 			 function(data) {
 			     $scope.loginError = data.data.message;
-			     console.log(data);
 			 }
 			);
     };
@@ -84,6 +102,13 @@ angular.module("app").controller("appController", function($scope,httpServicem L
 			     },
 			     function(data) { //success
 				 $("#signupModal").closeModal();
+				 LocalStorageService.store("userId", data);
+				 LocalStorageService.store("userName", $scope.signupUserName);
+				 $scope.currentUser = $scope.signupUserName;
+				 $scope.signupUserName = "";
+				 $scope.signupPassword = "";
+				 $scope.showLogin = false;
+				 
 			     },
 			     function(data) {//error
 				 $scope.error = data.data.message;
@@ -94,6 +119,11 @@ angular.module("app").controller("appController", function($scope,httpServicem L
 	else {
 	    $scope.signupError = "Passwords are not equal";
 	} 
+    };
+
+    $scope.logout = function() {
+	$scope.showLogin = true;
+	LocalStorageService.del("userId");
     };
 
 });
