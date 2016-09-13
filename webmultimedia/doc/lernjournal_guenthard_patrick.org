@@ -1,0 +1,13 @@
+#+TITLE:Lernjournal
+* <2016-09-13> 
+** Gemacht
+
+   Ich habe an der Web-Applikation weitergearbeitet. Ich arbeite schon seit einigen Tagen daran gearbeitet.
+   Heute habe ich die Login- und Signup funktion fertig implementiert und getestet. Ich habe auch begonnen, 
+   eine logout funktion zu implementieren.
+   
+
+** Was habe ich gelernt?
+
+   Ich habe nichts neues hinzugelernt, da ich alle dinge welche ich implementiert habe, schon einmal
+   gemacht habe.
