@@ -1,4 +1,14 @@
 #+TITLE:Lernjournal
+#+AUTHOR:Patrick Günthard
+#+DATE: 5ia13c Berufbildungsschule Winterthur
+* <2016-09-06>
+
+** Gemacht
+
+   Wir haben angefangen, die verschiedenen Komponenten welche wir verwenden wollen, herunterzuladen und 
+   das Projekt aufzusetzten.
+
+ 
 * <2016-09-13> 
 ** Gemacht
 
@@ -11,3 +21,8 @@
 
    Ich habe nichts neues hinzugelernt, da ich alle dinge welche ich implementiert habe, schon einmal
    gemacht habe.
+
+* <2016-09-20>
+** Gemacht
+
+   Heute habe ich 
