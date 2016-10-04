@@ -25,4 +25,18 @@
 * <2016-09-20>
 ** Gemacht
 
-   Heute habe ich 
+   Heute habe ich am Backend gearbeitet. Ich habe weiter Rest-Services implementiert.
+
+* <2016-09-27>
+
+** Gemacht
+
+   Heute habe ich am Frontend weitergearbeitet. Ich habe auch recherchiert, wie man mit *node js* einen file-upload zum laufen bringen kann.
+
+** Was Ich heute gelernt habe
+
+   Ich habe mich mit File Upload mit node js beschäftigt und gelernt, wie dieser funktioniert.
+
+* <2016-10-04>
+
+

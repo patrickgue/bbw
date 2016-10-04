@@ -126,6 +126,48 @@ angular.module("app").controller("appController", function($scope,httpService, L
 	LocalStorageService.del("userId");
     };
 
+    $scope.myformdata = new FormData();
+    $scope.getTheFiles = function ($files) {
+        angular.forEach($files, function (value, key) {
+            $scope.myformdata.append(key, value);
+	    console.log(key)
+	    console.log(value);
+        });
+    };
+    
+
+    $scope.uploadFile = function() {
+
+	$scope.myformdata.append("title",$scope.newFileTitle);
+	$scope.myformdata.append("license",$scope.newFileLicense);
+
+	console.log($scope.myformdata);
+	let request = {
+            method: 'POST',
+            url: 'files/upload/',
+            data: $scope.myformdata,
+            headers: {
+                'Content-Type': undefined
+            }
+        };
+
+	httpService.http(request)
+	    .success(function(data) {
+		console.log(data);
+	    });
+    };
+}).directive('ngFiles',function ($parse) {
+    
+    function fn_link(scope, element, attrs) {
+        var onChange = $parse(attrs.ngFiles);
+        element.on('change', function (event) {
+            onChange(scope, { $files: event.target.files });
+        });
+    };
+    
+    return {
+        link: fn_link
+    }
 });
 
 

@@ -41,9 +41,11 @@ angular.module("app").factory("httpService", function($http,appConst) {
 	    }
 	);
     }
+
     
     return {
 	get : get,
-	post : post
+	post : post,
+	http : $http
     };
 });

@@ -24,6 +24,7 @@ const app = express();
 const sha1 = require('sha1');
 const bodyParser = require('body-parser')
 const database = require('./dbservice.js');
+const fileUpload = require('express-fileupload');
 
 // Util methods
 function error(_message) {
@@ -38,6 +39,8 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+app.use(fileUpload());
 
 app.use(bodyParser.json());
 
@@ -125,6 +128,11 @@ app.post(PATH_PREFIX + "/user/login", function(req, res) {
     });
 });
 
+
+app.post(PATH_PREFIX + "/files/upload", function(req, res) {
+    console.log(req.files);
+    res.end();
+});
 
 
 // Run HTTP Server

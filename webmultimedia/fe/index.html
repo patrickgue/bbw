@@ -86,14 +86,14 @@
 	<h4>Upload</h4>
 	<div class="row">
 	  <div class="input-field col s12">
-	    <input class="validate"/>
+	    <input ng-model="newFileTitle" class="validate"/>
 	    <label>Title</label>
 	  </div>
 	</div>
 
 	<div class="row">
 	  <div class="input-field col s12">
-	    <select>
+	    <select ng-model="newFileLicense">
 	      <option value="" disabled selected>Choose your option</option>
 	      <option value="1">Creative Commons</option>
 	      <option value="2">GNU GPLv3</option>
@@ -107,17 +107,17 @@
 	  <div class="file-field input-field col s12">
 	    <div class="btn">
               <span>File</span>
-              <input type="file">
+              <input ng-files="getTheFiles($files)" type="file">
 	    </div>
 	    <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
+              <input  class="file-path validate" type="text">
 	    </div>
 	    <label>File</label>
 	  </div>
 	</div>
       </div>
       <div class="modal-footer">
-	<a href="#!" class=" modal-action modal-close waves-effect pink darken-2 waves-light btn">Upload</a>
+	<a href="#!" ng-click="uploadFile();" class=" waves-effect pink darken-2 waves-light btn">Upload</a>
       </div>
     </div>
 
