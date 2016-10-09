@@ -40,3 +40,12 @@
 * <2016-10-04>
 
 
+** Gemacht
+
+   Ich habe weiter an der Upload Funktion gearbeitet. Ich habe sowohl am Frontend und am 
+   Backend versucht, die nötigen methoden zu implementieren. Ich habe es jedoch nicht fertig
+   geschafft.
+
+** Was Ich heute gelernt habe
+
+   Ich habe heute mehr über HTML-Forms und Ajax in AngularJS gelernt.
