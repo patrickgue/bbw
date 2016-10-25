@@ -24,7 +24,7 @@ const app = express();
 const sha1 = require('sha1');
 const bodyParser = require('body-parser')
 const database = require('./dbservice.js');
-const fileUpload = require('express-fileupload');
+
 
 // Util methods
 function error(_message) {
@@ -40,7 +40,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(fileUpload());
 
 app.use(bodyParser.json());
 
