@@ -26,10 +26,6 @@ const bodyParser = require('body-parser')
 const database = require('./dbservice.js');
 
 
-// Util methods
-function error(_message) {
-    this.message = _message;
-}
 
 
 // configuration
