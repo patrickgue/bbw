@@ -165,7 +165,14 @@ app.post(PATH_PREFIX + "/user/login", function(req, res) {
 });
 
 
-app.get("/api/token", function(req, res) {
+app.get(PATH_PREFIX + "/media/all", function(req, res) {
+    database.select("SELECT * FROM TMUL_MEDIA", function(data) {
+	res.end(JSON.stringify(data));
+    });
+}); 
+
+
+app.get(PATH_PREFIX + "/token", function(req, res) {
     res.end(JSON.stringify({
 	token : generateToken(32)
     }));
