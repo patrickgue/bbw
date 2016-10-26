@@ -35,6 +35,11 @@ const PATH_PREFIX = "/api/v0";
 const htmlFilesPath = "/html/";
 
 
+// Util methods
+function error(_message) {
+    this.message = _message;
+}
+
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({
