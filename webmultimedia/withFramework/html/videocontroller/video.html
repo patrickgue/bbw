@@ -1,0 +1,25 @@
+<style>
+  .player {
+  width: 100%;
+  height: auto;
+  }
+
+  .videoControl {
+  background-color: #000;
+  }
+
+  .player button {
+  background-color: transparent;
+  border: none;
+  color: #eee;
+  }
+</style>
+<div class="player">
+  <video>
+    <source ng-attr-src="{{$ctrl.src}}"></source>
+  </video>
+  <div class="videoControl">
+    <button ng-show="!$ctrl.playing" ng-click="$ctrl.play($event)">&#x25b6;</button>
+    <button ng-show="$ctrl.playing" ng-click="$ctrl.pause($event)">&#10074; &#10074;</button>
+  </div>
+</div>

@@ -50,6 +50,7 @@
     </nav>
     <span>{{currentUser}}</span>
 
+    
     <div class="container">
       <div class="row">
         <div ng-repeat="med in media" class="col s12 m4">
@@ -70,6 +71,8 @@
           </div>
         </div>
       </div>
+      
+      <video-player src="'/videocontroller/samples/sample1.mp4'"></video-player>
     </div>
 
 
@@ -185,6 +188,7 @@
       </div>
       <div class="modal-footer">
 	<a href="#!" ng-click="signup()" ng-disabled="{{signupPasswordRep !== signupPassword }}" class=" waves-effect pink darken-2 waves-light btn">Signup</a>
+
       </div>
     </div>
     
@@ -199,6 +203,7 @@
     <script type="text/javascript" src="app/http.service.js"></script>
     <script type="text/javascript" src="app/localstorage.service.js"></script>
     <script type="text/javascript" src="app/app.controller.js"></script>
+    <script type="text/javascript" src="videocontroller/video.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/image-viewer.js"></script>
   </body>
