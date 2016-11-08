@@ -1,95 +1,155 @@
-\documentclass[11pt,twoside,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[english,german]{babel}
-\usepackage{utopia}
-\usepackage[margin=1in]{geometry}
-\usepackage[parfill]{parskip}
-\usepackage{makeidx}
-\usepackage[onehalfspacing]{setspace}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
+% Created 2016-11-07 Mo. 09:41
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
 \usepackage{hyperref}
-
-\renewcommand{\sffamily}{phv}
-
-\newcommand{\titleText}{Notizen Physik}
-\newcommand{\authorText}{Patrick GÃ¼nthard}
-\newcommand{\dateText}{\today}
-
-\title{\titleText}
-\author{\authorText}
-\date{\dateText}
-
-\pagestyle{fancy}
-\fancyhf{}
-
-\fancyhead[EL]{\titleText}
-\fancyhead[OR]{\authorText}
-\cfoot{\thepage \space von \pageref{LastPage}}
-
+\tolerance=1000
+\usepackage[margin=1in]{geometry}
+\date{\today}
+\title{Notizen}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.1.1 (Org mode 8.2.10)}}
 \begin{document}
-	\maketitle
-	\tableofcontents
 
-        \section{Formeln}
-
-        \subsection{Kraft}
-
-        \(F = m * a \)
-
-        \subsection{Kreisbewegungen}
-
-        Bahngeschwindigkeit: \(v = \frac{\Delta s}{\Delta t} = \frac{2\pi r}{T}\)\\
-        Drehfrequenz \(f = \frac{n}{t}\)\\
-
-        Wenn \(f = \frac{1}{T}\) dann \(v = 2\pi * r * f\)\\
-        Kreisfrequenz: \(\omega = \frac{2\pi}{T}\) also \(\omega = 2\pi * f\) also \(\omega = \frac{v}{r}\)
-        \section{Aufgaben}
-
-        \subsection{26. Januar 2015}
-
-        \paragraph{179}
-
-        \textbf{geg}: \(m = 230 * 10^3 kg\)
-
-        \paragraph{180}
-
-        \textbf{geg:} \(m = 70000kg, K = 1900N\)\\
-        \textbf{ges(a):} \(a\)
-
-        \begin{verbatim}
-          __
-    c __-- |
-  __--30   |b
-------------
-    a
-        \end{verbatim}
-
-        \(\frac{a}{sin(\alpha)} = \frac{b}{sin(\beta}) = \frac{c}{sin(\gamma)}\)
-
-        \(\frac{a}{sin(60^\circ)} = \frac{b}{sin(30^\circ}) = \frac{1.9N}{sin(90^\circ)}\)
-
-        \(a = \frac{F}{m}, a = \frac{1900}{70000} = 0.027142857\)
-
-        \subsection{Skript Altowsche Fallmaschine - Seilkraft}
+\maketitle
+\tableofcontents
 
 
-        \(m_1 = \) Masse des Sensors = 202g, \(F_{G2} = 1.96N\)\\
-        \(m_{2A} = 170g; a_A = (-)0.916\frac{m}{s^2}\)\\
-        \(m_{2B} = 250g; a_B = 0.970\frac{m}{s^2}\);\\
+\section{242)}
+\label{sec-1}
+
+\textbf{Skizze}
+
+\begin{verbatim}
+  F   /
+  /  /
+ o  /
+Fab/
+  /
+ /
+/(a)
+---------------
+\end{verbatim}
+
+\textbf{Gegeben}
+\(\alpha = arctan(0.05) \)
+
+\(P = 1 kW\)
+
+\(m = 1000 kg\)
 
 
-        \(F_{SB} = m_1 * a_B + G_{G1} = m_1 * (a_B + g)\) also \(0.202kg * (0.970 + 9.81)\frac{m}{s^2} = 2.2\)
+\textbf{Formeln}
 
-        \subsection{Seilkraft}
-        \subsubsection{S18, N.7}
+\(P = F * v\)
 
-        \(a = 0.818\frac{m}{s^2}\)\\
-        \(F_{Res} = F_{G,1} - F_S\)\\
-        \(F_S = F_{G,1} - F_{Res}\)\\
-        \(m_1 * g - m_1 * a = m_1(g-a)\)\\
-        \(2.6kg * (9.81 - 0.818) \frac{m}{s^2} = 23.4N\)
+\textbf{Berechnungen}
 
-        \(2.2kg * (9.81 - 0.818) \frac{m}{s^2} = 19.8N\)
-        
+\(F = F_{ab}\)
+
+
+\(F_{ab} = F_{G,P} + F_R\)
+
+
+\(V = \frac{P}{F} = \frac{P}{F_{G,P} + F_R } = \frac{P}{F_G * sin(\alpha) + \mu * F_G cos(\alpha)}
+ = \frac{1000 W}{1000 kg * 9.81\frac{m}{s^2}  (sin(arctan(0.05) + 0.06 * cos(arctan(0.05)))  } = 0.9 \frac{m}{s} \) 
+
+
+\section{Notizen zum Wirkungsgrad}
+\label{sec-2}
+
+\emph{Wirkungsgrad} ist: Abgegebene Leistung geteilt durch aufgenommene Leistung
+
+\(\eta = \frac{P_{ab}}{P_{zu}} = \frac{W_{ab}}{t} * \frac{t}{W_{zu}} = \frac{W_{ab}}{W_{zu}} = \frac{\epsilon_{ab}}{\epsilon_{zu}} < 1\)
+
+
+
+eta = Nutzen / Aufwand
+
+
+
+\textbf{Gesamtwirkungsgrad}
+
+\(P_{ab} = \eta_1 * ... * \eta_n * P_{zu}\)
+
+
+
+\section{244)}
+\label{sec-3}
+
+\(\eta = \frac{P_{ab}}{P_{zu}}\)
+
+\section{Kinetische Energie}
+\label{sec-4}
+
+\(E_k = \frac{1}{2}mv^2\)
+
+\section{Reibungsarbeit}
+\label{sec-5}
+
+\(F_R * s\)
+
+Wärme(energie), innere Energie
+
+\section{Andere Energieformen}
+\label{sec-6}
+
+\begin{itemize}
+\item Wärme
+\item chemische
+\item Kernenergie
+\end{itemize}
+
+\section{Energieenrhaltung}
+\label{sec-7}
+Energie kann nur die Form ändern. Sie kann wieder erzeugt, noch vernichtet werden. \(E_{tot} = konst.\)
+
+\section{\underline{Experiment} fadenpendel}
+\label{sec-8}
+Vergleich von \(V_{max}\) aus Theoriemit Experiment
+
+
+\section{245)}
+\label{sec-9}
+\begin{verbatim}
+       v_0 /|\
+     o
+ ____| 
+ |       o
+_|_______|______
+        \|/ v_x
+\end{verbatim}
+
+\(h = 3m\)
+
+
+\(E_{tot,1} = E_{tot,2}\)
+
+Vorhandene Energieen
+\begin{itemize}
+\item \(E_{kin,1} + E_{pot,1} = E_{kin,2} \)
+\item \( \frac{1}{2}mv_0^2 + mgh = \frac{1}{2}mv_x^2 | /m | * 2  \)
+\item \(v_x = \sqrt{v_0^2 + 2gh}\)
+\end{itemize}
+
+\section{250)}
+\label{sec-10}
+\(m = 10g\)
+
+\(h = 0.9m\)
+% Emacs 25.1.1 (Org mode 8.2.10)
 \end{document}
