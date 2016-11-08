@@ -29,7 +29,7 @@ const bodyParser = require('body-parser');
 const fs = require("fs");
 const os = require('os');
 const sha1 = require('sha1');
-const database = require('./services/dbservice.js');
+const database = require('./services/dbservice.mysql.js');
 const PATH_PREFIX = "/api/v0";
 
 const htmlFilesPath = "/html/";
@@ -178,7 +178,7 @@ app.get(PATH_PREFIX + "/token", function(req, res) {
     }));
 });
 
-var server = app.listen(8080, function() {
+var server = app.listen(4083, function() {
     var host = server.address().address;
     var port = server.address().port;
     console.log(host, port);
