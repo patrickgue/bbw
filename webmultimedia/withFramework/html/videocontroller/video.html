@@ -4,14 +4,24 @@
   height: auto;
   }
 
+
+  .player video{
+  width: 100%;
+  }
+  
   .videoControl {
-  background-color: #000;
+  background-color: #fff;
   }
 
   .player button {
   background-color: transparent;
   border: none;
-  color: #eee;
+  color: #333;
+  font-size: 16pt;
+  }
+
+  .button_right {
+  float: right;
   }
 </style>
 <div class="player">
@@ -21,5 +31,7 @@
   <div class="videoControl">
     <button ng-show="!$ctrl.playing" ng-click="$ctrl.play($event)">&#x25b6;</button>
     <button ng-show="$ctrl.playing" ng-click="$ctrl.pause($event)">&#10074; &#10074;</button>
+    <button class="button_right" ng-click="$ctrl.replay($event)">&#x21e4;</button>
+    
   </div>
 </div>

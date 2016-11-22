@@ -1,7 +1,9 @@
 #+TITLE:Lernjournal
 #+AUTHOR:Patrick Günthard
 #+DATE: 5ia13c Berufbildungsschule Winterthur
-* <2016-09-06>
+#+LATEX_HEADER:\usepackage[margin=1in]{geometry}
+* Wöchentliches Journal
+** <2016-09-06>
 
 ** Gemacht
 
@@ -9,7 +11,7 @@
    das Projekt aufzusetzten.
 
  
-* <2016-09-13> 
+** <2016-09-13> 
 ** Gemacht
 
    Ich habe an der Web-Applikation weitergearbeitet. Ich arbeite schon seit einigen Tagen daran gearbeitet.
@@ -22,12 +24,12 @@
    Ich habe nichts neues hinzugelernt, da ich alle dinge welche ich implementiert habe, schon einmal
    gemacht habe.
 
-* <2016-09-20>
+** <2016-09-20>
 ** Gemacht
 
    Heute habe ich am Backend gearbeitet. Ich habe weiter Rest-Services implementiert.
 
-* <2016-09-27>
+** <2016-09-27>
 
 ** Gemacht
 
@@ -37,7 +39,7 @@
 
    Ich habe mich mit File Upload mit node js beschäftigt und gelernt, wie dieser funktioniert.
 
-* <2016-10-04>
+** <2016-10-04>
 
 
 ** Gemacht
@@ -49,3 +51,204 @@
 ** Was Ich heute gelernt habe
 
    Ich habe heute mehr über HTML-Forms und Ajax in AngularJS gelernt.
+** <2016-11-15>
+
+Ich habe die Video funktion zur Seite hinzugefügt und die Audio Funktion verbessert. Auch habe
+ich angefangen, eine Dokumentation der Themen zu schreiben.
+
+* Dokumentierung der Themen
+** Bilder
+*** Bildformate
+**** Rastergrafiken
+|-----+----------------------------------------------------------------|
+| jpg | Bildformat mit verlustbehafteter Kompression. Kommt oft bei    |
+|     | Fotographien zum Einsatz. (Farbtiefe meist 24 bit, jedoch      |
+|     | nicht spezifiziert)                                            |
+|-----+----------------------------------------------------------------|
+| png | Bildformat mit verlustfreien Kompression. Kommt hauptsächlich  |
+|     | bei Grafiken zu Einsatz. (Die Farbtiefe ist 24 bit. Zusätlich  |
+|     | gibt es einen 8 bit Alpha-Kanal für Transparenz)               |
+|-----+----------------------------------------------------------------|
+| gif | Veraltetes Bildformat mit verlustfreien Kompression. Es können |
+|     | mit GIF animationen gemacht werden. (Die Farbtiefe ist 8 bit   |
+|     | und es ist ein 1 bit Alpha-Kanal vorhanden)                    |
+|-----+----------------------------------------------------------------|
+
+Es gibt weitere Formate, welche historisch eine Rolle spielten, heute jedoch kaum mehr
+eingesetzt werden. Beispielsweise:
+ * *.bmp* Windows Bitmap
+ * *.xbm* X11 Bitmap (1 bit)
+ * *.xpm* X11 Bitmap (8 bit)
+
+**** Vektorgrafiken
+
+Vektorgrafiken werden für Grafiken eingesetzt. Im Gegensatzt zu Rastergrafiekn werden hier nicht
+pixel, sondern geometrische Objekte respektive deren Vektoren gespeichert und beim Rendering in 
+eine Rastergrafik umgewandelt. Dies macht sie unendlich skalierbar.
+
+Es gibt mehrere Formate in welchen Vektorgrafiken gespeichert werden können:
+ * *.ps* PostScript
+ * *.pdf* Portable Document Format 
+ * *.svg* Scalable Vector Graphic
+
+
+*** Downloaddauer einer Datei
+
+Die Downloaddauer einer Datei ist von 2 Faktoren abhängig:
+ * Grösse der Datei
+ * Geschwindigkeit des Netzwerkes
+
+Beispiele:
+ * Bei einer 5 MBit/s Verbindung ist eine 100 MiB grosse Datei in etwa 2.5 Minuten heruntergeladen
+ * Bei einer 100 MBit/s Verbindung ist eine 800 KiB grosse Datei in etwa einer zehntel Sekunde heruntergeladen
+
+
+*** Auflösung und Farbtiefe
+**** Auflösung
+
+Die Auflösung eines Bildes ist von grosser Wichtigkeit um eine gute ausgabe zu garantieren,
+sowohl im Druck als auch im Web.
+
+Im Druck wird generell eine höhere Auflösung benötigt, da ein Drucker ein genaueres Resultat
+produzieren kann als ein Bildschirm.
+
+Mindestwerte:
+| Druck | 300 dpi           |
+| Web   | 144 dpi - 200 dpi |
+
+=dpi= bedeutet /dots per inch/, also punkte pro inch. Ebenfalls gibt es den Begriff =ppi= welcher
+/Pixels per inch/ bedeutet und - wie der name schon sagt - bei Bildschirmen und digitalen Inhalten 
+zur Anwendung kommen.
+
+
+**** Farbtiefe
+
+Die Farbtiefe definiert, wie viele Farben in einem Pixel eines Bildes gespreichert werden
+können. Die Farbtiefe wird normalwerweise in bit-Grösse angegeben. Beispiele:
+|-------+----------------------------------------------------------|
+| 1 bit | Monochrom (Schwarz Weiss)                                |
+|-------+----------------------------------------------------------|
+| 8 bit | Pro Farbe 8 bit (255 Abstuffungen) also \(256^3\) Farben |
+|-------+----------------------------------------------------------|
+
+
+
+**** Farbräume
+
+Es gibt in der grafischen Industrie 2 grundlegende Weisen Farben zu speichern:
+ * CYMK für Druck
+ * RGB(A) für das Web
+
+CYMK steht für die Farben /Cyan/, /Yellow/, /Magenta/, /Key (Schwarz)/, welche normalerweise
+im Druck verwendet werden.
+
+RGB steht für /Red o. Rot/, /Green o. Grün/ und /Blue o. Blau/. Diese Farben (mit 
+unterschiedlichen tönen) stehen einem Bildschirm zur verfügung, warum Grafiken für das 
+Web normalerweise in RGB gespeichert sind.
+
+Diese beiden Farbdefinitionen decken nicht genau die selben Farben ab, sodass es bei
+der kovertierung zwischen den beiden Modellen zu Problemen kommen kann (Bspw. kann
+eine Verfärbung entstehen)
+
+Wie sich die Farbräume verhalten, wird in den folgenden Abbildungen gezeigt:
+
+#+ATTR_LATEX: :width 5cm :caption \\\textbf{RGB}
+[[file:imgs/rgb.png]]
+
+#+ATTR_LATEX: :width 5cm :caption \\\textbf{CYMK}
+[[file:imgs/cymk.png]]
+
+
+** Juristische Fragen
+
+Wenn in Betracht gezongen wird, Inhalte aus dem Internet zu verwenden, muss jeweils
+die rechtliche Lage der Inhalt geprüft werden um sich zu vergewissern, ob diese
+überhaupt verwendet werden dürfen.
+
+Es gibt verschiedene Varianten, wie Inhalte im Internet lizenziert werden:
+ * Proprietär
+ * Freie Lizenzen
+ * Public Domain
+
+*** Proprietäre Inhalte
+
+Proprietäre Inhalte gehören explizit dem o. der AutorIn oder der Firma an welche der o. die 
+AutorIn seine o. ihre Arbeitskraft verkauft. Die Nutzung ohne Rücksprache derer welche die
+sogn. Urheberechte besizten, ist illegal. Oft können die Rechte diese Inhalte selber
+weiterzuverwenden, gekauft werden.
+
+
+*** Freie Lizenzen
+
+Es gibt eine Reihe von freien Lizenzen welche der o. die AutorIn explizit erlauben, die Inhalte
+weiterzuverwenden, jedoch unter bestimmten Bedingungen. Auch sind AutorInnen rechtlich 
+geschützt. 
+
+Je nach Lizenz, können bestimmte Bestimmungen getroffen werden:
+ * Darf der Inhalt verändert werden?
+ * Darf mit dem Inhalt Profit erwirtschaftet werden?
+ * Unter welcher Lizenz darf der Inhalt geteilt werden?
+
+Für unterschiedliche Inhalte gibt es verschiedene Lizenzen:
+
+**** Bilder, Audio, Video
+
+Bei Multimedia Inhalte sind vor allem die Creative Commons Lizenzen [1] verbreitet. Die Creative 
+Common gibt es in verschiedene Varianten welche aus verschiedenen Attributen beliebig
+zusammengesetzt werden können:
+ * CC: Kennzeichnung, dass es sich um die Creative Commons Lizenz handelt
+ * BY: AutorIn muss angegeben werden
+ * NC: (Non Commercial) Es dürfen keine Profite erwirtschaftet werden
+ * SA: (Share Alike) Es dürfen veränderung am Inhalt gemacht werden. Der neue Inhalt muss unter den gleichen Bedingungen / Lizenz veröffentlicht werden
+ * ND: (No Derivates) Es dürfen keine Veränderungen vorgenommen werden
+
+Beispiel: /CC BY NC SA/
+
+[1] [[https://creativecommons.org/]]
+
+**** Computer Programme & Source Code
+
+Für Computer Programme existieren ebenfalls spezielle Lizenzen welche vor allem die Verfügbarkeit
+des Source Codes regeln. Die Details sind in der folgenden Tabelle beschrieben (welche natürlich
+keinen Anspruch auf vollständigkeit hat)
+|---------+------------------------------------------------------------------------------------|
+| GNU GPL | Die GNU GPL (Gnu's Not Unix General Public License) ist die älteste Lizenz für     |
+|         | freie Software und eine der Radikalsten. Sie wurde von einem der Pioniere der      |
+|         | Free Software Movement, Richard Stallman geschrieben. Wie bei allen Lizenzen       |
+|         | für freie Software muss jede änderung am Sourcecode der öffentlichkeit zugänglich  |
+|         | gemacht werden. Die GNU GPL hat zusätzlich ein Copyleft, was festlegt, dass alle   |
+|         | Veränderungen zwingenderweise unter der GNU GPL oder einer kompatiblen Lizenz      |
+|         | veröffentlicht werden muss. (Die Kompatibilität wird von der FSF (Free Software    |
+|         | Foundation) festgelegt. [2]                                                        |
+|---------+------------------------------------------------------------------------------------|
+| BSD     | Die BSD Lizenz wurde ursprünglich für das Betriebsystem Berkeley Software          |
+|         | Distribution (UNIX Distribution von der University of California Berkeley)         |
+|         | geschrieben. Im Unterschied zur GNU GPL besitzt die BSD Lizenz kein Copyleft,      |
+|         | was bedeutet, dass der Code für Proprietäre Software verwendet werden kann.  [3]   |
+|---------+------------------------------------------------------------------------------------|
+| Apache  | Die Apache Lizenz wurde für den Apache Webserver geschrieben. Sie ist sehr ähnlich |
+|         | wie die BSD Lizenz und wird oft für Web Projekte (Beispielsweise JavaScript [4]    |
+|         | Libraries.                                                                         |
+|---------+------------------------------------------------------------------------------------|
+
+[2] [[http://gnu.org]]
+[3] [[https://opensource.org/licenses/BSD-3-Clause]]
+[4] [[https://www.apache.org/licenses/LICENSE-2.0]]
+
+**** Dokumente
+
+Es gibt spezielle Lizenzen für Dokumente jeglicher Art. Grundsätzlich können Dokumente unter
+den Bedingungen der Creative Commons Lizenz veröffentlicht werden. Auch gibt es die /GNU/ 
+/Free Documentation License/[2], welche es erlaubt, Dokumente unter GNU GPL ähnlichen 
+Bedingungen zu veröffentlichen.
+
+
+** Banner
+
+* Über dieses Dokument
+
+
+(c) 2016 von Patrick Günthard
+
+Dieses Dokument ist lizenziert unter der GNU Free Documentation License. Mehr Informationen
+sind auf [[http://gnu.org]] zu finden.

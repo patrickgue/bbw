@@ -56,23 +56,26 @@
         <div ng-repeat="med in media" class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img data-image="allmedia" ng-attr-src="{{med.picture}}">
-              <span class="card-title">{{med.title}}</span>
+              <img ng-if="!isVideo(med)" data-image="allmedia" ng-attr-src="{{med.picture}}">
+	      <video-player ng-if="isVideo(med)"  src="med.uri"></video-player>
+              <span  ng-if="!isVideo(med)" class="card-title">{{med.title}}</span>
             </div>
             <div class="card-content">
               <p>{{med.text}}</p>
 	      <div ng-show="med.uri">
-		<audio controls ng-attr-src="{{med.uri}}"></audio>
+		<audio-player ng-if="isAudio(med)" controls src="med.uri"></audio-player>
+		
 	      </div>
             </div>
-	    <div ng-hide="isPhoto(med)" class="card-action">
-              <a href="#">Open</a> 
+	    <div class="card-action">
+              <!--<a ng-hide="isPhoto(med) || isVideo(med)"  href="#">Open</a>-->
+	      <a ng-attr-href="{{med.uri || med.picture}}" ng-hide="isPhoto(med) || isVideo(med)"  href="#">Download</a> 
             </div>
           </div>
         </div>
       </div>
       
-      <video-player src="'/videocontroller/samples/sample1.mp4'"></video-player>
+      
     </div>
 
 
@@ -198,12 +201,14 @@
     
 
     <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.model.js"></script>
     <script type="text/javascript" src="app/app.module.js"></script>
     <script type="text/javascript" src="app/app.constants.js"></script>
     <script type="text/javascript" src="app/http.service.js"></script>
     <script type="text/javascript" src="app/localstorage.service.js"></script>
     <script type="text/javascript" src="app/app.controller.js"></script>
     <script type="text/javascript" src="videocontroller/video.js"></script>
+    <script type="text/javascript" src="audiocontroller/audio.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/image-viewer.js"></script>
   </body>

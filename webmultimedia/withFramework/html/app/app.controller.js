@@ -1,31 +1,4 @@
-class MediaElement{
-    constructor(title, text, picture) {
-	this.title = title;
-	this.text = text;
-	this.picture = picture;
-	this.attr = [];
-    }
 
-    addAttr(desc, value) {
-	this.attr.push({
-	    "descr" : desc,
-	    "value" : value
-	});
-    }
-}
-
-class PictureElement extends MediaElement {
-    constructor(title, text, picture) {
-	super(title, text, picture);
-    }
-}
-
-class AudioElement extends MediaElement {
-    constructor(title, text, picture, uri) {
-	super(title, text, picture);
-	this.uri = uri;
-    }
-}
 
 angular.module("app").controller("appController", function($scope,httpService, LocalStorageService) {
 
@@ -50,14 +23,14 @@ angular.module("app").controller("appController", function($scope,httpService, L
     }
 
     addItem(new PictureElement(
-	    "Alfa Romeo",
-	    "Alfa Romeo Automobiles S.p.A. is an Italian car manufacturer. Founded as A.L.F.A., translating to Anonymous Lombard Automobile Factory in English) on June 24, 1910, in Milan, the company has been involved in car racing since 1911.",
-	    "data/WP_20160804_07_44_49_Rich.jpg"));
+	"Alfa Romeo",
+	"Alfa Romeo Automobiles S.p.A. is an Italian car manufacturer. Founded as A.L.F.A., translating to Anonymous Lombard Automobile Factory in English) on June 24, 1910, in Milan, the company has been involved in car racing since 1911.",
+	"data/WP_20160804_07_44_49_Rich.jpg"));
     
     addItem(new AudioElement(
-	    "Dance Song 97",
-	    "Dance Song 97 by Sleater Kinney on the Album Dig me out (1997)",
-	    "data/sleaterkinney-digmeout-1425.jpg",
+	"Dance Song 97",
+	"Dance Song 97 by Sleater Kinney on the Album Dig me out (1997)",
+	"data/sleaterkinney-digmeout-1425.jpg",
 	"data/sp1105-12_dance_song_97.mp3"));
 
     addItem(new PictureElement(
@@ -66,9 +39,23 @@ angular.module("app").controller("appController", function($scope,httpService, L
 	"http://www.bythom.com/Images/lineage-chart.jpg"
     ));
 
+    addItem(new VideoElement(
+	"Sample Video",
+	"This is a sample Video",
+	"data/sample1.mp4"
+    ));
+
     
     $scope.isPhoto = function(elm) {
 	return elm instanceof PictureElement;
+    };
+
+    $scope.isAudio = function(elm) {
+	return elm instanceof AudioElement;
+    };
+
+    $scope.isVideo = function(elm) {
+	return elm instanceof VideoElement;
     };
 
     $scope.login = function() {
