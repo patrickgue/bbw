@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="Hamstershop" company="Berufsbildungsschule Winterthur" webLink="http://" view-date="2016-08-07" view-index="1" gantt-divider-location="348" resource-divider-location="300" version="2.8.1" locale="en_US">
     <description/>
-    <view zooming-state="default:7" id="gantt-chart">
+    <view zooming-state="default:2" id="gantt-chart">
         <field id="tpd3" name="Name" width="185" order="0"/>
         <field id="tpd4" name="Begin date" width="78" order="1"/>
         <field id="tpd5" name="End date" width="78" order="2"/>
