@@ -66,6 +66,7 @@ app.use(function(req, res, next) {
 		    res.status(404);
 		    res.type("text/plain");
 		    res.end("File not found: '"+req.originalUrl + "'");
+		    console.log("err")
 		}
 		else {
 		    res.status(500);
