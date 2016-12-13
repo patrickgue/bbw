@@ -159,6 +159,22 @@ Wie sich die Farbräume verhalten, wird in den folgenden Abbildungen gezeigt:
 [[file:imgs/cymk.png]]
 
 
+*** Bildergalerie
+
+Es gibt für das WWW viele Möglichkeiten, Bilder in einer Galerie darzustellen. Es gibt u.A. PHP
+Frameworks zur Darstellung von Bildern. Am geläufigsten sind heutzutage (2016) Bildergalerien 
+welche mit JavaScript verwirklicht wurden. Dafür gibt es verschiedene Libraries.
+
+#+ATTR_LATEX: :width 14cm :caption \\Screenshot einer Bildergalerie
+[[file:imgs/src3.png]]
+
+#+ATTR_LATEX: :width 14cm :caption \\Screenshot eines geöffneten Bildes in einer Bildergalerie (Die Librarie wurde vom Autor dieses Dokumentes entwickelt)
+[[file:imgs/src.png]]
+
+#+ATTR_LATEX: :width 10cm :caption \\Screenshot eines in die Website eingebundenes Video
+[[file:imgs/src2.png]]
+
+
 ** Juristische Fragen
 
 Wenn in Betracht gezongen wird, Inhalte aus dem Internet zu verwenden, muss jeweils
@@ -239,11 +255,27 @@ keinen Anspruch auf vollständigkeit hat)
 
 Es gibt spezielle Lizenzen für Dokumente jeglicher Art. Grundsätzlich können Dokumente unter
 den Bedingungen der Creative Commons Lizenz veröffentlicht werden. Auch gibt es die /GNU/ 
-/Free Documentation License/[2], welche es erlaubt, Dokumente unter GNU GPL ähnlichen 
+/Free Documentation License/ [2], welche es erlaubt, Dokumente unter GNU GPL ähnlichen 
 Bedingungen zu veröffentlichen.
 
 
 ** Banner
+*** Verwendung
+
+Banner koennen verschieden eingesetzt werden, hauptsaechlich jedoch um Inhalt
+welcher nicht direkt mit dem Inhalt des eigentlichen Dokumentes zusammenhaengt.
+Vor allem fuer Werbung auf Websites werden Banner verwendet.
+
+*** Beispiele
+
+Es gibt verschiedene Anbieter für Online Werbung, der Grösste ist AdSense von
+Google. AdSense stellt folgende Grössen zur Verfuegung:
+ * Medium Rectangle (300 x 250)
+ * Large Rectangle (336 x 280)
+ * Leaderboard (728 x 90)
+ * Large Skyscraper (300 x 600)
+ * Banner (468 x 60)
+
 
 * Über dieses Dokument
 

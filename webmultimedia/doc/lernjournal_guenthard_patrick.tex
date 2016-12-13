@@ -1,4 +1,4 @@
-% Created 2016-11-22 Di. 15:59
+% Created 2016-12-13 Di. 16:41
 \documentclass[11pt]{article}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -104,6 +104,9 @@ ich angefangen, eine Dokumentation der Themen zu schreiben.
 \label{sec-2-1}
 \subsubsection{Bildformate}
 \label{sec-2-1-1}
+\begin{enumerate}
+\item Rastergrafiken
+\label{sec-2-1-1-1}
 \begin{center}
 \begin{tabular}{ll}
 \hline
@@ -129,6 +132,21 @@ eingesetzt werden. Beispielsweise:
 \item \textbf{.xbm} X11 Bitmap (1 bit)
 \item \textbf{.xpm} X11 Bitmap (8 bit)
 \end{itemize}
+
+\item Vektorgrafiken
+\label{sec-2-1-1-2}
+
+Vektorgrafiken werden für Grafiken eingesetzt. Im Gegensatzt zu Rastergrafiekn werden hier nicht
+pixel, sondern geometrische Objekte respektive deren Vektoren gespeichert und beim Rendering in 
+eine Rastergrafik umgewandelt. Dies macht sie unendlich skalierbar.
+
+Es gibt mehrere Formate in welchen Vektorgrafiken gespeichert werden können:
+\begin{itemize}
+\item \textbf{.ps} PostScript
+\item \textbf{.pdf} Portable Document Format
+\item \textbf{.svg} Scalable Vector Graphic
+\end{itemize}
+\end{enumerate}
 
 
 \subsubsection{Downloaddauer einer Datei}
@@ -167,7 +185,10 @@ Web & 144 dpi - 200 dpi\\
 \end{tabular}
 \end{center}
 
-(dpi -  dots per inch, also punkte pro inch)
+\texttt{dpi} bedeutet \emph{dots per inch}, also punkte pro inch. Ebenfalls gibt es den Begriff \texttt{ppi} welcher
+\emph{Pixels per inch} bedeutet und - wie der name schon sagt - bei Bildschirmen und digitalen Inhalten 
+zur Anwendung kommen.
+
 
 \item Farbtiefe
 \label{sec-2-1-3-2}
@@ -220,6 +241,32 @@ Wie sich die Farbräume verhalten, wird in den folgenden Abbildungen gezeigt:
 \\\textbf{CYMK}
 \end{figure}
 \end{enumerate}
+
+
+\subsubsection{Bildergalerie}
+\label{sec-2-1-4}
+
+Es gibt für das WWW viele Möglichkeiten, Bilder in einer Galerie darzustellen. Es gibt u.A. PHP
+Frameworks zur Darstellung von Bildern. Am geläufigsten sind heutzutage (2016) Bildergalerien 
+welche mit JavaScript verwirklicht wurden. Dafür gibt es verschiedene Libraries.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{imgs/src3.png}
+\\Screenshot einer Bildergalerie
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{imgs/src.png}
+\\Screenshot eines geöffneten Bildes in einer Bildergalerie (Die Librarie wurde vom Autor dieses Dokumentes entwickelt)
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=10cm]{imgs/src2.png}
+\\Screenshot eines in die Website eingebundenes Video
+\end{figure}
 
 
 \subsection{Juristische Fragen}
@@ -313,9 +360,32 @@ Apache & Die Apache Lizenz wurde für den Apache Webserver geschrieben. Sie ist s
 
 Es gibt spezielle Lizenzen für Dokumente jeglicher Art. Grundsätzlich können Dokumente unter
 den Bedingungen der Creative Commons Lizenz veröffentlicht werden. Auch gibt es die \emph{GNU} 
-/Free Documentation License/\footnotemark[4]{}, welche es erlaubt, Dokumente unter GNU GPL ähnlichen 
+\emph{Free Documentation License} \footnotemark[2]{}, welche es erlaubt, Dokumente unter GNU GPL ähnlichen 
 Bedingungen zu veröffentlichen.
 \end{enumerate}
+
+
+\subsection{Banner}
+\label{sec-2-3}
+\subsubsection{Verwendung}
+\label{sec-2-3-1}
+
+Banner koennen verschieden eingesetzt werden, hauptsaechlich jedoch um Inhalt
+welcher nicht direkt mit dem Inhalt des eigentlichen Dokumentes zusammenhaengt.
+Vor allem fuer Werbung auf Websites werden Banner verwendet.
+
+\subsubsection{Beispiele}
+\label{sec-2-3-2}
+
+Es gibt verschiedene Anbieter fuer Online Werbung, der Groesste ist AdSense von
+Google. AdSense stellt folgende Groessen zur Verfuegung:
+\begin{itemize}
+\item Medium Rectangle (300 x 250)
+\item Large Rectangle (336 x 280)
+\item Leaderboard (728 x 90)
+\item Large Skyscraper (300 x 600)
+\item Banner (468 x 60)
+\end{itemize}
 
 
 \section{Über dieses Dokument}
