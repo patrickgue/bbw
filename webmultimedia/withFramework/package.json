@@ -1,15 +1,15 @@
 {
-    "title": "Web Multimedia Framework",
-    "version": "0.0.1",
-    "license": "GPL-3.0",
-    "description" : "Framework for sharing free (as in freedom) media",
-    "dependencies": {
-	"body-parser": "^1.15.2",
-	"express": "^4.14.0",
-	"sha1": "^1.1.1",
-	"sqlite3": "^3.1.8"
-    },
-    "scripts" : {
-	"run" : "node server.js"
-    }
+  "title": "Web Multimedia Framework",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "description": "Framework for sharing free (as in freedom) media",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.12.0",
+    "sha1": "^1.1.1"
+  },
+  "scripts": {
+    "run": "node server.js"
+  }
 }
