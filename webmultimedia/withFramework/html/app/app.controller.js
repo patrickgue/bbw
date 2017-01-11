@@ -143,6 +143,30 @@ angular.module("app").controller("appController", function($scope,httpService, L
 		console.log(data);
 	    });
     };
+
+    console.log("g a m");
+    httpService.get("media/all", function(data) {
+	console.log("get all media");
+	for(let d of data.data) {
+	    if(d.mediaType === "IMAGE") {
+		addItem(new PictureElement(
+		    d.mediaTitle,
+		    d.mediaDescription,
+		    d.mediaResourcePath
+		));
+	    } else if(d.mediaType === "AUDIO") {
+		addItem(new AudioElement(
+		    d.mediaTitle,
+		    d.mediaDescription,
+		    d.mediaPicturePath,
+		    d.mediaResourcePath
+		));
+	    }
+	}
+    }, function(error) {
+	console.log(error);
+    });
+    
 }).directive('ngFiles',function ($parse) {
     
     function fn_link(scope, element, attrs) {

@@ -29,7 +29,7 @@ const bodyParser = require('body-parser');
 const fs = require("fs");
 const os = require('os');
 const sha1 = require('sha1');
-const database = require('./services/dbservice.mysql.js');
+const database = require('./services/dbservice.js');
 const PATH_PREFIX = "/api/v0";
 
 const htmlFilesPath = "/html/";
@@ -47,6 +47,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(function(req, res, next) {
+
     if(req.originalUrl.indexOf("/api/") == -1) {
 
 	var defaultF = "";

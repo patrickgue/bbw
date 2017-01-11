@@ -1,37 +1,106 @@
-#+TITLE:Rede Ã¼ber Prokrastinations
-#+AUTHOR:Patrick GÃ¼nthard
+#+TITLE:Rede Über Prokrastination
+#+AUTHOR:Patrick Günthard
 #+DATE:15. Dezember 2016
+
+#+LATEX_CLASS_OPTIONS:[a4paper,14pt]
+#+LATEX_HEADER:\usepackage[margin=1in]{geometry}
+#+LATEX_HEADER:\usepackage[onehalfspacing]{setspace}
 
 
 * Fakten
-
+** Generell
  * Wir menschen schieben Aufgaben teilweise auf, auch wenn dies gar nicht nötig wäre
  * Diese Angewohnheit ist sehr irrational
- * 
-
+** Ursachen
+ * Grosse Aufgaben können abschreckend wirken
+   * man fürchtet sich vor dem Stress
 * Anektoten
 
 [A1] Wer kennt die Situation nicht. Sonntag Abend, halb zwölf, und man versteht 
 den Stoff für die Matheprüfung am nächsten Morgen immer noch nicht.
 
 * Schlüsse
+ * Tipps
+   * Grosse Aufgaben in kleine Schritte einteilen
+   * Deadlines setzten,
  * Just do it now
- * 
-* Entwurf Rede
 
-[A1] Viele Menschen haben die Angewohnheitm aufgaben, seien sie noch so wichtig, 
-aufzuschieben, zu vertagen. 
+* Entwurfstext
+
+** Einleitung
+
+[A1] Viele Menschen haben die Angewohnheit, Aufgaben, seien sie noch so wichtig, 
+aufzuschieben, und zu vertagen. Sei es nun die Hausaufgaben, einen Zahnarzttermin,
+den Stapel an Rechnungen welche man eigentlich noch bezahlen müsste. Man kann
+diese Dinge ja auch noch Morgen erledigen. Oder nächste Woche. Oder in einem Monat.
+
+Dieses Aufschieben von Aufgaben nennt man auch Prokrastination.
+
+Prokrastinieren kann man eigentlich überall wo man zu gewissen Aufgaben verpflichtet
+wird. Jede und jeder schiebt manchmal Dinge auf doch in den meisten Fällen 
+bleibt es in einem gesunden Rahmen.
+
+Wie Prokrastination entsteht, sind sich die Forscher uneinig und ich möchte auch
+nicht im Detail auf die wissenschaftliche Ebene dieses Themas eingehen.
+
+Die wichtigste Frage ist, wie entsteht Prokrastination und wie kann man sie bekämpfen.
+
+Natürlich sind die Ursachen sehr individuell. Man erkennt jedoch gewisse Muster,
+nur schon wenn ich mich selbst und das Verhalten meiner MitschülerInnen beobachte.
+
+** Warum prokrastinieren wir?
+
+Prokrastination kann passieren, wenn sehr grosse, teilweise auch weniger grosse 
+Aufgaben anstehen. Man fürchtet sich vor dem Stress welcher bevorsteht und versucht 
+sich diesem so lange wie möglich zu entziehen.
+
+Und das nur, weil es ja theoretisch möglich ist, diese Aufgaben später zu 
+erledigen.
+
+Die Ironie dahinter, dass man dann alles auf den letzten Drücker macht und 
+somit noch viel mehr Stress hat, ist schon fast absurd.  
+
+Grundsätzlich ist das Phänomen sehr irrational. 
+
+
+** Auswirkungen
+
+Die Auswirkungen könnt ihr euch sicher vorstellen. Prokrastinieren bei Schulischen
+Aufgabem, kann sich negativ auf die Noten auswirken. Wirklich gefährlich wird es, 
+wenn man Beispielswiese einen Arzttermin aufschiebt. Die Konsquenzen können fatal
+sein.
+
+
+** Was tun?
+
+Um endlich die Frage zu beantworten, Was kann man tun? Man könnte einfach sagen,
+machs einfach, plan dir deine Termine besser ein. Das Problem ist jedoch viel 
+komplexer und individueller. 
+[Z1]
+
+Schreibt z.B. Psychology Today. 
+
+Es gibt einige Methoden, welche helfen können das prokrastinieren zu verhindern:
+ * Grosse Aufgaben können in kleinere Teil-Aufgaben aufgesplittet werden
+ * Neben der Deadline für die gesammte Aufgabe können auch Deadlines für die kleinen Teilaufgaben gesetzt werden.
+ * Wenn man Teil-Aufgaben abschliesst, kann das ein zufreidenstellendes Gefühl auslösen, was weiterem prokrastinieren entgegenwirkt.
+
+** Abschluss
+
+
+* Stilideen für Rede
+ * Antworten immer aufschieben
+
 
 * Rede
 
-* Slam Poetry Version
-
 * Zitate
 
-"Telling someone who procrastinates to buy a weekly planner is like telling someone with chronic 
+[Z1] "Telling someone who procrastinates to buy a weekly planner is like telling someone with chronic 
 depression to just cheer up," (Psychology Today, 23 August 2003)
 
 * Quellen
 
 [1] Generelle Infos http://www.zeit.de/studium/uni-leben/2013-06/prokrastination-aufschieben-engberding-muenster-tipps
 [2] Statistiken http://www.prokrastination.net/umfrage/
+[3] Kurze Erklärung https://www.youtube.com/watch?v=pKyHX0zqynk&t=338s

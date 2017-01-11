@@ -161,7 +161,7 @@ Wie sich die Farbräume verhalten, wird in den folgenden Abbildungen gezeigt:
 
 *** Bildergalerie
 
-Es gibt für das WWW viele Möglichkeiten, Bilder in einer Galerie darzustellen. Es gibt u.A. PHP
+Es gibt für das WWW viele Möglichkeiten, Bilder darzustellen, beispielsweise in einer Gallerie. Es gibt u.A. PHP
 Frameworks zur Darstellung von Bildern. Am geläufigsten sind heutzutage (2016) Bildergalerien 
 welche mit JavaScript verwirklicht wurden. Dafür gibt es verschiedene Libraries.
 
@@ -284,3 +284,4 @@ Google. AdSense stellt folgende Grössen zur Verfuegung:
 
 Dieses Dokument ist lizenziert unter der GNU Free Documentation License. Mehr Informationen
 sind auf [[http://gnu.org]] zu finden.
+
