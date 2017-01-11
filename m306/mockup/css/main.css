@@ -1,0 +1,126 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Avenir";
+}
+
+p {
+  font-size: 14pt;
+  margin: 4px 0px;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 36pt;
+}
+
+h2 {
+  font-size: 28pt;
+}
+
+h3 {
+  font-size: 24pt;
+}
+
+h4 {
+  font-size: 20pt;
+}
+
+h5 {
+  font-size: 18pt;
+}
+
+h6 {
+  font-size: 16pt;
+}
+
+.content {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+}
+
+
+
+.dark {
+  background-color: #444;
+  color: #eee;
+}
+
+header h1 {
+  font-size: 12pt;
+  display: inline;
+}
+
+header a {
+  color: #eee;
+  text-decoration: none;
+}
+
+
+header {
+  padding: 8px 0px;
+}
+
+.fright {
+  float: right;
+}
+
+/* Timeline */
+
+.timelineHead {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border-radius: 150px;
+  border: 1px solid #444;
+  margin-top: 40px;
+  background-size: cover;
+  background-position: center;
+}
+
+.timelineItem {
+  width: 360px;
+  padding: 20px 2%;
+}
+
+.timelineItem.left {
+  border-right: 1px solid #444;
+}
+
+
+.timelineItem.right {
+  margin-left: 359px;
+  border-left: 1px solid #444;
+
+}
+
+.timelineItem.left {
+  text-align: right;
+}
+
+.timelineItem p {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 8px;
+  display: inline-block;
+}
+
+
+.menuItem {
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  border: 1px solid #444;
+  display: inline-block;
+  background-position: center;
+  background-size: cover;
+}
