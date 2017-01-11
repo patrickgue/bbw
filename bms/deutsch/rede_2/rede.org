@@ -1,5 +1,5 @@
-#+TITLE:Rede Ã¼ber Prokrastinations
-#+AUTHOR:Patrick GÃ¼nthard
+#+TITLE:Rede über Prokrastination
+#+AUTHOR:Patrick Günthard
 #+DATE:15. Dezember 2016
 
 
