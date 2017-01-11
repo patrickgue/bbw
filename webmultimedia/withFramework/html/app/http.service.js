@@ -1,7 +1,7 @@
 angular.module("app").factory("httpService", function($http,appConst) {
 
     function get(url,success,error) {
-	$http.get(appConst.httpPrefix + url,
+	$http.get(appConst.httpPrefix + url).then(
 		  function(data) {
 		      if(success == undefined) {
 			  console.log("no success method", data);
@@ -12,7 +12,7 @@ angular.module("app").factory("httpService", function($http,appConst) {
 		  },
 		  function(data) {
 		      if(error == undefined) {
-			  console.log("no success method", data);
+			  console.log("no error method", data);
 		      }
 		      else {
 			  error(data);

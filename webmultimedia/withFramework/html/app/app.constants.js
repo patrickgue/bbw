@@ -1,3 +1,3 @@
 angular.module("app").constant("appConst",{
-    "httpPrefix" : "http://localhost:8080/api/v0/"
+    "httpPrefix" : "http://localhost:4083/api/v0/"
 });

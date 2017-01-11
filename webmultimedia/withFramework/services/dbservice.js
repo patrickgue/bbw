@@ -30,6 +30,10 @@ db.serialize(function(){
 	       + "mediaPicturePath, mediaResourcePath, mediaUserId)"
 	       + " VALUES (1, \"IMAGE\", \"Alfa Romeo\", \"Alfa Romeo Automobiles S.p.A. is an Italian car manufacturer. Founded as A.L.F.A., translating to Anonymous Lombard Automobile Factory in English) on June 24, 1910, in Milan, the company has been involved in car racing since 1911.\", \"data/WP_20160804_07_44_49_Rich.jpg\", \"data/WP_20160804_07_44_49_Rich.jpg\", 1)");
 
+	db.run("INSERT INTO TMUL_MEDIA (mediaId, mediaType, mediaTitle, mediaDescription, "
+	       + "mediaPicturePath, mediaResourcePath, mediaUserId)"
+	       + " VALUES (2, \"AUDIO\", \"Dance Song 97\", \"Dance Song 97 by Sleater Kinney on the Album Dig Me Out (1997)\", \"data/sleaterkinney-digmeout-1425.jpg\", \"data/sp1105-12_dance_song_97.mp3\", 1)");
+
 
 	
 
