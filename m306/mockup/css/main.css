@@ -5,7 +5,7 @@
 }
 
 
-body {
+body, input, textarea {
   font-family: "Avenir";
 }
 
@@ -53,13 +53,17 @@ h6 {
 }
 
 header h1 {
-  font-size: 12pt;
+  font-size: 18pt;
   display: inline;
 }
 
-header a {
+header.dark a {
   color: #eee;
   text-decoration: none;
+}
+
+.menu {
+  padding-top: 5px;
 }
 
 
@@ -113,14 +117,80 @@ header {
 
 
 .menuItem {
-  margin-right: 40px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+
   width: 300px;
   height: 300px;
   border-radius: 150px;
   border: 1px solid #444;
-  display: inline-block;
+  display: block;
   background-position: center;
   background-size: cover;
+}
+
+.menuItemWrapper {
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 300px;
+  text-align: center;
+  display: inline-block;
+  color: #444;
+  font-size: 20pt;
+  text-decoration: none;
+}
+
+.hamsterMenu {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #444;
+  display: inline-block;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact {
+  margin: auto;
+  width: 302px;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+label span {
+  display: inline-block;
+  width: 80px;
+}
+
+
+input, button, textarea {
+  width: 200px;
+  height: 42px;
+  background-color:#fff;
+  border: 1px solid #444;
+  border-radius: 3px;
+  padding: 0px 8px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  width: 100px;
+}
+
+.close {
+  font-size: 24pt;
+}
+
+.hamsterWindow {
+  display: none;
 }
