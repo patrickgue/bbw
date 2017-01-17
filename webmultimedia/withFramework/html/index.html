@@ -1,205 +1,233 @@
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
-    <meta charset="utf-8"/>
+
+<head>
+    <meta charset="utf-8" />
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/image-viewer.css"/>
+    <link rel="stylesheet" href="css/image-viewer.css" />
     <title>Media</title>
-    
+
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-  
-  <body ng-controller="appController">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body ng-controller="appController">
     <ul id="userDropdown" class="dropdown-content">
-      <li><a href="#!">one</a></li>
-      <li><a href="#!">two</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">three</a></li>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
     </ul>
 
-    
-    <nav class="pink accent-2">
-      <div class="container">
-	<div class="nav-wrapper">
-	  <a href="#!" class="brand-logo">Media</a>
-	  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-	  <ul class="right hide-on-med-and-down">
-            <li><a class="modal-trigger" ng-show="showLogin" href="#loginModal">Login</a></li>
-	    <li>
-	      <a class="dropdown-button" ng-hide="showLogin" href="#!" data-activates="userDropdown">
-		{{ currentUser }}<i class="material-icons right">arrow_drop_down</i>
-	      </a>
-	    </li>
 
-	  </ul>
-	  <ul class="side-nav" id="mobile-demo">
-            <li><a class="modal-trigger" ng-show="showLogin" href="#loginModal">Login</a></li>
-	    <li>
-	      <a class="dropdown-button" ng-hide="showLogin" href="#!" data-activates="userDropdown">
-		{{ currentUser }}<i class="material-icons right">arrow_drop_down</i>
-	      </a>
-	    </li>
-	  </ul>
-	</div>
-      </div>
+    <nav class="pink accent-2">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Media</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="modal-trigger" ng-show="showLogin" href="#loginModal">Login</a></li>
+                    <li>
+                        <a class="dropdown-button" ng-hide="showLogin" href="#!" data-activates="userDropdown">
+            {{ currentUser }}<i class="material-icons right">arrow_drop_down</i>
+            </a>
+                    </li>
+
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a class="modal-trigger" ng-show="showLogin" href="#loginModal">Login</a></li>
+                    <li>
+                        <a class="dropdown-button" ng-hide="showLogin" href="#!" data-activates="userDropdown">
+            {{ currentUser }}<i class="material-icons right">arrow_drop_down</i>
+            </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <span>{{currentUser}}</span>
 
-    <img src="data/banner.png" style="position: fixed; right: 0px; bottom: 20px; border: 1px solid #000;" id="banner"/>
-    
+    <img src="data/banner.png" style="position: fixed; right: 0px; bottom: 20px; border: 1px solid #000;" id="banner" />
+
     <div class="container">
-      <div class="row">
-        <div ng-repeat="med in media" class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img ng-if="!isVideo(med)" data-image="allmedia" ng-attr-src="{{med.picture}}">
-	      <video-player ng-if="isVideo(med)"  src="med.uri"></video-player>
-              <span  ng-if="!isVideo(med)" class="card-title">{{med.title}}</span>
+        <div class="row">
+            <div ng-repeat="med in media" class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img ng-if="!isVideo(med)" data-image="allmedia" ng-attr-src="{{med.picture}}">
+                        <video-player ng-if="isVideo(med)" src="med.uri"></video-player>
+                        <span ng-if="!isVideo(med)" class="card-title">{{med.title}}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{med.text}}</p>
+                        <div ng-show="med.uri">
+                            <audio-player ng-if="isAudio(med)" controls src="med.uri"></audio-player>
+
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <!--<a ng-hide="isPhoto(med) || isVideo(med)"  href="#">Open</a>-->
+                        <a ng-attr-href="{{med.uri || med.picture}}" ng-hide="isPhoto(med) || isVideo(med)" href="#">Download</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-              <p>{{med.text}}</p>
-	      <div ng-show="med.uri">
-		<audio-player ng-if="isAudio(med)" controls src="med.uri"></audio-player>
-		
-	      </div>
-            </div>
-	    <div class="card-action">
-              <!--<a ng-hide="isPhoto(med) || isVideo(med)"  href="#">Open</a>-->
-	      <a ng-attr-href="{{med.uri || med.picture}}" ng-hide="isPhoto(med) || isVideo(med)"  href="#">Download</a> 
-            </div>
-          </div>
         </div>
-      </div>
-      
-      
+
+
     </div>
 
 
 
 
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-      <a href="#uploadModal" class="btn-floating btn-large red modal-trigger modal-action ">
-	<i class="large material-icons">add</i>
-      </a>
+        <a href="#uploadModal" class="btn-floating btn-large red modal-trigger modal-action ">
+            <i class="large material-icons">add</i>
+        </a>
     </div>
 
     <div id="uploadModal" class="modal">
-      <div class="modal-content">
-	<h4>Upload</h4>
-	<div class="row">
-	  <div class="input-field col s12">
-	    <input ng-model="newFileTitle" class="validate"/>
-	    <label>Title</label>
-	  </div>
-	</div>
+        <form enctype="multipart/form-data" action="/api/v0/upload" method="post">
+            <div class="modal-content">
 
-	<div class="row">
-	  <div class="input-field col s12">
-	    <select ng-model="newFileLicense">
-	      <option value="" disabled selected>Choose your option</option>
-	      <option value="1">Creative Commons</option>
-	      <option value="2">GNU GPLv3</option>
-	      <option value="3">Apache</option>
-	    </select>
-	    <label>License</label>
-	  </div>
-	</div>
+                <h4>Upload</h4>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="title" />
+                        <label>Title</label>
+                    </div>
+                </div>
 
-	<div class="row">
-	  <div class="file-field input-field col s12">
-	    <div class="btn">
-              <span>File</span>
-              <input ng-files="getTheFiles($files)" type="file">
-	    </div>
-	    <div class="file-path-wrapper">
-              <input  class="file-path validate" type="text">
-	    </div>
-	    <label>File</label>
-	  </div>
-	</div>
-      </div>
-      <div class="modal-footer">
-	<a href="#!" ng-click="uploadFile();" class=" waves-effect pink darken-2 waves-light btn">Upload</a>
-      </div>
+                <div class="row">
+                    <div class="input-field col s12">
+
+                        <textarea name="description" class="materialize-textarea" type="text"></textarea>
+                        <label>Description</label>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+
+                        <select name="license" ng-model="newFileLicense">
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="1">Creative Commons</option>
+                          <option value="2">GNU GPLv3</option>
+                          <option value="3">Apache</option>
+                        </select>
+                        <label>License</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>File</span>
+                            <input name="file" ng-files="getTheFiles($files)" type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                        <label>File</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+
+                        <input id="imageUrlInput" name="image" type="text">
+                        <label for="imageUrlInput">Image URL (not necessary if uploading an image)</label>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <input type="submit" class="waves-effect pink darken-2 waves-light btn" value="Upload" />
+            </div>
+        </form>
     </div>
 
-    
-    
+
+
     <div id="loginModal" class="modal">
-      <div class="modal-content">
-	<h4>Login</h4>
-	<div class="row">
-	  <a href="#signupModal" class="modal-trigger modal-action modal-close">Signup here if you don't already have a login</a>
-	  <form class="col s12">
-	    <div class="row">
-              <div class="input-field col s12">
-		<input ng-model="loginUserName" placeholder="Username" id="username" type="text" class="validate">
-		<label ng-model="loginPassword" for="username">Username</label>
-              </div>
-	    </div>
-	    <div>
-              <div class="input-field col s12">
-		<input ng-model="loginPassword" id="password" type="password" class="validate">
-		<label for="password">Password</label>
-              </div>
-	    </div>
-	</div>
-	<p class="red-text">{{loginError}}</p>
-      </div>
-      <div class="modal-footer">
-	<a href="#!" ng-click="login()" class=" waves-effect pink darken-2 waves-light btn">Login</a>
-      </div>
+        <form class="col s12">
+            <div class="modal-content">
+
+                <h4>Login</h4>
+                <div class="row">
+                    <a href="#signupModal" class="modal-trigger modal-action modal-close">Signup here if you don't already have a login</a>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input ng-model="loginUserName" placeholder="Username" id="username" type="text" class="validate">
+                        <label ng-model="loginPassword" for="username">Username</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field col s12">
+                        <input ng-model="loginPassword" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <p class="red-text">{{loginError}}</p>
+
+            </div>
+
+            <div class="modal-footer">
+                <a href="#!" ng-click="login()" class=" waves-effect pink darken-2 waves-light btn">Login</a>
+
+            </div>
+        </form>
     </div>
 
 
-    
+
     <div id="signupModal" class="modal">
-      <div class="modal-content">
-	<h4>Signup</h4>
-	<div class="row">
-	  <a href="#loginModal" class="modal-action modal-trigger modal-close">Login here if you already have a login</a>
-	  <p>
-	    Remeber: This site is accessible to all the users on the world wide web. To
-	    ensure your anonymity we encourage you to use a fake name and only to use your
-	    real name if you are completely sure what you're doing.
-	  </p>
-	  <form class="col s12">
-	    <div class="row">
-              <div class="input-field col s12">
-		<input ng-model="signupUserName" placeholder="Username" id="username" type="text" class="validate">
-		<label for="username">Username</label>
-              </div>
-	    </div>
-	    <div>
-              <div class="input-field col s12">
-		<input ng-model="signupPassword" id="password" type="password" class="validate">
-		<label for="password">Password</label>
-              </div>
-	    </div>
-	    <div>
-              <div class="input-field col s12">
-		<input ng-model="signupPasswordRep" id="password" type="password" class="validate">
-		<label for="password">Repeat Password</label>
-              </div>
-	    </div>
-	</div>
-	<p class="red-text">{{signupError}}</p>
-      </div>
-      <div class="modal-footer">
-	<a href="#!" ng-click="signup()" ng-disabled="{{signupPasswordRep !== signupPassword }}" class=" waves-effect pink darken-2 waves-light btn">Signup</a>
+        <div class="modal-content">
+            <h4>Signup</h4>
+            <div class="row">
+                <a href="#loginModal" class="modal-action modal-trigger modal-close">Login here if you already have a login</a>
+                <p>
+                    Remeber: This site is accessible to all the users on the world wide web. To ensure your anonymity we encourage you to use a fake name and only to use your real name if you are completely sure what you're doing.
+                </p>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input ng-model="signupUserName" placeholder="Username" id="username" type="text" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="input-field col s12">
+                            <input ng-model="signupPassword" id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="input-field col s12">
+                            <input ng-model="signupPasswordRep" id="password" type="password" class="validate">
+                            <label for="password">Repeat Password</label>
+                        </div>
+                </form>
+                </div>
+            </div>
+            <p class="red-text">{{signupError}}</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" ng-click="signup()" ng-disabled="{{signupPasswordRep !== signupPassword }}" class=" waves-effect pink darken-2 waves-light btn">Signup</a>
 
-      </div>
+        </div>
     </div>
-    
+
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-    
+
 
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="app/app.model.js"></script>
@@ -212,5 +240,6 @@
     <script type="text/javascript" src="audiocontroller/audio.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/image-viewer.js"></script>
-  </body>
+</body>
+
 </html>
