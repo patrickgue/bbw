@@ -29,7 +29,7 @@ const bodyParser = require('body-parser');
 const fs = require("fs");
 const os = require('os');
 const sha1 = require('sha1');
-const database = require('./services/dbservice.js');
+const database = require('./services/dbservice.mysql.js');
 const multer = require('multer');
 const PATH_PREFIX = "/api/v0";
 
