@@ -108,7 +108,7 @@ header {
   text-align: right;
 }
 
-.timelineItem p {
+.timelineItem p, .zubcontent p {
   background-color: #eee;
   border-radius: 4px;
   padding: 8px;
@@ -193,4 +193,34 @@ button {
 
 .hamsterWindow {
   display: none;
+}
+
+
+
+.zubtitle {
+  cursor: pointer;
+}
+
+.zubtitle h3 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 80px 40px;
+}
+
+.zubcontent p {
+  display: block;
+}
+
+.zubcontent {
+  display: none;
+}
+
+.zubicon {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 1px solid #444;
+  background-size: cover;
+  background-position: center;
 }

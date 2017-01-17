@@ -30,9 +30,22 @@ const fs = require("fs");
 const os = require('os');
 const sha1 = require('sha1');
 const database = require('./services/dbservice.js');
+const multer = require('multer');
 const PATH_PREFIX = "/api/v0";
 
 const htmlFilesPath = "/html/";
+
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, '/tmp/my-uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now())
+  }
+})
+
+var upload = multer({ storage: storage })
 
 
 // Util methods
@@ -51,7 +64,7 @@ app.use(function(req, res, next) {
     if(req.originalUrl.indexOf("/api/") == -1) {
 
 	var defaultF = "";
-	
+
 	if(req.originalUrl.charAt(req.originalUrl.length - 1) == "/") {
 	    defaultF = defaultFile;
 	}
@@ -60,7 +73,7 @@ app.use(function(req, res, next) {
 	}
 
 	console.log( __dirname, htmlFilesPath, req.originalUrl,  defaultF);
-	
+
 	fs.readFile( __dirname + htmlFilesPath + req.originalUrl + defaultF, function (err, data) {
 	    if (err) {
 		if(err.code === "ENOENT") {
@@ -73,7 +86,7 @@ app.use(function(req, res, next) {
 		    res.status(500);
 		    console.log(err);
 		    res.end(JSON.stringify( err));
-		} 
+		}
 	    } else {
 		for(var mimeType in mimeTypes) {
 		    if(req.originalUrl.indexOf(mimeType) != -1) {
@@ -110,7 +123,7 @@ Return Success:
 app.post(PATH_PREFIX + "/user/add", function(req, res) {
     var user = req.body.userName;
     var password = sha1(req.body.userPassword);
-    
+
     database.run(
 	"INSERT INTO TMUL_USER (userName,userPassword) VALUES(?,?)",
 	[user, password],
@@ -122,20 +135,20 @@ app.post(PATH_PREFIX + "/user/add", function(req, res) {
 /*
 =Login=
 
-POST Parameters: 
+POST Parameters:
 
 {
   userName : string,
   password : string
 }
 
-Return Succeess: 
+Return Succeess:
 
 {
   userId: number
 }
 
-Return Error: 
+Return Error:
 
 {
   message : string
@@ -146,7 +159,7 @@ app.post(PATH_PREFIX + "/user/login", function(req, res) {
     var userName = req.body.userName;
     var plainPassword = req.body.userPassword;
     var password = sha1(plainPassword);
-    
+
     database.select("SELECT * FROM TMUL_USER WHERE userName = \"" + userName + "\"", function(data) {
 	console.log("SELECT * FROM TMUL_USER WHERE userName = \"" + userName + "\"");
 	if(data.length > 0) {
@@ -167,11 +180,15 @@ app.post(PATH_PREFIX + "/user/login", function(req, res) {
 });
 
 
+app.post(PATH_PREFIX + '/upload', multer().array(), function (req, res, next) {
+  res.end("[]")
+})
+
 app.get(PATH_PREFIX + "/media/all", function(req, res) {
     database.select("SELECT * FROM TMUL_MEDIA", function(data) {
 	res.end(JSON.stringify(data));
     });
-}); 
+});
 
 
 app.get(PATH_PREFIX + "/token", function(req, res) {

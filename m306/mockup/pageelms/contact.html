@@ -1,8 +1,11 @@
 
-<form>
-  <p>Ich interessiere mich für diesen Hamster. Ich möchte mit euch Kontakt aufnehmen:</p>
+<div>
+  <p>Ich interessiere mich für dafür. Ich möchte mit euch Kontakt aufnehmen:</p>
   <label><span>Name</span><input/></label>
   <label><span>Email</span><input/></label>
   <label><span>Nachricht</span><textarea></textarea></label>
-  <label style="text-align: right;"><span></span><button>Senden</button></label>
-</form>
+  <label style="text-align: right;"><span></span><button class="sendbutton">Senden</button></label>
+  <script>
+    $(".sendbutton").on("click", function() { message("Nachricht abgeschickt!");})
+  </script>
+</div>
