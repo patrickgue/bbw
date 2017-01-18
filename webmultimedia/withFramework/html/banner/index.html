@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Banner</title>
+    <style>
+      @font-face {
+          font-family: "Akzidenz";
+          src:url('agr.ttf');
+          font-weight: 400;
+      }
+
+      @font-face {
+          font-family: "Akzidenz";
+          src:url('ag.ttf');
+          font-weight: 600;
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow: hidden;
+      }
+
+      .frame {
+        text-align: center;
+        font-size: 24pt;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 200px;
+        float: left;
+      }
+
+      .frame .lg {
+        font-size: 48px;
+      }
+
+
+      #comicsans {
+        font-family: "Comic Sans","ComicSansMS",cursive;
+        background-color: rgba(240,30,0,1);
+        color: rgba(80,120,240,1)
+      }
+
+      #arial {
+        font-family: "Arial",sans-serif;
+        background-color: #00A;
+        color: #eee;
+
+      }
+
+      #akzidenz {
+        font-family: "Akzidenz";
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="frameholder">
+      <div id="comicsans" class="frame">
+        <p>tired of looking at <span class="lg">Comic Sans?</span></p>
+      </div>
+      <div id="arial" class="frame">
+        <p>or even <br/><b class="lg">Arial?</b></p>
+      </div>
+      <div id="akzidenz" class="frame">
+        <p>Now use<br/><b class="lg">Akzidenz Grotesk</b><br/>loved by designers since 1896!</p>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
