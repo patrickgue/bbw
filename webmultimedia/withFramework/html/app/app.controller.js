@@ -7,7 +7,15 @@ angular.module("app").controller("appController", function($scope, httpService, 
     $scope.signupUserName = "";
     $scope.signupPassword = "";
 
-    $scope.showLogin = true;
+    if(LocalStorageService.load("userId") !== undefined) {
+        $scope.currentUser = LocalStorageService.load("userName");
+        $scope.showLogin = false;
+    }
+    else {
+        $scope.showLogin = true;
+    }
+
+
 
 
 
@@ -66,7 +74,7 @@ angular.module("app").controller("appController", function($scope, httpService, 
             function(data) {
                 $("#loginModal").closeModal();
                 LocalStorageService.store("userId", data);
-                LocalStorageService.store("userName", $scope.loginName);
+                LocalStorageService.store("userName", $scope.loginUserName);
                 $scope.currentUser = $scope.loginUserName;
                 $scope.loginUserName = "";
                 $scope.loginPassword = "";
@@ -107,6 +115,7 @@ angular.module("app").controller("appController", function($scope, httpService, 
     $scope.logout = function() {
         $scope.showLogin = true;
         LocalStorageService.del("userId");
+        LocalStorageService.del("userName");
     };
 
     $scope.myformdata = new FormData();

@@ -30,12 +30,11 @@
                 <a href="#!" class="brand-logo">Media</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
+                    <li><a class="modal-trigger" ng-hide="showLogin" href="#uploadModal">Upload</a></li>
                     <li><a class="modal-trigger" ng-show="showLogin" href="#loginModal">Login</a></li>
-                    <li>
-                        <a class="dropdown-button" ng-hide="showLogin" href="#!" data-activates="userDropdown">
-            {{ currentUser }}<i class="material-icons right">arrow_drop_down</i>
-            </a>
-                    </li>
+                    <li><a ng-click="logout()" ng-hide="showLogin" href="#!">Logout</a></li>
+                    <li style="background-color: rgba(32,32,32,.7)"><a ng-hide="showLogin" href="#!">{{ currentUser }}</a></li>
+
 
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
@@ -49,8 +48,6 @@
             </div>
         </div>
     </nav>
-    <span>{{currentUser}}</span>
-
     <img src="data/banner.png" style="position: fixed; right: 0px; bottom: 20px; border: 1px solid #000;" id="banner" />
 
     <div class="container">
@@ -83,7 +80,7 @@
 
 
 
-    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <div class="fixed-action-btn" ng-hide="showLogin" style="bottom: 45px; right: 24px;">
         <a href="#uploadModal" class="btn-floating btn-large red modal-trigger modal-action ">
             <i class="large material-icons">add</i>
         </a>
