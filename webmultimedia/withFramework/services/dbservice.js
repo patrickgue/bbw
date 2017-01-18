@@ -21,7 +21,12 @@ db.serialize(function() {
             "mediaPicturePath STRING, " +
             "mediaResourcePath STRING," +
             "mediaUserId INTEGER" +
-            ");");
+               ");");
+
+	db.run("CREATE TABLE TMUL_LICENSE ("+
+	       "licenseId INTEGER PRIMARY KEY AUTOINCREMENT," +
+	       "licenseName STRING" +
+	       ")");
 
         db.run("INSERT INTO TMUL_USER (userId, userName, userPassword) " +
             "VALUES(1, \"pat\", \"a9993e364706816aba3e25717850c26c9cd0d89d\")");
@@ -32,7 +37,15 @@ db.serialize(function() {
 
         db.run("INSERT INTO TMUL_MEDIA (mediaId, mediaType, mediaTitle, mediaDescription, " +
             "mediaPicturePath, mediaResourcePath, mediaUserId)" +
-            " VALUES (2, \"AUDIO\", \"Dance Song 97\", \"Dance Song 97 by Sleater Kinney on the Album Dig Me Out (1997)\", \"data/sleaterkinney-digmeout-1425.jpg\", \"data/sp1105-12_dance_song_97.mp3\", 1)");
+               " VALUES (2, \"AUDIO\", \"Dance Song 97\", \"Dance Song 97 by Sleater Kinney on the Album Dig Me Out (1997)\", \"data/sleaterkinney-digmeout-1425.jpg\", \"data/sp1105-12_dance_song_97.mp3\", 1)");
+
+
+	db.run("INSERT INTO TMUL_LICENSE (licenseName) VALUES(\"GNU GPLv3\") ;");
+	db.run("INSERT INTO TMUL_LICENSE (licenseName) VALUES(\"Apache\") ;");
+	db.run("INSERT INTO TMUL_LICENSE (licenseName) VALUES(\"Creative Commons\") ;");
+	db.run("INSERT INTO TMUL_LICENSE (licenseName) VALUES(\"MIT\") ;");
+	db.run("INSERT INTO TMUL_LICENSE (licenseName) VALUES(\"Public Domain\");");
+
 
     }
 });

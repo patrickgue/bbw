@@ -124,6 +124,28 @@ app.use(function(req, res, next) {
 
 
 /*
+=Get All supported Licenses=
+
+Return
+
+[
+  "string",
+  ...
+]
+*/
+
+app.get(PATH_PREFIX + "/license/all", function(req, res) {
+    database.select("SELECT licenseName FROM TMUL_LICENSE", function(data) {
+	var licenses = [];
+	for(var l in data) {
+	    licenses.push(data[l].licenseName);
+	}
+	res.end(JSON.stringify(licenses));
+    });
+});
+
+
+/*
 =Add User=
 
 POST Parameters:

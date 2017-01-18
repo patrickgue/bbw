@@ -112,9 +112,7 @@
 
                         <select name="license" ng-model="newFileLicense">
                           <option value="" disabled selected>Choose your option</option>
-                          <option value="1">Creative Commons</option>
-                          <option value="2">GNU GPLv3</option>
-                          <option value="3">Apache</option>
+                          <option ng-repeat="lic in licenses" value="{{lic}}">{{lic}}</option>
                         </select>
                         <label>License</label>
                     </div>

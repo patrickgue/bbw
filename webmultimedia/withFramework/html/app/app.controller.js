@@ -180,6 +180,15 @@ angular.module("app").controller("appController", function($scope, httpService, 
         console.log(error);
     });
 
+    httpService.get("license/all", function(data) {
+	$scope.licenses = data.data;
+	setTimeout(function() {
+	    $('select').material_select();
+	},1000);
+    }, function(error) {
+	console.log(error);
+    });
+
 }).directive('ngFiles', function($parse) {
 
     function fn_link(scope, element, attrs) {
