@@ -240,19 +240,22 @@ app.post(PATH_PREFIX + '/upload', function(req, res, next) {
 
 
 
-        database.run("INSERT INTO TMUL_MEDIA (mediaType, mediaTitle, mediaDescription, mediaPicturePath, mediaResourcePath) VALUES("+
+        database.run("INSERT INTO TMUL_MEDIA (mediaType, mediaTitle, mediaDescription, mediaPicturePath, mediaResourcePath, mediaLicense) VALUES("+
           '"'+ fileType +'",' +
           '"'+ req.body.title +'",' +
           '"'+ req.body.description +'",' +
           '"'+ req.body.image +'",' +
-          '"data/'+ req.file.filename + "\")");
+          '"data/'+ req.file.filename + '",' +
+          '"'+ req.body.license +
+           "\")");
 
-        console.log("INSERT INTO TMUL_MEDIA (mediaType, mediaTitle, mediaDescription, mediaPicturePath, mediaResourcePath) VALUES("+
+        console.log("INSERT INTO TMUL_MEDIA (mediaType, mediaTitle, mediaDescription, mediaPicturePath, mediaResourcePath, mediaLicense) VALUES("+
           '"'+ fileType +'",' +
           '"'+ req.body.title +'",' +
           '"'+ req.body.description +'",' +
           '"'+ req.body.image +'",' +
-          '"data/'+ req.file.filename + "\")");
+          '"data/'+ req.file.filename + '",' +
+          '"'+ req.body.license + "\")");
 
         console.log(req.file, req.body);
         res.type("text/html");

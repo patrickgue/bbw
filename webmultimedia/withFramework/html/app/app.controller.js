@@ -118,6 +118,7 @@ angular.module("app").controller("appController", function($scope, httpService, 
         LocalStorageService.del("userName");
     };
 
+    /*
     $scope.myformdata = new FormData();
     $scope.getTheFiles = function($files) {
         angular.forEach($files, function(value, key) {
@@ -126,7 +127,7 @@ angular.module("app").controller("appController", function($scope, httpService, 
             console.log(value);
         });
     };
-
+    */
 
     $scope.uploadFile = function() {
 
@@ -157,21 +158,24 @@ angular.module("app").controller("appController", function($scope, httpService, 
                 addItem(new PictureElement(
                     d.mediaTitle,
                     d.mediaDescription,
-                    d.mediaResourcePath
+                    d.mediaResourcePath,
+                    d.mediaLicense
                 ));
             } else if (d.mediaType === "AUDIO") {
                 addItem(new AudioElement(
                     d.mediaTitle,
                     d.mediaDescription,
                     d.mediaPicturePath,
-                    d.mediaResourcePath
+                    d.mediaResourcePath,
+                    d.mediaLicense
                 ));
             } else if (d.mediaType === "VIDEO") {
                 addItem(new VideoElement(
                     d.mediaTitle,
                     d.mediaDescription,
                     d.mediaPicturePath,
-                    d.mediaResourcePath
+                    d.mediaResourcePath,
+                    d.mediaLicense
                 ));
             }
         }

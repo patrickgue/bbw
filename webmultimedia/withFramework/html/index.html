@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/image-viewer.css" />
+    <link rel="stylesheet" href="css/index.css"/>
     <title>Media</title>
 
     <!--Let browser know website is optimized for mobile-->
@@ -49,7 +50,7 @@
         </div>
     </nav>
 
-    <iframe style="position: fixed; right: 0px; bottom: 20px; border: 1px solid #000; width: 300px; height: 600px;" src="/banner/index.html" id="banner"></iframe>
+    <iframe style=";" src="/banner/index.html" id="banner" ></iframe><!-- position: fixed; right: 0px; bottom: 20px; border: 1px solid #000; width: 300px; height: 600px -->
     <!--<img src="data/banner.png"  style="position: fixed; right: 0px; bottom: 20px; border: 1px solid #000;" id="banner" />-->
 
     <div class="container">
@@ -69,6 +70,7 @@
                         </div>
                     </div>
                     <div class="card-action">
+                        <span class="license">License: {{med.license}}</span>
                         <!--<a ng-hide="isPhoto(med) || isVideo(med)"  href="#">Open</a>-->
                         <a ng-attr-href="{{med.uri || med.picture}}" ng-hide="isPhoto(med) || isVideo(med)" href="#">Download</a>
                     </div>
