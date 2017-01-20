@@ -29,3 +29,10 @@
 .license {
   color: #666;
 }
+
+.card.open {
+  position: fixed;
+  left: 25%;
+  top: 5%;
+  width: 50%;
+}

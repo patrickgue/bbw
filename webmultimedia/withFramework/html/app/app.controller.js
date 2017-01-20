@@ -173,7 +173,6 @@ angular.module("app").controller("appController", function($scope, httpService, 
                 addItem(new VideoElement(
                     d.mediaTitle,
                     d.mediaDescription,
-                    d.mediaPicturePath,
                     d.mediaResourcePath,
                     d.mediaLicense
                 ));
