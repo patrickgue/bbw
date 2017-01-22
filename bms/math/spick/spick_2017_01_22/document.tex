@@ -1,11 +1,20 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=.4in]{geometry}
 \usepackage{amsmath}
 \usepackage[parfill]{parskip}
 \usepackage{multicol}
+\newcommand{\inv}{^{\text{-}1}}
+
+\renewcommand{\familydefault}{phv}
+
 \begin{document}
 	\begin{multicols}{3}
 		\section{Logarithmus Funktionen}
+		\subsection{Grundsätzliche Dinge}
+		Zehnerlogarithmus: \(lg\)\\
+		Natürlicher Logarithmus: \(ln \equiv log_e \)\\
+		\(e^{log_{e}(a)} = a \)\\
 		\subsection{Grundfunktionen}
 		\(log_b(xy) = log_b(x) + log_b(y)\)\\
 		\(log_b(\frac{x}{y}) = log_b(x) - log_b(y)\)\\
@@ -14,6 +23,19 @@
 		\(log_b(x) = \frac{log_k(x)}{log_k(b)} \)
 	
 		\subsection{Umkehrfunktion}
+		Schreibweise: \(f\inv \) 
+		
+		\section{Vektoren}
+		\subsection{Schreibweise}
+		\(\vec{a} = \begin{bmatrix}
+		a_1\\a_2\\a_3\end{bmatrix} \)
+		\subsection{Operationen}
+		\(\vec{a} = \begin{bmatrix}a_1\\a_2\\a3\end{bmatrix},
+		\vec{b} = \begin{bmatrix}b_1\\b_2\\b3\end{bmatrix}\)\\
+		\textbf{Addition:}\\
+		\(\vec{a} + \vec{b} = \begin{bmatrix}
+		a_1 + b_1\\a_2 + b_2\\a_3 + b_3\\
+		\end{bmatrix} \)	
 	\end{multicols}
 	
 	
