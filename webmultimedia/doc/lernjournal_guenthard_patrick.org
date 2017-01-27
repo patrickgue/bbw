@@ -276,6 +276,16 @@ Google. AdSense stellt folgende Grössen zur Verfuegung:
  * Large Skyscraper (300 x 600)
  * Banner (468 x 60)
 
+*** Implementierung in diesem Projekt
+**** Storyboard
+Für die Planung eines Banners ist ein Storyboard hilfreich um eine 
+
+[[file:imgs/storyboard.png]]
+
+**** Implementierung
+
+[[file:imgs/banner1.PNG]]
+[[file:imgs/banner2.PNG]]
 
 * Über dieses Dokument
 
