@@ -280,12 +280,22 @@ Google. AdSense stellt folgende Grössen zur Verfuegung:
 **** Storyboard
 Für die Planung eines Banners ist ein Storyboard hilfreich um eine 
 
+#+ATTR_LATEX: :width 14cm :caption \\Storyboard
 [[file:imgs/storyboard.png]]
 
 **** Implementierung
 
+Die Implementierung der Banner kann mit verschiedenne Methoden erfolgen.
+Im folgenden Beispiel wurde HTML 5 verwendet:
+
+#+ATTR_LATEX: :width 6cm :caption \\Screen 1
 [[file:imgs/banner1.PNG]]
+ 
+#+ATTR_LATEX: :width 6cm :caption \\Screen 2
 [[file:imgs/banner2.PNG]]
+
+#+ATTR_LATEX: :width 6cm :caption \\Screen 3
+[[file:imgs/banner3.PNG]]
 
 * Über dieses Dokument
 
