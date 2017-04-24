@@ -1,0 +1,56 @@
+/setA4Paper {<</PageSize [595 842] >> setpagedevice} def
+setA4Paper
+/LM 72 def
+/RM 523 def
+/ypos 780 def
+/lineheight 12 def
+
+
+/setparamfont {/Times-Roman findfont 11 scalefont setfont} def
+
+
+/setsectionfont {/Helvetica-Bold findfont 18 scalefont setfont} def
+
+/newline
+{   ypos lineheight sub
+    /ypos exch def
+    LM ypos moveto } def
+
+
+/prtstr
+{   
+    dup stringwidth pop
+    currentpoint pop
+    add RM gt
+    {newline} if
+    show} def
+
+
+/section
+{
+    setsectionfont
+    newline
+    newline
+    prtstr
+    newline
+    setparamfont
+} def
+
+
+LM ypos moveto
+
+
+
+
+(Hello World) section 
+
+
+
+(If ) prtstr (you ) prtstr (tell ) prtstr
+(the ) prtstr (truth, ) prtstr (you ) prtstr
+(don't ) prtstr (have ) prtstr (to ) prtstr
+(remember ) prtstr (anything. ) prtstr
+(- Mark ) prtstr (Twain ) prtstr (Lorem ) prtstr
+(Ipsum ) prtstr (Hello ) prtstr
+
+showpage
