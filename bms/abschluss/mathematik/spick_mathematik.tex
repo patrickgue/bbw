@@ -1,0 +1,47 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[left=5mm,top=15mm,right=5mm,bottom=15mm]{geometry}
+\usepackage{utopia}
+\usepackage{amsmath}
+\usepackage[parfill]{parskip}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\newcommand{\titleText}{Spick BMS Abschlussprüfung Mathematik}
+\newcommand{\authorText}{Patrick Günthard}
+\newcommand{\dateText}{\today}
+
+\title{\titleText}
+\author{\authorText}
+\date{\dateText}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\lhead{\titleText}
+\rhead{\authorText}
+\cfoot{\thepage}
+
+\begin{document}
+
+\maketitle
+\clearpage
+\tableofcontents
+\clearpage
+
+\begin{multicols}{4}
+
+\section{Vektorgeometrie}
+\subsection{Betrag / Länge}
+\[
+\vec{a} = \Bigg| \Bigg(
+ \begin{matrix}
+  a_1\\
+  a_2\\
+  a_3
+ \end{matrix} \Bigg) \Bigg| = \sqrt{a_1^2 + a_2^2 + a_3^2}
+\]
+
+\end{multicols}
+
+\end{document}
